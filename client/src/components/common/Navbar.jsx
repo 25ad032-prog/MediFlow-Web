@@ -3,6 +3,7 @@ import { useAuth } from '../../context/AuthContext';
 import { useQueue } from '../../context/QueueContext';
 import { api } from '../../utils/api';
 import AuthModal from '../auth/AuthModal';
+import NotificationDrawer from './NotificationDrawer';
 import { 
   Activity, 
   Stethoscope, 
@@ -14,14 +15,16 @@ import {
   Calendar,
   FolderLock,
   Home,
-  CheckCircle2
+  CheckCircle2,
+  Sparkles
 } from 'lucide-react';
 
-export default function Navbar({ activeTab = 'home', onSelectTab }) {
-  const { role, switchRole, patient, isAuthenticated } = useAuth();
+export default function Navbar({ activeTab = 'home', onSelectTab, onOpenReport }) {
+  const { role, switchRole, user, patient, currentDoctor, isAuthenticated, unreadNotifCount } = useAuth();
   const { isConnected } = useQueue();
   const [resetting, setResetting] = useState(false);
   const [showAuthModal, setShowAuthModal] = useState(false);
+  const [showNotificationDrawer, setShowNotificationDrawer] = useState(false);
 
   const handleResetDemo = async () => {
     if (confirm('Reset demo data to initial state?')) {
@@ -46,7 +49,7 @@ export default function Navbar({ activeTab = 'home', onSelectTab }) {
 
   return (
     <>
-      <header className="sticky top-0 z-40 bg-white/90 backdrop-blur-md border-b border-slate-200/80 px-4 lg:px-8 py-3 transition-all shadow-sm">
+      <header className="sticky top-0 z-40 bg-white/95 backdrop-blur-md border-b border-slate-200/90 px-4 lg:px-8 py-3 transition-all shadow-sm">
         <div className="max-w-7xl mx-auto flex items-center justify-between gap-4">
           
           {/* Brand Logo */}
@@ -70,7 +73,7 @@ export default function Navbar({ activeTab = 'home', onSelectTab }) {
             </div>
           </div>
 
-          {/* Desktop Navigation Links matching prompt requirements */}
+          {/* Desktop Navigation Links */}
           {role === 'patient' && onSelectTab && (
             <nav className="hidden md:flex items-center gap-1 bg-slate-100/80 p-1 rounded-2xl border border-slate-200/60 shadow-inner">
               {navItems.map((item) => {
@@ -94,14 +97,28 @@ export default function Navbar({ activeTab = 'home', onSelectTab }) {
             </nav>
           )}
 
-          {/* Right Controls: Live Sync, Role Switcher, Notifications, Auth */}
+          {/* Right Controls: Live Sync, Notifications, Role Switcher, Auth */}
           <div className="flex items-center gap-2 sm:gap-3">
             
             {/* Real-time Status Badge */}
             <div className="hidden lg:flex items-center gap-1.5 px-2.5 py-1 rounded-full bg-slate-100 border border-slate-200 text-xs font-medium text-slate-600">
               <span className={`w-2 h-2 rounded-full ${isConnected ? 'bg-teal-500 animate-pulse' : 'bg-amber-400'}`}></span>
-              <span>{isConnected ? 'Live Sync' : 'Connecting...'}</span>
+              <span>{isConnected ? 'Live Synced' : 'Connecting...'}</span>
             </div>
+
+            {/* Notification Bell Button with Badge */}
+            <button
+              onClick={() => setShowNotificationDrawer(true)}
+              className="relative p-2 rounded-xl bg-white hover:bg-slate-50 border border-slate-200 text-slate-600 hover:text-slate-900 shadow-sm transition-all"
+              title="Open Notifications Center"
+            >
+              <Bell className={`w-4 h-4 ${unreadNotifCount > 0 ? 'text-teal-600' : 'text-slate-500'}`} />
+              {unreadNotifCount > 0 && (
+                <span className="absolute -top-1 -right-1 flex h-4 w-4 items-center justify-center rounded-full bg-rose-500 text-[9px] font-bold text-white shadow-sm animate-pulse">
+                  {unreadNotifCount > 9 ? '9+' : unreadNotifCount}
+                </span>
+              )}
+            </button>
 
             {/* Role Switcher (Patient / Doctor) */}
             <div className="bg-slate-100 p-1 rounded-xl border border-slate-200 flex items-center gap-1">
@@ -129,21 +146,25 @@ export default function Navbar({ activeTab = 'home', onSelectTab }) {
               </button>
             </div>
 
-            {/* User Account / Profile Button */}
+            {/* User Profile / Auth Button */}
             <button
               onClick={() => setShowAuthModal(true)}
               className="px-3 py-1.5 rounded-xl bg-white hover:bg-slate-50 border border-slate-200 text-xs font-semibold text-slate-700 flex items-center gap-1.5 shadow-sm transition-all"
-              title="User Account & Profile"
+              title="User Account & Security"
             >
               {isAuthenticated ? (
                 <>
                   <span className="w-2 h-2 rounded-full bg-teal-500"></span>
-                  <span className="hidden sm:inline">{role === 'doctor' ? 'Dr. Priya' : (patient?.name?.split(' ')[0] || 'Hasini')}</span>
+                  <span className="hidden sm:inline">
+                    {role === 'doctor' 
+                      ? (currentDoctor?.name || 'Dr. Priya') 
+                      : (user?.name?.split(' ')[0] || patient?.name?.split(' ')[0] || 'Rahul')}
+                  </span>
                 </>
               ) : (
                 <>
                   <LogIn className="w-3.5 h-3.5 text-teal-600" />
-                  <span>Login</span>
+                  <span>Sign In</span>
                 </>
               )}
             </button>
@@ -165,6 +186,15 @@ export default function Navbar({ activeTab = 'home', onSelectTab }) {
 
       {/* Auth Modal */}
       <AuthModal isOpen={showAuthModal} onClose={() => setShowAuthModal(false)} />
+
+      {/* Notification Drawer */}
+      <NotificationDrawer 
+        isOpen={showNotificationDrawer} 
+        onClose={() => setShowNotificationDrawer(false)}
+        onNavigateTab={onSelectTab}
+        onOpenReport={onOpenReport}
+        onOpenWaitingRoom={() => onSelectTab && onSelectTab('waiting_room')}
+      />
     </>
   );
 }

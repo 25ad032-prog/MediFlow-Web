@@ -13,36 +13,40 @@ import {
   Users, 
   Stethoscope,
   ChevronRight,
-  HeartPulse
+  FolderLock,
+  HeartPulse,
+  User,
+  MapPin
 } from 'lucide-react';
 
-export default function PatientHome({ onNavigate, onOpenAiChat, onSelectDoctor }) {
-  const { patient } = useAuth();
+export default function PatientHome({ onNavigate, onOpenAiChat, onSelectDoctor, onOpenReport }) {
+  const { user, patient } = useAuth();
   const { queues, activeAppointment } = useQueue();
   const [quickSearch, setQuickSearch] = useState('');
 
   // Default demo appointment if none booked yet
   const apt = activeAppointment || {
-    id: "apt-demo-default",
+    id: "apt-101",
     doctorId: "doc-1",
     doctorName: "Dr. Priya Sharma",
     doctorSpecialty: "Cardiologist",
     tokenNumber: "Q-04",
     queuePosition: 4,
-    time: "11:30 AM",
+    time: "04:00 PM",
     date: "Today",
     status: "waiting",
+    queueState: "WAITING",
     aiPreConsultation: { completed: false }
   };
 
   const doctorQueue = queues[apt.doctorId] || null;
-  const isNowConsulting = apt.status === 'now_consulting' || (doctorQueue?.nowConsulting?.id === apt.id);
+  const isNowConsulting = apt.status === 'now_consulting' || apt.queueState === 'IN_CONSULTATION' || (doctorQueue?.nowConsulting?.id === apt.id);
   const queuePos = isNowConsulting ? 1 : (apt.queuePosition || 4);
   const patientsAhead = isNowConsulting ? 0 : Math.max(0, queuePos - 1);
   const avgDuration = doctorQueue?.avgDuration || 18;
   const estWait = isNowConsulting ? 0 : (patientsAhead * avgDuration || 32);
 
-  const patientName = patient?.name?.split(' ')[0] || "Hasini";
+  const patientName = user?.name?.split(' ')[0] || patient?.name?.split(' ')[0] || "Rahul";
   const aiDone = apt?.aiPreConsultation?.completed;
 
   const handleSearchSubmit = (e) => {
@@ -51,7 +55,7 @@ export default function PatientHome({ onNavigate, onOpenAiChat, onSelectDoctor }
   };
 
   return (
-    <div className="space-y-12 animate-fade-in pb-12">
+    <div className="space-y-10 animate-fade-in pb-12">
       
       {/* Editorial Split Hero Section */}
       <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-10 items-center pt-2 sm:pt-4">
@@ -73,7 +77,7 @@ export default function PatientHome({ onNavigate, onOpenAiChat, onSelectDoctor }
             </h1>
 
             <p className="text-base sm:text-lg text-slate-600 max-w-xl leading-relaxed pt-1">
-              Find the right doctor, join the queue remotely, and know precisely when it's your turn without hospital waiting room stress.
+              Find verified specialists across 5 cities, join live queues remotely, and walk into consultation exactly when it's your turn.
             </p>
           </div>
 
@@ -85,7 +89,7 @@ export default function PatientHome({ onNavigate, onOpenAiChat, onSelectDoctor }
                 type="text"
                 value={quickSearch}
                 onChange={(e) => setQuickSearch(e.target.value)}
-                placeholder="Search by doctor, specialty, or symptom..."
+                placeholder="Search doctor, specialty, city, or symptom..."
                 className="w-full pl-12 pr-28 py-3.5 rounded-2xl glass-input text-sm text-slate-900 placeholder-slate-400 shadow-sm"
               />
               <button
@@ -104,8 +108,8 @@ export default function PatientHome({ onNavigate, onOpenAiChat, onSelectDoctor }
               onClick={() => onNavigate('search')}
               className="px-6 py-3.5 rounded-2xl bg-teal-600 hover:bg-teal-700 text-white font-bold text-sm shadow-sm hover:shadow transition-all flex items-center gap-2"
             >
+              <Search className="w-4 h-4" />
               <span>Find a Doctor</span>
-              <ArrowRight className="w-4 h-4" />
             </button>
 
             <button
@@ -113,7 +117,15 @@ export default function PatientHome({ onNavigate, onOpenAiChat, onSelectDoctor }
               className="px-6 py-3.5 rounded-2xl bg-white hover:bg-slate-50 border border-slate-200/90 text-slate-700 font-bold text-sm shadow-sm transition-all flex items-center gap-2"
             >
               <Calendar className="w-4 h-4 text-slate-500" />
-              <span>View Appointments</span>
+              <span>My Appointments</span>
+            </button>
+
+            <button
+              onClick={() => onNavigate('vault')}
+              className="px-6 py-3.5 rounded-2xl bg-white hover:bg-slate-50 border border-slate-200/90 text-slate-700 font-bold text-sm shadow-sm transition-all flex items-center gap-2"
+            >
+              <FolderLock className="w-4 h-4 text-teal-600" />
+              <span>Health Records</span>
             </button>
           </div>
 
@@ -152,13 +164,13 @@ export default function PatientHome({ onNavigate, onOpenAiChat, onSelectDoctor }
                   {apt.doctorName}
                 </h3>
                 <p className="text-xs font-semibold text-teal-700">
-                  {apt.doctorSpecialty}
+                  {apt.doctorSpecialty} • {apt.location || 'Greams Road, Chennai'}
                 </p>
               </div>
 
               <div className="text-right">
                 <span className="text-xs font-bold text-slate-900 block">{apt.date || "Today"}</span>
-                <span className="text-xs font-semibold text-slate-500">{apt.time || "11:30 AM"}</span>
+                <span className="text-xs font-semibold text-slate-500">{apt.time || "04:00 PM"}</span>
               </div>
             </div>
 
@@ -171,7 +183,7 @@ export default function PatientHome({ onNavigate, onOpenAiChat, onSelectDoctor }
                 </span>
                 <span className="inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded-full bg-teal-500/20 text-teal-300 text-[11px] font-semibold border border-teal-500/30">
                   <span className="w-1.5 h-1.5 rounded-full bg-teal-400 animate-ping"></span>
-                  <span>Doctor: In consultation</span>
+                  <span>Doctor: Currently consulting</span>
                 </span>
               </div>
 
@@ -196,7 +208,7 @@ export default function PatientHome({ onNavigate, onOpenAiChat, onSelectDoctor }
                 </div>
               </div>
 
-              {/* Visual Queue Stepper: Completed ● ─ ● ─ ● ── Current ◎ ── Upcoming ○ ─ ○ */}
+              {/* Visual Queue Stepper */}
               <div className="pt-2 border-t border-slate-800/80">
                 <div className="flex items-center justify-between text-[10px] text-slate-400 mb-1.5 font-medium">
                   <span>Completed</span>
@@ -205,29 +217,24 @@ export default function PatientHome({ onNavigate, onOpenAiChat, onSelectDoctor }
                 </div>
 
                 <div className="flex items-center justify-between gap-1.5">
-                  {/* #1 Completed */}
                   <div className="flex-1 flex items-center">
                     <span className="w-3 h-3 rounded-full bg-slate-600 flex items-center justify-center text-[7px] text-white">✓</span>
                     <span className="flex-1 h-0.5 bg-slate-700"></span>
                   </div>
-                  {/* #2 Completed */}
                   <div className="flex-1 flex items-center">
                     <span className="w-3 h-3 rounded-full bg-slate-600 flex items-center justify-center text-[7px] text-white">✓</span>
                     <span className="flex-1 h-0.5 bg-slate-700"></span>
                   </div>
-                  {/* #3 Completed */}
                   <div className="flex-1 flex items-center">
                     <span className="w-3 h-3 rounded-full bg-slate-600 flex items-center justify-center text-[7px] text-white">✓</span>
                     <span className="flex-1 h-0.5 bg-teal-500"></span>
                   </div>
-                  {/* #4 Current Active Patient */}
                   <div className="flex-1 flex items-center">
                     <span className="w-5 h-5 rounded-full bg-teal-400 text-slate-950 font-black flex items-center justify-center text-[10px] shadow-glow-teal animate-pulse">
                       {queuePos}
                     </span>
                     <span className="flex-1 h-0.5 bg-slate-700"></span>
                   </div>
-                  {/* #5 Upcoming */}
                   <div className="flex items-center">
                     <span className="w-3 h-3 rounded-full border border-slate-600 bg-slate-900"></span>
                   </div>
@@ -274,41 +281,45 @@ export default function PatientHome({ onNavigate, onOpenAiChat, onSelectDoctor }
 
       </div>
 
-      {/* Featured Medical Specialties Overview */}
-      <div className="space-y-4 pt-4">
+      {/* Featured Cities & Medical Specialties Overview */}
+      <div className="space-y-4 pt-2">
         <div className="flex items-center justify-between">
           <div>
-            <h2 className="text-xl font-bold text-slate-900">Explore by Medical Specialty</h2>
-            <p className="text-xs text-slate-500 mt-0.5">Consult with verified top hospital specialists</p>
+            <h2 className="text-xl font-bold text-slate-900">Top Medical Hubs</h2>
+            <p className="text-xs text-slate-500 mt-0.5">Explore specialists across 5 major medical clusters</p>
           </div>
           <button
             onClick={() => onNavigate('search')}
             className="text-xs font-bold text-teal-700 hover:underline flex items-center gap-1"
           >
-            <span>View all 8 specialties</span>
+            <span>View all 17 specialists</span>
             <ChevronRight className="w-4 h-4" />
           </button>
         </div>
 
-        <div className="grid grid-cols-2 sm:grid-cols-4 gap-3.5">
+        <div className="grid grid-cols-2 sm:grid-cols-5 gap-3.5">
           {[
-            { name: 'Cardiology', icon: '❤️', doctors: '2 specialists', wait: '~18 min' },
-            { name: 'Dermatology', icon: '✨', doctors: '1 specialist', wait: '~12 min' },
-            { name: 'Neurology', icon: '🧠', doctors: '1 specialist', wait: '~20 min' },
-            { name: 'Orthopedics', icon: '🦴', doctors: '1 specialist', wait: '~15 min' }
-          ].map((spec) => (
+            { name: 'Chennai', tag: 'Apollo & Madras Heart', count: '5 Doctors' },
+            { name: 'Bangalore', tag: 'NIMHANS & City Care', count: '5 Doctors' },
+            { name: 'Hyderabad', tag: 'Jubilee Hills Care', count: '3 Doctors' },
+            { name: 'Coimbatore', tag: 'Kovai Ortho & Wellness', count: '2 Doctors' },
+            { name: 'Madurai', tag: 'Meenakshi Speciality', count: '2 Doctors' }
+          ].map((loc) => (
             <div
-              key={spec.name}
-              onClick={() => onNavigate('search', spec.name)}
-              className="p-4 rounded-2xl glass-surface hover:bg-white border border-slate-200/80 hover:border-teal-300 cursor-pointer transition-all space-y-2 group shadow-sm hover:shadow"
+              key={loc.name}
+              onClick={() => onNavigate('search', '', loc.name)}
+              className="p-4 rounded-2xl glass-surface hover:bg-white border border-slate-200/80 hover:border-teal-300 cursor-pointer transition-all space-y-1.5 group shadow-sm hover:shadow"
             >
-              <div className="text-2xl">{spec.icon}</div>
-              <div>
-                <h4 className="font-bold text-sm text-slate-900 group-hover:text-teal-700 transition-colors">
-                  {spec.name}
-                </h4>
-                <p className="text-[11px] text-slate-500">{spec.doctors} • Avg {spec.wait}</p>
+              <div className="flex items-center justify-between">
+                <MapPin className="w-4 h-4 text-teal-600" />
+                <span className="text-[10px] font-bold px-1.5 py-0.5 rounded bg-teal-50 text-teal-700">
+                  {loc.count}
+                </span>
               </div>
+              <h4 className="font-bold text-sm text-slate-900 group-hover:text-teal-700 transition-colors">
+                {loc.name}
+              </h4>
+              <p className="text-[11px] text-slate-500 truncate">{loc.tag}</p>
             </div>
           ))}
         </div>

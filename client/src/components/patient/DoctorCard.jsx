@@ -1,5 +1,5 @@
 import React from 'react';
-import { Star, Clock, Users, MapPin, ArrowRight, Activity } from 'lucide-react';
+import { Star, Clock, Users, MapPin, ArrowRight, Activity, Building2 } from 'lucide-react';
 
 export default function DoctorCard({ doctor, onSelect, onBookNow }) {
   const {
@@ -13,6 +13,9 @@ export default function DoctorCard({ doctor, onSelect, onBookNow }) {
     consultationFee,
     languages = [],
     hospital,
+    location,
+    area,
+    distance,
     avatar,
     averageDurationMinutes = 18,
     currentQueueCount = 0,
@@ -36,9 +39,16 @@ export default function DoctorCard({ doctor, onSelect, onBookNow }) {
           </div>
 
           <div className="flex-1 min-w-0">
-            <h3 className="font-bold text-slate-900 text-base truncate group-hover:text-teal-700 transition-colors">
-              {name}
-            </h3>
+            <div className="flex items-center justify-between gap-1">
+              <h3 className="font-bold text-slate-900 text-base truncate group-hover:text-teal-700 transition-colors">
+                {name}
+              </h3>
+              {location && (
+                <span className="text-[10px] font-bold px-2 py-0.5 rounded-full bg-slate-100 text-slate-600 border border-slate-200">
+                  {location}
+                </span>
+              )}
+            </div>
             
             <p className="text-xs font-semibold text-teal-700 mt-0.5">
               {specialty}
@@ -56,11 +66,11 @@ export default function DoctorCard({ doctor, onSelect, onBookNow }) {
           </div>
         </div>
 
-        {/* Hospital & Fee info */}
+        {/* Hospital, Location & Fee info */}
         <div className="flex items-center justify-between text-xs text-slate-600 pb-3 border-b border-slate-100">
           <span className="truncate max-w-[200px] flex items-center gap-1 text-slate-500 text-[11px]">
             <MapPin className="w-3 h-3 text-slate-400 shrink-0" />
-            {hospital.split(',')[0]}
+            <span>{area || location ? `${area || location} • ` : ''}{hospital?.split(',')[0]}</span>
           </span>
           <span className="font-bold text-slate-900">₹{consultationFee}</span>
         </div>

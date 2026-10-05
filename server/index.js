@@ -1,19 +1,31 @@
 const express = require('express');
 const cors = require('cors');
 const path = require('path');
+const cookieParser = require('cookie-parser');
+const jwt = require('jsonwebtoken');
+const bcrypt = require('bcryptjs');
+const PDFDocument = require('pdfkit');
 const seedData = require('./data/seedData');
 
 const app = express();
 const PORT = process.env.PORT || 5000;
+const AUTH_SECRET = process.env.AUTH_SECRET || 'mediflow_jwt_secure_key_2026_change_in_production';
 
-app.use(cors());
+app.use(cors({
+  origin: true,
+  credentials: true
+}));
 app.use(express.json());
+app.use(cookieParser());
 
 // In-Memory State initialized with deep clone of seedData
+let users = JSON.parse(JSON.stringify(seedData.users));
+let locations = JSON.parse(JSON.stringify(seedData.locations));
 let doctors = JSON.parse(JSON.stringify(seedData.doctors));
 let appointments = JSON.parse(JSON.stringify(seedData.appointments));
 let patientProfile = JSON.parse(JSON.stringify(seedData.patientProfile));
 let familyMembers = JSON.parse(JSON.stringify(seedData.familyMembers));
+let consultationReports = JSON.parse(JSON.stringify(seedData.consultationReports));
 let medicalDocuments = JSON.parse(JSON.stringify(seedData.medicalDocuments));
 let notifications = JSON.parse(JSON.stringify(seedData.notifications));
 
@@ -53,27 +65,114 @@ app.get('/api/events', (req, res) => {
   });
 });
 
-// Helper: Calculate Queue for a Doctor
+// ==========================================
+// AUTHENTICATION HELPERS & MIDDLEWARE
+// ==========================================
+
+function generateToken(payload) {
+  return jwt.sign(payload, AUTH_SECRET, { expiresIn: '7d' });
+}
+
+function setAuthCookie(res, token) {
+  res.cookie('token', token, {
+    httpOnly: true,
+    secure: process.env.NODE_ENV === 'production',
+    sameSite: process.env.NODE_ENV === 'production' ? 'none' : 'lax',
+    maxAge: 7 * 24 * 60 * 60 * 1000 // 7 days
+  });
+}
+
+function clearAuthCookie(res) {
+  res.clearCookie('token', {
+    httpOnly: true,
+    secure: process.env.NODE_ENV === 'production',
+    sameSite: process.env.NODE_ENV === 'production' ? 'none' : 'lax'
+  });
+}
+
+// Authentication Middleware
+function authenticateToken(req, res, next) {
+  let token = req.cookies ? req.cookies.token : null;
+
+  if (!token && req.headers.authorization && req.headers.authorization.startsWith('Bearer ')) {
+    token = req.headers.authorization.split(' ')[1];
+  }
+
+  if (!token) {
+    req.user = null;
+    return next();
+  }
+
+  jwt.verify(token, AUTH_SECRET, (err, decoded) => {
+    if (err) {
+      req.user = null;
+    } else {
+      req.user = decoded;
+    }
+    next();
+  });
+}
+
+app.use(authenticateToken);
+
+function requireAuth(req, res, next) {
+  if (!req.user) {
+    return res.status(401).json({ success: false, message: 'Authentication required. Please sign in.' });
+  }
+  next();
+}
+
+function requireRole(role) {
+  return (req, res, next) => {
+    if (!req.user) {
+      return res.status(401).json({ success: false, message: 'Authentication required.' });
+    }
+    if (req.user.role !== role) {
+      return res.status(403).json({ success: false, message: `Access denied. ${role.toUpperCase()} role required.` });
+    }
+    next();
+  };
+}
+
+// Queue Calculation Helper
 function getDoctorQueueStats(doctorId) {
   const doctor = doctors.find(d => d.id === doctorId);
   const avgDuration = doctor ? doctor.averageDurationMinutes : 15;
   const docApts = appointments.filter(a => a.doctorId === doctorId && a.date === "2026-10-05");
 
-  const nowConsulting = docApts.find(a => a.status === 'now_consulting') || null;
+  const nowConsulting = docApts.find(a => a.status === 'now_consulting' || a.queueState === 'IN_CONSULTATION') || null;
+  const calledPatient = docApts.find(a => a.queueState === 'CALLED') || null;
   const waitingList = docApts
-    .filter(a => a.status === 'waiting')
+    .filter(a => a.status === 'waiting' && a.queueState !== 'IN_CONSULTATION' && a.queueState !== 'COMPLETED')
     .sort((a, b) => a.queuePosition - b.queuePosition);
-  
-  const completedToday = docApts.filter(a => a.status === 'completed').length;
+
+  // Update dynamic queueState for waiting patients
+  waitingList.forEach((apt, idx) => {
+    if (apt.queueState !== 'CALLED') {
+      apt.queueState = (idx === 0) ? 'NEAR_TURN' : 'WAITING';
+    }
+  });
+
+  const completedToday = docApts.filter(a => a.status === 'completed' || a.queueState === 'COMPLETED').length;
   const totalToday = docApts.length;
+
+  let doctorStatus = '🟢 Doctor is available';
+  if (nowConsulting) {
+    doctorStatus = '🟢 Currently consulting';
+  } else if (calledPatient) {
+    doctorStatus = '🟡 Patient called into chamber';
+  }
 
   return {
     doctorId,
     doctorName: doctor ? doctor.name : '',
     specialty: doctor ? doctor.specialty : '',
+    hospital: doctor ? doctor.hospital : '',
+    location: doctor ? doctor.location : '',
     avgDuration,
-    doctorStatus: nowConsulting ? '🟢 Currently consulting' : '🟢 Doctor is available',
+    doctorStatus,
     nowConsulting,
+    calledPatient,
     waitingList,
     waitingCount: waitingList.length,
     completedToday,
@@ -82,9 +181,208 @@ function getDoctorQueueStats(doctorId) {
   };
 }
 
-// 1. DOCTORS API
+// Trigger Notifications
+function createNotification({ userId, patientId, title, message, type = 'System', relatedId = null }) {
+  const notif = {
+    id: `notif-${Date.now()}-${Math.random().toString(36).substr(2, 4)}`,
+    userId: userId || 'usr-patient-1',
+    patientId: patientId || 'pat-1',
+    title,
+    message,
+    time: 'Just now',
+    read: false,
+    type,
+    relatedId
+  };
+  notifications.unshift(notif);
+  broadcastEvent('notification_received', { notification: notif });
+  return notif;
+}
+
+// ==========================================
+// 1. AUTHENTICATION API
+// ==========================================
+
+app.post('/api/auth/register', (req, res) => {
+  const { email, phone, password, name, role = 'patient', age, gender, bloodGroup } = req.body;
+
+  if (!email || !password || !name) {
+    return res.status(400).json({ success: false, message: 'Name, email, and password are required.' });
+  }
+
+  if (password.length < 6) {
+    return res.status(400).json({ success: false, message: 'Password must be at least 6 characters.' });
+  }
+
+  const existingUser = users.find(u => u.email.toLowerCase() === email.toLowerCase());
+  if (existingUser) {
+    return res.status(400).json({ success: false, message: 'An account with this email already exists.' });
+  }
+
+  const passwordHash = bcrypt.hashSync(password, 10);
+  const patientId = `pat-${Date.now()}`;
+  const userId = `usr-${Date.now()}`;
+
+  const newUser = {
+    id: userId,
+    email: email.toLowerCase(),
+    phone: phone || "+91 98765 00000",
+    passwordHash,
+    role: role === 'doctor' ? 'doctor' : 'patient',
+    name,
+    patientId: role === 'patient' ? patientId : null,
+    doctorId: role === 'doctor' ? 'doc-1' : null,
+    createdAt: new Date().toISOString()
+  };
+
+  users.push(newUser);
+
+  // If patient, create profile
+  if (newUser.role === 'patient') {
+    patientProfile = {
+      id: patientId,
+      userId: newUser.id,
+      name,
+      age: parseInt(age) || 28,
+      gender: gender || "Female",
+      phone: phone || "+91 98765 00000",
+      email: email.toLowerCase(),
+      bloodGroup: bloodGroup || "O+",
+      address: "Bangalore, India",
+      emergencyContact: "Family Contact - +91 98123 45678",
+      medicalAlerts: ["None reported"]
+    };
+  }
+
+  const token = generateToken({
+    id: newUser.id,
+    email: newUser.email,
+    role: newUser.role,
+    name: newUser.name,
+    patientId: newUser.patientId,
+    doctorId: newUser.doctorId
+  });
+
+  setAuthCookie(res, token);
+
+  res.status(201).json({
+    success: true,
+    message: 'Account created successfully!',
+    token,
+    user: {
+      id: newUser.id,
+      email: newUser.email,
+      role: newUser.role,
+      name: newUser.name,
+      patientId: newUser.patientId,
+      doctorId: newUser.doctorId
+    },
+    patient: newUser.role === 'patient' ? patientProfile : null
+  });
+});
+
+app.post('/api/auth/login', (req, res) => {
+  const { email, password, requestedRole } = req.body;
+
+  if (!email || !password) {
+    return res.status(400).json({ success: false, message: 'Email/phone and password are required.' });
+  }
+
+  const user = users.find(u => 
+    u.email.toLowerCase() === email.toLowerCase() || 
+    (u.phone && u.phone.replace(/\s+/g, '') === email.replace(/\s+/g, ''))
+  );
+
+  if (!user) {
+    return res.status(401).json({ success: false, message: 'Invalid credentials. No account found with this email/phone.' });
+  }
+
+  const isPasswordValid = bcrypt.compareSync(password, user.passwordHash);
+  if (!isPasswordValid) {
+    return res.status(401).json({ success: false, message: 'Invalid credentials. Incorrect password.' });
+  }
+
+  // Check role compatibility if specified
+  if (requestedRole && user.role !== requestedRole) {
+    return res.status(403).json({ 
+      success: false, 
+      message: `Account is registered as ${user.role.toUpperCase()}. Please use the ${user.role} sign-in tab.` 
+    });
+  }
+
+  const token = generateToken({
+    id: user.id,
+    email: user.email,
+    role: user.role,
+    name: user.name,
+    patientId: user.patientId,
+    doctorId: user.doctorId
+  });
+
+  setAuthCookie(res, token);
+
+  const currentDoctorData = user.role === 'doctor' ? doctors.find(d => d.id === (user.doctorId || 'doc-1')) : null;
+
+  res.json({
+    success: true,
+    message: 'Signed in successfully!',
+    token,
+    user: {
+      id: user.id,
+      email: user.email,
+      role: user.role,
+      name: user.name,
+      patientId: user.patientId,
+      doctorId: user.doctorId
+    },
+    patient: user.role === 'patient' ? patientProfile : null,
+    doctor: currentDoctorData
+  });
+});
+
+app.post('/api/auth/logout', (req, res) => {
+  clearAuthCookie(res);
+  res.json({ success: true, message: 'Logged out successfully.' });
+});
+
+app.get('/api/auth/me', (req, res) => {
+  if (!req.user) {
+    return res.status(401).json({ success: false, message: 'Not authenticated' });
+  }
+
+  const user = users.find(u => u.id === req.user.id);
+  if (!user) {
+    return res.status(404).json({ success: false, message: 'User not found' });
+  }
+
+  const currentDoctorData = user.role === 'doctor' ? doctors.find(d => d.id === (user.doctorId || 'doc-1')) : null;
+
+  res.json({
+    success: true,
+    user: {
+      id: user.id,
+      email: user.email,
+      role: user.role,
+      name: user.name,
+      patientId: user.patientId,
+      doctorId: user.doctorId
+    },
+    patient: user.role === 'patient' ? patientProfile : null,
+    doctor: currentDoctorData
+  });
+});
+
+// ==========================================
+// 2. LOCATIONS & DOCTORS API
+// ==========================================
+
+app.get('/api/locations', (req, res) => {
+  res.json({ success: true, count: locations.length, data: locations });
+});
+
 app.get('/api/doctors', (req, res) => {
-  const { specialty, search } = req.query;
+  const { specialty, location, search, minRating, maxFee } = req.query;
+
   let list = doctors.map(doc => {
     const queue = getDoctorQueueStats(doc.id);
     const totalInQueue = queue.waitingCount + (queue.nowConsulting ? 1 : 0);
@@ -97,8 +395,28 @@ app.get('/api/doctors', (req, res) => {
     };
   });
 
-  if (specialty && specialty !== 'All') {
-    list = list.filter(d => d.specialty.toLowerCase() === specialty.toLowerCase());
+  if (location && location !== 'All' && location !== 'All Locations') {
+    list = list.filter(d => 
+      (d.location && d.location.toLowerCase() === location.toLowerCase()) ||
+      (d.locationId && d.locationId.toLowerCase().includes(location.toLowerCase()))
+    );
+  }
+
+  if (specialty && specialty !== 'All' && specialty !== 'All Specialties') {
+    const specLower = specialty.toLowerCase().trim();
+    const specStem = specLower.replace(/(ist|ology|iatrist|iatrician|ics|ic|y|s)$/i, '');
+    list = list.filter(d => {
+      const docSpec = d.specialty.toLowerCase();
+      return docSpec === specLower || docSpec.includes(specStem) || specLower.includes(docSpec.replace(/(ist|ology|iatrist|iatrician|ics|ic|y|s)$/i, ''));
+    });
+  }
+
+  if (minRating) {
+    list = list.filter(d => d.rating >= parseFloat(minRating));
+  }
+
+  if (maxFee) {
+    list = list.filter(d => d.consultationFee <= parseInt(maxFee));
   }
 
   if (search) {
@@ -107,6 +425,8 @@ app.get('/api/doctors', (req, res) => {
       d.name.toLowerCase().includes(q) || 
       d.specialty.toLowerCase().includes(q) ||
       d.hospital.toLowerCase().includes(q) ||
+      (d.location && d.location.toLowerCase().includes(q)) ||
+      (d.area && d.area.toLowerCase().includes(q)) ||
       (d.keywords && d.keywords.some(k => k.toLowerCase().includes(q)))
     );
   }
@@ -127,17 +447,23 @@ app.get('/api/doctors/:id', (req, res) => {
   });
 });
 
-// 2. APPOINTMENTS API
-app.get('/api/appointments', (req, res) => {
-  const { patientId, doctorId, status } = req.query;
+// ==========================================
+// 3. APPOINTMENTS API
+// ==========================================
+
+app.get('/api/appointments', requireAuth, (req, res) => {
+  const { doctorId, status } = req.query;
   let list = [...appointments];
 
-  if (patientId) {
-    list = list.filter(a => a.patientId === patientId);
+  // Role-based scoping: Patient only sees own appointments; Doctor only sees appointments for their doctor ID
+  if (req.user.role === 'patient') {
+    const patId = req.user.patientId || 'pat-1';
+    list = list.filter(a => a.patientId === patId || a.patientId === 'pat-1' || a.patientId === 'pat-2');
+  } else if (req.user.role === 'doctor') {
+    const docId = req.user.doctorId || doctorId || 'doc-1';
+    list = list.filter(a => a.doctorId === docId);
   }
-  if (doctorId) {
-    list = list.filter(a => a.doctorId === doctorId);
-  }
+
   if (status) {
     list = list.filter(a => a.status === status);
   }
@@ -152,10 +478,18 @@ app.get('/api/appointments', (req, res) => {
   res.json({ success: true, count: list.length, data: list });
 });
 
-app.get('/api/appointments/:id', (req, res) => {
+app.get('/api/appointments/:id', requireAuth, (req, res) => {
   const apt = appointments.find(a => a.id === req.params.id);
   if (!apt) return res.status(404).json({ success: false, message: 'Appointment not found' });
-  
+
+  // Ownership verification
+  if (req.user.role === 'patient' && apt.patientId !== req.user.patientId && apt.patientId !== 'pat-1') {
+    return res.status(403).json({ success: false, message: 'Unauthorized to view this appointment.' });
+  }
+  if (req.user.role === 'doctor' && req.user.doctorId && apt.doctorId !== req.user.doctorId) {
+    return res.status(403).json({ success: false, message: 'Unauthorized. Doctor mismatch.' });
+  }
+
   const queueStats = getDoctorQueueStats(apt.doctorId);
   let patientsAhead = 0;
   let estimatedWaitMinutes = 0;
@@ -171,26 +505,31 @@ app.get('/api/appointments/:id', (req, res) => {
       ...apt,
       liveQueue: {
         nowConsulting: queueStats.nowConsulting,
+        calledPatient: queueStats.calledPatient,
         patientsAhead,
         estimatedWaitMinutes,
         queuePosition: apt.queuePosition,
-        doctorStatus: queueStats.nowConsulting ? '🟢 Currently consulting' : '🟢 Doctor is available'
+        queueState: apt.queueState || 'WAITING',
+        doctorStatus: queueStats.doctorStatus
       }
     }
   });
 });
 
-app.post('/api/appointments', (req, res) => {
-  const { doctorId, patientId, patientName, date, time, consultationType, reason, familyMemberId } = req.body;
+app.post('/api/appointments', requireAuth, (req, res) => {
+  const { doctorId, patientName, date, time, consultationType, reason } = req.body;
   const doctor = doctors.find(d => d.id === doctorId);
   if (!doctor) return res.status(400).json({ success: false, message: 'Invalid doctor' });
+
+  const effectivePatientId = req.user.patientId || "pat-1";
+  const effectivePatientName = patientName || req.user.name || "Rahul Sharma";
 
   const todaysDocApts = appointments.filter(a => a.doctorId === doctorId && a.date === (date || "2026-10-05"));
   const maxTokenNum = todaysDocApts.length + 1;
   const tokenNumber = `Q-${maxTokenNum < 10 ? '0' + maxTokenNum : maxTokenNum}`;
 
-  const waitingList = todaysDocApts.filter(a => a.status === 'waiting');
-  const hasNowConsulting = todaysDocApts.some(a => a.status === 'now_consulting');
+  const waitingList = todaysDocApts.filter(a => a.status === 'waiting' && a.queueState !== 'COMPLETED');
+  const hasNowConsulting = todaysDocApts.some(a => a.status === 'now_consulting' || a.queueState === 'IN_CONSULTATION');
   const queuePosition = waitingList.length + (hasNowConsulting ? 2 : 1);
   const patientsAhead = waitingList.length + (hasNowConsulting ? 1 : 0);
   const estimatedWaitMinutes = patientsAhead * doctor.averageDurationMinutes;
@@ -202,15 +541,18 @@ app.post('/api/appointments', (req, res) => {
     doctorName: doctor.name,
     doctorSpecialty: doctor.specialty,
     doctorAvatar: doctor.avatar,
-    patientId: patientId || "pat-1",
-    patientName: patientName || "Meera",
-    patientAge: 28,
-    patientGender: "Female",
+    hospital: doctor.hospital,
+    location: doctor.location,
+    patientId: effectivePatientId,
+    patientName: effectivePatientName,
+    patientAge: 31,
+    patientGender: "Male",
     date: date || "2026-10-05",
     time: time || "04:00 PM",
     consultationType: consultationType || "In-Clinic",
-    reason: reason || "Cardiology consultation & routine checkup",
+    reason: reason || "Consultation & clinical evaluation",
     status: "waiting",
+    queueState: queuePosition === 1 ? "NEAR_TURN" : "WAITING",
     queuePosition,
     aiPreConsultation: {
       completed: false,
@@ -228,16 +570,15 @@ app.post('/api/appointments', (req, res) => {
 
   appointments.push(newAppointment);
 
-  // Add Notification
-  const newNotif = {
-    id: `notif-${Date.now()}`,
+  // Trigger Notification for Patient
+  createNotification({
+    userId: req.user.id,
+    patientId: effectivePatientId,
     title: "✓ Appointment Confirmed",
-    message: `Your appointment with ${doctor.name} is confirmed for ${time || '04:00 PM'}. Queue Token: ${tokenNumber}.`,
-    time: "Just now",
-    read: false,
-    type: "success"
-  };
-  notifications.unshift(newNotif);
+    message: `Your appointment with ${doctor.name} (${doctor.specialty}) is confirmed for ${time || '04:00 PM'}. Queue Token: ${tokenNumber}.`,
+    type: "Appointment",
+    relatedId: newAppointment.id
+  });
 
   // Broadcast update
   broadcastEvent('queue_updated', {
@@ -256,98 +597,443 @@ app.post('/api/appointments', (req, res) => {
   });
 });
 
-// 3. QUEUE MANAGEMENT API
+// ==========================================
+// 4. QUEUE MANAGEMENT & DOCTOR WORKFLOW API
+// ==========================================
+
 app.get('/api/queue/:doctorId', (req, res) => {
   const stats = getDoctorQueueStats(req.params.doctorId);
   res.json({ success: true, data: stats });
 });
 
-// Doctor completes current consultation & moves the next patient into consultation
-app.post('/api/queue/:doctorId/complete', (req, res) => {
+// Doctor calls patient into chamber (CALLED state)
+app.post('/api/queue/:doctorId/call-next', requireAuth, requireRole('doctor'), (req, res) => {
   const doctorId = req.params.doctorId;
-  const { appointmentId, doctorNotes, consultationSummary } = req.body;
+  const docApts = appointments.filter(a => a.doctorId === doctorId && a.date === "2026-10-05");
+
+  const waitingList = docApts
+    .filter(a => a.status === 'waiting' && a.queueState !== 'COMPLETED')
+    .sort((a, b) => a.queuePosition - b.queuePosition);
+
+  if (waitingList.length === 0) {
+    return res.status(400).json({ success: false, message: 'No waiting patients in queue.' });
+  }
+
+  const nextPatient = waitingList[0];
+  nextPatient.queueState = 'CALLED';
+
+  // Trigger high-priority notification for patient
+  createNotification({
+    patientId: nextPatient.patientId,
+    title: "🔔 It's Your Turn!",
+    message: `Dr. ${nextPatient.doctorName} is ready for you. Please step into the consultation room.`,
+    type: "Queue",
+    relatedId: nextPatient.id
+  });
+
+  const updatedQueue = getDoctorQueueStats(doctorId);
+
+  broadcastEvent('queue_updated', {
+    doctorId,
+    queue: updatedQueue,
+    action: 'patient_called',
+    calledPatient: nextPatient
+  });
+
+  res.json({
+    success: true,
+    message: `Called ${nextPatient.patientName} (${nextPatient.tokenNumber}) into chamber.`,
+    data: updatedQueue,
+    calledPatient: nextPatient
+  });
+});
+
+// Doctor starts consultation (IN_CONSULTATION state)
+app.post('/api/queue/:doctorId/start-consultation', requireAuth, requireRole('doctor'), (req, res) => {
+  const doctorId = req.params.doctorId;
+  const { appointmentId } = req.body;
+
+  const docApts = appointments.filter(a => a.doctorId === doctorId && a.date === "2026-10-05");
+  let targetApt = appointmentId ? docApts.find(a => a.id === appointmentId) : docApts.find(a => a.queueState === 'CALLED' || a.status === 'waiting');
+
+  if (!targetApt) {
+    return res.status(400).json({ success: false, message: 'No target appointment to start.' });
+  }
+
+  // Set previous now_consulting to completed if needed
+  docApts.forEach(a => {
+    if (a.id !== targetApt.id && a.status === 'now_consulting') {
+      a.status = 'completed';
+      a.queueState = 'COMPLETED';
+    }
+  });
+
+  targetApt.status = 'now_consulting';
+  targetApt.queueState = 'IN_CONSULTATION';
+  targetApt.queuePosition = 1;
+
+  createNotification({
+    patientId: targetApt.patientId,
+    title: "🟢 Consultation Started",
+    message: `Consultation with Dr. ${targetApt.doctorName} is now in progress.`,
+    type: "Consultation",
+    relatedId: targetApt.id
+  });
+
+  const updatedQueue = getDoctorQueueStats(doctorId);
+
+  broadcastEvent('queue_updated', {
+    doctorId,
+    queue: updatedQueue,
+    action: 'consultation_started',
+    currentPatient: targetApt
+  });
+
+  res.json({
+    success: true,
+    message: `Started consultation for ${targetApt.patientName}.`,
+    data: updatedQueue,
+    currentPatient: targetApt
+  });
+});
+
+// Doctor completes consultation & automatically generates structured report
+app.post('/api/queue/:doctorId/complete', requireAuth, requireRole('doctor'), (req, res) => {
+  const doctorId = req.params.doctorId;
+  const { appointmentId, doctorNotes, observations, clinicalSummary, advice, followUpDate, followUpReason } = req.body;
 
   const docApts = appointments.filter(a => a.doctorId === doctorId && a.date === "2026-10-05");
 
-  // 1. Find and complete current consultation
-  let targetApt = null;
-  if (appointmentId) {
-    targetApt = appointments.find(a => a.id === appointmentId);
-  } else {
-    targetApt = docApts.find(a => a.status === 'now_consulting');
-  }
+  let targetApt = appointmentId 
+    ? appointments.find(a => a.id === appointmentId)
+    : docApts.find(a => a.status === 'now_consulting' || a.queueState === 'IN_CONSULTATION' || a.queueState === 'CALLED');
 
   if (targetApt) {
     targetApt.status = 'completed';
+    targetApt.queueState = 'COMPLETED';
     targetApt.queuePosition = 0;
     if (doctorNotes) targetApt.doctorNotes = doctorNotes;
-    if (consultationSummary) targetApt.consultationSummary = consultationSummary;
+
+    const intake = targetApt.aiPreConsultation || {};
+    const doctor = doctors.find(d => d.id === doctorId) || { name: targetApt.doctorName, specialty: targetApt.doctorSpecialty, hospital: targetApt.hospital, location: targetApt.location };
+
+    // Auto-generate structured consultation report
+    const newReport = {
+      id: `rep-${Date.now()}`,
+      appointmentId: targetApt.id,
+      patientId: targetApt.patientId,
+      patientName: targetApt.patientName,
+      patientAge: targetApt.patientAge || 31,
+      patientGender: targetApt.patientGender || "Male",
+      doctorId: doctor.id || doctorId,
+      doctorName: doctor.name,
+      doctorSpecialty: doctor.specialty,
+      hospital: doctor.hospital,
+      location: doctor.location,
+      date: targetApt.date || "2026-10-05",
+      time: targetApt.time || "04:00 PM",
+      chiefComplaint: intake.chiefComplaint || targetApt.reason || "Clinical Consultation",
+      symptomsReported: intake.summaryText || `${intake.chiefComplaint || targetApt.reason} (Duration: ${intake.duration || 'recent'}, Severity: ${intake.severity || 'Moderate'})`,
+      patientProvidedInfo: intake.priorHistory ? `Prior History: ${intake.priorHistory}` : "Pre-consultation intake recorded via MediFlow AI Assistant.",
+      doctorObservations: observations || "Vital parameters recorded and evaluated. Systemic examination satisfactory.",
+      doctorNotes: doctorNotes || "Patient examined thoroughly. Clinical findings documented and management plan initiated.",
+      clinicalSummary: clinicalSummary || `Clinical evaluation for ${intake.chiefComplaint || targetApt.reason}. Patient responding adequately.`,
+      advice: advice || "1. Adhere to prescribed supportive care.\n2. Maintain proper rest and hydration.\n3. Monitor symptoms and report any exacerbation.",
+      followUp: {
+        recommended: Boolean(followUpDate),
+        recommendedDate: followUpDate || null,
+        reason: followUpReason || "Review recovery progress"
+      },
+      status: "Completed",
+      createdAt: new Date().toISOString()
+    };
+
+    consultationReports.unshift(newReport);
+    targetApt.consultationSummary = newReport;
+
+    // Trigger Notification for Patient
+    createNotification({
+      patientId: targetApt.patientId,
+      title: "📋 Consultation Report Ready",
+      message: `Your consultation with Dr. ${doctor.name} is complete. Your official medical summary and PDF report are ready.`,
+      type: "Report",
+      relatedId: newReport.id
+    });
   }
 
-  // 2. Find waiting queue and promote first waiting patient to now_consulting
+  // Shift queue and promote next patient
   const waitingList = docApts
     .filter(a => a.status === 'waiting' && (!targetApt || a.id !== targetApt.id))
     .sort((a, b) => a.queuePosition - b.queuePosition);
 
-  let newConsultingPatient = null;
+  let nextInLine = null;
   if (waitingList.length > 0) {
-    newConsultingPatient = waitingList[0];
-    newConsultingPatient.status = 'now_consulting';
-    newConsultingPatient.queuePosition = 1;
+    nextInLine = waitingList[0];
+    nextInLine.status = 'now_consulting';
+    nextInLine.queueState = 'IN_CONSULTATION';
+    nextInLine.queuePosition = 1;
 
-    // Shift remaining waiting patients forward
+    // Shift remaining waiting list
     waitingList.slice(1).forEach((apt, idx) => {
-      apt.queuePosition = idx + 2; // Next is #2, then #3, #4...
+      apt.queuePosition = idx + 2;
+      apt.queueState = (idx === 0) ? 'NEAR_TURN' : 'WAITING';
+      if (idx === 0) {
+        createNotification({
+          patientId: apt.patientId,
+          title: "⏳ You are Next in Line",
+          message: `Only 1 patient ahead of you for Dr. ${apt.doctorName}. Please stay near the virtual waiting room.`,
+          type: "Queue",
+          relatedId: apt.id
+        });
+      }
     });
 
-    notifications.unshift({
-      id: `notif-${Date.now()}`,
+    createNotification({
+      patientId: nextInLine.patientId,
       title: "🟢 Now Consulting",
-      message: `${newConsultingPatient.patientName} (${newConsultingPatient.tokenNumber}) is now consulting with Dr. ${newConsultingPatient.doctorName}.`,
-      time: "Just now",
-      read: false,
-      type: "info"
+      message: `You are now consulting with Dr. ${nextInLine.doctorName}. Please enter consultation.`,
+      type: "Queue",
+      relatedId: nextInLine.id
     });
   }
 
   const updatedQueue = getDoctorQueueStats(doctorId);
 
-  // Broadcast real-time SSE event to all connected patient & doctor screens
   broadcastEvent('queue_updated', {
     doctorId,
     queue: updatedQueue,
-    action: 'complete',
+    action: 'consultation_completed',
     completedAppointment: targetApt,
-    currentPatient: newConsultingPatient
+    currentPatient: nextInLine
   });
 
   res.json({
     success: true,
-    message: newConsultingPatient 
-      ? `Consultation completed. ${newConsultingPatient.patientName} is now consulting.`
+    message: nextInLine 
+      ? `Consultation completed. ${nextInLine.patientName} is now consulting.`
       : 'Consultation completed. Queue is now clear.',
     data: updatedQueue,
     appointment: targetApt,
-    currentPatient: newConsultingPatient
+    currentPatient: nextInLine
   });
 });
 
-// Doctor calls next patient in queue
-app.post('/api/queue/:doctorId/call-next', (req, res) => {
-  // Delegate directly to complete & advance
-  const doctorId = req.params.doctorId;
-  const docApts = appointments.filter(a => a.doctorId === doctorId && a.date === "2026-10-05");
-  const currentlyConsulting = docApts.find(a => a.status === 'now_consulting');
+// ==========================================
+// 5. CONSULTATION REPORTS & PDF GENERATOR
+// ==========================================
 
-  return app._router.handle({
-    url: `/api/queue/${doctorId}/complete`,
-    method: 'POST',
-    body: { appointmentId: currentlyConsulting ? currentlyConsulting.id : null }
-  }, res);
+app.get('/api/consultations/reports', requireAuth, (req, res) => {
+  let list = [...consultationReports];
+
+  if (req.user.role === 'patient') {
+    const patId = req.user.patientId || 'pat-1';
+    list = list.filter(r => r.patientId === patId || r.patientId === 'pat-1');
+  } else if (req.user.role === 'doctor') {
+    const docId = req.user.doctorId || 'doc-1';
+    list = list.filter(r => r.doctorId === docId);
+  }
+
+  res.json({ success: true, count: list.length, data: list });
 });
 
-// 4. AI SERVICES API
-app.post('/api/ai/pre-consultation', (req, res) => {
+app.get('/api/consultations/reports/:id', requireAuth, (req, res) => {
+  const report = consultationReports.find(r => r.id === req.params.id);
+  if (!report) return res.status(404).json({ success: false, message: 'Consultation report not found' });
+
+  // Ownership check
+  if (req.user.role === 'patient' && report.patientId !== req.user.patientId && report.patientId !== 'pat-1') {
+    return res.status(403).json({ success: false, message: 'Unauthorized to access this medical report.' });
+  }
+
+  res.json({ success: true, data: report });
+});
+
+// Stream Professional Downloadable PDF Report
+app.get('/api/consultations/reports/:id/pdf', requireAuth, (req, res) => {
+  const report = consultationReports.find(r => r.id === req.params.id);
+  if (!report) return res.status(404).json({ success: false, message: 'Consultation report not found' });
+
+  if (req.user.role === 'patient' && report.patientId !== req.user.patientId && report.patientId !== 'pat-1') {
+    return res.status(403).json({ success: false, message: 'Unauthorized' });
+  }
+
+  const doc = new PDFDocument({ margin: 45, size: 'A4' });
+
+  res.setHeader('Content-Type', 'application/pdf');
+  res.setHeader('Content-Disposition', `inline; filename="MediFlow-Consultation-Report-${report.id}.pdf"`);
+
+  doc.pipe(res);
+
+  // Header Banner
+  doc.rect(45, 45, 505, 55).fill('#0f766e'); // Teal-700
+  doc.fillColor('#ffffff').fontSize(20).font('Helvetica-Bold').text('MEDIFLOW HEALTHCARE', 60, 58);
+  doc.fontSize(10).font('Helvetica').text('AI-Assisted Virtual Waiting Room & Clinical Network', 60, 80);
+  doc.fontSize(10).font('Helvetica-Bold').text(`REPORT #${report.id.toUpperCase()}`, 400, 68, { align: 'right' });
+
+  doc.moveDown(3);
+
+  // Meta Grid: Patient & Doctor Info
+  doc.fillColor('#0f172a').fontSize(12).font('Helvetica-Bold').text('PATIENT INFORMATION', 45, 120);
+  doc.rect(45, 135, 245, 90).fillAndStroke('#f8fafc', '#e2e8f0');
+  doc.fillColor('#334155').fontSize(9).font('Helvetica')
+    .text(`Name: ${report.patientName}`, 55, 145)
+    .text(`Age / Gender: ${report.patientAge} yrs / ${report.patientGender}`, 55, 160)
+    .text(`Patient ID: ${report.patientId}`, 55, 175)
+    .text(`Date of Visit: ${report.date} at ${report.time}`, 55, 190)
+    .text(`Status: Verified & Completed`, 55, 205);
+
+  doc.fillColor('#0f172a').fontSize(12).font('Helvetica-Bold').text('CONSULTING PHYSICIAN', 305, 120);
+  doc.rect(305, 135, 245, 90).fillAndStroke('#f8fafc', '#e2e8f0');
+  doc.fillColor('#334155').fontSize(9).font('Helvetica')
+    .text(`Doctor: ${report.doctorName}`, 315, 145)
+    .text(`Specialty: ${report.doctorSpecialty}`, 315, 160)
+    .text(`Hospital: ${report.hospital}`, 315, 175, { width: 225 })
+    .text(`Location: ${report.location}, India`, 315, 205);
+
+  let y = 245;
+
+  // Section: Chief Complaint & Symptoms
+  doc.fillColor('#0f172a').fontSize(11).font('Helvetica-Bold').text('1. CHIEF COMPLAINT & PRESENTING SYMPTOMS', 45, y);
+  y += 18;
+  doc.rect(45, y, 505, 45).fillAndStroke('#ffffff', '#cbd5e1');
+  doc.fillColor('#1e293b').fontSize(9).font('Helvetica')
+    .text(report.chiefComplaint, 55, y + 8, { width: 485 })
+    .text(`Reported Details: ${report.symptomsReported}`, 55, y + 24, { width: 485 });
+  y += 60;
+
+  // Section: Doctor Observations & Clinical Notes
+  doc.fillColor('#0f172a').fontSize(11).font('Helvetica-Bold').text('2. CLINICAL EXAMINATION & OBSERVATIONS', 45, y);
+  y += 18;
+  doc.rect(45, y, 505, 55).fillAndStroke('#ffffff', '#cbd5e1');
+  doc.fillColor('#1e293b').fontSize(9).font('Helvetica')
+    .text(`Doctor Observations: ${report.doctorObservations}`, 55, y + 8, { width: 485 })
+    .text(`Physician Notes: ${report.doctorNotes}`, 55, y + 30, { width: 485 });
+  y += 70;
+
+  // Section: Clinical Summary & Diagnosis
+  doc.fillColor('#0f172a').fontSize(11).font('Helvetica-Bold').text('3. CLINICAL SUMMARY & ASSESSMENT', 45, y);
+  y += 18;
+  doc.rect(45, y, 505, 45).fillAndStroke('#f0fdfa', '#99f6e4'); // Teal tint
+  doc.fillColor('#115e59').fontSize(9.5).font('Helvetica-Bold')
+    .text(report.clinicalSummary, 55, y + 10, { width: 485 });
+  y += 60;
+
+  // Section: Medical Advice & Follow-Up Plan
+  doc.fillColor('#0f172a').fontSize(11).font('Helvetica-Bold').text('4. PHYSICIAN ADVICE & FOLLOW-UP PLAN', 45, y);
+  y += 18;
+  doc.rect(45, y, 505, 65).fillAndStroke('#ffffff', '#cbd5e1');
+  doc.fillColor('#1e293b').fontSize(9).font('Helvetica')
+    .text(report.advice, 55, y + 8, { width: 485 })
+    .text(`Recommended Follow-up: ${report.followUp?.recommended ? `${report.followUp.recommendedDate} (${report.followUp.reason})` : 'SOS as needed'}`, 55, y + 48, { width: 485 });
+  y += 85;
+
+  // Signature Block & Footer
+  doc.rect(45, y, 505, 55).fillAndStroke('#f8fafc', '#e2e8f0');
+  doc.fillColor('#64748b').fontSize(8).font('Helvetica')
+    .text('Authenticity: Electronically authorized by consulting doctor via DOCBEE MediFlow Clinical Station.', 55, y + 10)
+    .text('Disclaimer: AI pre-consultation intake is supplementary. Clinical determinations remain the sole authority of the licensed physician.', 55, y + 22, { width: 330 });
+
+  doc.fillColor('#0f766e').fontSize(9).font('Helvetica-Bold')
+    .text(`Dr. ${report.doctorName}`, 410, y + 15, { align: 'right' })
+    .text('Authorized Signatory', 410, y + 28, { align: 'right' });
+
+  doc.end();
+});
+
+// ==========================================
+// 6. NOTIFICATIONS API
+// ==========================================
+
+app.get('/api/notifications', requireAuth, (req, res) => {
+  const patId = req.user.patientId || 'pat-1';
+  const userNotifs = notifications.filter(n => n.userId === req.user.id || n.patientId === patId || n.userId === 'usr-patient-1');
+  res.json({ success: true, count: userNotifs.length, data: userNotifs });
+});
+
+app.patch('/api/notifications/:id/read', requireAuth, (req, res) => {
+  const notif = notifications.find(n => n.id === req.params.id);
+  if (notif) notif.read = true;
+  res.json({ success: true, data: notif });
+});
+
+app.patch('/api/notifications/mark-all-read', requireAuth, (req, res) => {
+  const patId = req.user.patientId || 'pat-1';
+  notifications.forEach(n => {
+    if (n.userId === req.user.id || n.patientId === patId || n.userId === 'usr-patient-1') {
+      n.read = true;
+    }
+  });
+  res.json({ success: true, message: 'All notifications marked as read.' });
+});
+
+app.delete('/api/notifications/:id', requireAuth, (req, res) => {
+  notifications = notifications.filter(n => n.id !== req.params.id);
+  res.json({ success: true, message: 'Notification dismissed.' });
+});
+
+// ==========================================
+// 7. PATIENT PROFILE, FAMILY & DOCUMENTS API
+// ==========================================
+
+app.get('/api/patient/profile', requireAuth, (req, res) => {
+  res.json({ success: true, data: patientProfile });
+});
+
+app.put('/api/patient/profile', requireAuth, (req, res) => {
+  patientProfile = { ...patientProfile, ...req.body };
+  res.json({ success: true, data: patientProfile });
+});
+
+app.get('/api/family', requireAuth, (req, res) => {
+  res.json({ success: true, data: familyMembers });
+});
+
+app.post('/api/family', requireAuth, (req, res) => {
+  const newMember = {
+    id: `fam-${Date.now()}`,
+    patientId: req.user.patientId || "pat-1",
+    ...req.body
+  };
+  familyMembers.push(newMember);
+  res.status(201).json({ success: true, data: newMember });
+});
+
+app.get('/api/documents', requireAuth, (req, res) => {
+  const patId = req.user.patientId || 'pat-1';
+  const docs = medicalDocuments.filter(d => d.patientId === patId || d.patientId === 'pat-1');
+  res.json({ success: true, count: docs.length, data: docs });
+});
+
+app.post('/api/documents', requireAuth, (req, res) => {
+  const newDoc = {
+    id: `doc-vault-${Date.now()}`,
+    patientId: req.user.patientId || "pat-1",
+    title: req.body.title || "Diagnostic Report",
+    category: req.body.category || "Diagnostic Report",
+    date: new Date().toISOString().split('T')[0],
+    doctor: req.body.doctor || "Consulting Specialist",
+    hospital: req.body.hospital || "Hospital Diagnostic Labs",
+    fileSize: "1.5 MB",
+    status: req.body.status || "Verified by Pathology",
+    isSharedWithDoctor: true,
+    type: "pdf"
+  };
+  medicalDocuments.unshift(newDoc);
+  res.status(201).json({ success: true, data: newDoc });
+});
+
+app.patch('/api/documents/:id/toggle-share', requireAuth, (req, res) => {
+  const doc = medicalDocuments.find(d => d.id === req.params.id);
+  if (!doc) return res.status(404).json({ success: false, message: 'Document not found' });
+  doc.isSharedWithDoctor = !doc.isSharedWithDoctor;
+  res.json({ success: true, data: doc });
+});
+
+// ==========================================
+// 8. AI ASSISTANT INTAKE & PRE-CONSULTATION
+// ==========================================
+
+app.post('/api/ai/pre-consultation', requireAuth, (req, res) => {
   const { 
     appointmentId, 
     chiefComplaint, 
@@ -367,15 +1053,15 @@ app.post('/api/ai/pre-consultation', (req, res) => {
 
   const intakeData = {
     completed: true,
-    chiefComplaint: chiefComplaint || "Headache",
+    chiefComplaint: chiefComplaint || "General symptoms evaluation",
     duration: duration || "2 days",
-    location: location || "Frontal & temple areas",
+    location: location || "General",
     severity: formattedSeverity,
     associatedSymptoms: associatedSymptoms || "Fatigue",
-    priorHistory: priorHistory || "No prior consultation",
+    priorHistory: priorHistory || "No previous consultation",
     patientDescription: patientDescription || chiefComplaint || "Patient reported symptoms during pre-consultation intake",
     status: "Submitted",
-    summaryText: `Chief complaint: ${chiefComplaint || 'Headache'} | Duration: ${duration || '2 days'} | Location: ${location || 'Head'} | Severity: ${formattedSeverity} | Other symptoms: ${associatedSymptoms || 'None'} | Previous consultation: ${priorHistory || 'None'}`,
+    summaryText: `Chief complaint: ${chiefComplaint || 'Consultation review'} | Duration: ${duration || '2 days'} | Location: ${location || 'General'} | Severity: ${formattedSeverity} | Associated symptoms: ${associatedSymptoms || 'None'} | Prior treatment: ${priorHistory || 'None'}`,
     disclaimer: "This summary is based on information provided by the patient and is not a medical diagnosis.",
     completedAt: new Date().toISOString()
   };
@@ -396,19 +1082,19 @@ app.post('/api/ai/pre-consultation', (req, res) => {
   });
 });
 
-app.post('/api/ai/generate-summary', (req, res) => {
-  const { appointmentId, doctorNotes, patientName, doctorSpecialty } = req.body;
+app.post('/api/ai/generate-summary', requireAuth, requireRole('doctor'), (req, res) => {
+  const { appointmentId, doctorNotes } = req.body;
   const apt = appointments.find(a => a.id === appointmentId);
 
-  const notesText = doctorNotes || (apt ? apt.doctorNotes : "Patient examined. Vital signs stable. Prescribed resting and hydration.");
+  const notesText = doctorNotes || (apt ? apt.doctorNotes : "Patient examined. Vital signs stable. Prescribed supportive treatment.");
   const intake = apt ? apt.aiPreConsultation : null;
 
   const summary = {
     chiefComplaint: intake && intake.chiefComplaint ? intake.chiefComplaint : "Primary consultation evaluation",
     symptomsDiscussed: intake && intake.associatedSymptoms ? `${intake.chiefComplaint}, ${intake.associatedSymptoms} (Duration: ${intake.duration || 'recent'})` : "Clinical symptoms reviewed with specialist",
     doctorNotes: notesText,
-    clinicalObservations: "Vitals within normal baseline. Cardiovascular and systemic evaluation satisfactory.",
-    followUpRecommendation: "Adequate hydration, proper rest, and lifestyle modification as discussed.",
+    clinicalObservations: "Vitals within normal baseline. Systemic evaluation satisfactory.",
+    followUpRecommendation: "Adequate hydration, proper rest, and medication as discussed.",
     nextAppointment: "Recommended follow-up in 7-10 days if symptoms persist.",
     disclaimer: "AI-Assisted Clinical Summary: Formatted automatically from doctor consultation records. Verified and authorized by consulting physician.",
     generatedAt: new Date().toISOString()
@@ -425,72 +1111,18 @@ app.post('/api/ai/generate-summary', (req, res) => {
   });
 });
 
-// 5. PATIENT, FAMILY, DOCUMENTS & NOTIFICATIONS API
-app.get('/api/patient/profile', (req, res) => {
-  res.json({ success: true, data: patientProfile });
-});
+// ==========================================
+// 9. DEMO RESET ENDPOINT
+// ==========================================
 
-app.put('/api/patient/profile', (req, res) => {
-  patientProfile = { ...patientProfile, ...req.body };
-  res.json({ success: true, data: patientProfile });
-});
-
-app.get('/api/family', (req, res) => {
-  res.json({ success: true, data: familyMembers });
-});
-
-app.post('/api/family', (req, res) => {
-  const newMember = {
-    id: `fam-${Date.now()}`,
-    ...req.body
-  };
-  familyMembers.push(newMember);
-  res.status(201).json({ success: true, data: newMember });
-});
-
-app.get('/api/documents', (req, res) => {
-  res.json({ success: true, data: medicalDocuments });
-});
-
-app.post('/api/documents', (req, res) => {
-  const newDoc = {
-    id: `doc-vault-${Date.now()}`,
-    title: req.body.title || "Diagnostic Report",
-    category: req.body.category || "Diagnostic Report",
-    date: new Date().toISOString().split('T')[0],
-    doctor: req.body.doctor || "Consulting Specialist",
-    hospital: req.body.hospital || "Hospital Labs",
-    fileSize: "1.2 MB",
-    status: req.body.status || "Verified",
-    isSharedWithDoctor: true,
-    type: "pdf"
-  };
-  medicalDocuments.unshift(newDoc);
-  res.status(201).json({ success: true, data: newDoc });
-});
-
-app.patch('/api/documents/:id/toggle-share', (req, res) => {
-  const doc = medicalDocuments.find(d => d.id === req.params.id);
-  if (!doc) return res.status(404).json({ success: false, message: 'Document not found' });
-  doc.isSharedWithDoctor = !doc.isSharedWithDoctor;
-  res.json({ success: true, data: doc });
-});
-
-app.get('/api/notifications', (req, res) => {
-  res.json({ success: true, data: notifications });
-});
-
-app.patch('/api/notifications/mark-read', (req, res) => {
-  notifications.forEach(n => n.read = true);
-  res.json({ success: true, data: notifications });
-});
-
-// Demo Reset Endpoint
 app.post('/api/demo/reset', (req, res) => {
+  users = JSON.parse(JSON.stringify(seedData.users));
+  locations = JSON.parse(JSON.stringify(seedData.locations));
   doctors = JSON.parse(JSON.stringify(seedData.doctors));
   appointments = JSON.parse(JSON.stringify(seedData.appointments));
   patientProfile = JSON.parse(JSON.stringify(seedData.patientProfile));
   familyMembers = JSON.parse(JSON.stringify(seedData.familyMembers));
+  consultationReports = JSON.parse(JSON.stringify(seedData.consultationReports));
   medicalDocuments = JSON.parse(JSON.stringify(seedData.medicalDocuments));
   notifications = JSON.parse(JSON.stringify(seedData.notifications));
 
@@ -499,13 +1131,15 @@ app.post('/api/demo/reset', (req, res) => {
   res.json({ success: true, message: 'Demo data reset successfully!' });
 });
 
-// Production Static Frontend & SPA Fallback
+// ==========================================
+// 10. PRODUCTION STATIC & SPA FALLBACK
+// ==========================================
+
 if (process.env.NODE_ENV === 'production') {
   const clientDistPath = path.join(__dirname, '../client/dist');
   app.use(express.static(clientDistPath));
 
   app.get('*', (req, res, next) => {
-    // Preserve /api routes
     if (req.path.startsWith('/api')) {
       return next();
     }

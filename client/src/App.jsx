@@ -15,6 +15,7 @@ import FamilyProfiles from './components/patient/FamilyProfiles';
 import PatientProfile from './components/patient/PatientProfile';
 import DoctorDashboard from './components/doctor/DoctorDashboard';
 import PreConsultationChatModal from './components/ai/PreConsultationChatModal';
+import ConsultationReportModal from './components/patient/ConsultationReportModal';
 
 export default function App() {
   const { role } = useAuth();
@@ -23,12 +24,14 @@ export default function App() {
   // Navigation tab for patient web portal: 'home' | 'search' | 'waiting_room' | 'history' | 'vault' | 'family' | 'profile'
   const [patientTab, setPatientTab] = useState('home');
   const [initialSearchQuery, setInitialSearchQuery] = useState('');
+  const [initialSearchLocation, setInitialSearchLocation] = useState('All');
   
   // Modals & Active Selections
   const [selectedDoctorForProfile, setSelectedDoctorForProfile] = useState(null);
   const [selectedDoctorForBooking, setSelectedDoctorForBooking] = useState(null);
   const [familyMembers, setFamilyMembers] = useState([]);
   const [activeChatApt, setActiveChatApt] = useState(null);
+  const [activeReportModal, setActiveReportModal] = useState(null);
 
   // Load family members for booking
   useEffect(() => {
@@ -51,9 +54,19 @@ export default function App() {
     setPatientTab('waiting_room');
   };
 
-  const handleNavigateFromHome = (tab, query = '') => {
+  const handleNavigateFromHome = (tab, query = '', location = 'All') => {
     if (query) setInitialSearchQuery(query);
+    if (location) setInitialSearchLocation(location);
     setPatientTab(tab);
+  };
+
+  const handleOpenReportById = async (reportId) => {
+    try {
+      const res = await api.getConsultationReportById(reportId || 'rep-101');
+      if (res.success) {
+        setActiveReportModal(res.data);
+      }
+    } catch (e) {}
   };
 
   return (
@@ -65,7 +78,8 @@ export default function App() {
         onSelectTab={(tab) => {
           setInitialSearchQuery('');
           setPatientTab(tab);
-        }} 
+        }}
+        onOpenReport={handleOpenReportById}
       />
 
       {/* Global Notifications Toast */}
@@ -85,12 +99,14 @@ export default function App() {
                 onNavigate={handleNavigateFromHome}
                 onOpenAiChat={(apt) => setActiveChatApt(apt)}
                 onSelectDoctor={(doc) => setSelectedDoctorForProfile(doc)}
+                onOpenReport={handleOpenReportById}
               />
             )}
 
             {patientTab === 'search' && (
               <DoctorSearch
                 initialQuery={initialSearchQuery}
+                initialLocation={initialSearchLocation}
                 onSelectDoctor={(doc) => setSelectedDoctorForProfile(doc)}
                 onBookDoctor={(doc) => handleBookNow(doc)}
               />
@@ -101,6 +117,7 @@ export default function App() {
                 appointment={activeAppointment}
                 onOpenAiChat={(apt) => setActiveChatApt(apt)}
                 onBack={() => setPatientTab('home')}
+                onOpenReport={handleOpenReportById}
               />
             )}
 
@@ -114,7 +131,9 @@ export default function App() {
               />
             )}
 
-            {patientTab === 'vault' && <DocumentVault />}
+            {patientTab === 'vault' && (
+              <DocumentVault onOpenReportModal={setActiveReportModal} />
+            )}
 
             {patientTab === 'family' && <FamilyProfiles />}
 
@@ -157,6 +176,13 @@ export default function App() {
               setActiveAppointment(prev => ({ ...prev, aiPreConsultation: summary }));
             }
           }}
+        />
+      )}
+
+      {activeReportModal && (
+        <ConsultationReportModal
+          report={activeReportModal}
+          onClose={() => setActiveReportModal(null)}
         />
       )}
 

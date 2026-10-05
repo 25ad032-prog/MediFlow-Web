@@ -1,38 +1,121 @@
-import React, { createContext, useContext, useState, useEffect } from 'react';
+import React, { createContext, useContext, useState, useEffect, useCallback } from 'react';
 import { api } from '../utils/api';
+import { soundFx } from '../utils/sound';
 
 const AuthContext = createContext(null);
 
 export function AuthProvider({ children }) {
-  // role: 'patient' | 'doctor'
-  const [role, setRole] = useState('patient');
-  const [isAuthenticated, setIsAuthenticated] = useState(true);
+  const [user, setUser] = useState(null);
+  const [role, setRole] = useState('patient'); // 'patient' | 'doctor'
+  const [isAuthenticated, setIsAuthenticated] = useState(false);
   const [patient, setPatient] = useState(null);
   const [selectedDoctorId, setSelectedDoctorId] = useState('doc-1');
   const [currentDoctor, setCurrentDoctor] = useState(null);
-  const [viewMode, setViewMode] = useState('web'); // 'web' | 'mobile' | 'split'
   const [loading, setLoading] = useState(true);
 
+  // Persistent Notification Center State
+  const [notifications, setNotifications] = useState([]);
+  const [unreadNotifCount, setUnreadNotifCount] = useState(0);
+
+  const fetchNotifications = useCallback(async () => {
+    try {
+      const res = await api.getNotifications();
+      if (res.success) {
+        setNotifications(res.data);
+        setUnreadNotifCount(res.data.filter(n => !n.read).length);
+      }
+    } catch (e) {
+      console.error('Failed to fetch notifications', e);
+    }
+  }, []);
+
+  const loadCurrentUser = useCallback(async () => {
+    try {
+      const meRes = await api.getMe();
+      if (meRes.success && meRes.user) {
+        setUser(meRes.user);
+        setRole(meRes.user.role);
+        setIsAuthenticated(true);
+        if (meRes.patient) setPatient(meRes.patient);
+        if (meRes.doctor) {
+          setCurrentDoctor(meRes.doctor);
+          setSelectedDoctorId(meRes.doctor.id);
+        }
+      } else {
+        // Fallback demo auto-login for pristine demo experience
+        const demoLoginRes = await api.login({
+          email: 'patient@mediflow.demo',
+          password: 'Patient@123',
+          requestedRole: 'patient'
+        });
+        if (demoLoginRes.success) {
+          setUser(demoLoginRes.user);
+          setRole(demoLoginRes.user.role);
+          setIsAuthenticated(true);
+          if (demoLoginRes.patient) setPatient(demoLoginRes.patient);
+        }
+      }
+    } catch (err) {
+      console.warn('Initial session check resolved to unauthenticated', err);
+    } finally {
+      setLoading(false);
+    }
+  }, []);
+
   useEffect(() => {
-    async function loadData() {
-      try {
-        const [patRes, docRes] = await Promise.all([
-          api.getPatientProfile(),
-          api.getDoctorById(selectedDoctorId)
-        ]);
-        if (patRes.success) setPatient(patRes.data);
-        if (docRes.success) setCurrentDoctor(docRes.data);
-      } catch (err) {
-        console.error('Failed to load initial profile data', err);
-      } finally {
-        setLoading(false);
+    loadCurrentUser();
+  }, [loadCurrentUser]);
+
+  useEffect(() => {
+    if (isAuthenticated) {
+      fetchNotifications();
+    }
+  }, [isAuthenticated, fetchNotifications]);
+
+  // Load Doctor Details when selectedDoctorId changes
+  useEffect(() => {
+    async function loadDoctor() {
+      if (selectedDoctorId) {
+        try {
+          const res = await api.getDoctorById(selectedDoctorId);
+          if (res.success) setCurrentDoctor(res.data);
+        } catch (e) {}
       }
     }
-    loadData();
+    loadDoctor();
   }, [selectedDoctorId]);
 
-  const switchRole = (newRole) => {
+  const switchRole = async (newRole) => {
     setRole(newRole);
+    if (newRole === 'doctor') {
+      try {
+        const docLogin = await api.login({
+          email: 'doctor@mediflow.demo',
+          password: 'Doctor@123',
+          requestedRole: 'doctor'
+        });
+        if (docLogin.success) {
+          setUser(docLogin.user);
+          setIsAuthenticated(true);
+          setSelectedDoctorId('doc-1');
+          if (docLogin.doctor) setCurrentDoctor(docLogin.doctor);
+        }
+      } catch (e) {}
+    } else {
+      try {
+        const patLogin = await api.login({
+          email: 'patient@mediflow.demo',
+          password: 'Patient@123',
+          requestedRole: 'patient'
+        });
+        if (patLogin.success) {
+          setUser(patLogin.user);
+          setIsAuthenticated(true);
+          if (patLogin.patient) setPatient(patLogin.patient);
+        }
+      } catch (e) {}
+    }
+    fetchNotifications();
   };
 
   const switchDoctor = async (docId) => {
@@ -43,77 +126,94 @@ export function AuthProvider({ children }) {
     } catch (e) {}
   };
 
-  const login = (email, password) => {
-    setIsAuthenticated(true);
-    if (email.includes('doctor') || email.includes('priya')) {
-      setRole('doctor');
-    } else {
-      setRole('patient');
+  const login = async (email, password, requestedRole) => {
+    try {
+      const res = await api.login({ email, password, requestedRole });
+      if (res.success) {
+        setUser(res.user);
+        setRole(res.user.role);
+        setIsAuthenticated(true);
+        if (res.patient) setPatient(res.patient);
+        if (res.doctor) {
+          setCurrentDoctor(res.doctor);
+          setSelectedDoctorId(res.doctor.id);
+        }
+        await fetchNotifications();
+        soundFx.playSuccessAlert();
+        return { success: true, message: res.message };
+      }
+      return { success: false, message: res.message || 'Login failed' };
+    } catch (err) {
+      return { success: false, message: 'Server communication error. Please try again.' };
     }
-    return { success: true };
   };
 
-  const register = (userData) => {
-    setIsAuthenticated(true);
-    setRole('patient');
-    setPatient({
-      id: `pat-${Date.now()}`,
-      name: userData.name || "Demo Patient",
-      age: userData.age || 28,
-      gender: userData.gender || "Female",
-      phone: userData.phone || "+91 98765 00000",
-      email: userData.email || "patient@mediflow.io",
-      bloodGroup: userData.bloodGroup || "O+",
-      address: "Bangalore, India",
-      emergencyContact: "Family Contact",
-      medicalAlerts: ["None reported"]
-    });
-    return { success: true };
+  const register = async (userData) => {
+    try {
+      const res = await api.register(userData);
+      if (res.success) {
+        setUser(res.user);
+        setRole(res.user.role);
+        setIsAuthenticated(true);
+        if (res.patient) setPatient(res.patient);
+        await fetchNotifications();
+        soundFx.playSuccessAlert();
+        return { success: true, message: res.message };
+      }
+      return { success: false, message: res.message || 'Registration failed' };
+    } catch (err) {
+      return { success: false, message: 'Registration network error. Please try again.' };
+    }
   };
 
-  const logout = () => {
+  const logout = async () => {
+    try {
+      await api.logout();
+    } catch (e) {}
+    setUser(null);
     setIsAuthenticated(false);
+    setNotifications([]);
+    setUnreadNotifCount(0);
   };
 
-  const quickDemoLogin = (profileKey) => {
-    setIsAuthenticated(true);
-    if (profileKey === 'rahul') {
-      setRole('patient');
-      setPatient({
-        id: "pat-1",
-        name: "Rahul Sharma",
-        age: 31,
-        gender: "Male",
-        phone: "+91 98765 43210",
-        email: "rahul.sharma@mediflow.io",
-        bloodGroup: "O+Positive",
-        address: "Flat 402, Green Glen Layout, Bellandur, Bangalore",
-        emergencyContact: "Sunita Sharma (Mother)",
-        medicalAlerts: ["Mild Penicillin Allergy", "Family History of Hypertension"]
-      });
+  const quickDemoLogin = async (profileKey) => {
+    if (profileKey === 'rahul' || profileKey === 'patient') {
+      return await login('patient@mediflow.demo', 'Patient@123', 'patient');
+    } else if (profileKey === 'priya' || profileKey === 'doctor') {
+      return await login('doctor@mediflow.demo', 'Doctor@123', 'doctor');
     } else if (profileKey === 'meera') {
-      setRole('patient');
-      setPatient({
-        id: "pat-2",
-        name: "Meera Patel",
-        age: 28,
-        gender: "Female",
-        phone: "+91 98123 45678",
-        email: "meera.patel@mediflow.io",
-        bloodGroup: "A+Positive",
-        address: "Koramangala, Bangalore",
-        emergencyContact: "Suresh Patel",
-        medicalAlerts: ["None reported"]
-      });
-    } else if (profileKey === 'priya') {
-      setRole('doctor');
-      setSelectedDoctorId('doc-1');
+      return await login('meera.sharma@mediflow.io', 'Meera@123', 'patient');
     }
+  };
+
+  const markNotificationRead = async (id) => {
+    try {
+      await api.markNotificationRead(id);
+      setNotifications(prev => prev.map(n => n.id === id ? { ...n, read: true } : n));
+      setUnreadNotifCount(prev => Math.max(0, prev - 1));
+    } catch (e) {}
+  };
+
+  const markAllNotificationsRead = async () => {
+    try {
+      await api.markAllNotificationsRead();
+      setNotifications(prev => prev.map(n => ({ ...n, read: true })));
+      setUnreadNotifCount(0);
+    } catch (e) {}
+  };
+
+  const dismissNotification = async (id) => {
+    try {
+      await api.dismissNotification(id);
+      setNotifications(prev => prev.filter(n => n.id !== id));
+      setUnreadNotifCount(prev => Math.max(0, notifications.filter(n => n.id !== id && !n.read).length));
+    } catch (e) {}
   };
 
   return (
     <AuthContext.Provider
       value={{
+        user,
         role,
         setRole,
         switchRole,
@@ -127,9 +227,13 @@ export function AuthProvider({ children }) {
         selectedDoctorId,
         switchDoctor,
         currentDoctor,
-        viewMode,
-        setViewMode,
-        loading
+        loading,
+        notifications,
+        unreadNotifCount,
+        fetchNotifications,
+        markNotificationRead,
+        markAllNotificationsRead,
+        dismissNotification
       }}
     >
       {children}

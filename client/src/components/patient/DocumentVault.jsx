@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { api } from '../../utils/api';
+import ConsultationReportModal from './ConsultationReportModal';
 import { 
   FolderLock, 
   FileText, 
@@ -10,21 +11,32 @@ import {
   Plus, 
   X,
   Eye,
-  FileCheck
+  FileCheck,
+  Download,
+  Calendar,
+  Building2,
+  Stethoscope
 } from 'lucide-react';
 
-export default function DocumentVault() {
+export default function DocumentVault({ onOpenReportModal }) {
   const [documents, setDocuments] = useState([]);
+  const [consultationReports, setConsultationReports] = useState([]);
   const [loading, setLoading] = useState(true);
   const [showUploadModal, setShowUploadModal] = useState(false);
+  const [selectedReport, setSelectedReport] = useState(null);
   const [newTitle, setNewTitle] = useState('');
   const [newCategory, setNewCategory] = useState('Diagnostic Report');
+  const [activeTab, setActiveTab] = useState('all'); // 'all' | 'reports' | 'labs'
 
-  const fetchDocs = async () => {
+  const fetchVaultData = async () => {
     setLoading(true);
     try {
-      const res = await api.getDocuments();
-      if (res.success) setDocuments(res.data);
+      const [docsRes, reportsRes] = await Promise.all([
+        api.getDocuments(),
+        api.getConsultationReports()
+      ]);
+      if (docsRes.success) setDocuments(docsRes.data);
+      if (reportsRes.success) setConsultationReports(reportsRes.data);
     } catch (e) {
       console.error(e);
     } finally {
@@ -33,7 +45,7 @@ export default function DocumentVault() {
   };
 
   useEffect(() => {
-    fetchDocs();
+    fetchVaultData();
   }, []);
 
   const handleToggleShare = async (docId) => {
@@ -56,7 +68,7 @@ export default function DocumentVault() {
         title: newTitle,
         category: newCategory,
         doctor: "Dr. Priya Sharma",
-        hospital: "Apollo Hospital Labs",
+        hospital: "Apollo Hospital Diagnostic Labs",
         status: "Verified by Clinical Pathology"
       });
       if (res.success) {
@@ -76,10 +88,10 @@ export default function DocumentVault() {
       <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4 border-b border-slate-200/80 pb-4">
         <div>
           <h1 className="text-2xl sm:text-3xl font-extrabold text-slate-900 tracking-tight">
-            Medical Document Vault
+            Medical Document Vault & Health Timeline
           </h1>
           <p className="text-xs text-slate-500 mt-1">
-            Securely store diagnostic reports, ECGs, blood work & share instantly with consulting doctors.
+            Chronological clinical records, physician consultation summaries & downloadable PDF reports.
           </p>
         </div>
 
@@ -92,60 +104,162 @@ export default function DocumentVault() {
         </button>
       </div>
 
-      {/* Documents Grid */}
+      {/* Filter Tabs */}
+      <div className="flex gap-2 text-xs font-bold">
+        {[
+          { id: 'all', label: 'All Records' },
+          { id: 'reports', label: `Consultation Reports (${consultationReports.length})` },
+          { id: 'labs', label: `Lab Panels & Scans (${documents.length})` }
+        ].map(tab => (
+          <button
+            key={tab.id}
+            onClick={() => setActiveTab(tab.id)}
+            className={`px-4 py-2 rounded-xl border transition-all ${
+              activeTab === tab.id
+                ? 'bg-teal-600 text-white border-teal-600 shadow-sm'
+                : 'bg-white text-slate-600 border-slate-200 hover:bg-slate-50'
+            }`}
+          >
+            {tab.label}
+          </button>
+        ))}
+      </div>
+
+      {/* TIMELINE VIEW OF MEDICAL RECORDS */}
       {loading ? (
         <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
           {[1, 2, 3, 4].map(i => (
-            <div key={i} className="h-32 rounded-3xl bg-white/70 border border-slate-200 animate-pulse"></div>
+            <div key={i} className="h-36 rounded-3xl bg-white/70 border border-slate-200 animate-pulse"></div>
           ))}
         </div>
       ) : (
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-          {documents.map(doc => (
-            <div
-              key={doc.id}
-              className="p-5 rounded-3xl bg-white border border-slate-200 shadow-sm flex flex-col justify-between space-y-4 hover:border-teal-300 transition-all"
-            >
-              <div className="flex items-start justify-between gap-3">
-                <div className="flex items-center gap-3">
-                  <div className="w-12 h-12 rounded-2xl bg-teal-50 text-teal-700 flex items-center justify-center font-bold text-sm">
-                    <FileText className="w-6 h-6" />
-                  </div>
-                  <div>
-                    <h3 className="font-bold text-slate-900 text-sm leading-tight">{doc.title}</h3>
-                    <p className="text-xs text-teal-700 font-semibold mt-0.5">{doc.category} • {doc.date}</p>
-                    <p className="text-[11px] text-slate-500 mt-0.5">{doc.hospital} ({doc.fileSize})</p>
-                  </div>
-                </div>
+        <div className="space-y-6">
+          
+          {/* 1. Official Consultation Reports Section */}
+          {(activeTab === 'all' || activeTab === 'reports') && consultationReports.length > 0 && (
+            <div className="space-y-3">
+              <h3 className="text-xs font-bold text-teal-800 uppercase tracking-wider flex items-center gap-1.5">
+                <Stethoscope className="w-4 h-4" />
+                <span>Physician Consultation Reports</span>
+              </h3>
 
-                <button
-                  onClick={() => handleToggleShare(doc.id)}
-                  className={`px-3 py-1.5 rounded-xl text-[11px] font-bold transition-all flex items-center gap-1.5 ${
-                    doc.isSharedWithDoctor
-                      ? 'bg-teal-50 text-teal-800 border border-teal-200'
-                      : 'bg-slate-100 text-slate-600 hover:text-slate-900 border border-slate-200'
-                  }`}
-                >
-                  <Share2 className="w-3.5 h-3.5" />
-                  <span>{doc.isSharedWithDoctor ? 'Shared' : 'Private'}</span>
-                </button>
-              </div>
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                {consultationReports.map(report => (
+                  <div
+                    key={report.id}
+                    className="p-5 rounded-3xl bg-white border border-teal-200 shadow-sm flex flex-col justify-between space-y-4 hover:border-teal-400 transition-all relative overflow-hidden"
+                  >
+                    <div className="flex items-start justify-between gap-3">
+                      <div className="flex items-center gap-3">
+                        <div className="w-12 h-12 rounded-2xl bg-teal-50 text-teal-700 flex items-center justify-center font-bold text-sm shrink-0 border border-teal-100">
+                          <FileText className="w-6 h-6" />
+                        </div>
+                        <div>
+                          <span className="text-[10px] font-bold text-teal-700 uppercase tracking-wider block">
+                            {report.doctorSpecialty} Consultation
+                          </span>
+                          <h4 className="font-bold text-slate-900 text-sm">{report.doctorName}</h4>
+                          <p className="text-[11px] text-slate-500 mt-0.5">{report.hospital} • {report.date}</p>
+                        </div>
+                      </div>
 
-              <div className="p-2.5 rounded-xl bg-slate-50 border border-slate-200 text-[11px] text-slate-600 flex items-center justify-between">
-                <span>Status: <strong className="text-teal-700">{doc.status}</strong></span>
-                <button
-                  onClick={() => alert(`Opening preview for ${doc.title}... (Demo PDF Viewer)`)}
-                  className="text-teal-700 hover:underline font-semibold"
-                >
-                  View File
-                </button>
+                      <span className="px-2 py-0.5 rounded-full bg-teal-50 text-teal-800 border border-teal-200 text-[10px] font-bold">
+                        Completed
+                      </span>
+                    </div>
+
+                    <div className="p-3 rounded-2xl bg-slate-50 border border-slate-200/80 text-[11px] space-y-1">
+                      <p className="text-slate-800 font-semibold truncate">
+                        <strong>Diagnosis/Summary:</strong> {report.clinicalSummary}
+                      </p>
+                      <p className="text-slate-500 truncate">
+                        <strong>Chief Complaint:</strong> {report.chiefComplaint}
+                      </p>
+                    </div>
+
+                    <div className="flex items-center gap-2 pt-1 border-t border-slate-100">
+                      <button
+                        onClick={() => setSelectedReport(report)}
+                        className="flex-1 py-2 px-3 rounded-xl bg-teal-50 hover:bg-teal-100 text-teal-800 text-xs font-bold transition-all flex items-center justify-center gap-1.5 border border-teal-200"
+                      >
+                        <Eye className="w-3.5 h-3.5" />
+                        <span>[ View Report ]</span>
+                      </button>
+
+                      <a
+                        href={api.getConsultationReportPdfUrl(report.id)}
+                        target="_blank"
+                        rel="noreferrer"
+                        className="flex-1 py-2 px-3 rounded-xl bg-teal-600 hover:bg-teal-700 text-white text-xs font-bold transition-all flex items-center justify-center gap-1.5 shadow-sm"
+                      >
+                        <Download className="w-3.5 h-3.5" />
+                        <span>[ Download PDF ]</span>
+                      </a>
+                    </div>
+                  </div>
+                ))}
               </div>
             </div>
-          ))}
+          )}
+
+          {/* 2. Uploaded Diagnostic Documents & Lab Tests Section */}
+          {(activeTab === 'all' || activeTab === 'labs') && (
+            <div className="space-y-3">
+              <h3 className="text-xs font-bold text-slate-500 uppercase tracking-wider flex items-center gap-1.5">
+                <FolderLock className="w-4 h-4" />
+                <span>Laboratory Tests & Diagnostic Panels</span>
+              </h3>
+
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                {documents.map(doc => (
+                  <div
+                    key={doc.id}
+                    className="p-5 rounded-3xl bg-white border border-slate-200 shadow-sm flex flex-col justify-between space-y-4 hover:border-teal-300 transition-all"
+                  >
+                    <div className="flex items-start justify-between gap-3">
+                      <div className="flex items-center gap-3">
+                        <div className="w-12 h-12 rounded-2xl bg-slate-100 text-slate-700 flex items-center justify-center font-bold text-sm shrink-0">
+                          <FileText className="w-6 h-6 text-teal-600" />
+                        </div>
+                        <div>
+                          <h3 className="font-bold text-slate-900 text-sm leading-tight">{doc.title}</h3>
+                          <p className="text-xs text-teal-700 font-semibold mt-0.5">{doc.category} • {doc.date}</p>
+                          <p className="text-[11px] text-slate-500 mt-0.5">{doc.hospital} ({doc.fileSize})</p>
+                        </div>
+                      </div>
+
+                      <button
+                        onClick={() => handleToggleShare(doc.id)}
+                        className={`px-3 py-1.5 rounded-xl text-[11px] font-bold transition-all flex items-center gap-1.5 ${
+                          doc.isSharedWithDoctor
+                            ? 'bg-teal-50 text-teal-800 border border-teal-200'
+                            : 'bg-slate-100 text-slate-600 hover:text-slate-900 border border-slate-200'
+                        }`}
+                      >
+                        <Share2 className="w-3.5 h-3.5" />
+                        <span>{doc.isSharedWithDoctor ? 'Shared' : 'Private'}</span>
+                      </button>
+                    </div>
+
+                    <div className="p-2.5 rounded-xl bg-slate-50 border border-slate-200 text-[11px] text-slate-600 flex items-center justify-between">
+                      <span className="truncate max-w-[240px]">Status: <strong className="text-teal-700">{doc.status}</strong></span>
+                      <button
+                        onClick={() => alert(`Opening diagnostic preview for ${doc.title}... (Demo File Viewer)`)}
+                        className="text-teal-700 hover:underline font-semibold shrink-0 ml-2"
+                      >
+                        View File
+                      </button>
+                    </div>
+                  </div>
+                ))}
+              </div>
+            </div>
+          )}
+
         </div>
       )}
 
-      {/* Upload Modal */}
+      {/* Upload Record Modal */}
       {showUploadModal && (
         <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-slate-900/60 backdrop-blur-sm animate-fade-in">
           <div className="bg-white rounded-3xl border border-slate-200 max-w-md w-full p-6 sm:p-8 relative shadow-xl">
@@ -203,6 +317,14 @@ export default function DocumentVault() {
             </form>
           </div>
         </div>
+      )}
+
+      {/* Consultation Report Viewer Modal */}
+      {selectedReport && (
+        <ConsultationReportModal
+          report={selectedReport}
+          onClose={() => setSelectedReport(null)}
+        />
       )}
 
     </div>
