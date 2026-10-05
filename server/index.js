@@ -210,11 +210,17 @@ app.post('/api/auth/register', (req, res) => {
     return res.status(400).json({ success: false, message: 'Name, email, and password are required.' });
   }
 
+  const cleanEmail = email.trim().toLowerCase();
+  const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+  if (!emailRegex.test(cleanEmail)) {
+    return res.status(400).json({ success: false, message: 'Please enter a valid email address.' });
+  }
+
   if (password.length < 6) {
     return res.status(400).json({ success: false, message: 'Password must be at least 6 characters.' });
   }
 
-  const existingUser = users.find(u => u.email.toLowerCase() === email.toLowerCase());
+  const existingUser = users.find(u => u.email.toLowerCase() === cleanEmail);
   if (existingUser) {
     return res.status(400).json({ success: false, message: 'An account with this email already exists.' });
   }
@@ -225,11 +231,11 @@ app.post('/api/auth/register', (req, res) => {
 
   const newUser = {
     id: userId,
-    email: email.toLowerCase(),
-    phone: phone || "+91 98765 00000",
+    email: cleanEmail,
+    phone: phone ? phone.trim() : "+91 98765 00000",
     passwordHash,
     role: role === 'doctor' ? 'doctor' : 'patient',
-    name,
+    name: name.trim(),
     patientId: role === 'patient' ? patientId : null,
     doctorId: role === 'doctor' ? 'doc-1' : null,
     createdAt: new Date().toISOString()
@@ -242,11 +248,11 @@ app.post('/api/auth/register', (req, res) => {
     patientProfile = {
       id: patientId,
       userId: newUser.id,
-      name,
+      name: newUser.name,
       age: parseInt(age) || 28,
       gender: gender || "Female",
-      phone: phone || "+91 98765 00000",
-      email: email.toLowerCase(),
+      phone: newUser.phone,
+      email: newUser.email,
       bloodGroup: bloodGroup || "O+",
       address: "Bangalore, India",
       emergencyContact: "Family Contact - +91 98123 45678",
@@ -285,21 +291,24 @@ app.post('/api/auth/login', (req, res) => {
   const { email, password, requestedRole } = req.body;
 
   if (!email || !password) {
-    return res.status(400).json({ success: false, message: 'Email/phone and password are required.' });
+    return res.status(400).json({ success: false, message: 'Email and password are required.' });
   }
 
+  const cleanEmail = email.trim().toLowerCase();
+  const rawClean = email.trim().replace(/\s+/g, '');
+
   const user = users.find(u => 
-    u.email.toLowerCase() === email.toLowerCase() || 
-    (u.phone && u.phone.replace(/\s+/g, '') === email.replace(/\s+/g, ''))
+    u.email.toLowerCase() === cleanEmail || 
+    (u.phone && u.phone.replace(/\s+/g, '') === rawClean)
   );
 
   if (!user) {
-    return res.status(401).json({ success: false, message: 'Invalid credentials. No account found with this email/phone.' });
+    return res.status(401).json({ success: false, message: 'Invalid email or password' });
   }
 
   const isPasswordValid = bcrypt.compareSync(password, user.passwordHash);
   if (!isPasswordValid) {
-    return res.status(401).json({ success: false, message: 'Invalid credentials. Incorrect password.' });
+    return res.status(401).json({ success: false, message: 'Invalid email or password' });
   }
 
   // Check role compatibility if specified
@@ -323,7 +332,7 @@ app.post('/api/auth/login', (req, res) => {
 
   const currentDoctorData = user.role === 'doctor' ? doctors.find(d => d.id === (user.doctorId || 'doc-1')) : null;
 
-  res.json({
+  res.status(200).json({
     success: true,
     message: 'Signed in successfully!',
     token,
@@ -342,7 +351,7 @@ app.post('/api/auth/login', (req, res) => {
 
 app.post('/api/auth/logout', (req, res) => {
   clearAuthCookie(res);
-  res.json({ success: true, message: 'Logged out successfully.' });
+  res.status(200).json({ success: true, message: 'Logged out successfully.' });
 });
 
 app.get('/api/auth/me', (req, res) => {
@@ -376,6 +385,21 @@ app.get('/api/auth/me', (req, res) => {
 // 2. LOCATIONS & DOCTORS API
 // ==========================================
 
+function getCanonicalSpecialty(spec) {
+  if (!spec) return '';
+  const s = spec.toLowerCase().trim();
+  if (s.includes('cardio') || s.includes('heart')) return 'cardiology';
+  if (s.includes('derma') || s.includes('skin')) return 'dermatology';
+  if (s.includes('ortho') || s.includes('bone') || s.includes('joint')) return 'orthopedics';
+  if (s.includes('pediat') || s.includes('child')) return 'pediatrics';
+  if (s.includes('neuro') || s.includes('brain')) return 'neurology';
+  if (s.includes('ent') || s.includes('sinus') || s.includes('ear') || s.includes('throat')) return 'ent';
+  if (s.includes('general') || s.includes('physician') || s.includes('medicine')) return 'general_medicine';
+  if (s.includes('gynec') || s.includes('women') || s.includes('obstet')) return 'gynecology';
+  if (s.includes('dent')) return 'dentistry';
+  return s;
+}
+
 app.get('/api/locations', (req, res) => {
   res.json({ success: true, count: locations.length, data: locations });
 });
@@ -396,18 +420,20 @@ app.get('/api/doctors', (req, res) => {
   });
 
   if (location && location !== 'All' && location !== 'All Locations') {
+    const locLower = location.toLowerCase().trim();
     list = list.filter(d => 
-      (d.location && d.location.toLowerCase() === location.toLowerCase()) ||
-      (d.locationId && d.locationId.toLowerCase().includes(location.toLowerCase()))
+      (d.location && d.location.toLowerCase() === locLower) ||
+      (d.location && d.location.toLowerCase().includes(locLower)) ||
+      (d.city && d.city.toLowerCase() === locLower) ||
+      (d.locationId && d.locationId.toLowerCase().includes(locLower))
     );
   }
 
   if (specialty && specialty !== 'All' && specialty !== 'All Specialties') {
-    const specLower = specialty.toLowerCase().trim();
-    const specStem = specLower.replace(/(ist|ology|iatrist|iatrician|ics|ic|y|s)$/i, '');
+    const targetCanon = getCanonicalSpecialty(specialty);
     list = list.filter(d => {
-      const docSpec = d.specialty.toLowerCase();
-      return docSpec === specLower || docSpec.includes(specStem) || specLower.includes(docSpec.replace(/(ist|ology|iatrist|iatrician|ics|ic|y|s)$/i, ''));
+      const docCanon = getCanonicalSpecialty(d.specialty);
+      return docCanon === targetCanon || d.specialty.toLowerCase() === specialty.toLowerCase().trim();
     });
   }
 
@@ -426,6 +452,7 @@ app.get('/api/doctors', (req, res) => {
       d.specialty.toLowerCase().includes(q) ||
       d.hospital.toLowerCase().includes(q) ||
       (d.location && d.location.toLowerCase().includes(q)) ||
+      (d.city && d.city.toLowerCase() === q) ||
       (d.area && d.area.toLowerCase().includes(q)) ||
       (d.keywords && d.keywords.some(k => k.toLowerCase().includes(q)))
     );
@@ -1135,8 +1162,9 @@ app.post('/api/demo/reset', (req, res) => {
 // 10. PRODUCTION STATIC & SPA FALLBACK
 // ==========================================
 
-if (process.env.NODE_ENV === 'production') {
-  const clientDistPath = path.join(__dirname, '../client/dist');
+const fs = require('fs');
+const clientDistPath = path.join(__dirname, '../client/dist');
+if (fs.existsSync(clientDistPath) || process.env.NODE_ENV === 'production') {
   app.use(express.static(clientDistPath));
 
   app.get('*', (req, res, next) => {

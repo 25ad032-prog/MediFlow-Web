@@ -5,38 +5,83 @@ const API_BASE = '/api';
 export const api = {
   // Authentication
   async login(credentials) {
-    const res = await fetch(`${API_BASE}/auth/login`, {
-      method: 'POST',
-      headers: { 'Content-Type': 'application/json' },
-      credentials: 'include',
-      body: JSON.stringify(credentials)
-    });
-    return res.json();
+    try {
+      const res = await fetch(`${API_BASE}/auth/login`, {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        credentials: 'include',
+        body: JSON.stringify(credentials)
+      });
+      const data = await res.json().catch(() => ({}));
+      if (!res.ok) {
+        return {
+          success: false,
+          status: res.status,
+          message: data.message || 'Invalid email or password'
+        };
+      }
+      return { success: true, ...data };
+    } catch (err) {
+      return {
+        success: false,
+        status: 500,
+        message: 'Unable to reach authentication server. Please check your connection.'
+      };
+    }
   },
 
   async register(userData) {
-    const res = await fetch(`${API_BASE}/auth/register`, {
-      method: 'POST',
-      headers: { 'Content-Type': 'application/json' },
-      credentials: 'include',
-      body: JSON.stringify(userData)
-    });
-    return res.json();
+    try {
+      const res = await fetch(`${API_BASE}/auth/register`, {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        credentials: 'include',
+        body: JSON.stringify(userData)
+      });
+      const data = await res.json().catch(() => ({}));
+      if (!res.ok) {
+        return {
+          success: false,
+          status: res.status,
+          message: data.message || 'Registration failed'
+        };
+      }
+      return { success: true, ...data };
+    } catch (err) {
+      return {
+        success: false,
+        status: 500,
+        message: 'Network error during registration.'
+      };
+    }
   },
 
   async logout() {
-    const res = await fetch(`${API_BASE}/auth/logout`, {
-      method: 'POST',
-      credentials: 'include'
-    });
-    return res.json();
+    try {
+      const res = await fetch(`${API_BASE}/auth/logout`, {
+        method: 'POST',
+        credentials: 'include'
+      });
+      const data = await res.json().catch(() => ({}));
+      return data;
+    } catch (err) {
+      return { success: true };
+    }
   },
 
   async getMe() {
-    const res = await fetch(`${API_BASE}/auth/me`, {
-      credentials: 'include'
-    });
-    return res.json();
+    try {
+      const res = await fetch(`${API_BASE}/auth/me`, {
+        credentials: 'include'
+      });
+      if (!res.ok) {
+        return { success: false, status: res.status, user: null };
+      }
+      const data = await res.json().catch(() => ({}));
+      return data;
+    } catch (err) {
+      return { success: false, status: 500, user: null };
+    }
   },
 
   // Locations

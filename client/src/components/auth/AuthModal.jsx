@@ -67,13 +67,13 @@ export default function AuthModal({ isOpen, onClose }) {
     try {
       if (authMode === 'login' || activeTab === 'doctor') {
         const res = await login(email, password, activeTab);
-        if (res.success) {
+        if (res && res.success) {
           setSuccessMessage(res.message || 'Signed in successfully!');
           setTimeout(() => {
             onClose();
           }, 600);
         } else {
-          setErrorMessage(res.message || 'Invalid credentials. Please try again.');
+          setErrorMessage(res?.message || 'Invalid email or password');
         }
       } else {
         const res = await register({
@@ -84,13 +84,13 @@ export default function AuthModal({ isOpen, onClose }) {
           age,
           gender
         });
-        if (res.success) {
+        if (res && res.success) {
           setSuccessMessage('Account registered successfully!');
           setTimeout(() => {
             onClose();
           }, 600);
         } else {
-          setErrorMessage(res.message || 'Registration failed.');
+          setErrorMessage(res?.message || 'Registration failed.');
         }
       }
     } catch (err) {

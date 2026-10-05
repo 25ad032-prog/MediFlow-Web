@@ -83,10 +83,10 @@ export default function AuthPage() {
     try {
       if (authMode === 'login' || activeTab === 'doctor') {
         const res = await login(email, password, activeTab);
-        if (res.success) {
+        if (res && res.success) {
           setSuccessMessage(res.message || 'Authentication successful! Loading workspace...');
         } else {
-          setErrorMessage(res.message || 'Invalid credentials. Please verify email and password.');
+          setErrorMessage(res?.message || 'Invalid email or password');
         }
       } else {
         const res = await register({
@@ -97,10 +97,10 @@ export default function AuthPage() {
           age,
           gender
         });
-        if (res.success) {
+        if (res && res.success) {
           setSuccessMessage('Account registered successfully! Welcome to MediFlow.');
         } else {
-          setErrorMessage(res.message || 'Registration failed. Please check your information.');
+          setErrorMessage(res?.message || 'Registration failed. Please check your information.');
         }
       }
     } catch (err) {

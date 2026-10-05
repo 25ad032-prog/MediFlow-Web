@@ -292,18 +292,18 @@ export default function PatientHome({ onNavigate, onOpenAiChat, onSelectDoctor, 
             onClick={() => onNavigate('search')}
             className="text-xs font-bold text-teal-700 hover:underline flex items-center gap-1"
           >
-            <span>View all 17 specialists</span>
+            <span>View all 70 specialists</span>
             <ChevronRight className="w-4 h-4" />
           </button>
         </div>
 
         <div className="grid grid-cols-2 sm:grid-cols-5 gap-3.5">
           {[
-            { name: 'Chennai', tag: 'Apollo & Madras Heart', count: '5 Doctors' },
-            { name: 'Bangalore', tag: 'NIMHANS & City Care', count: '5 Doctors' },
-            { name: 'Hyderabad', tag: 'Jubilee Hills Care', count: '3 Doctors' },
-            { name: 'Coimbatore', tag: 'Kovai Ortho & Wellness', count: '2 Doctors' },
-            { name: 'Madurai', tag: 'Meenakshi Speciality', count: '2 Doctors' }
+            { name: 'Chennai', tag: 'Apollo, MGM & Madras Heart', count: '16 Doctors' },
+            { name: 'Bangalore', tag: 'Manipal, NIMHANS & Aster', count: '16 Doctors' },
+            { name: 'Hyderabad', tag: 'Yashoda, CARE & Apollo', count: '14 Doctors' },
+            { name: 'Coimbatore', tag: 'KMCH, PSG & Ganga Hospital', count: '12 Doctors' },
+            { name: 'Madurai', tag: 'Meenakshi Mission & Apollo', count: '12 Doctors' }
           ].map((loc) => (
             <div
               key={loc.name}

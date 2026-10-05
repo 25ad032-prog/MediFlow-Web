@@ -99,7 +99,7 @@ export function AuthProvider({ children }) {
   const login = async (email, password, requestedRole) => {
     try {
       const res = await api.login({ email, password, requestedRole });
-      if (res.success) {
+      if (res && res.success && res.user) {
         setUser(res.user);
         setRole(res.user.role);
         setIsAuthenticated(true);
@@ -112,8 +112,16 @@ export function AuthProvider({ children }) {
         soundFx.playSuccessAlert();
         return { success: true, message: res.message };
       }
-      return { success: false, message: res.message || 'Login failed' };
+      setUser(null);
+      setIsAuthenticated(false);
+      setPatient(null);
+      setCurrentDoctor(null);
+      return { success: false, message: res?.message || 'Invalid email or password' };
     } catch (err) {
+      setUser(null);
+      setIsAuthenticated(false);
+      setPatient(null);
+      setCurrentDoctor(null);
       return { success: false, message: 'Server communication error. Please try again.' };
     }
   };
@@ -121,7 +129,7 @@ export function AuthProvider({ children }) {
   const register = async (userData) => {
     try {
       const res = await api.register(userData);
-      if (res.success) {
+      if (res && res.success && res.user) {
         setUser(res.user);
         setRole(res.user.role);
         setIsAuthenticated(true);
@@ -130,8 +138,16 @@ export function AuthProvider({ children }) {
         soundFx.playSuccessAlert();
         return { success: true, message: res.message };
       }
-      return { success: false, message: res.message || 'Registration failed' };
+      setUser(null);
+      setIsAuthenticated(false);
+      setPatient(null);
+      setCurrentDoctor(null);
+      return { success: false, message: res?.message || 'Registration failed' };
     } catch (err) {
+      setUser(null);
+      setIsAuthenticated(false);
+      setPatient(null);
+      setCurrentDoctor(null);
       return { success: false, message: 'Registration network error. Please try again.' };
     }
   };
@@ -142,6 +158,8 @@ export function AuthProvider({ children }) {
     } catch (e) {}
     setUser(null);
     setIsAuthenticated(false);
+    setPatient(null);
+    setCurrentDoctor(null);
     setNotifications([]);
     setUnreadNotifCount(0);
   };
