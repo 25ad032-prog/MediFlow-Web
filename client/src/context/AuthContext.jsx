@@ -42,21 +42,17 @@ export function AuthProvider({ children }) {
           setSelectedDoctorId(meRes.doctor.id);
         }
       } else {
-        // Fallback demo auto-login for pristine demo experience
-        const demoLoginRes = await api.login({
-          email: 'patient@mediflow.demo',
-          password: 'Patient@123',
-          requestedRole: 'patient'
-        });
-        if (demoLoginRes.success) {
-          setUser(demoLoginRes.user);
-          setRole(demoLoginRes.user.role);
-          setIsAuthenticated(true);
-          if (demoLoginRes.patient) setPatient(demoLoginRes.patient);
-        }
+        setUser(null);
+        setIsAuthenticated(false);
+        setPatient(null);
+        setCurrentDoctor(null);
       }
     } catch (err) {
       console.warn('Initial session check resolved to unauthenticated', err);
+      setUser(null);
+      setIsAuthenticated(false);
+      setPatient(null);
+      setCurrentDoctor(null);
     } finally {
       setLoading(false);
     }
@@ -87,35 +83,9 @@ export function AuthProvider({ children }) {
 
   const switchRole = async (newRole) => {
     setRole(newRole);
-    if (newRole === 'doctor') {
-      try {
-        const docLogin = await api.login({
-          email: 'doctor@mediflow.demo',
-          password: 'Doctor@123',
-          requestedRole: 'doctor'
-        });
-        if (docLogin.success) {
-          setUser(docLogin.user);
-          setIsAuthenticated(true);
-          setSelectedDoctorId('doc-1');
-          if (docLogin.doctor) setCurrentDoctor(docLogin.doctor);
-        }
-      } catch (e) {}
-    } else {
-      try {
-        const patLogin = await api.login({
-          email: 'patient@mediflow.demo',
-          password: 'Patient@123',
-          requestedRole: 'patient'
-        });
-        if (patLogin.success) {
-          setUser(patLogin.user);
-          setIsAuthenticated(true);
-          if (patLogin.patient) setPatient(patLogin.patient);
-        }
-      } catch (e) {}
+    if (isAuthenticated) {
+      fetchNotifications();
     }
-    fetchNotifications();
   };
 
   const switchDoctor = async (docId) => {
