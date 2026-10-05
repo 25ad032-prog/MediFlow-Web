@@ -194,7 +194,7 @@ Deploying `MediFlow-Web` as a **Unified Web Service** on [Render](https://render
 | **Region** | Any (e.g. `Oregon (US West)` or `Singapore`) |
 | **Branch** | `main` |
 | **Root Directory** | `MediFlow-Web` (or leave empty if repo root is the project) |
-| **Build Command** | `npm install && npm --prefix client install && npm --prefix client run build` |
+| **Build Command** | `npm install && npm run build` (or `npm install && npm --prefix client install --include=dev && npm --prefix client run build`) |
 | **Start Command** | `node server/index.js` |
 
 ### Environment Variables on Render:
