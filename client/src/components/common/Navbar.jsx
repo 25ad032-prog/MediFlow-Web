@@ -4,6 +4,7 @@ import { useQueue } from '../../context/QueueContext';
 import { api } from '../../utils/api';
 import AuthModal from '../auth/AuthModal';
 import NotificationDrawer from './NotificationDrawer';
+import DataSourceModal from './DataSourceModal';
 import { 
   Activity, 
   Stethoscope, 
@@ -16,7 +17,8 @@ import {
   FolderLock,
   Home,
   CheckCircle2,
-  Sparkles
+  Sparkles,
+  Database
 } from 'lucide-react';
 
 export default function Navbar({ activeTab = 'home', onSelectTab, onOpenReport }) {
@@ -25,6 +27,7 @@ export default function Navbar({ activeTab = 'home', onSelectTab, onOpenReport }
   const [resetting, setResetting] = useState(false);
   const [showAuthModal, setShowAuthModal] = useState(false);
   const [showNotificationDrawer, setShowNotificationDrawer] = useState(false);
+  const [showDataSourceModal, setShowDataSourceModal] = useState(false);
 
   const handleResetDemo = async () => {
     if (confirm('Reset demo data to initial state?')) {
@@ -100,6 +103,17 @@ export default function Navbar({ activeTab = 'home', onSelectTab, onOpenReport }
           {/* Right Controls: Live Sync, Notifications, Role Switcher, Auth */}
           <div className="flex items-center gap-2 sm:gap-3">
             
+            {/* FHIR Interoperability Data Source Badge */}
+            <button
+              onClick={() => setShowDataSourceModal(true)}
+              className="hidden sm:flex items-center gap-1.5 px-2.5 py-1 rounded-xl bg-slate-100/90 hover:bg-slate-200/80 border border-slate-200 text-[11px] font-bold text-slate-700 shadow-sm transition-all"
+              title="View Healthcare Interoperability & FHIR API Architecture"
+            >
+              <Database className="w-3.5 h-3.5 text-teal-600" />
+              <span className="hidden md:inline">DATA SOURCE:</span>
+              <span className="text-teal-700">FHIR R4</span>
+            </button>
+
             {/* Real-time Status Badge */}
             <div className="hidden lg:flex items-center gap-1.5 px-2.5 py-1 rounded-full bg-slate-100 border border-slate-200 text-xs font-medium text-slate-600">
               <span className={`w-2 h-2 rounded-full ${isConnected ? 'bg-teal-500 animate-pulse' : 'bg-amber-400'}`}></span>
@@ -183,6 +197,12 @@ export default function Navbar({ activeTab = 'home', onSelectTab, onOpenReport }
 
         </div>
       </header>
+
+      {/* Data Source / FHIR Interoperability Modal */}
+      <DataSourceModal 
+        isOpen={showDataSourceModal} 
+        onClose={() => setShowDataSourceModal(false)} 
+      />
 
       {/* Auth Modal */}
       <AuthModal isOpen={showAuthModal} onClose={() => setShowAuthModal(false)} />

@@ -6,6 +6,8 @@ const jwt = require('jsonwebtoken');
 const bcrypt = require('bcryptjs');
 const PDFDocument = require('pdfkit');
 const seedData = require('./data/seedData');
+const healthcareDataProvider = require('./integrations/healthcare/healthcareDataProvider');
+const resourceMapper = require('./integrations/healthcare/resourceMapper');
 
 const app = express();
 const PORT = process.env.PORT || 5000;
@@ -379,6 +381,241 @@ app.get('/api/auth/me', (req, res) => {
     patient: user.role === 'patient' ? patientProfile : null,
     doctor: currentDoctorData
   });
+});
+
+// ==========================================
+// 1.5. HEALTHCARE INTEROPERABILITY & FHIR R4 APIS
+// ==========================================
+
+app.get('/api/healthcare/status', (req, res) => {
+  res.json({
+    success: true,
+    data: healthcareDataProvider.getStatus()
+  });
+});
+
+app.post('/api/healthcare/switch-provider', (req, res) => {
+  const { mode } = req.body;
+  const status = healthcareDataProvider.switchProvider(mode || 'synthetic');
+  res.json({
+    success: true,
+    message: `Healthcare Data Provider switched to ${status.activeMode.toUpperCase()}`,
+    data: status
+  });
+});
+
+app.get('/api/healthcare/patients', async (req, res) => {
+  try {
+    const provider = healthcareDataProvider.getProvider();
+    const patients = await provider.getPatients(req.query);
+    res.json({
+      success: true,
+      count: patients.length,
+      resourceType: "Bundle",
+      type: "searchset",
+      data: patients
+    });
+  } catch (err) {
+    res.status(500).json({ success: false, message: err.message });
+  }
+});
+
+app.get('/api/healthcare/patients/:id', async (req, res) => {
+  try {
+    const provider = healthcareDataProvider.getProvider();
+    const patient = await provider.getPatientById(req.params.id);
+    if (!patient) return res.status(404).json({ success: false, message: 'FHIR Patient resource not found' });
+    res.json({
+      success: true,
+      data: patient
+    });
+  } catch (err) {
+    res.status(500).json({ success: false, message: err.message });
+  }
+});
+
+app.get(['/api/healthcare/doctors', '/api/healthcare/practitioners'], async (req, res) => {
+  try {
+    const provider = healthcareDataProvider.getProvider();
+    const practitioners = await provider.getPractitioners(req.query);
+    res.json({
+      success: true,
+      count: practitioners.length,
+      resourceType: "Bundle",
+      type: "searchset",
+      data: practitioners
+    });
+  } catch (err) {
+    res.status(500).json({ success: false, message: err.message });
+  }
+});
+
+app.get(['/api/healthcare/doctors/:id', '/api/healthcare/practitioners/:id'], async (req, res) => {
+  try {
+    const provider = healthcareDataProvider.getProvider();
+    const practitioner = await provider.getPractitionerById(req.params.id);
+    if (!practitioner) return res.status(404).json({ success: false, message: 'FHIR Practitioner resource not found' });
+    res.json({
+      success: true,
+      data: practitioner
+    });
+  } catch (err) {
+    res.status(500).json({ success: false, message: err.message });
+  }
+});
+
+app.get('/api/healthcare/organizations', async (req, res) => {
+  try {
+    const provider = healthcareDataProvider.getProvider();
+    const orgs = await provider.getOrganizations();
+    res.json({
+      success: true,
+      count: orgs.length,
+      resourceType: "Bundle",
+      data: orgs
+    });
+  } catch (err) {
+    res.status(500).json({ success: false, message: err.message });
+  }
+});
+
+app.get(['/api/healthcare/schedules', '/api/healthcare/schedules/:doctorId'], async (req, res) => {
+  try {
+    const provider = healthcareDataProvider.getProvider();
+    const doctorId = req.params.doctorId || req.query.doctorId || 'doc-1';
+    const schedules = await provider.getSchedules(doctorId);
+    res.json({
+      success: true,
+      count: schedules.length,
+      resourceType: "Bundle",
+      data: schedules
+    });
+  } catch (err) {
+    res.status(500).json({ success: false, message: err.message });
+  }
+});
+
+app.get(['/api/healthcare/slots', '/api/healthcare/slots/:doctorId'], async (req, res) => {
+  try {
+    const provider = healthcareDataProvider.getProvider();
+    const doctorId = req.params.doctorId || req.query.doctorId || 'doc-1';
+    const slots = await provider.getSlots(doctorId, req.query.date);
+    res.json({
+      success: true,
+      count: slots.length,
+      resourceType: "Bundle",
+      data: slots
+    });
+  } catch (err) {
+    res.status(500).json({ success: false, message: err.message });
+  }
+});
+
+app.get('/api/healthcare/appointments', async (req, res) => {
+  try {
+    const provider = healthcareDataProvider.getProvider();
+    const apts = await provider.getAppointments(req.query);
+    res.json({
+      success: true,
+      count: apts.length,
+      resourceType: "Bundle",
+      type: "searchset",
+      data: apts
+    });
+  } catch (err) {
+    res.status(500).json({ success: false, message: err.message });
+  }
+});
+
+app.post('/api/healthcare/appointments', async (req, res) => {
+  try {
+    const provider = healthcareDataProvider.getProvider();
+    const createdApt = await provider.createAppointment(req.body);
+    res.status(201).json({
+      success: true,
+      message: 'FHIR Appointment resource created',
+      data: createdApt
+    });
+  } catch (err) {
+    res.status(500).json({ success: false, message: err.message });
+  }
+});
+
+app.get('/api/healthcare/encounters', async (req, res) => {
+  try {
+    const provider = healthcareDataProvider.getProvider();
+    const encounters = await provider.getEncounters(req.query);
+    res.json({
+      success: true,
+      count: encounters.length,
+      resourceType: "Bundle",
+      data: encounters
+    });
+  } catch (err) {
+    res.status(500).json({ success: false, message: err.message });
+  }
+});
+
+app.get('/api/healthcare/encounters/:id', async (req, res) => {
+  try {
+    const provider = healthcareDataProvider.getProvider();
+    const enc = await provider.getEncounterById(req.params.id);
+    if (!enc) return res.status(404).json({ success: false, message: 'FHIR Encounter resource not found' });
+    res.json({
+      success: true,
+      data: enc
+    });
+  } catch (err) {
+    res.status(500).json({ success: false, message: err.message });
+  }
+});
+
+app.get(['/api/healthcare/observations', '/api/healthcare/observations/:patientId'], async (req, res) => {
+  try {
+    const provider = healthcareDataProvider.getProvider();
+    const patientId = req.params.patientId || req.query.patientId || 'pat-1';
+    const obs = await provider.getObservations(patientId);
+    res.json({
+      success: true,
+      count: obs.length,
+      resourceType: "Bundle",
+      data: obs
+    });
+  } catch (err) {
+    res.status(500).json({ success: false, message: err.message });
+  }
+});
+
+app.get(['/api/healthcare/reports', '/api/healthcare/reports/:patientId', '/api/healthcare/diagnostic-reports', '/api/healthcare/diagnostic-reports/:patientId'], async (req, res) => {
+  try {
+    const provider = healthcareDataProvider.getProvider();
+    const patientId = req.params.patientId || req.query.patientId || 'pat-1';
+    const reports = await provider.getDiagnosticReports(patientId);
+    res.json({
+      success: true,
+      count: reports.length,
+      resourceType: "Bundle",
+      data: reports
+    });
+  } catch (err) {
+    res.status(500).json({ success: false, message: err.message });
+  }
+});
+
+app.get(['/api/healthcare/documents', '/api/healthcare/documents/:patientId', '/api/healthcare/document-references', '/api/healthcare/document-references/:patientId'], async (req, res) => {
+  try {
+    const provider = healthcareDataProvider.getProvider();
+    const patientId = req.params.patientId || req.query.patientId || 'pat-1';
+    const docs = await provider.getDocumentReferences(patientId);
+    res.json({
+      success: true,
+      count: docs.length,
+      resourceType: "Bundle",
+      data: docs
+    });
+  } catch (err) {
+    res.status(500).json({ success: false, message: err.message });
+  }
 });
 
 // ==========================================
@@ -1152,6 +1389,7 @@ app.post('/api/demo/reset', (req, res) => {
   consultationReports = JSON.parse(JSON.stringify(seedData.consultationReports));
   medicalDocuments = JSON.parse(JSON.stringify(seedData.medicalDocuments));
   notifications = JSON.parse(JSON.stringify(seedData.notifications));
+  healthcareDataProvider.reset();
 
   broadcastEvent('demo_reset', { message: 'Demo data restored' });
 

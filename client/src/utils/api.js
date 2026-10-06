@@ -309,5 +309,27 @@ export const api = {
       credentials: 'include'
     });
     return res.json();
+  },
+
+  // Healthcare Interoperability & FHIR Provider Management
+  async getHealthcareStatus() {
+    try {
+      const res = await fetch(`${API_BASE}/healthcare/status`, {
+        credentials: 'include'
+      });
+      return res.json();
+    } catch (e) {
+      return { success: false, data: { activeMode: 'synthetic', providerName: 'MediFlow Synthetic Provider' } };
+    }
+  },
+
+  async switchHealthcareProvider(mode) {
+    const res = await fetch(`${API_BASE}/healthcare/switch-provider`, {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      credentials: 'include',
+      body: JSON.stringify({ mode })
+    });
+    return res.json();
   }
 };

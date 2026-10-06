@@ -203,3 +203,106 @@ Deploying `MediFlow-Web` as a **Unified Web Service** on [Render](https://render
 | :--- | :--- | :--- |
 | `NODE_ENV` | `production` | Enables Express static asset serving from `client/dist` and SPA fallback |
 | `PORT` | `10000` | Render automatically sets `PORT`, which `server/index.js` binds dynamically |
+| `FHIR_ENABLED` | `false` | Defaults to synthetic FHIR provider; set `true` when external FHIR endpoint is active |
+| `FHIR_BASE_URL` | Optional | URL of external hospital/EHR FHIR R4 REST endpoint |
+
+---
+
+## 12. Healthcare API & FHIR Integration
+
+### 12.1 Overview & Concept
+MediFlow is designed as an **API-driven healthcare interoperability platform**. Rather than directly coupling application state to hardcoded mock records, MediFlow implements an **Integration Layer** following the **HL7® FHIR® (Fast Healthcare Interoperability Resources) Release 4 (R4)** standard.
+
+```
+Hospital / Healthcare System (EHR / EMR / PACS)
+                   ↓
+            FHIR / REST API
+                   ↓
+  MediFlow Healthcare Integration Layer
+                   ↓
+            MediFlow Backend
+               ↙        ↘
+        MediFlow Web   MediFlow Mobile
+```
+
+### 12.2 Supported FHIR Resource Models (10 Types)
+The MediFlow Integration Layer maps standard FHIR R4 resource structures to MediFlow healthcare domain entities:
+
+| FHIR Resource | MediFlow Domain Mapping | Description |
+| :--- | :--- | :--- |
+| **`Patient`** | Patient Profile | Demographics, contact information, age, gender, identifier. |
+| **`Practitioner`** | Doctor Dossier | Specialist identity, qualifications, specialty, hospital affiliation, consultation fee. |
+| **`Organization`** | Medical Hub / Clinic | Hospital systems across metropolitan locations (Chennai, Bangalore, Hyderabad, Coimbatore, Madurai). |
+| **`Schedule`** | Specialist OPD Schedule | Weekly and daily operating windows for clinic chambers. |
+| **`Slot`** | Time Slots | Discrete booking intervals (09:00 AM, 09:30 AM, etc.) with free/busy availability. |
+| **`Appointment`** | Booked Consultation | Scheduled encounter linking Patient and Practitioner with queue token assignment. |
+| **`Encounter`** | Clinical Consultation | Active chamber consultation tracking start/end time and reason for visit. |
+| **`Observation`** | Vitals & Lab Measurements | Blood pressure, heart rate, oxygen saturation, blood glucose with LOINC codes. |
+| **`DiagnosticReport`** | Consultation Report | Physician-authorized consultation summary, findings, advice, and discharge documentation. |
+| **`DocumentReference`** | Health Records Vault | Stored medical records, lab reports, and prescriptions. |
+
+### 12.3 Provider Abstraction & Modes
+
+MediFlow implements a provider abstraction with two interchangeable engines:
+
+```
+                  HealthcareDataProvider
+                            |
+           +----------------+----------------+
+           |                                 |
+SyntheticProvider (Default)         FhirHealthcareProvider (API)
+• Local FHIR R4 Structures          • External REST FHIR Endpoint
+• 70 Specialists, 5 Cities          • Real-time Hospital Gateway
+• Offline & Demo Ready              • Automated Fallback on Outage
+```
+
+1. **Synthetic Mode (`FHIR_ENABLED=false`)**:
+   - Uses realistic synthetic healthcare records structured under FHIR R4 schema.
+   - Fully supports multi-doctor filtering, booking, and waiting room flows offline without external network dependencies.
+2. **External FHIR API Mode (`FHIR_ENABLED=true`)**:
+   - Connects to an external hospital/EHR FHIR endpoint defined in `FHIR_BASE_URL` with optional `FHIR_API_KEY`.
+   - **Automated Graceful Fallback**: If the external endpoint is unreachable or times out, the integration layer logs the fallback event and seamlessly serves synthetic data without interrupting patient care.
+
+### 12.4 Environment Variables
+
+```env
+# Healthcare Interoperability & FHIR API (HL7 R4)
+FHIR_ENABLED=false
+FHIR_BASE_URL=http://localhost:8080/fhir
+FHIR_API_KEY=your_optional_bearer_token
+```
+
+### 12.5 Dedicated Healthcare Endpoints
+
+| Endpoint | Method | Description |
+| :--- | :--- | :--- |
+| `/api/healthcare/status` | `GET` | Interoperability status, active provider, and supported resource list |
+| `/api/healthcare/switch-provider` | `POST` | Toggle provider mode dynamically (`synthetic` vs `fhir_api`) |
+| `/api/healthcare/patients` | `GET` | List or query FHIR Patient bundle |
+| `/api/healthcare/patients/:id` | `GET` | Retrieve single FHIR Patient resource |
+| `/api/healthcare/doctors` | `GET` | Retrieve FHIR Practitioner search bundle with location/specialty filters |
+| `/api/healthcare/doctors/:id` | `GET` | Retrieve single FHIR Practitioner resource |
+| `/api/healthcare/organizations` | `GET` | List hospital organizations |
+| `/api/healthcare/schedules/:doctorId` | `GET` | Retrieve specialist operating schedule |
+| `/api/healthcare/slots/:doctorId` | `GET` | Retrieve available booking slots |
+| `/api/healthcare/appointments` | `GET`, `POST` | Query or create FHIR Appointment resources |
+| `/api/healthcare/encounters/:id` | `GET` | Retrieve FHIR Encounter record |
+| `/api/healthcare/observations/:patientId` | `GET` | Retrieve patient vitals and LOINC observations |
+| `/api/healthcare/reports/:patientId` | `GET` | Retrieve FHIR DiagnosticReports |
+| `/api/healthcare/documents/:patientId` | `GET` | Retrieve FHIR DocumentReferences |
+
+### 12.6 Live Queue Layer on Top of FHIR
+While FHIR handles standard appointment bookings and scheduling, real-time waiting room experiences require live token sequencing and active consultation state management. MediFlow layers its real-time **Queue Engine** on top of FHIR Appointments to dynamically calculate remaining wait times:
+$$\text{Estimated Wait Time} = \text{Patients Ahead} \times \text{Specialist Consultation Duration}$$
+Updates broadcast instantly to Web and Mobile via Server-Sent Events (SSE).
+
+### 12.7 Security, Privacy & Compliance Statement
+
+> **Important Healthcare Privacy Notice**:  
+> Current prototype uses **synthetic / de-identified healthcare data** and is designed to integrate with authorized healthcare systems through APIs.  
+> Production deployment with a live hospital EHR/EMR requires:
+> 1. Formal Business Associate Agreements (BAA) and institutional data sharing agreements.
+> 2. OAuth 2.0 / SMART on FHIR backend authorization with scoped tokens.
+> 3. TLS 1.3 encryption in transit and AES-256 encryption at rest.
+> 4. Role-based access control (RBAC), patient consent verification, and tamper-evident audit logging.
+> 5. Adherence to jurisdictional health data regulations (e.g., HIPAA, GDPR, India DPDP Act 2023 / ABDM guidelines).
