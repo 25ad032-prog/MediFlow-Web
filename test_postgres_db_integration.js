@@ -1,4 +1,5 @@
 const { dbService, checkConnection, hasDbConfig, isDbConnected } = require('./server/db');
+const seedData = require('./server/data/seedData');
 
 async function testPostgreSqlIntegration() {
   console.log('========================================================');
@@ -29,8 +30,29 @@ async function testPostgreSqlIntegration() {
     assert(typeof conn.connected === 'boolean', 'checkConnection returns valid status object');
     assert(typeof conn.configured === 'boolean', 'checkConnection includes configured flag');
 
-    // 2. Multi-City Doctors Dataset
-    console.log('\n2. Multi-City Doctor Repository Verification');
+    // 2. Foreign Key & Dependency Integrity Verification
+    console.log('\n2. Foreign Key & Seed Data Referential Integrity');
+    const userIds = new Set(seedData.users.map(u => u.id));
+    const docIds = new Set(seedData.doctors.map(d => d.id));
+    const aptIds = new Set(seedData.appointments.map(a => a.id));
+
+    // Check patient profile -> user
+    const profileUserValid = !seedData.patientProfile.userId || userIds.has(seedData.patientProfile.userId);
+    assert(profileUserValid, `Patient profile references valid user (${seedData.patientProfile.userId})`);
+
+    // Check all appointments -> doctors
+    const allAptsHaveValidDoctor = seedData.appointments.every(a => docIds.has(a.doctorId));
+    assert(allAptsHaveValidDoctor, `All ${seedData.appointments.length} appointments reference valid doctor IDs`);
+
+    // Check all consultation reports -> appointments & doctors
+    const allReportsHaveValidApt = seedData.consultationReports.every(r => !r.appointmentId || aptIds.has(r.appointmentId));
+    assert(allReportsHaveValidApt, `All ${seedData.consultationReports.length} consultation reports reference valid appointment IDs`);
+
+    const allReportsHaveValidDoc = seedData.consultationReports.every(r => docIds.has(r.doctorId));
+    assert(allReportsHaveValidDoc, `All ${seedData.consultationReports.length} consultation reports reference valid doctor IDs`);
+
+    // 3. Multi-City Doctors Dataset
+    console.log('\n3. Multi-City Doctor Repository Verification');
     const allDoctors = await dbService.getDoctors();
     assert(allDoctors.length === 70, `Loads all 70 doctors (found: ${allDoctors.length})`);
 
@@ -43,26 +65,26 @@ async function testPostgreSqlIntegration() {
     const doc1 = await dbService.getDoctorById('doc-1');
     assert(doc1 && doc1.name === 'Dr. Priya Sharma', `Retrieved Dr. Priya Sharma by ID: ${doc1?.name}`);
 
-    // 3. User Authentication Persistence
-    console.log('\n3. User Authentication Queries');
+    // 4. User Authentication Persistence
+    console.log('\n4. User Authentication Queries');
     const patientUser = await dbService.findUserByEmailOrPhone('patient@mediflow.demo');
     assert(patientUser && patientUser.role === 'patient', `Found demo patient user: ${patientUser?.email}`);
 
     const doctorUser = await dbService.findUserByEmailOrPhone('doctor@mediflow.demo');
     assert(doctorUser && doctorUser.role === 'doctor', `Found demo doctor user: ${doctorUser?.email}`);
 
-    // 4. Locations
-    console.log('\n4. Locations Repository');
+    // 5. Locations
+    console.log('\n5. Locations Repository');
     const locations = await dbService.getLocations();
     assert(locations.length === 5, `Loads all 5 hub locations (found: ${locations.length})`);
 
-    // 5. Patient Profile
-    console.log('\n5. Patient Profile Repository');
+    // 6. Patient Profile
+    console.log('\n6. Patient Profile Repository');
     const profile = await dbService.getPatientProfile('pat-1');
     assert(profile && profile.name === 'Rahul Sharma', `Loaded profile for: ${profile?.name}`);
 
-    // 6. Appointments & Live Queue
-    console.log('\n6. Appointments & Queue Operations');
+    // 7. Appointments & Live Queue
+    console.log('\n7. Appointments & Queue Operations');
     const apts = await dbService.getAppointments({ doctorId: 'doc-1' });
     assert(apts.length > 0, `Found ${apts.length} appointments for Dr. Priya Sharma`);
 
@@ -85,18 +107,18 @@ async function testPostgreSqlIntegration() {
     const fetchedApt = await dbService.getAppointmentById(testAptId);
     assert(fetchedApt && fetchedApt.tokenNumber === 'Q-99', `Fetched created appointment token: ${fetchedApt?.tokenNumber}`);
 
-    // 7. Consultation Reports
-    console.log('\n7. Consultation Reports Repository');
+    // 8. Consultation Reports
+    console.log('\n8. Consultation Reports Repository');
     const reports = await dbService.getConsultationReports({ patientId: 'pat-1' });
     assert(reports.length > 0, `Found ${reports.length} consultation reports for patient`);
 
-    // 8. Notifications
-    console.log('\n8. Notifications Repository');
+    // 9. Notifications
+    console.log('\n9. Notifications Repository');
     const notifs = await dbService.getNotifications('usr-patient-1', 'pat-1');
     assert(notifs.length > 0, `Found ${notifs.length} notifications`);
 
-    // 9. Family Members & Vault
-    console.log('\n9. Family & Medical Documents');
+    // 10. Family Members & Vault
+    console.log('\n10. Family & Medical Documents');
     const family = await dbService.getFamilyMembers('pat-1');
     assert(family.length > 0, `Found ${family.length} family members`);
 

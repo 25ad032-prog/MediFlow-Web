@@ -2108,6 +2108,74 @@ const medicalDocuments = [
 
 // Seed appointments creating realistic, distinct live queues across different doctors
 let appointments = [
+  // Past Completed Appointments (Linked to consultation reports rep-101 and rep-102)
+  {
+    id: "apt-past-1",
+    tokenNumber: "Q-03",
+    doctorId: "doc-1",
+    doctorName: "Dr. Priya Sharma",
+    doctorSpecialty: "Cardiologist",
+    doctorAvatar: "https://images.unsplash.com/photo-1594824813515-998858348b6c?auto=format&fit=crop&q=80&w=400",
+    hospital: "Apollo Heart & Vascular Institute, Greams Road",
+    location: "Chennai",
+    patientId: "pat-1",
+    patientName: "Rahul Sharma",
+    patientAge: 31,
+    patientGender: "Male",
+    date: "2026-09-20",
+    time: "02:30 PM",
+    consultationType: "In-Clinic",
+    reason: "Quarterly hypertension review and resting ECG evaluation",
+    status: "completed",
+    queueState: "COMPLETED",
+    queuePosition: 0,
+    aiPreConsultation: {
+      completed: true,
+      chiefComplaint: "Quarterly hypertension review and resting ECG evaluation",
+      duration: "Routine",
+      severity: "2/10",
+      associatedSymptoms: "Occasional mild morning headache",
+      priorHistory: "Diagnosed with primary hypertension in 2022; on Telmisartan 40mg",
+      summaryText: "Hypertension review patient with stable home BP logs."
+    },
+    doctorNotes: "Cardiovascular examination within target therapeutic limits. Good lifestyle adherence.",
+    consultationSummary: null,
+    createdAt: "2026-09-20T08:00:00Z"
+  },
+  {
+    id: "apt-past-2",
+    tokenNumber: "Q-01",
+    doctorId: "doc-20",
+    doctorName: "Dr. Arjun Kumar",
+    doctorSpecialty: "Dermatologist",
+    doctorAvatar: "https://images.unsplash.com/photo-1622253692010-333f2da6031d?auto=format&fit=crop&q=80&w=400",
+    hospital: "Skin & Aesthetic Laser Centre, Indiranagar",
+    location: "Bangalore",
+    patientId: "pat-1",
+    patientName: "Rahul Sharma",
+    patientAge: 31,
+    patientGender: "Male",
+    date: "2026-08-15",
+    time: "11:00 AM",
+    consultationType: "In-Clinic",
+    reason: "Contact dermatitis and itching on forearms after garden work",
+    status: "completed",
+    queueState: "COMPLETED",
+    queuePosition: 0,
+    aiPreConsultation: {
+      completed: true,
+      chiefComplaint: "Contact dermatitis and itching on forearms after garden work",
+      duration: "4 days",
+      severity: "4/10",
+      associatedSymptoms: "Erythematous papules, localized pruritus",
+      priorHistory: "No prior drug allergies reported",
+      summaryText: "Allergic contact dermatitis with itching on forearms."
+    },
+    doctorNotes: "Classic allergic contact dermatitis presentation. Advised protective clothing.",
+    consultationSummary: null,
+    createdAt: "2026-08-15T05:00:00Z"
+  },
+
   // Dr. Priya Sharma (doc-1, Chennai Cardio) - 3 patients in queue
   {
     id: "apt-101",
