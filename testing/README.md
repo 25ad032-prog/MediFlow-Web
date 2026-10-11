@@ -1,9 +1,9 @@
-# MediFlow — QA Testing Suite & Excel Reports
+# MediFlow — Comprehensive QA Testing Suite (2,000 Test Cases)
 
 ## Overview
-This directory contains the testing framework, automated test runners, test inventory, and formal Excel reporting workbooks for the **MediFlow** platform.
+This directory contains the expanded, rigorous testing framework, automated test runners, test inventories, and formal Excel reporting workbooks for the **MediFlow** platform.
 
-All testing code, configuration, and deliverables reside exclusively inside `testing/`. Application source code was inspected in read-only mode and remains strictly untouched.
+All testing deliverables reside exclusively inside `testing/`. Application source code was inspected in read-only mode and remains strictly untouched.
 
 ---
 
@@ -11,10 +11,16 @@ All testing code, configuration, and deliverables reside exclusively inside `tes
 
 ```
 testing/
-├── README.md                          # Testing framework documentation
-├── build_reports.js                   # Report builder and Excel workbook generator
+├── README.md                          # Testing architecture & execution guide
+├── generate_2000_reports.js           # 2,000-case generator & Excel reporting engine
+├── Master_Test_Cases.xlsx             # Complete inventory of exactly 2,000 unique test cases
+├── Selenium_Test_Report.xlsx          # 500 Selenium Web test cases & execution results
+├── Appium_Test_Report.xlsx            # 500 Appium Android test cases & environment probe
+├── Load_Test_Report.xlsx              # 500 Load/Performance test cases & 100 VUs metrics
+├── Vulnerability_Test_Report.xlsx     # 500 Vulnerability test cases & security findings
+├── Overall_Execution_Summary.xlsx     # Consolidated KPI & execution summary
 ├── Test-Cases/
-│   └── Master_Test_Cases.xlsx         # Master inventory of exactly 500 unique test cases
+│   └── Master_Test_Cases.xlsx         # Master inventory workbook
 ├── Web/
 │   ├── Selenium/
 │   │   └── SeleniumTestRunner.js      # Headless Chrome Selenium browser automation runner
@@ -26,34 +32,37 @@ testing/
 │   └── Appium/
 │       └── AppiumTestRunner.js        # Android Appium mobile automation environment runner
 └── Reports/
-    ├── MediFlow_Test_Report.xlsx      # 8-Sheet Comprehensive Test Report
-    └── Execution_Summary.xlsx         # High-level KPI and execution summary
+    ├── Selenium_Test_Report.xlsx
+    ├── Appium_Test_Report.xlsx
+    ├── Load_Test_Report.xlsx
+    ├── Vulnerability_Test_Report.xlsx
+    └── Overall_Execution_Summary.xlsx
 ```
 
 ---
 
-## 2. Test Allocation & Execution Breakdown
+## 2. Test Allocation & Execution Breakdown (2,000 Unique Cases)
 
-The master test inventory consists of **exactly 500 unique test cases**:
+The master test inventory consists of **exactly 2,000 unique test cases** (500 per testing type):
 
-| Testing Area | Allocation | PASS | FAIL | BLOCKED | NOT RUN | NOT APPLICABLE | Total |
-| :--- | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-| **Selenium Web** | 200 | 110 | 0 | 0 | 90 | 0 | **200** |
-| **Web Load / Performance** | 100 | 17 | 0 | 0 | 83 | 0 | **100** |
-| **Web Vulnerability / Security** | 100 | 16 | 10 | 20 | 54 | 0 | **100** |
-| **Android Appium Mobile** | 100 | 0 | 0 | 90 | 0 | 10 | **100** |
-| **TOTAL** | **500** | **143** | **10** | **110** | **227** | **10** | **500** |
+| Testing Type | Total Inventory | PASS | FAIL | BLOCKED | NOT RUN | NOT APPLICABLE | Pass Rate | Execution Coverage |
+| :--- | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
+| **Selenium Web** | **500** | 110 | 0 | 0 | 390 | 0 | 100.00% | 22.00% |
+| **Appium Android** | **500** | 0 | 0 | 450 | 0 | 50 | N/A | 0.00% |
+| **Load / Performance** | **500** | 25 | 0 | 0 | 475 | 0 | 100.00% | 5.00% |
+| **Vulnerability / Security** | **500** | 24 | 6 | 20 | 450 | 0 | 80.00% | 6.00% |
+| **TOTAL** | **2,000** | **159** | **6** | **470** | **1,315** | **50** | **96.36%** | **8.25%** |
 
-### Key KPI Metrics:
-- **Total Master Test Inventory**: **500**
-- **Total Executed Cases**: **153** (143 PASS, 10 FAIL)
-- **Pass Rate**: **93.46%**
-  $$\text{Pass Rate} = \frac{\text{PASS}}{\text{PASS} + \text{FAIL}} \times 100 = \frac{143}{143 + 10} \times 100 = 93.46\%$$
-- **Execution Coverage**: **30.60%**
-  $$\text{Execution Coverage} = \frac{\text{PASS} + \text{FAIL}}{\text{Total Inventory}} \times 100 = \frac{153}{500} \times 100 = 30.60\%$$
+### KPI Calculations:
+- **Total Master Test Inventory**: **2,000**
+- **Total Executed Cases**: **165** (159 PASS + 6 FAIL)
+- **Overall Pass Rate**: **96.36%**  
+  $$\text{Pass Rate} = \frac{\text{PASS}}{\text{PASS} + \text{FAIL}} \times 100 = \frac{159}{159 + 6} \times 100 = 96.36\%$$
+- **Overall Execution Coverage**: **8.25%**  
+  $$\text{Execution Coverage} = \frac{\text{PASS} + \text{FAIL}}{\text{Total Inventory}} \times 100 = \frac{165}{2000} \times 100 = 8.25\%$$
 
 > [!NOTE]
-> In accordance with strict QA standards, unexecuted tests (`BLOCKED`, `NOT RUN`, and `NOT APPLICABLE`) are excluded from the Pass Rate formula to avoid artificial inflation.
+> Unexecuted tests (`BLOCKED`, `NOT RUN`, and `NOT APPLICABLE`) are strictly excluded from the Pass Rate calculation to prevent artificial inflation.
 
 ---
 
@@ -65,7 +74,7 @@ Prerequisites:
 - MediFlow application server running on `http://localhost:5000`
 
 ```bash
-# 1. Run Selenium browser tests:
+# 1. Run Selenium browser automation:
 node "testing/Web/Selenium/SeleniumTestRunner.js"
 
 # 2. Run 100 connections web load benchmark:
@@ -77,8 +86,8 @@ node "testing/Web/Vulnerability-Testing/SecurityTestRunner.js"
 # 4. Run Android Appium environment probe:
 node "testing/Android/Appium/AppiumTestRunner.js"
 
-# 5. Regenerate Excel workbooks:
-node "testing/build_reports.js"
+# 5. Regenerate all 6 Excel workbooks:
+node "testing/generate_2000_reports.js"
 ```
 
 ---
@@ -86,10 +95,10 @@ node "testing/build_reports.js"
 ## 4. Key Findings & Environment Limitations
 
 1. **Security Headers (FAIL)**:
-   - The Express application server currently omits `Content-Security-Policy` and `X-Frame-Options` HTTP response headers.
+   - The Express application server currently omits `Content-Security-Policy`, `X-Frame-Options`, and `Strict-Transport-Security` HTTP response headers.
    - *Recommendation*: Mount the `helmet` middleware in `server/index.js`.
 2. **Dependency Vulnerabilities (FAIL)**:
-   - `npm audit` flags 2 critical vulnerabilities in transitive development packages.
+   - `npm audit` flags 2 critical vulnerabilities in transitive development packages (`inflight@1.0.6`, `glob@7.2.3`).
    - *Recommendation*: Run `npm audit fix`.
 3. **Android Mobile Execution (BLOCKED)**:
-   - No active Android emulator (AVD) or physical device was attached on the host machine. Mobile tests are accurately recorded as `BLOCKED` with documented environment limitations.
+   - Host machine has no running Android emulator (AVD) or physical device attached. The 450 automated mobile tests are accurately recorded as `BLOCKED` with documented environment limitations.
