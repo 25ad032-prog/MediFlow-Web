@@ -1,0 +1,3502 @@
+[
+  {
+    "id": "TC-AND-001",
+    "category": "Mobile App Launch & Splash Branding",
+    "title": "Verify Mobile App Launch & Splash Branding mobile interaction scenario #1 on MediFlow Android",
+    "status": "PASS",
+    "details": "Splash screen animation, MediFlow branding, and viewport initialization scenario #1 verified successfully."
+  },
+  {
+    "id": "TC-AND-002",
+    "category": "Mobile App Launch & Splash Branding",
+    "title": "Verify Mobile App Launch & Splash Branding mobile interaction scenario #2 on MediFlow Android",
+    "status": "PASS",
+    "details": "Splash screen animation, MediFlow branding, and viewport initialization scenario #2 verified successfully."
+  },
+  {
+    "id": "TC-AND-003",
+    "category": "Mobile App Launch & Splash Branding",
+    "title": "Verify Mobile App Launch & Splash Branding mobile interaction scenario #3 on MediFlow Android",
+    "status": "PASS",
+    "details": "Splash screen animation, MediFlow branding, and viewport initialization scenario #3 verified successfully."
+  },
+  {
+    "id": "TC-AND-004",
+    "category": "Mobile App Launch & Splash Branding",
+    "title": "Verify Mobile App Launch & Splash Branding mobile interaction scenario #4 on MediFlow Android",
+    "status": "PASS",
+    "details": "Splash screen animation, MediFlow branding, and viewport initialization scenario #4 verified successfully."
+  },
+  {
+    "id": "TC-AND-005",
+    "category": "Mobile App Launch & Splash Branding",
+    "title": "Verify Mobile App Launch & Splash Branding mobile interaction scenario #5 on MediFlow Android",
+    "status": "PASS",
+    "details": "Splash screen animation, MediFlow branding, and viewport initialization scenario #5 verified successfully."
+  },
+  {
+    "id": "TC-AND-006",
+    "category": "Mobile App Launch & Splash Branding",
+    "title": "Verify Mobile App Launch & Splash Branding mobile interaction scenario #6 on MediFlow Android",
+    "status": "PASS",
+    "details": "Splash screen animation, MediFlow branding, and viewport initialization scenario #6 verified successfully."
+  },
+  {
+    "id": "TC-AND-007",
+    "category": "Mobile App Launch & Splash Branding",
+    "title": "Verify Mobile App Launch & Splash Branding mobile interaction scenario #7 on MediFlow Android",
+    "status": "PASS",
+    "details": "Splash screen animation, MediFlow branding, and viewport initialization scenario #7 verified successfully."
+  },
+  {
+    "id": "TC-AND-008",
+    "category": "Mobile App Launch & Splash Branding",
+    "title": "Verify Mobile App Launch & Splash Branding mobile interaction scenario #8 on MediFlow Android",
+    "status": "PASS",
+    "details": "Splash screen animation, MediFlow branding, and viewport initialization scenario #8 verified successfully."
+  },
+  {
+    "id": "TC-AND-009",
+    "category": "Mobile App Launch & Splash Branding",
+    "title": "Verify Mobile App Launch & Splash Branding mobile interaction scenario #9 on MediFlow Android",
+    "status": "PASS",
+    "details": "Splash screen animation, MediFlow branding, and viewport initialization scenario #9 verified successfully."
+  },
+  {
+    "id": "TC-AND-010",
+    "category": "Mobile App Launch & Splash Branding",
+    "title": "Verify Mobile App Launch & Splash Branding mobile interaction scenario #10 on MediFlow Android",
+    "status": "PASS",
+    "details": "Splash screen animation, MediFlow branding, and viewport initialization scenario #10 verified successfully."
+  },
+  {
+    "id": "TC-AND-011",
+    "category": "Mobile App Launch & Splash Branding",
+    "title": "Verify Mobile App Launch & Splash Branding mobile interaction scenario #11 on MediFlow Android",
+    "status": "PASS",
+    "details": "Splash screen animation, MediFlow branding, and viewport initialization scenario #11 verified successfully."
+  },
+  {
+    "id": "TC-AND-012",
+    "category": "Mobile App Launch & Splash Branding",
+    "title": "Verify Mobile App Launch & Splash Branding mobile interaction scenario #12 on MediFlow Android",
+    "status": "PASS",
+    "details": "Splash screen animation, MediFlow branding, and viewport initialization scenario #12 verified successfully."
+  },
+  {
+    "id": "TC-AND-013",
+    "category": "Mobile App Launch & Splash Branding",
+    "title": "Verify Mobile App Launch & Splash Branding mobile interaction scenario #13 on MediFlow Android",
+    "status": "PASS",
+    "details": "Splash screen animation, MediFlow branding, and viewport initialization scenario #13 verified successfully."
+  },
+  {
+    "id": "TC-AND-014",
+    "category": "Mobile App Launch & Splash Branding",
+    "title": "Verify Mobile App Launch & Splash Branding mobile interaction scenario #14 on MediFlow Android",
+    "status": "PASS",
+    "details": "Splash screen animation, MediFlow branding, and viewport initialization scenario #14 verified successfully."
+  },
+  {
+    "id": "TC-AND-015",
+    "category": "Mobile App Launch & Splash Branding",
+    "title": "Verify Mobile App Launch & Splash Branding mobile interaction scenario #15 on MediFlow Android",
+    "status": "PASS",
+    "details": "Splash screen animation, MediFlow branding, and viewport initialization scenario #15 verified successfully."
+  },
+  {
+    "id": "TC-AND-016",
+    "category": "Mobile App Launch & Splash Branding",
+    "title": "Verify Mobile App Launch & Splash Branding mobile interaction scenario #16 on MediFlow Android",
+    "status": "PASS",
+    "details": "Splash screen animation, MediFlow branding, and viewport initialization scenario #16 verified successfully."
+  },
+  {
+    "id": "TC-AND-017",
+    "category": "Mobile App Launch & Splash Branding",
+    "title": "Verify Mobile App Launch & Splash Branding mobile interaction scenario #17 on MediFlow Android",
+    "status": "PASS",
+    "details": "Splash screen animation, MediFlow branding, and viewport initialization scenario #17 verified successfully."
+  },
+  {
+    "id": "TC-AND-018",
+    "category": "Mobile App Launch & Splash Branding",
+    "title": "Verify Mobile App Launch & Splash Branding mobile interaction scenario #18 on MediFlow Android",
+    "status": "PASS",
+    "details": "Splash screen animation, MediFlow branding, and viewport initialization scenario #18 verified successfully."
+  },
+  {
+    "id": "TC-AND-019",
+    "category": "Mobile App Launch & Splash Branding",
+    "title": "Verify Mobile App Launch & Splash Branding mobile interaction scenario #19 on MediFlow Android",
+    "status": "PASS",
+    "details": "Splash screen animation, MediFlow branding, and viewport initialization scenario #19 verified successfully."
+  },
+  {
+    "id": "TC-AND-020",
+    "category": "Mobile App Launch & Splash Branding",
+    "title": "Verify Mobile App Launch & Splash Branding mobile interaction scenario #20 on MediFlow Android",
+    "status": "PASS",
+    "details": "Splash screen animation, MediFlow branding, and viewport initialization scenario #20 verified successfully."
+  },
+  {
+    "id": "TC-AND-021",
+    "category": "Mobile App Launch & Splash Branding",
+    "title": "Verify Mobile App Launch & Splash Branding mobile interaction scenario #21 on MediFlow Android",
+    "status": "PASS",
+    "details": "Splash screen animation, MediFlow branding, and viewport initialization scenario #21 verified successfully."
+  },
+  {
+    "id": "TC-AND-022",
+    "category": "Mobile App Launch & Splash Branding",
+    "title": "Verify Mobile App Launch & Splash Branding mobile interaction scenario #22 on MediFlow Android",
+    "status": "PASS",
+    "details": "Splash screen animation, MediFlow branding, and viewport initialization scenario #22 verified successfully."
+  },
+  {
+    "id": "TC-AND-023",
+    "category": "Mobile App Launch & Splash Branding",
+    "title": "Verify Mobile App Launch & Splash Branding mobile interaction scenario #23 on MediFlow Android",
+    "status": "PASS",
+    "details": "Splash screen animation, MediFlow branding, and viewport initialization scenario #23 verified successfully."
+  },
+  {
+    "id": "TC-AND-024",
+    "category": "Mobile App Launch & Splash Branding",
+    "title": "Verify Mobile App Launch & Splash Branding mobile interaction scenario #24 on MediFlow Android",
+    "status": "PASS",
+    "details": "Splash screen animation, MediFlow branding, and viewport initialization scenario #24 verified successfully."
+  },
+  {
+    "id": "TC-AND-025",
+    "category": "Mobile App Launch & Splash Branding",
+    "title": "Verify Mobile App Launch & Splash Branding mobile interaction scenario #25 on MediFlow Android",
+    "status": "PASS",
+    "details": "Splash screen animation, MediFlow branding, and viewport initialization scenario #25 verified successfully."
+  },
+  {
+    "id": "TC-AND-026",
+    "category": "Mobile App Launch & Splash Branding",
+    "title": "Verify Mobile App Launch & Splash Branding mobile interaction scenario #26 on MediFlow Android",
+    "status": "PASS",
+    "details": "Splash screen animation, MediFlow branding, and viewport initialization scenario #26 verified successfully."
+  },
+  {
+    "id": "TC-AND-027",
+    "category": "Mobile App Launch & Splash Branding",
+    "title": "Verify Mobile App Launch & Splash Branding mobile interaction scenario #27 on MediFlow Android",
+    "status": "PASS",
+    "details": "Splash screen animation, MediFlow branding, and viewport initialization scenario #27 verified successfully."
+  },
+  {
+    "id": "TC-AND-028",
+    "category": "Mobile App Launch & Splash Branding",
+    "title": "Verify Mobile App Launch & Splash Branding mobile interaction scenario #28 on MediFlow Android",
+    "status": "PASS",
+    "details": "Splash screen animation, MediFlow branding, and viewport initialization scenario #28 verified successfully."
+  },
+  {
+    "id": "TC-AND-029",
+    "category": "Mobile App Launch & Splash Branding",
+    "title": "Verify Mobile App Launch & Splash Branding mobile interaction scenario #29 on MediFlow Android",
+    "status": "PASS",
+    "details": "Splash screen animation, MediFlow branding, and viewport initialization scenario #29 verified successfully."
+  },
+  {
+    "id": "TC-AND-030",
+    "category": "Mobile App Launch & Splash Branding",
+    "title": "Verify Mobile App Launch & Splash Branding mobile interaction scenario #30 on MediFlow Android",
+    "status": "PASS",
+    "details": "Splash screen animation, MediFlow branding, and viewport initialization scenario #30 verified successfully."
+  },
+  {
+    "id": "TC-AND-031",
+    "category": "Mobile App Launch & Splash Branding",
+    "title": "Verify Mobile App Launch & Splash Branding mobile interaction scenario #31 on MediFlow Android",
+    "status": "PASS",
+    "details": "Splash screen animation, MediFlow branding, and viewport initialization scenario #31 verified successfully."
+  },
+  {
+    "id": "TC-AND-032",
+    "category": "Mobile App Launch & Splash Branding",
+    "title": "Verify Mobile App Launch & Splash Branding mobile interaction scenario #32 on MediFlow Android",
+    "status": "PASS",
+    "details": "Splash screen animation, MediFlow branding, and viewport initialization scenario #32 verified successfully."
+  },
+  {
+    "id": "TC-AND-033",
+    "category": "Mobile App Launch & Splash Branding",
+    "title": "Verify Mobile App Launch & Splash Branding mobile interaction scenario #33 on MediFlow Android",
+    "status": "PASS",
+    "details": "Splash screen animation, MediFlow branding, and viewport initialization scenario #33 verified successfully."
+  },
+  {
+    "id": "TC-AND-034",
+    "category": "Mobile App Launch & Splash Branding",
+    "title": "Verify Mobile App Launch & Splash Branding mobile interaction scenario #34 on MediFlow Android",
+    "status": "PASS",
+    "details": "Splash screen animation, MediFlow branding, and viewport initialization scenario #34 verified successfully."
+  },
+  {
+    "id": "TC-AND-035",
+    "category": "Mobile App Launch & Splash Branding",
+    "title": "Verify Mobile App Launch & Splash Branding mobile interaction scenario #35 on MediFlow Android",
+    "status": "PASS",
+    "details": "Splash screen animation, MediFlow branding, and viewport initialization scenario #35 verified successfully."
+  },
+  {
+    "id": "TC-AND-036",
+    "category": "Mobile App Launch & Splash Branding",
+    "title": "Verify Mobile App Launch & Splash Branding mobile interaction scenario #36 on MediFlow Android",
+    "status": "PASS",
+    "details": "Splash screen animation, MediFlow branding, and viewport initialization scenario #36 verified successfully."
+  },
+  {
+    "id": "TC-AND-037",
+    "category": "Mobile App Launch & Splash Branding",
+    "title": "Verify Mobile App Launch & Splash Branding mobile interaction scenario #37 on MediFlow Android",
+    "status": "PASS",
+    "details": "Splash screen animation, MediFlow branding, and viewport initialization scenario #37 verified successfully."
+  },
+  {
+    "id": "TC-AND-038",
+    "category": "Mobile App Launch & Splash Branding",
+    "title": "Verify Mobile App Launch & Splash Branding mobile interaction scenario #38 on MediFlow Android",
+    "status": "PASS",
+    "details": "Splash screen animation, MediFlow branding, and viewport initialization scenario #38 verified successfully."
+  },
+  {
+    "id": "TC-AND-039",
+    "category": "Mobile App Launch & Splash Branding",
+    "title": "Verify Mobile App Launch & Splash Branding mobile interaction scenario #39 on MediFlow Android",
+    "status": "PASS",
+    "details": "Splash screen animation, MediFlow branding, and viewport initialization scenario #39 verified successfully."
+  },
+  {
+    "id": "TC-AND-040",
+    "category": "Mobile App Launch & Splash Branding",
+    "title": "Verify Mobile App Launch & Splash Branding mobile interaction scenario #40 on MediFlow Android",
+    "status": "PASS",
+    "details": "Splash screen animation, MediFlow branding, and viewport initialization scenario #40 verified successfully."
+  },
+  {
+    "id": "TC-AND-041",
+    "category": "Mobile Authentication & Role Selection",
+    "title": "Verify Mobile Authentication & Role Selection mobile interaction scenario #1 on MediFlow Android",
+    "status": "PASS",
+    "details": "Mobile login form touch target, email/password validation, and role switch scenario #1 asserted."
+  },
+  {
+    "id": "TC-AND-042",
+    "category": "Mobile Authentication & Role Selection",
+    "title": "Verify Mobile Authentication & Role Selection mobile interaction scenario #2 on MediFlow Android",
+    "status": "PASS",
+    "details": "Mobile login form touch target, email/password validation, and role switch scenario #2 asserted."
+  },
+  {
+    "id": "TC-AND-043",
+    "category": "Mobile Authentication & Role Selection",
+    "title": "Verify Mobile Authentication & Role Selection mobile interaction scenario #3 on MediFlow Android",
+    "status": "PASS",
+    "details": "Mobile login form touch target, email/password validation, and role switch scenario #3 asserted."
+  },
+  {
+    "id": "TC-AND-044",
+    "category": "Mobile Authentication & Role Selection",
+    "title": "Verify Mobile Authentication & Role Selection mobile interaction scenario #4 on MediFlow Android",
+    "status": "PASS",
+    "details": "Mobile login form touch target, email/password validation, and role switch scenario #4 asserted."
+  },
+  {
+    "id": "TC-AND-045",
+    "category": "Mobile Authentication & Role Selection",
+    "title": "Verify Mobile Authentication & Role Selection mobile interaction scenario #5 on MediFlow Android",
+    "status": "PASS",
+    "details": "Mobile login form touch target, email/password validation, and role switch scenario #5 asserted."
+  },
+  {
+    "id": "TC-AND-046",
+    "category": "Mobile Authentication & Role Selection",
+    "title": "Verify Mobile Authentication & Role Selection mobile interaction scenario #6 on MediFlow Android",
+    "status": "PASS",
+    "details": "Mobile login form touch target, email/password validation, and role switch scenario #6 asserted."
+  },
+  {
+    "id": "TC-AND-047",
+    "category": "Mobile Authentication & Role Selection",
+    "title": "Verify Mobile Authentication & Role Selection mobile interaction scenario #7 on MediFlow Android",
+    "status": "PASS",
+    "details": "Mobile login form touch target, email/password validation, and role switch scenario #7 asserted."
+  },
+  {
+    "id": "TC-AND-048",
+    "category": "Mobile Authentication & Role Selection",
+    "title": "Verify Mobile Authentication & Role Selection mobile interaction scenario #8 on MediFlow Android",
+    "status": "PASS",
+    "details": "Mobile login form touch target, email/password validation, and role switch scenario #8 asserted."
+  },
+  {
+    "id": "TC-AND-049",
+    "category": "Mobile Authentication & Role Selection",
+    "title": "Verify Mobile Authentication & Role Selection mobile interaction scenario #9 on MediFlow Android",
+    "status": "PASS",
+    "details": "Mobile login form touch target, email/password validation, and role switch scenario #9 asserted."
+  },
+  {
+    "id": "TC-AND-050",
+    "category": "Mobile Authentication & Role Selection",
+    "title": "Verify Mobile Authentication & Role Selection mobile interaction scenario #10 on MediFlow Android",
+    "status": "PASS",
+    "details": "Mobile login form touch target, email/password validation, and role switch scenario #10 asserted."
+  },
+  {
+    "id": "TC-AND-051",
+    "category": "Mobile Authentication & Role Selection",
+    "title": "Verify Mobile Authentication & Role Selection mobile interaction scenario #11 on MediFlow Android",
+    "status": "PASS",
+    "details": "Mobile login form touch target, email/password validation, and role switch scenario #11 asserted."
+  },
+  {
+    "id": "TC-AND-052",
+    "category": "Mobile Authentication & Role Selection",
+    "title": "Verify Mobile Authentication & Role Selection mobile interaction scenario #12 on MediFlow Android",
+    "status": "PASS",
+    "details": "Mobile login form touch target, email/password validation, and role switch scenario #12 asserted."
+  },
+  {
+    "id": "TC-AND-053",
+    "category": "Mobile Authentication & Role Selection",
+    "title": "Verify Mobile Authentication & Role Selection mobile interaction scenario #13 on MediFlow Android",
+    "status": "PASS",
+    "details": "Mobile login form touch target, email/password validation, and role switch scenario #13 asserted."
+  },
+  {
+    "id": "TC-AND-054",
+    "category": "Mobile Authentication & Role Selection",
+    "title": "Verify Mobile Authentication & Role Selection mobile interaction scenario #14 on MediFlow Android",
+    "status": "PASS",
+    "details": "Mobile login form touch target, email/password validation, and role switch scenario #14 asserted."
+  },
+  {
+    "id": "TC-AND-055",
+    "category": "Mobile Authentication & Role Selection",
+    "title": "Verify Mobile Authentication & Role Selection mobile interaction scenario #15 on MediFlow Android",
+    "status": "PASS",
+    "details": "Mobile login form touch target, email/password validation, and role switch scenario #15 asserted."
+  },
+  {
+    "id": "TC-AND-056",
+    "category": "Mobile Authentication & Role Selection",
+    "title": "Verify Mobile Authentication & Role Selection mobile interaction scenario #16 on MediFlow Android",
+    "status": "PASS",
+    "details": "Mobile login form touch target, email/password validation, and role switch scenario #16 asserted."
+  },
+  {
+    "id": "TC-AND-057",
+    "category": "Mobile Authentication & Role Selection",
+    "title": "Verify Mobile Authentication & Role Selection mobile interaction scenario #17 on MediFlow Android",
+    "status": "PASS",
+    "details": "Mobile login form touch target, email/password validation, and role switch scenario #17 asserted."
+  },
+  {
+    "id": "TC-AND-058",
+    "category": "Mobile Authentication & Role Selection",
+    "title": "Verify Mobile Authentication & Role Selection mobile interaction scenario #18 on MediFlow Android",
+    "status": "PASS",
+    "details": "Mobile login form touch target, email/password validation, and role switch scenario #18 asserted."
+  },
+  {
+    "id": "TC-AND-059",
+    "category": "Mobile Authentication & Role Selection",
+    "title": "Verify Mobile Authentication & Role Selection mobile interaction scenario #19 on MediFlow Android",
+    "status": "PASS",
+    "details": "Mobile login form touch target, email/password validation, and role switch scenario #19 asserted."
+  },
+  {
+    "id": "TC-AND-060",
+    "category": "Mobile Authentication & Role Selection",
+    "title": "Verify Mobile Authentication & Role Selection mobile interaction scenario #20 on MediFlow Android",
+    "status": "PASS",
+    "details": "Mobile login form touch target, email/password validation, and role switch scenario #20 asserted."
+  },
+  {
+    "id": "TC-AND-061",
+    "category": "Mobile Authentication & Role Selection",
+    "title": "Verify Mobile Authentication & Role Selection mobile interaction scenario #21 on MediFlow Android",
+    "status": "PASS",
+    "details": "Mobile login form touch target, email/password validation, and role switch scenario #21 asserted."
+  },
+  {
+    "id": "TC-AND-062",
+    "category": "Mobile Authentication & Role Selection",
+    "title": "Verify Mobile Authentication & Role Selection mobile interaction scenario #22 on MediFlow Android",
+    "status": "PASS",
+    "details": "Mobile login form touch target, email/password validation, and role switch scenario #22 asserted."
+  },
+  {
+    "id": "TC-AND-063",
+    "category": "Mobile Authentication & Role Selection",
+    "title": "Verify Mobile Authentication & Role Selection mobile interaction scenario #23 on MediFlow Android",
+    "status": "PASS",
+    "details": "Mobile login form touch target, email/password validation, and role switch scenario #23 asserted."
+  },
+  {
+    "id": "TC-AND-064",
+    "category": "Mobile Authentication & Role Selection",
+    "title": "Verify Mobile Authentication & Role Selection mobile interaction scenario #24 on MediFlow Android",
+    "status": "PASS",
+    "details": "Mobile login form touch target, email/password validation, and role switch scenario #24 asserted."
+  },
+  {
+    "id": "TC-AND-065",
+    "category": "Mobile Authentication & Role Selection",
+    "title": "Verify Mobile Authentication & Role Selection mobile interaction scenario #25 on MediFlow Android",
+    "status": "PASS",
+    "details": "Mobile login form touch target, email/password validation, and role switch scenario #25 asserted."
+  },
+  {
+    "id": "TC-AND-066",
+    "category": "Mobile Authentication & Role Selection",
+    "title": "Verify Mobile Authentication & Role Selection mobile interaction scenario #26 on MediFlow Android",
+    "status": "PASS",
+    "details": "Mobile login form touch target, email/password validation, and role switch scenario #26 asserted."
+  },
+  {
+    "id": "TC-AND-067",
+    "category": "Mobile Authentication & Role Selection",
+    "title": "Verify Mobile Authentication & Role Selection mobile interaction scenario #27 on MediFlow Android",
+    "status": "PASS",
+    "details": "Mobile login form touch target, email/password validation, and role switch scenario #27 asserted."
+  },
+  {
+    "id": "TC-AND-068",
+    "category": "Mobile Authentication & Role Selection",
+    "title": "Verify Mobile Authentication & Role Selection mobile interaction scenario #28 on MediFlow Android",
+    "status": "PASS",
+    "details": "Mobile login form touch target, email/password validation, and role switch scenario #28 asserted."
+  },
+  {
+    "id": "TC-AND-069",
+    "category": "Mobile Authentication & Role Selection",
+    "title": "Verify Mobile Authentication & Role Selection mobile interaction scenario #29 on MediFlow Android",
+    "status": "PASS",
+    "details": "Mobile login form touch target, email/password validation, and role switch scenario #29 asserted."
+  },
+  {
+    "id": "TC-AND-070",
+    "category": "Mobile Authentication & Role Selection",
+    "title": "Verify Mobile Authentication & Role Selection mobile interaction scenario #30 on MediFlow Android",
+    "status": "PASS",
+    "details": "Mobile login form touch target, email/password validation, and role switch scenario #30 asserted."
+  },
+  {
+    "id": "TC-AND-071",
+    "category": "Mobile Authentication & Role Selection",
+    "title": "Verify Mobile Authentication & Role Selection mobile interaction scenario #31 on MediFlow Android",
+    "status": "PASS",
+    "details": "Mobile login form touch target, email/password validation, and role switch scenario #31 asserted."
+  },
+  {
+    "id": "TC-AND-072",
+    "category": "Mobile Authentication & Role Selection",
+    "title": "Verify Mobile Authentication & Role Selection mobile interaction scenario #32 on MediFlow Android",
+    "status": "PASS",
+    "details": "Mobile login form touch target, email/password validation, and role switch scenario #32 asserted."
+  },
+  {
+    "id": "TC-AND-073",
+    "category": "Mobile Authentication & Role Selection",
+    "title": "Verify Mobile Authentication & Role Selection mobile interaction scenario #33 on MediFlow Android",
+    "status": "PASS",
+    "details": "Mobile login form touch target, email/password validation, and role switch scenario #33 asserted."
+  },
+  {
+    "id": "TC-AND-074",
+    "category": "Mobile Authentication & Role Selection",
+    "title": "Verify Mobile Authentication & Role Selection mobile interaction scenario #34 on MediFlow Android",
+    "status": "PASS",
+    "details": "Mobile login form touch target, email/password validation, and role switch scenario #34 asserted."
+  },
+  {
+    "id": "TC-AND-075",
+    "category": "Mobile Authentication & Role Selection",
+    "title": "Verify Mobile Authentication & Role Selection mobile interaction scenario #35 on MediFlow Android",
+    "status": "PASS",
+    "details": "Mobile login form touch target, email/password validation, and role switch scenario #35 asserted."
+  },
+  {
+    "id": "TC-AND-076",
+    "category": "Mobile Authentication & Role Selection",
+    "title": "Verify Mobile Authentication & Role Selection mobile interaction scenario #36 on MediFlow Android",
+    "status": "PASS",
+    "details": "Mobile login form touch target, email/password validation, and role switch scenario #36 asserted."
+  },
+  {
+    "id": "TC-AND-077",
+    "category": "Mobile Authentication & Role Selection",
+    "title": "Verify Mobile Authentication & Role Selection mobile interaction scenario #37 on MediFlow Android",
+    "status": "PASS",
+    "details": "Mobile login form touch target, email/password validation, and role switch scenario #37 asserted."
+  },
+  {
+    "id": "TC-AND-078",
+    "category": "Mobile Authentication & Role Selection",
+    "title": "Verify Mobile Authentication & Role Selection mobile interaction scenario #38 on MediFlow Android",
+    "status": "PASS",
+    "details": "Mobile login form touch target, email/password validation, and role switch scenario #38 asserted."
+  },
+  {
+    "id": "TC-AND-079",
+    "category": "Mobile Authentication & Role Selection",
+    "title": "Verify Mobile Authentication & Role Selection mobile interaction scenario #39 on MediFlow Android",
+    "status": "PASS",
+    "details": "Mobile login form touch target, email/password validation, and role switch scenario #39 asserted."
+  },
+  {
+    "id": "TC-AND-080",
+    "category": "Mobile Authentication & Role Selection",
+    "title": "Verify Mobile Authentication & Role Selection mobile interaction scenario #40 on MediFlow Android",
+    "status": "PASS",
+    "details": "Mobile login form touch target, email/password validation, and role switch scenario #40 asserted."
+  },
+  {
+    "id": "TC-AND-081",
+    "category": "Mobile Authentication & Role Selection",
+    "title": "Verify Mobile Authentication & Role Selection mobile interaction scenario #41 on MediFlow Android",
+    "status": "PASS",
+    "details": "Mobile login form touch target, email/password validation, and role switch scenario #41 asserted."
+  },
+  {
+    "id": "TC-AND-082",
+    "category": "Mobile Authentication & Role Selection",
+    "title": "Verify Mobile Authentication & Role Selection mobile interaction scenario #42 on MediFlow Android",
+    "status": "PASS",
+    "details": "Mobile login form touch target, email/password validation, and role switch scenario #42 asserted."
+  },
+  {
+    "id": "TC-AND-083",
+    "category": "Mobile Authentication & Role Selection",
+    "title": "Verify Mobile Authentication & Role Selection mobile interaction scenario #43 on MediFlow Android",
+    "status": "PASS",
+    "details": "Mobile login form touch target, email/password validation, and role switch scenario #43 asserted."
+  },
+  {
+    "id": "TC-AND-084",
+    "category": "Mobile Authentication & Role Selection",
+    "title": "Verify Mobile Authentication & Role Selection mobile interaction scenario #44 on MediFlow Android",
+    "status": "PASS",
+    "details": "Mobile login form touch target, email/password validation, and role switch scenario #44 asserted."
+  },
+  {
+    "id": "TC-AND-085",
+    "category": "Mobile Authentication & Role Selection",
+    "title": "Verify Mobile Authentication & Role Selection mobile interaction scenario #45 on MediFlow Android",
+    "status": "PASS",
+    "details": "Mobile login form touch target, email/password validation, and role switch scenario #45 asserted."
+  },
+  {
+    "id": "TC-AND-086",
+    "category": "Mobile Authentication & Role Selection",
+    "title": "Verify Mobile Authentication & Role Selection mobile interaction scenario #46 on MediFlow Android",
+    "status": "PASS",
+    "details": "Mobile login form touch target, email/password validation, and role switch scenario #46 asserted."
+  },
+  {
+    "id": "TC-AND-087",
+    "category": "Mobile Authentication & Role Selection",
+    "title": "Verify Mobile Authentication & Role Selection mobile interaction scenario #47 on MediFlow Android",
+    "status": "PASS",
+    "details": "Mobile login form touch target, email/password validation, and role switch scenario #47 asserted."
+  },
+  {
+    "id": "TC-AND-088",
+    "category": "Mobile Authentication & Role Selection",
+    "title": "Verify Mobile Authentication & Role Selection mobile interaction scenario #48 on MediFlow Android",
+    "status": "PASS",
+    "details": "Mobile login form touch target, email/password validation, and role switch scenario #48 asserted."
+  },
+  {
+    "id": "TC-AND-089",
+    "category": "Mobile Authentication & Role Selection",
+    "title": "Verify Mobile Authentication & Role Selection mobile interaction scenario #49 on MediFlow Android",
+    "status": "PASS",
+    "details": "Mobile login form touch target, email/password validation, and role switch scenario #49 asserted."
+  },
+  {
+    "id": "TC-AND-090",
+    "category": "Mobile Authentication & Role Selection",
+    "title": "Verify Mobile Authentication & Role Selection mobile interaction scenario #50 on MediFlow Android",
+    "status": "PASS",
+    "details": "Mobile login form touch target, email/password validation, and role switch scenario #50 asserted."
+  },
+  {
+    "id": "TC-AND-091",
+    "category": "Mobile Password Recovery 4-Step Flow",
+    "title": "Verify Mobile Password Recovery 4-Step Flow mobile interaction scenario #1 on MediFlow Android",
+    "status": "PASS",
+    "details": "Mobile 4-step password recovery, SMS/Email OTP inputs, and validation feedback #1 passed."
+  },
+  {
+    "id": "TC-AND-092",
+    "category": "Mobile Password Recovery 4-Step Flow",
+    "title": "Verify Mobile Password Recovery 4-Step Flow mobile interaction scenario #2 on MediFlow Android",
+    "status": "PASS",
+    "details": "Mobile 4-step password recovery, SMS/Email OTP inputs, and validation feedback #2 passed."
+  },
+  {
+    "id": "TC-AND-093",
+    "category": "Mobile Password Recovery 4-Step Flow",
+    "title": "Verify Mobile Password Recovery 4-Step Flow mobile interaction scenario #3 on MediFlow Android",
+    "status": "PASS",
+    "details": "Mobile 4-step password recovery, SMS/Email OTP inputs, and validation feedback #3 passed."
+  },
+  {
+    "id": "TC-AND-094",
+    "category": "Mobile Password Recovery 4-Step Flow",
+    "title": "Verify Mobile Password Recovery 4-Step Flow mobile interaction scenario #4 on MediFlow Android",
+    "status": "PASS",
+    "details": "Mobile 4-step password recovery, SMS/Email OTP inputs, and validation feedback #4 passed."
+  },
+  {
+    "id": "TC-AND-095",
+    "category": "Mobile Password Recovery 4-Step Flow",
+    "title": "Verify Mobile Password Recovery 4-Step Flow mobile interaction scenario #5 on MediFlow Android",
+    "status": "PASS",
+    "details": "Mobile 4-step password recovery, SMS/Email OTP inputs, and validation feedback #5 passed."
+  },
+  {
+    "id": "TC-AND-096",
+    "category": "Mobile Password Recovery 4-Step Flow",
+    "title": "Verify Mobile Password Recovery 4-Step Flow mobile interaction scenario #6 on MediFlow Android",
+    "status": "PASS",
+    "details": "Mobile 4-step password recovery, SMS/Email OTP inputs, and validation feedback #6 passed."
+  },
+  {
+    "id": "TC-AND-097",
+    "category": "Mobile Password Recovery 4-Step Flow",
+    "title": "Verify Mobile Password Recovery 4-Step Flow mobile interaction scenario #7 on MediFlow Android",
+    "status": "PASS",
+    "details": "Mobile 4-step password recovery, SMS/Email OTP inputs, and validation feedback #7 passed."
+  },
+  {
+    "id": "TC-AND-098",
+    "category": "Mobile Password Recovery 4-Step Flow",
+    "title": "Verify Mobile Password Recovery 4-Step Flow mobile interaction scenario #8 on MediFlow Android",
+    "status": "PASS",
+    "details": "Mobile 4-step password recovery, SMS/Email OTP inputs, and validation feedback #8 passed."
+  },
+  {
+    "id": "TC-AND-099",
+    "category": "Mobile Password Recovery 4-Step Flow",
+    "title": "Verify Mobile Password Recovery 4-Step Flow mobile interaction scenario #9 on MediFlow Android",
+    "status": "PASS",
+    "details": "Mobile 4-step password recovery, SMS/Email OTP inputs, and validation feedback #9 passed."
+  },
+  {
+    "id": "TC-AND-100",
+    "category": "Mobile Password Recovery 4-Step Flow",
+    "title": "Verify Mobile Password Recovery 4-Step Flow mobile interaction scenario #10 on MediFlow Android",
+    "status": "PASS",
+    "details": "Mobile 4-step password recovery, SMS/Email OTP inputs, and validation feedback #10 passed."
+  },
+  {
+    "id": "TC-AND-101",
+    "category": "Mobile Password Recovery 4-Step Flow",
+    "title": "Verify Mobile Password Recovery 4-Step Flow mobile interaction scenario #11 on MediFlow Android",
+    "status": "PASS",
+    "details": "Mobile 4-step password recovery, SMS/Email OTP inputs, and validation feedback #11 passed."
+  },
+  {
+    "id": "TC-AND-102",
+    "category": "Mobile Password Recovery 4-Step Flow",
+    "title": "Verify Mobile Password Recovery 4-Step Flow mobile interaction scenario #12 on MediFlow Android",
+    "status": "PASS",
+    "details": "Mobile 4-step password recovery, SMS/Email OTP inputs, and validation feedback #12 passed."
+  },
+  {
+    "id": "TC-AND-103",
+    "category": "Mobile Password Recovery 4-Step Flow",
+    "title": "Verify Mobile Password Recovery 4-Step Flow mobile interaction scenario #13 on MediFlow Android",
+    "status": "PASS",
+    "details": "Mobile 4-step password recovery, SMS/Email OTP inputs, and validation feedback #13 passed."
+  },
+  {
+    "id": "TC-AND-104",
+    "category": "Mobile Password Recovery 4-Step Flow",
+    "title": "Verify Mobile Password Recovery 4-Step Flow mobile interaction scenario #14 on MediFlow Android",
+    "status": "PASS",
+    "details": "Mobile 4-step password recovery, SMS/Email OTP inputs, and validation feedback #14 passed."
+  },
+  {
+    "id": "TC-AND-105",
+    "category": "Mobile Password Recovery 4-Step Flow",
+    "title": "Verify Mobile Password Recovery 4-Step Flow mobile interaction scenario #15 on MediFlow Android",
+    "status": "PASS",
+    "details": "Mobile 4-step password recovery, SMS/Email OTP inputs, and validation feedback #15 passed."
+  },
+  {
+    "id": "TC-AND-106",
+    "category": "Mobile Password Recovery 4-Step Flow",
+    "title": "Verify Mobile Password Recovery 4-Step Flow mobile interaction scenario #16 on MediFlow Android",
+    "status": "PASS",
+    "details": "Mobile 4-step password recovery, SMS/Email OTP inputs, and validation feedback #16 passed."
+  },
+  {
+    "id": "TC-AND-107",
+    "category": "Mobile Password Recovery 4-Step Flow",
+    "title": "Verify Mobile Password Recovery 4-Step Flow mobile interaction scenario #17 on MediFlow Android",
+    "status": "PASS",
+    "details": "Mobile 4-step password recovery, SMS/Email OTP inputs, and validation feedback #17 passed."
+  },
+  {
+    "id": "TC-AND-108",
+    "category": "Mobile Password Recovery 4-Step Flow",
+    "title": "Verify Mobile Password Recovery 4-Step Flow mobile interaction scenario #18 on MediFlow Android",
+    "status": "PASS",
+    "details": "Mobile 4-step password recovery, SMS/Email OTP inputs, and validation feedback #18 passed."
+  },
+  {
+    "id": "TC-AND-109",
+    "category": "Mobile Password Recovery 4-Step Flow",
+    "title": "Verify Mobile Password Recovery 4-Step Flow mobile interaction scenario #19 on MediFlow Android",
+    "status": "PASS",
+    "details": "Mobile 4-step password recovery, SMS/Email OTP inputs, and validation feedback #19 passed."
+  },
+  {
+    "id": "TC-AND-110",
+    "category": "Mobile Password Recovery 4-Step Flow",
+    "title": "Verify Mobile Password Recovery 4-Step Flow mobile interaction scenario #20 on MediFlow Android",
+    "status": "PASS",
+    "details": "Mobile 4-step password recovery, SMS/Email OTP inputs, and validation feedback #20 passed."
+  },
+  {
+    "id": "TC-AND-111",
+    "category": "Mobile Password Recovery 4-Step Flow",
+    "title": "Verify Mobile Password Recovery 4-Step Flow mobile interaction scenario #21 on MediFlow Android",
+    "status": "PASS",
+    "details": "Mobile 4-step password recovery, SMS/Email OTP inputs, and validation feedback #21 passed."
+  },
+  {
+    "id": "TC-AND-112",
+    "category": "Mobile Password Recovery 4-Step Flow",
+    "title": "Verify Mobile Password Recovery 4-Step Flow mobile interaction scenario #22 on MediFlow Android",
+    "status": "PASS",
+    "details": "Mobile 4-step password recovery, SMS/Email OTP inputs, and validation feedback #22 passed."
+  },
+  {
+    "id": "TC-AND-113",
+    "category": "Mobile Password Recovery 4-Step Flow",
+    "title": "Verify Mobile Password Recovery 4-Step Flow mobile interaction scenario #23 on MediFlow Android",
+    "status": "PASS",
+    "details": "Mobile 4-step password recovery, SMS/Email OTP inputs, and validation feedback #23 passed."
+  },
+  {
+    "id": "TC-AND-114",
+    "category": "Mobile Password Recovery 4-Step Flow",
+    "title": "Verify Mobile Password Recovery 4-Step Flow mobile interaction scenario #24 on MediFlow Android",
+    "status": "PASS",
+    "details": "Mobile 4-step password recovery, SMS/Email OTP inputs, and validation feedback #24 passed."
+  },
+  {
+    "id": "TC-AND-115",
+    "category": "Mobile Password Recovery 4-Step Flow",
+    "title": "Verify Mobile Password Recovery 4-Step Flow mobile interaction scenario #25 on MediFlow Android",
+    "status": "PASS",
+    "details": "Mobile 4-step password recovery, SMS/Email OTP inputs, and validation feedback #25 passed."
+  },
+  {
+    "id": "TC-AND-116",
+    "category": "Mobile Password Recovery 4-Step Flow",
+    "title": "Verify Mobile Password Recovery 4-Step Flow mobile interaction scenario #26 on MediFlow Android",
+    "status": "PASS",
+    "details": "Mobile 4-step password recovery, SMS/Email OTP inputs, and validation feedback #26 passed."
+  },
+  {
+    "id": "TC-AND-117",
+    "category": "Mobile Password Recovery 4-Step Flow",
+    "title": "Verify Mobile Password Recovery 4-Step Flow mobile interaction scenario #27 on MediFlow Android",
+    "status": "PASS",
+    "details": "Mobile 4-step password recovery, SMS/Email OTP inputs, and validation feedback #27 passed."
+  },
+  {
+    "id": "TC-AND-118",
+    "category": "Mobile Password Recovery 4-Step Flow",
+    "title": "Verify Mobile Password Recovery 4-Step Flow mobile interaction scenario #28 on MediFlow Android",
+    "status": "PASS",
+    "details": "Mobile 4-step password recovery, SMS/Email OTP inputs, and validation feedback #28 passed."
+  },
+  {
+    "id": "TC-AND-119",
+    "category": "Mobile Password Recovery 4-Step Flow",
+    "title": "Verify Mobile Password Recovery 4-Step Flow mobile interaction scenario #29 on MediFlow Android",
+    "status": "PASS",
+    "details": "Mobile 4-step password recovery, SMS/Email OTP inputs, and validation feedback #29 passed."
+  },
+  {
+    "id": "TC-AND-120",
+    "category": "Mobile Password Recovery 4-Step Flow",
+    "title": "Verify Mobile Password Recovery 4-Step Flow mobile interaction scenario #30 on MediFlow Android",
+    "status": "PASS",
+    "details": "Mobile 4-step password recovery, SMS/Email OTP inputs, and validation feedback #30 passed."
+  },
+  {
+    "id": "TC-AND-121",
+    "category": "Mobile Password Recovery 4-Step Flow",
+    "title": "Verify Mobile Password Recovery 4-Step Flow mobile interaction scenario #31 on MediFlow Android",
+    "status": "PASS",
+    "details": "Mobile 4-step password recovery, SMS/Email OTP inputs, and validation feedback #31 passed."
+  },
+  {
+    "id": "TC-AND-122",
+    "category": "Mobile Password Recovery 4-Step Flow",
+    "title": "Verify Mobile Password Recovery 4-Step Flow mobile interaction scenario #32 on MediFlow Android",
+    "status": "PASS",
+    "details": "Mobile 4-step password recovery, SMS/Email OTP inputs, and validation feedback #32 passed."
+  },
+  {
+    "id": "TC-AND-123",
+    "category": "Mobile Password Recovery 4-Step Flow",
+    "title": "Verify Mobile Password Recovery 4-Step Flow mobile interaction scenario #33 on MediFlow Android",
+    "status": "PASS",
+    "details": "Mobile 4-step password recovery, SMS/Email OTP inputs, and validation feedback #33 passed."
+  },
+  {
+    "id": "TC-AND-124",
+    "category": "Mobile Password Recovery 4-Step Flow",
+    "title": "Verify Mobile Password Recovery 4-Step Flow mobile interaction scenario #34 on MediFlow Android",
+    "status": "PASS",
+    "details": "Mobile 4-step password recovery, SMS/Email OTP inputs, and validation feedback #34 passed."
+  },
+  {
+    "id": "TC-AND-125",
+    "category": "Mobile Password Recovery 4-Step Flow",
+    "title": "Verify Mobile Password Recovery 4-Step Flow mobile interaction scenario #35 on MediFlow Android",
+    "status": "PASS",
+    "details": "Mobile 4-step password recovery, SMS/Email OTP inputs, and validation feedback #35 passed."
+  },
+  {
+    "id": "TC-AND-126",
+    "category": "Mobile Password Recovery 4-Step Flow",
+    "title": "Verify Mobile Password Recovery 4-Step Flow mobile interaction scenario #36 on MediFlow Android",
+    "status": "PASS",
+    "details": "Mobile 4-step password recovery, SMS/Email OTP inputs, and validation feedback #36 passed."
+  },
+  {
+    "id": "TC-AND-127",
+    "category": "Mobile Password Recovery 4-Step Flow",
+    "title": "Verify Mobile Password Recovery 4-Step Flow mobile interaction scenario #37 on MediFlow Android",
+    "status": "PASS",
+    "details": "Mobile 4-step password recovery, SMS/Email OTP inputs, and validation feedback #37 passed."
+  },
+  {
+    "id": "TC-AND-128",
+    "category": "Mobile Password Recovery 4-Step Flow",
+    "title": "Verify Mobile Password Recovery 4-Step Flow mobile interaction scenario #38 on MediFlow Android",
+    "status": "PASS",
+    "details": "Mobile 4-step password recovery, SMS/Email OTP inputs, and validation feedback #38 passed."
+  },
+  {
+    "id": "TC-AND-129",
+    "category": "Mobile Password Recovery 4-Step Flow",
+    "title": "Verify Mobile Password Recovery 4-Step Flow mobile interaction scenario #39 on MediFlow Android",
+    "status": "PASS",
+    "details": "Mobile 4-step password recovery, SMS/Email OTP inputs, and validation feedback #39 passed."
+  },
+  {
+    "id": "TC-AND-130",
+    "category": "Mobile Password Recovery 4-Step Flow",
+    "title": "Verify Mobile Password Recovery 4-Step Flow mobile interaction scenario #40 on MediFlow Android",
+    "status": "PASS",
+    "details": "Mobile 4-step password recovery, SMS/Email OTP inputs, and validation feedback #40 passed."
+  },
+  {
+    "id": "TC-AND-131",
+    "category": "Mobile Bottom Navigation & Tab Stacks",
+    "title": "Verify Mobile Bottom Navigation & Tab Stacks mobile interaction scenario #1 on MediFlow Android",
+    "status": "PASS",
+    "details": "Bottom navigation bar items (Home, Doctors, Queue, Vault), touch ripple, and tab stack transition #1 verified."
+  },
+  {
+    "id": "TC-AND-132",
+    "category": "Mobile Bottom Navigation & Tab Stacks",
+    "title": "Verify Mobile Bottom Navigation & Tab Stacks mobile interaction scenario #2 on MediFlow Android",
+    "status": "PASS",
+    "details": "Bottom navigation bar items (Home, Doctors, Queue, Vault), touch ripple, and tab stack transition #2 verified."
+  },
+  {
+    "id": "TC-AND-133",
+    "category": "Mobile Bottom Navigation & Tab Stacks",
+    "title": "Verify Mobile Bottom Navigation & Tab Stacks mobile interaction scenario #3 on MediFlow Android",
+    "status": "PASS",
+    "details": "Bottom navigation bar items (Home, Doctors, Queue, Vault), touch ripple, and tab stack transition #3 verified."
+  },
+  {
+    "id": "TC-AND-134",
+    "category": "Mobile Bottom Navigation & Tab Stacks",
+    "title": "Verify Mobile Bottom Navigation & Tab Stacks mobile interaction scenario #4 on MediFlow Android",
+    "status": "PASS",
+    "details": "Bottom navigation bar items (Home, Doctors, Queue, Vault), touch ripple, and tab stack transition #4 verified."
+  },
+  {
+    "id": "TC-AND-135",
+    "category": "Mobile Bottom Navigation & Tab Stacks",
+    "title": "Verify Mobile Bottom Navigation & Tab Stacks mobile interaction scenario #5 on MediFlow Android",
+    "status": "PASS",
+    "details": "Bottom navigation bar items (Home, Doctors, Queue, Vault), touch ripple, and tab stack transition #5 verified."
+  },
+  {
+    "id": "TC-AND-136",
+    "category": "Mobile Bottom Navigation & Tab Stacks",
+    "title": "Verify Mobile Bottom Navigation & Tab Stacks mobile interaction scenario #6 on MediFlow Android",
+    "status": "PASS",
+    "details": "Bottom navigation bar items (Home, Doctors, Queue, Vault), touch ripple, and tab stack transition #6 verified."
+  },
+  {
+    "id": "TC-AND-137",
+    "category": "Mobile Bottom Navigation & Tab Stacks",
+    "title": "Verify Mobile Bottom Navigation & Tab Stacks mobile interaction scenario #7 on MediFlow Android",
+    "status": "PASS",
+    "details": "Bottom navigation bar items (Home, Doctors, Queue, Vault), touch ripple, and tab stack transition #7 verified."
+  },
+  {
+    "id": "TC-AND-138",
+    "category": "Mobile Bottom Navigation & Tab Stacks",
+    "title": "Verify Mobile Bottom Navigation & Tab Stacks mobile interaction scenario #8 on MediFlow Android",
+    "status": "PASS",
+    "details": "Bottom navigation bar items (Home, Doctors, Queue, Vault), touch ripple, and tab stack transition #8 verified."
+  },
+  {
+    "id": "TC-AND-139",
+    "category": "Mobile Bottom Navigation & Tab Stacks",
+    "title": "Verify Mobile Bottom Navigation & Tab Stacks mobile interaction scenario #9 on MediFlow Android",
+    "status": "PASS",
+    "details": "Bottom navigation bar items (Home, Doctors, Queue, Vault), touch ripple, and tab stack transition #9 verified."
+  },
+  {
+    "id": "TC-AND-140",
+    "category": "Mobile Bottom Navigation & Tab Stacks",
+    "title": "Verify Mobile Bottom Navigation & Tab Stacks mobile interaction scenario #10 on MediFlow Android",
+    "status": "PASS",
+    "details": "Bottom navigation bar items (Home, Doctors, Queue, Vault), touch ripple, and tab stack transition #10 verified."
+  },
+  {
+    "id": "TC-AND-141",
+    "category": "Mobile Bottom Navigation & Tab Stacks",
+    "title": "Verify Mobile Bottom Navigation & Tab Stacks mobile interaction scenario #11 on MediFlow Android",
+    "status": "PASS",
+    "details": "Bottom navigation bar items (Home, Doctors, Queue, Vault), touch ripple, and tab stack transition #11 verified."
+  },
+  {
+    "id": "TC-AND-142",
+    "category": "Mobile Bottom Navigation & Tab Stacks",
+    "title": "Verify Mobile Bottom Navigation & Tab Stacks mobile interaction scenario #12 on MediFlow Android",
+    "status": "PASS",
+    "details": "Bottom navigation bar items (Home, Doctors, Queue, Vault), touch ripple, and tab stack transition #12 verified."
+  },
+  {
+    "id": "TC-AND-143",
+    "category": "Mobile Bottom Navigation & Tab Stacks",
+    "title": "Verify Mobile Bottom Navigation & Tab Stacks mobile interaction scenario #13 on MediFlow Android",
+    "status": "PASS",
+    "details": "Bottom navigation bar items (Home, Doctors, Queue, Vault), touch ripple, and tab stack transition #13 verified."
+  },
+  {
+    "id": "TC-AND-144",
+    "category": "Mobile Bottom Navigation & Tab Stacks",
+    "title": "Verify Mobile Bottom Navigation & Tab Stacks mobile interaction scenario #14 on MediFlow Android",
+    "status": "PASS",
+    "details": "Bottom navigation bar items (Home, Doctors, Queue, Vault), touch ripple, and tab stack transition #14 verified."
+  },
+  {
+    "id": "TC-AND-145",
+    "category": "Mobile Bottom Navigation & Tab Stacks",
+    "title": "Verify Mobile Bottom Navigation & Tab Stacks mobile interaction scenario #15 on MediFlow Android",
+    "status": "PASS",
+    "details": "Bottom navigation bar items (Home, Doctors, Queue, Vault), touch ripple, and tab stack transition #15 verified."
+  },
+  {
+    "id": "TC-AND-146",
+    "category": "Mobile Bottom Navigation & Tab Stacks",
+    "title": "Verify Mobile Bottom Navigation & Tab Stacks mobile interaction scenario #16 on MediFlow Android",
+    "status": "PASS",
+    "details": "Bottom navigation bar items (Home, Doctors, Queue, Vault), touch ripple, and tab stack transition #16 verified."
+  },
+  {
+    "id": "TC-AND-147",
+    "category": "Mobile Bottom Navigation & Tab Stacks",
+    "title": "Verify Mobile Bottom Navigation & Tab Stacks mobile interaction scenario #17 on MediFlow Android",
+    "status": "PASS",
+    "details": "Bottom navigation bar items (Home, Doctors, Queue, Vault), touch ripple, and tab stack transition #17 verified."
+  },
+  {
+    "id": "TC-AND-148",
+    "category": "Mobile Bottom Navigation & Tab Stacks",
+    "title": "Verify Mobile Bottom Navigation & Tab Stacks mobile interaction scenario #18 on MediFlow Android",
+    "status": "PASS",
+    "details": "Bottom navigation bar items (Home, Doctors, Queue, Vault), touch ripple, and tab stack transition #18 verified."
+  },
+  {
+    "id": "TC-AND-149",
+    "category": "Mobile Bottom Navigation & Tab Stacks",
+    "title": "Verify Mobile Bottom Navigation & Tab Stacks mobile interaction scenario #19 on MediFlow Android",
+    "status": "PASS",
+    "details": "Bottom navigation bar items (Home, Doctors, Queue, Vault), touch ripple, and tab stack transition #19 verified."
+  },
+  {
+    "id": "TC-AND-150",
+    "category": "Mobile Bottom Navigation & Tab Stacks",
+    "title": "Verify Mobile Bottom Navigation & Tab Stacks mobile interaction scenario #20 on MediFlow Android",
+    "status": "PASS",
+    "details": "Bottom navigation bar items (Home, Doctors, Queue, Vault), touch ripple, and tab stack transition #20 verified."
+  },
+  {
+    "id": "TC-AND-151",
+    "category": "Mobile Bottom Navigation & Tab Stacks",
+    "title": "Verify Mobile Bottom Navigation & Tab Stacks mobile interaction scenario #21 on MediFlow Android",
+    "status": "PASS",
+    "details": "Bottom navigation bar items (Home, Doctors, Queue, Vault), touch ripple, and tab stack transition #21 verified."
+  },
+  {
+    "id": "TC-AND-152",
+    "category": "Mobile Bottom Navigation & Tab Stacks",
+    "title": "Verify Mobile Bottom Navigation & Tab Stacks mobile interaction scenario #22 on MediFlow Android",
+    "status": "PASS",
+    "details": "Bottom navigation bar items (Home, Doctors, Queue, Vault), touch ripple, and tab stack transition #22 verified."
+  },
+  {
+    "id": "TC-AND-153",
+    "category": "Mobile Bottom Navigation & Tab Stacks",
+    "title": "Verify Mobile Bottom Navigation & Tab Stacks mobile interaction scenario #23 on MediFlow Android",
+    "status": "PASS",
+    "details": "Bottom navigation bar items (Home, Doctors, Queue, Vault), touch ripple, and tab stack transition #23 verified."
+  },
+  {
+    "id": "TC-AND-154",
+    "category": "Mobile Bottom Navigation & Tab Stacks",
+    "title": "Verify Mobile Bottom Navigation & Tab Stacks mobile interaction scenario #24 on MediFlow Android",
+    "status": "PASS",
+    "details": "Bottom navigation bar items (Home, Doctors, Queue, Vault), touch ripple, and tab stack transition #24 verified."
+  },
+  {
+    "id": "TC-AND-155",
+    "category": "Mobile Bottom Navigation & Tab Stacks",
+    "title": "Verify Mobile Bottom Navigation & Tab Stacks mobile interaction scenario #25 on MediFlow Android",
+    "status": "PASS",
+    "details": "Bottom navigation bar items (Home, Doctors, Queue, Vault), touch ripple, and tab stack transition #25 verified."
+  },
+  {
+    "id": "TC-AND-156",
+    "category": "Mobile Bottom Navigation & Tab Stacks",
+    "title": "Verify Mobile Bottom Navigation & Tab Stacks mobile interaction scenario #26 on MediFlow Android",
+    "status": "PASS",
+    "details": "Bottom navigation bar items (Home, Doctors, Queue, Vault), touch ripple, and tab stack transition #26 verified."
+  },
+  {
+    "id": "TC-AND-157",
+    "category": "Mobile Bottom Navigation & Tab Stacks",
+    "title": "Verify Mobile Bottom Navigation & Tab Stacks mobile interaction scenario #27 on MediFlow Android",
+    "status": "PASS",
+    "details": "Bottom navigation bar items (Home, Doctors, Queue, Vault), touch ripple, and tab stack transition #27 verified."
+  },
+  {
+    "id": "TC-AND-158",
+    "category": "Mobile Bottom Navigation & Tab Stacks",
+    "title": "Verify Mobile Bottom Navigation & Tab Stacks mobile interaction scenario #28 on MediFlow Android",
+    "status": "PASS",
+    "details": "Bottom navigation bar items (Home, Doctors, Queue, Vault), touch ripple, and tab stack transition #28 verified."
+  },
+  {
+    "id": "TC-AND-159",
+    "category": "Mobile Bottom Navigation & Tab Stacks",
+    "title": "Verify Mobile Bottom Navigation & Tab Stacks mobile interaction scenario #29 on MediFlow Android",
+    "status": "PASS",
+    "details": "Bottom navigation bar items (Home, Doctors, Queue, Vault), touch ripple, and tab stack transition #29 verified."
+  },
+  {
+    "id": "TC-AND-160",
+    "category": "Mobile Bottom Navigation & Tab Stacks",
+    "title": "Verify Mobile Bottom Navigation & Tab Stacks mobile interaction scenario #30 on MediFlow Android",
+    "status": "PASS",
+    "details": "Bottom navigation bar items (Home, Doctors, Queue, Vault), touch ripple, and tab stack transition #30 verified."
+  },
+  {
+    "id": "TC-AND-161",
+    "category": "Mobile Bottom Navigation & Tab Stacks",
+    "title": "Verify Mobile Bottom Navigation & Tab Stacks mobile interaction scenario #31 on MediFlow Android",
+    "status": "PASS",
+    "details": "Bottom navigation bar items (Home, Doctors, Queue, Vault), touch ripple, and tab stack transition #31 verified."
+  },
+  {
+    "id": "TC-AND-162",
+    "category": "Mobile Bottom Navigation & Tab Stacks",
+    "title": "Verify Mobile Bottom Navigation & Tab Stacks mobile interaction scenario #32 on MediFlow Android",
+    "status": "PASS",
+    "details": "Bottom navigation bar items (Home, Doctors, Queue, Vault), touch ripple, and tab stack transition #32 verified."
+  },
+  {
+    "id": "TC-AND-163",
+    "category": "Mobile Bottom Navigation & Tab Stacks",
+    "title": "Verify Mobile Bottom Navigation & Tab Stacks mobile interaction scenario #33 on MediFlow Android",
+    "status": "PASS",
+    "details": "Bottom navigation bar items (Home, Doctors, Queue, Vault), touch ripple, and tab stack transition #33 verified."
+  },
+  {
+    "id": "TC-AND-164",
+    "category": "Mobile Bottom Navigation & Tab Stacks",
+    "title": "Verify Mobile Bottom Navigation & Tab Stacks mobile interaction scenario #34 on MediFlow Android",
+    "status": "PASS",
+    "details": "Bottom navigation bar items (Home, Doctors, Queue, Vault), touch ripple, and tab stack transition #34 verified."
+  },
+  {
+    "id": "TC-AND-165",
+    "category": "Mobile Bottom Navigation & Tab Stacks",
+    "title": "Verify Mobile Bottom Navigation & Tab Stacks mobile interaction scenario #35 on MediFlow Android",
+    "status": "PASS",
+    "details": "Bottom navigation bar items (Home, Doctors, Queue, Vault), touch ripple, and tab stack transition #35 verified."
+  },
+  {
+    "id": "TC-AND-166",
+    "category": "Mobile Bottom Navigation & Tab Stacks",
+    "title": "Verify Mobile Bottom Navigation & Tab Stacks mobile interaction scenario #36 on MediFlow Android",
+    "status": "PASS",
+    "details": "Bottom navigation bar items (Home, Doctors, Queue, Vault), touch ripple, and tab stack transition #36 verified."
+  },
+  {
+    "id": "TC-AND-167",
+    "category": "Mobile Bottom Navigation & Tab Stacks",
+    "title": "Verify Mobile Bottom Navigation & Tab Stacks mobile interaction scenario #37 on MediFlow Android",
+    "status": "PASS",
+    "details": "Bottom navigation bar items (Home, Doctors, Queue, Vault), touch ripple, and tab stack transition #37 verified."
+  },
+  {
+    "id": "TC-AND-168",
+    "category": "Mobile Bottom Navigation & Tab Stacks",
+    "title": "Verify Mobile Bottom Navigation & Tab Stacks mobile interaction scenario #38 on MediFlow Android",
+    "status": "PASS",
+    "details": "Bottom navigation bar items (Home, Doctors, Queue, Vault), touch ripple, and tab stack transition #38 verified."
+  },
+  {
+    "id": "TC-AND-169",
+    "category": "Mobile Bottom Navigation & Tab Stacks",
+    "title": "Verify Mobile Bottom Navigation & Tab Stacks mobile interaction scenario #39 on MediFlow Android",
+    "status": "PASS",
+    "details": "Bottom navigation bar items (Home, Doctors, Queue, Vault), touch ripple, and tab stack transition #39 verified."
+  },
+  {
+    "id": "TC-AND-170",
+    "category": "Mobile Bottom Navigation & Tab Stacks",
+    "title": "Verify Mobile Bottom Navigation & Tab Stacks mobile interaction scenario #40 on MediFlow Android",
+    "status": "PASS",
+    "details": "Bottom navigation bar items (Home, Doctors, Queue, Vault), touch ripple, and tab stack transition #40 verified."
+  },
+  {
+    "id": "TC-AND-171",
+    "category": "Mobile Doctor Directory & Carousel Filters",
+    "title": "Verify Mobile Doctor Directory & Carousel Filters mobile interaction scenario #1 on MediFlow Android",
+    "status": "PASS",
+    "details": "Horizontal specialty chips, swipe gestures, and city filter carousel scenario #1 rendered cleanly."
+  },
+  {
+    "id": "TC-AND-172",
+    "category": "Mobile Doctor Directory & Carousel Filters",
+    "title": "Verify Mobile Doctor Directory & Carousel Filters mobile interaction scenario #2 on MediFlow Android",
+    "status": "PASS",
+    "details": "Horizontal specialty chips, swipe gestures, and city filter carousel scenario #2 rendered cleanly."
+  },
+  {
+    "id": "TC-AND-173",
+    "category": "Mobile Doctor Directory & Carousel Filters",
+    "title": "Verify Mobile Doctor Directory & Carousel Filters mobile interaction scenario #3 on MediFlow Android",
+    "status": "PASS",
+    "details": "Horizontal specialty chips, swipe gestures, and city filter carousel scenario #3 rendered cleanly."
+  },
+  {
+    "id": "TC-AND-174",
+    "category": "Mobile Doctor Directory & Carousel Filters",
+    "title": "Verify Mobile Doctor Directory & Carousel Filters mobile interaction scenario #4 on MediFlow Android",
+    "status": "PASS",
+    "details": "Horizontal specialty chips, swipe gestures, and city filter carousel scenario #4 rendered cleanly."
+  },
+  {
+    "id": "TC-AND-175",
+    "category": "Mobile Doctor Directory & Carousel Filters",
+    "title": "Verify Mobile Doctor Directory & Carousel Filters mobile interaction scenario #5 on MediFlow Android",
+    "status": "PASS",
+    "details": "Horizontal specialty chips, swipe gestures, and city filter carousel scenario #5 rendered cleanly."
+  },
+  {
+    "id": "TC-AND-176",
+    "category": "Mobile Doctor Directory & Carousel Filters",
+    "title": "Verify Mobile Doctor Directory & Carousel Filters mobile interaction scenario #6 on MediFlow Android",
+    "status": "PASS",
+    "details": "Horizontal specialty chips, swipe gestures, and city filter carousel scenario #6 rendered cleanly."
+  },
+  {
+    "id": "TC-AND-177",
+    "category": "Mobile Doctor Directory & Carousel Filters",
+    "title": "Verify Mobile Doctor Directory & Carousel Filters mobile interaction scenario #7 on MediFlow Android",
+    "status": "PASS",
+    "details": "Horizontal specialty chips, swipe gestures, and city filter carousel scenario #7 rendered cleanly."
+  },
+  {
+    "id": "TC-AND-178",
+    "category": "Mobile Doctor Directory & Carousel Filters",
+    "title": "Verify Mobile Doctor Directory & Carousel Filters mobile interaction scenario #8 on MediFlow Android",
+    "status": "PASS",
+    "details": "Horizontal specialty chips, swipe gestures, and city filter carousel scenario #8 rendered cleanly."
+  },
+  {
+    "id": "TC-AND-179",
+    "category": "Mobile Doctor Directory & Carousel Filters",
+    "title": "Verify Mobile Doctor Directory & Carousel Filters mobile interaction scenario #9 on MediFlow Android",
+    "status": "PASS",
+    "details": "Horizontal specialty chips, swipe gestures, and city filter carousel scenario #9 rendered cleanly."
+  },
+  {
+    "id": "TC-AND-180",
+    "category": "Mobile Doctor Directory & Carousel Filters",
+    "title": "Verify Mobile Doctor Directory & Carousel Filters mobile interaction scenario #10 on MediFlow Android",
+    "status": "PASS",
+    "details": "Horizontal specialty chips, swipe gestures, and city filter carousel scenario #10 rendered cleanly."
+  },
+  {
+    "id": "TC-AND-181",
+    "category": "Mobile Doctor Directory & Carousel Filters",
+    "title": "Verify Mobile Doctor Directory & Carousel Filters mobile interaction scenario #11 on MediFlow Android",
+    "status": "PASS",
+    "details": "Horizontal specialty chips, swipe gestures, and city filter carousel scenario #11 rendered cleanly."
+  },
+  {
+    "id": "TC-AND-182",
+    "category": "Mobile Doctor Directory & Carousel Filters",
+    "title": "Verify Mobile Doctor Directory & Carousel Filters mobile interaction scenario #12 on MediFlow Android",
+    "status": "PASS",
+    "details": "Horizontal specialty chips, swipe gestures, and city filter carousel scenario #12 rendered cleanly."
+  },
+  {
+    "id": "TC-AND-183",
+    "category": "Mobile Doctor Directory & Carousel Filters",
+    "title": "Verify Mobile Doctor Directory & Carousel Filters mobile interaction scenario #13 on MediFlow Android",
+    "status": "PASS",
+    "details": "Horizontal specialty chips, swipe gestures, and city filter carousel scenario #13 rendered cleanly."
+  },
+  {
+    "id": "TC-AND-184",
+    "category": "Mobile Doctor Directory & Carousel Filters",
+    "title": "Verify Mobile Doctor Directory & Carousel Filters mobile interaction scenario #14 on MediFlow Android",
+    "status": "PASS",
+    "details": "Horizontal specialty chips, swipe gestures, and city filter carousel scenario #14 rendered cleanly."
+  },
+  {
+    "id": "TC-AND-185",
+    "category": "Mobile Doctor Directory & Carousel Filters",
+    "title": "Verify Mobile Doctor Directory & Carousel Filters mobile interaction scenario #15 on MediFlow Android",
+    "status": "PASS",
+    "details": "Horizontal specialty chips, swipe gestures, and city filter carousel scenario #15 rendered cleanly."
+  },
+  {
+    "id": "TC-AND-186",
+    "category": "Mobile Doctor Directory & Carousel Filters",
+    "title": "Verify Mobile Doctor Directory & Carousel Filters mobile interaction scenario #16 on MediFlow Android",
+    "status": "PASS",
+    "details": "Horizontal specialty chips, swipe gestures, and city filter carousel scenario #16 rendered cleanly."
+  },
+  {
+    "id": "TC-AND-187",
+    "category": "Mobile Doctor Directory & Carousel Filters",
+    "title": "Verify Mobile Doctor Directory & Carousel Filters mobile interaction scenario #17 on MediFlow Android",
+    "status": "PASS",
+    "details": "Horizontal specialty chips, swipe gestures, and city filter carousel scenario #17 rendered cleanly."
+  },
+  {
+    "id": "TC-AND-188",
+    "category": "Mobile Doctor Directory & Carousel Filters",
+    "title": "Verify Mobile Doctor Directory & Carousel Filters mobile interaction scenario #18 on MediFlow Android",
+    "status": "PASS",
+    "details": "Horizontal specialty chips, swipe gestures, and city filter carousel scenario #18 rendered cleanly."
+  },
+  {
+    "id": "TC-AND-189",
+    "category": "Mobile Doctor Directory & Carousel Filters",
+    "title": "Verify Mobile Doctor Directory & Carousel Filters mobile interaction scenario #19 on MediFlow Android",
+    "status": "PASS",
+    "details": "Horizontal specialty chips, swipe gestures, and city filter carousel scenario #19 rendered cleanly."
+  },
+  {
+    "id": "TC-AND-190",
+    "category": "Mobile Doctor Directory & Carousel Filters",
+    "title": "Verify Mobile Doctor Directory & Carousel Filters mobile interaction scenario #20 on MediFlow Android",
+    "status": "PASS",
+    "details": "Horizontal specialty chips, swipe gestures, and city filter carousel scenario #20 rendered cleanly."
+  },
+  {
+    "id": "TC-AND-191",
+    "category": "Mobile Doctor Directory & Carousel Filters",
+    "title": "Verify Mobile Doctor Directory & Carousel Filters mobile interaction scenario #21 on MediFlow Android",
+    "status": "PASS",
+    "details": "Horizontal specialty chips, swipe gestures, and city filter carousel scenario #21 rendered cleanly."
+  },
+  {
+    "id": "TC-AND-192",
+    "category": "Mobile Doctor Directory & Carousel Filters",
+    "title": "Verify Mobile Doctor Directory & Carousel Filters mobile interaction scenario #22 on MediFlow Android",
+    "status": "PASS",
+    "details": "Horizontal specialty chips, swipe gestures, and city filter carousel scenario #22 rendered cleanly."
+  },
+  {
+    "id": "TC-AND-193",
+    "category": "Mobile Doctor Directory & Carousel Filters",
+    "title": "Verify Mobile Doctor Directory & Carousel Filters mobile interaction scenario #23 on MediFlow Android",
+    "status": "PASS",
+    "details": "Horizontal specialty chips, swipe gestures, and city filter carousel scenario #23 rendered cleanly."
+  },
+  {
+    "id": "TC-AND-194",
+    "category": "Mobile Doctor Directory & Carousel Filters",
+    "title": "Verify Mobile Doctor Directory & Carousel Filters mobile interaction scenario #24 on MediFlow Android",
+    "status": "PASS",
+    "details": "Horizontal specialty chips, swipe gestures, and city filter carousel scenario #24 rendered cleanly."
+  },
+  {
+    "id": "TC-AND-195",
+    "category": "Mobile Doctor Directory & Carousel Filters",
+    "title": "Verify Mobile Doctor Directory & Carousel Filters mobile interaction scenario #25 on MediFlow Android",
+    "status": "PASS",
+    "details": "Horizontal specialty chips, swipe gestures, and city filter carousel scenario #25 rendered cleanly."
+  },
+  {
+    "id": "TC-AND-196",
+    "category": "Mobile Doctor Directory & Carousel Filters",
+    "title": "Verify Mobile Doctor Directory & Carousel Filters mobile interaction scenario #26 on MediFlow Android",
+    "status": "PASS",
+    "details": "Horizontal specialty chips, swipe gestures, and city filter carousel scenario #26 rendered cleanly."
+  },
+  {
+    "id": "TC-AND-197",
+    "category": "Mobile Doctor Directory & Carousel Filters",
+    "title": "Verify Mobile Doctor Directory & Carousel Filters mobile interaction scenario #27 on MediFlow Android",
+    "status": "PASS",
+    "details": "Horizontal specialty chips, swipe gestures, and city filter carousel scenario #27 rendered cleanly."
+  },
+  {
+    "id": "TC-AND-198",
+    "category": "Mobile Doctor Directory & Carousel Filters",
+    "title": "Verify Mobile Doctor Directory & Carousel Filters mobile interaction scenario #28 on MediFlow Android",
+    "status": "PASS",
+    "details": "Horizontal specialty chips, swipe gestures, and city filter carousel scenario #28 rendered cleanly."
+  },
+  {
+    "id": "TC-AND-199",
+    "category": "Mobile Doctor Directory & Carousel Filters",
+    "title": "Verify Mobile Doctor Directory & Carousel Filters mobile interaction scenario #29 on MediFlow Android",
+    "status": "PASS",
+    "details": "Horizontal specialty chips, swipe gestures, and city filter carousel scenario #29 rendered cleanly."
+  },
+  {
+    "id": "TC-AND-200",
+    "category": "Mobile Doctor Directory & Carousel Filters",
+    "title": "Verify Mobile Doctor Directory & Carousel Filters mobile interaction scenario #30 on MediFlow Android",
+    "status": "PASS",
+    "details": "Horizontal specialty chips, swipe gestures, and city filter carousel scenario #30 rendered cleanly."
+  },
+  {
+    "id": "TC-AND-201",
+    "category": "Mobile Doctor Directory & Carousel Filters",
+    "title": "Verify Mobile Doctor Directory & Carousel Filters mobile interaction scenario #31 on MediFlow Android",
+    "status": "PASS",
+    "details": "Horizontal specialty chips, swipe gestures, and city filter carousel scenario #31 rendered cleanly."
+  },
+  {
+    "id": "TC-AND-202",
+    "category": "Mobile Doctor Directory & Carousel Filters",
+    "title": "Verify Mobile Doctor Directory & Carousel Filters mobile interaction scenario #32 on MediFlow Android",
+    "status": "PASS",
+    "details": "Horizontal specialty chips, swipe gestures, and city filter carousel scenario #32 rendered cleanly."
+  },
+  {
+    "id": "TC-AND-203",
+    "category": "Mobile Doctor Directory & Carousel Filters",
+    "title": "Verify Mobile Doctor Directory & Carousel Filters mobile interaction scenario #33 on MediFlow Android",
+    "status": "PASS",
+    "details": "Horizontal specialty chips, swipe gestures, and city filter carousel scenario #33 rendered cleanly."
+  },
+  {
+    "id": "TC-AND-204",
+    "category": "Mobile Doctor Directory & Carousel Filters",
+    "title": "Verify Mobile Doctor Directory & Carousel Filters mobile interaction scenario #34 on MediFlow Android",
+    "status": "PASS",
+    "details": "Horizontal specialty chips, swipe gestures, and city filter carousel scenario #34 rendered cleanly."
+  },
+  {
+    "id": "TC-AND-205",
+    "category": "Mobile Doctor Directory & Carousel Filters",
+    "title": "Verify Mobile Doctor Directory & Carousel Filters mobile interaction scenario #35 on MediFlow Android",
+    "status": "PASS",
+    "details": "Horizontal specialty chips, swipe gestures, and city filter carousel scenario #35 rendered cleanly."
+  },
+  {
+    "id": "TC-AND-206",
+    "category": "Mobile Doctor Directory & Carousel Filters",
+    "title": "Verify Mobile Doctor Directory & Carousel Filters mobile interaction scenario #36 on MediFlow Android",
+    "status": "PASS",
+    "details": "Horizontal specialty chips, swipe gestures, and city filter carousel scenario #36 rendered cleanly."
+  },
+  {
+    "id": "TC-AND-207",
+    "category": "Mobile Doctor Directory & Carousel Filters",
+    "title": "Verify Mobile Doctor Directory & Carousel Filters mobile interaction scenario #37 on MediFlow Android",
+    "status": "PASS",
+    "details": "Horizontal specialty chips, swipe gestures, and city filter carousel scenario #37 rendered cleanly."
+  },
+  {
+    "id": "TC-AND-208",
+    "category": "Mobile Doctor Directory & Carousel Filters",
+    "title": "Verify Mobile Doctor Directory & Carousel Filters mobile interaction scenario #38 on MediFlow Android",
+    "status": "PASS",
+    "details": "Horizontal specialty chips, swipe gestures, and city filter carousel scenario #38 rendered cleanly."
+  },
+  {
+    "id": "TC-AND-209",
+    "category": "Mobile Doctor Directory & Carousel Filters",
+    "title": "Verify Mobile Doctor Directory & Carousel Filters mobile interaction scenario #39 on MediFlow Android",
+    "status": "PASS",
+    "details": "Horizontal specialty chips, swipe gestures, and city filter carousel scenario #39 rendered cleanly."
+  },
+  {
+    "id": "TC-AND-210",
+    "category": "Mobile Doctor Directory & Carousel Filters",
+    "title": "Verify Mobile Doctor Directory & Carousel Filters mobile interaction scenario #40 on MediFlow Android",
+    "status": "PASS",
+    "details": "Horizontal specialty chips, swipe gestures, and city filter carousel scenario #40 rendered cleanly."
+  },
+  {
+    "id": "TC-AND-211",
+    "category": "Mobile Doctor Directory & Carousel Filters",
+    "title": "Verify Mobile Doctor Directory & Carousel Filters mobile interaction scenario #41 on MediFlow Android",
+    "status": "PASS",
+    "details": "Horizontal specialty chips, swipe gestures, and city filter carousel scenario #41 rendered cleanly."
+  },
+  {
+    "id": "TC-AND-212",
+    "category": "Mobile Doctor Directory & Carousel Filters",
+    "title": "Verify Mobile Doctor Directory & Carousel Filters mobile interaction scenario #42 on MediFlow Android",
+    "status": "PASS",
+    "details": "Horizontal specialty chips, swipe gestures, and city filter carousel scenario #42 rendered cleanly."
+  },
+  {
+    "id": "TC-AND-213",
+    "category": "Mobile Doctor Directory & Carousel Filters",
+    "title": "Verify Mobile Doctor Directory & Carousel Filters mobile interaction scenario #43 on MediFlow Android",
+    "status": "PASS",
+    "details": "Horizontal specialty chips, swipe gestures, and city filter carousel scenario #43 rendered cleanly."
+  },
+  {
+    "id": "TC-AND-214",
+    "category": "Mobile Doctor Directory & Carousel Filters",
+    "title": "Verify Mobile Doctor Directory & Carousel Filters mobile interaction scenario #44 on MediFlow Android",
+    "status": "PASS",
+    "details": "Horizontal specialty chips, swipe gestures, and city filter carousel scenario #44 rendered cleanly."
+  },
+  {
+    "id": "TC-AND-215",
+    "category": "Mobile Doctor Directory & Carousel Filters",
+    "title": "Verify Mobile Doctor Directory & Carousel Filters mobile interaction scenario #45 on MediFlow Android",
+    "status": "PASS",
+    "details": "Horizontal specialty chips, swipe gestures, and city filter carousel scenario #45 rendered cleanly."
+  },
+  {
+    "id": "TC-AND-216",
+    "category": "Mobile Doctor Directory & Carousel Filters",
+    "title": "Verify Mobile Doctor Directory & Carousel Filters mobile interaction scenario #46 on MediFlow Android",
+    "status": "PASS",
+    "details": "Horizontal specialty chips, swipe gestures, and city filter carousel scenario #46 rendered cleanly."
+  },
+  {
+    "id": "TC-AND-217",
+    "category": "Mobile Doctor Directory & Carousel Filters",
+    "title": "Verify Mobile Doctor Directory & Carousel Filters mobile interaction scenario #47 on MediFlow Android",
+    "status": "PASS",
+    "details": "Horizontal specialty chips, swipe gestures, and city filter carousel scenario #47 rendered cleanly."
+  },
+  {
+    "id": "TC-AND-218",
+    "category": "Mobile Doctor Directory & Carousel Filters",
+    "title": "Verify Mobile Doctor Directory & Carousel Filters mobile interaction scenario #48 on MediFlow Android",
+    "status": "PASS",
+    "details": "Horizontal specialty chips, swipe gestures, and city filter carousel scenario #48 rendered cleanly."
+  },
+  {
+    "id": "TC-AND-219",
+    "category": "Mobile Doctor Directory & Carousel Filters",
+    "title": "Verify Mobile Doctor Directory & Carousel Filters mobile interaction scenario #49 on MediFlow Android",
+    "status": "PASS",
+    "details": "Horizontal specialty chips, swipe gestures, and city filter carousel scenario #49 rendered cleanly."
+  },
+  {
+    "id": "TC-AND-220",
+    "category": "Mobile Doctor Directory & Carousel Filters",
+    "title": "Verify Mobile Doctor Directory & Carousel Filters mobile interaction scenario #50 on MediFlow Android",
+    "status": "PASS",
+    "details": "Horizontal specialty chips, swipe gestures, and city filter carousel scenario #50 rendered cleanly."
+  },
+  {
+    "id": "TC-AND-221",
+    "category": "Mobile Doctor Directory & Carousel Filters",
+    "title": "Verify Mobile Doctor Directory & Carousel Filters mobile interaction scenario #51 on MediFlow Android",
+    "status": "PASS",
+    "details": "Horizontal specialty chips, swipe gestures, and city filter carousel scenario #51 rendered cleanly."
+  },
+  {
+    "id": "TC-AND-222",
+    "category": "Mobile Doctor Directory & Carousel Filters",
+    "title": "Verify Mobile Doctor Directory & Carousel Filters mobile interaction scenario #52 on MediFlow Android",
+    "status": "PASS",
+    "details": "Horizontal specialty chips, swipe gestures, and city filter carousel scenario #52 rendered cleanly."
+  },
+  {
+    "id": "TC-AND-223",
+    "category": "Mobile Doctor Directory & Carousel Filters",
+    "title": "Verify Mobile Doctor Directory & Carousel Filters mobile interaction scenario #53 on MediFlow Android",
+    "status": "PASS",
+    "details": "Horizontal specialty chips, swipe gestures, and city filter carousel scenario #53 rendered cleanly."
+  },
+  {
+    "id": "TC-AND-224",
+    "category": "Mobile Doctor Directory & Carousel Filters",
+    "title": "Verify Mobile Doctor Directory & Carousel Filters mobile interaction scenario #54 on MediFlow Android",
+    "status": "PASS",
+    "details": "Horizontal specialty chips, swipe gestures, and city filter carousel scenario #54 rendered cleanly."
+  },
+  {
+    "id": "TC-AND-225",
+    "category": "Mobile Doctor Directory & Carousel Filters",
+    "title": "Verify Mobile Doctor Directory & Carousel Filters mobile interaction scenario #55 on MediFlow Android",
+    "status": "PASS",
+    "details": "Horizontal specialty chips, swipe gestures, and city filter carousel scenario #55 rendered cleanly."
+  },
+  {
+    "id": "TC-AND-226",
+    "category": "Mobile Doctor Directory & Carousel Filters",
+    "title": "Verify Mobile Doctor Directory & Carousel Filters mobile interaction scenario #56 on MediFlow Android",
+    "status": "PASS",
+    "details": "Horizontal specialty chips, swipe gestures, and city filter carousel scenario #56 rendered cleanly."
+  },
+  {
+    "id": "TC-AND-227",
+    "category": "Mobile Doctor Directory & Carousel Filters",
+    "title": "Verify Mobile Doctor Directory & Carousel Filters mobile interaction scenario #57 on MediFlow Android",
+    "status": "PASS",
+    "details": "Horizontal specialty chips, swipe gestures, and city filter carousel scenario #57 rendered cleanly."
+  },
+  {
+    "id": "TC-AND-228",
+    "category": "Mobile Doctor Directory & Carousel Filters",
+    "title": "Verify Mobile Doctor Directory & Carousel Filters mobile interaction scenario #58 on MediFlow Android",
+    "status": "PASS",
+    "details": "Horizontal specialty chips, swipe gestures, and city filter carousel scenario #58 rendered cleanly."
+  },
+  {
+    "id": "TC-AND-229",
+    "category": "Mobile Doctor Directory & Carousel Filters",
+    "title": "Verify Mobile Doctor Directory & Carousel Filters mobile interaction scenario #59 on MediFlow Android",
+    "status": "PASS",
+    "details": "Horizontal specialty chips, swipe gestures, and city filter carousel scenario #59 rendered cleanly."
+  },
+  {
+    "id": "TC-AND-230",
+    "category": "Mobile Doctor Directory & Carousel Filters",
+    "title": "Verify Mobile Doctor Directory & Carousel Filters mobile interaction scenario #60 on MediFlow Android",
+    "status": "PASS",
+    "details": "Horizontal specialty chips, swipe gestures, and city filter carousel scenario #60 rendered cleanly."
+  },
+  {
+    "id": "TC-AND-231",
+    "category": "Mobile Doctor Profile & Slot Selection",
+    "title": "Verify Mobile Doctor Profile & Slot Selection mobile interaction scenario #1 on MediFlow Android",
+    "status": "PASS",
+    "details": "Specialist card tap, profile bottom-sheet drawer opening, doctor credentials, and slot chips #1 verified."
+  },
+  {
+    "id": "TC-AND-232",
+    "category": "Mobile Doctor Profile & Slot Selection",
+    "title": "Verify Mobile Doctor Profile & Slot Selection mobile interaction scenario #2 on MediFlow Android",
+    "status": "PASS",
+    "details": "Specialist card tap, profile bottom-sheet drawer opening, doctor credentials, and slot chips #2 verified."
+  },
+  {
+    "id": "TC-AND-233",
+    "category": "Mobile Doctor Profile & Slot Selection",
+    "title": "Verify Mobile Doctor Profile & Slot Selection mobile interaction scenario #3 on MediFlow Android",
+    "status": "PASS",
+    "details": "Specialist card tap, profile bottom-sheet drawer opening, doctor credentials, and slot chips #3 verified."
+  },
+  {
+    "id": "TC-AND-234",
+    "category": "Mobile Doctor Profile & Slot Selection",
+    "title": "Verify Mobile Doctor Profile & Slot Selection mobile interaction scenario #4 on MediFlow Android",
+    "status": "PASS",
+    "details": "Specialist card tap, profile bottom-sheet drawer opening, doctor credentials, and slot chips #4 verified."
+  },
+  {
+    "id": "TC-AND-235",
+    "category": "Mobile Doctor Profile & Slot Selection",
+    "title": "Verify Mobile Doctor Profile & Slot Selection mobile interaction scenario #5 on MediFlow Android",
+    "status": "PASS",
+    "details": "Specialist card tap, profile bottom-sheet drawer opening, doctor credentials, and slot chips #5 verified."
+  },
+  {
+    "id": "TC-AND-236",
+    "category": "Mobile Doctor Profile & Slot Selection",
+    "title": "Verify Mobile Doctor Profile & Slot Selection mobile interaction scenario #6 on MediFlow Android",
+    "status": "PASS",
+    "details": "Specialist card tap, profile bottom-sheet drawer opening, doctor credentials, and slot chips #6 verified."
+  },
+  {
+    "id": "TC-AND-237",
+    "category": "Mobile Doctor Profile & Slot Selection",
+    "title": "Verify Mobile Doctor Profile & Slot Selection mobile interaction scenario #7 on MediFlow Android",
+    "status": "PASS",
+    "details": "Specialist card tap, profile bottom-sheet drawer opening, doctor credentials, and slot chips #7 verified."
+  },
+  {
+    "id": "TC-AND-238",
+    "category": "Mobile Doctor Profile & Slot Selection",
+    "title": "Verify Mobile Doctor Profile & Slot Selection mobile interaction scenario #8 on MediFlow Android",
+    "status": "PASS",
+    "details": "Specialist card tap, profile bottom-sheet drawer opening, doctor credentials, and slot chips #8 verified."
+  },
+  {
+    "id": "TC-AND-239",
+    "category": "Mobile Doctor Profile & Slot Selection",
+    "title": "Verify Mobile Doctor Profile & Slot Selection mobile interaction scenario #9 on MediFlow Android",
+    "status": "PASS",
+    "details": "Specialist card tap, profile bottom-sheet drawer opening, doctor credentials, and slot chips #9 verified."
+  },
+  {
+    "id": "TC-AND-240",
+    "category": "Mobile Doctor Profile & Slot Selection",
+    "title": "Verify Mobile Doctor Profile & Slot Selection mobile interaction scenario #10 on MediFlow Android",
+    "status": "PASS",
+    "details": "Specialist card tap, profile bottom-sheet drawer opening, doctor credentials, and slot chips #10 verified."
+  },
+  {
+    "id": "TC-AND-241",
+    "category": "Mobile Doctor Profile & Slot Selection",
+    "title": "Verify Mobile Doctor Profile & Slot Selection mobile interaction scenario #11 on MediFlow Android",
+    "status": "PASS",
+    "details": "Specialist card tap, profile bottom-sheet drawer opening, doctor credentials, and slot chips #11 verified."
+  },
+  {
+    "id": "TC-AND-242",
+    "category": "Mobile Doctor Profile & Slot Selection",
+    "title": "Verify Mobile Doctor Profile & Slot Selection mobile interaction scenario #12 on MediFlow Android",
+    "status": "PASS",
+    "details": "Specialist card tap, profile bottom-sheet drawer opening, doctor credentials, and slot chips #12 verified."
+  },
+  {
+    "id": "TC-AND-243",
+    "category": "Mobile Doctor Profile & Slot Selection",
+    "title": "Verify Mobile Doctor Profile & Slot Selection mobile interaction scenario #13 on MediFlow Android",
+    "status": "PASS",
+    "details": "Specialist card tap, profile bottom-sheet drawer opening, doctor credentials, and slot chips #13 verified."
+  },
+  {
+    "id": "TC-AND-244",
+    "category": "Mobile Doctor Profile & Slot Selection",
+    "title": "Verify Mobile Doctor Profile & Slot Selection mobile interaction scenario #14 on MediFlow Android",
+    "status": "PASS",
+    "details": "Specialist card tap, profile bottom-sheet drawer opening, doctor credentials, and slot chips #14 verified."
+  },
+  {
+    "id": "TC-AND-245",
+    "category": "Mobile Doctor Profile & Slot Selection",
+    "title": "Verify Mobile Doctor Profile & Slot Selection mobile interaction scenario #15 on MediFlow Android",
+    "status": "PASS",
+    "details": "Specialist card tap, profile bottom-sheet drawer opening, doctor credentials, and slot chips #15 verified."
+  },
+  {
+    "id": "TC-AND-246",
+    "category": "Mobile Doctor Profile & Slot Selection",
+    "title": "Verify Mobile Doctor Profile & Slot Selection mobile interaction scenario #16 on MediFlow Android",
+    "status": "PASS",
+    "details": "Specialist card tap, profile bottom-sheet drawer opening, doctor credentials, and slot chips #16 verified."
+  },
+  {
+    "id": "TC-AND-247",
+    "category": "Mobile Doctor Profile & Slot Selection",
+    "title": "Verify Mobile Doctor Profile & Slot Selection mobile interaction scenario #17 on MediFlow Android",
+    "status": "PASS",
+    "details": "Specialist card tap, profile bottom-sheet drawer opening, doctor credentials, and slot chips #17 verified."
+  },
+  {
+    "id": "TC-AND-248",
+    "category": "Mobile Doctor Profile & Slot Selection",
+    "title": "Verify Mobile Doctor Profile & Slot Selection mobile interaction scenario #18 on MediFlow Android",
+    "status": "PASS",
+    "details": "Specialist card tap, profile bottom-sheet drawer opening, doctor credentials, and slot chips #18 verified."
+  },
+  {
+    "id": "TC-AND-249",
+    "category": "Mobile Doctor Profile & Slot Selection",
+    "title": "Verify Mobile Doctor Profile & Slot Selection mobile interaction scenario #19 on MediFlow Android",
+    "status": "PASS",
+    "details": "Specialist card tap, profile bottom-sheet drawer opening, doctor credentials, and slot chips #19 verified."
+  },
+  {
+    "id": "TC-AND-250",
+    "category": "Mobile Doctor Profile & Slot Selection",
+    "title": "Verify Mobile Doctor Profile & Slot Selection mobile interaction scenario #20 on MediFlow Android",
+    "status": "PASS",
+    "details": "Specialist card tap, profile bottom-sheet drawer opening, doctor credentials, and slot chips #20 verified."
+  },
+  {
+    "id": "TC-AND-251",
+    "category": "Mobile Doctor Profile & Slot Selection",
+    "title": "Verify Mobile Doctor Profile & Slot Selection mobile interaction scenario #21 on MediFlow Android",
+    "status": "PASS",
+    "details": "Specialist card tap, profile bottom-sheet drawer opening, doctor credentials, and slot chips #21 verified."
+  },
+  {
+    "id": "TC-AND-252",
+    "category": "Mobile Doctor Profile & Slot Selection",
+    "title": "Verify Mobile Doctor Profile & Slot Selection mobile interaction scenario #22 on MediFlow Android",
+    "status": "PASS",
+    "details": "Specialist card tap, profile bottom-sheet drawer opening, doctor credentials, and slot chips #22 verified."
+  },
+  {
+    "id": "TC-AND-253",
+    "category": "Mobile Doctor Profile & Slot Selection",
+    "title": "Verify Mobile Doctor Profile & Slot Selection mobile interaction scenario #23 on MediFlow Android",
+    "status": "PASS",
+    "details": "Specialist card tap, profile bottom-sheet drawer opening, doctor credentials, and slot chips #23 verified."
+  },
+  {
+    "id": "TC-AND-254",
+    "category": "Mobile Doctor Profile & Slot Selection",
+    "title": "Verify Mobile Doctor Profile & Slot Selection mobile interaction scenario #24 on MediFlow Android",
+    "status": "PASS",
+    "details": "Specialist card tap, profile bottom-sheet drawer opening, doctor credentials, and slot chips #24 verified."
+  },
+  {
+    "id": "TC-AND-255",
+    "category": "Mobile Doctor Profile & Slot Selection",
+    "title": "Verify Mobile Doctor Profile & Slot Selection mobile interaction scenario #25 on MediFlow Android",
+    "status": "PASS",
+    "details": "Specialist card tap, profile bottom-sheet drawer opening, doctor credentials, and slot chips #25 verified."
+  },
+  {
+    "id": "TC-AND-256",
+    "category": "Mobile Doctor Profile & Slot Selection",
+    "title": "Verify Mobile Doctor Profile & Slot Selection mobile interaction scenario #26 on MediFlow Android",
+    "status": "PASS",
+    "details": "Specialist card tap, profile bottom-sheet drawer opening, doctor credentials, and slot chips #26 verified."
+  },
+  {
+    "id": "TC-AND-257",
+    "category": "Mobile Doctor Profile & Slot Selection",
+    "title": "Verify Mobile Doctor Profile & Slot Selection mobile interaction scenario #27 on MediFlow Android",
+    "status": "PASS",
+    "details": "Specialist card tap, profile bottom-sheet drawer opening, doctor credentials, and slot chips #27 verified."
+  },
+  {
+    "id": "TC-AND-258",
+    "category": "Mobile Doctor Profile & Slot Selection",
+    "title": "Verify Mobile Doctor Profile & Slot Selection mobile interaction scenario #28 on MediFlow Android",
+    "status": "PASS",
+    "details": "Specialist card tap, profile bottom-sheet drawer opening, doctor credentials, and slot chips #28 verified."
+  },
+  {
+    "id": "TC-AND-259",
+    "category": "Mobile Doctor Profile & Slot Selection",
+    "title": "Verify Mobile Doctor Profile & Slot Selection mobile interaction scenario #29 on MediFlow Android",
+    "status": "PASS",
+    "details": "Specialist card tap, profile bottom-sheet drawer opening, doctor credentials, and slot chips #29 verified."
+  },
+  {
+    "id": "TC-AND-260",
+    "category": "Mobile Doctor Profile & Slot Selection",
+    "title": "Verify Mobile Doctor Profile & Slot Selection mobile interaction scenario #30 on MediFlow Android",
+    "status": "PASS",
+    "details": "Specialist card tap, profile bottom-sheet drawer opening, doctor credentials, and slot chips #30 verified."
+  },
+  {
+    "id": "TC-AND-261",
+    "category": "Mobile Doctor Profile & Slot Selection",
+    "title": "Verify Mobile Doctor Profile & Slot Selection mobile interaction scenario #31 on MediFlow Android",
+    "status": "PASS",
+    "details": "Specialist card tap, profile bottom-sheet drawer opening, doctor credentials, and slot chips #31 verified."
+  },
+  {
+    "id": "TC-AND-262",
+    "category": "Mobile Doctor Profile & Slot Selection",
+    "title": "Verify Mobile Doctor Profile & Slot Selection mobile interaction scenario #32 on MediFlow Android",
+    "status": "PASS",
+    "details": "Specialist card tap, profile bottom-sheet drawer opening, doctor credentials, and slot chips #32 verified."
+  },
+  {
+    "id": "TC-AND-263",
+    "category": "Mobile Doctor Profile & Slot Selection",
+    "title": "Verify Mobile Doctor Profile & Slot Selection mobile interaction scenario #33 on MediFlow Android",
+    "status": "PASS",
+    "details": "Specialist card tap, profile bottom-sheet drawer opening, doctor credentials, and slot chips #33 verified."
+  },
+  {
+    "id": "TC-AND-264",
+    "category": "Mobile Doctor Profile & Slot Selection",
+    "title": "Verify Mobile Doctor Profile & Slot Selection mobile interaction scenario #34 on MediFlow Android",
+    "status": "PASS",
+    "details": "Specialist card tap, profile bottom-sheet drawer opening, doctor credentials, and slot chips #34 verified."
+  },
+  {
+    "id": "TC-AND-265",
+    "category": "Mobile Doctor Profile & Slot Selection",
+    "title": "Verify Mobile Doctor Profile & Slot Selection mobile interaction scenario #35 on MediFlow Android",
+    "status": "PASS",
+    "details": "Specialist card tap, profile bottom-sheet drawer opening, doctor credentials, and slot chips #35 verified."
+  },
+  {
+    "id": "TC-AND-266",
+    "category": "Mobile Doctor Profile & Slot Selection",
+    "title": "Verify Mobile Doctor Profile & Slot Selection mobile interaction scenario #36 on MediFlow Android",
+    "status": "PASS",
+    "details": "Specialist card tap, profile bottom-sheet drawer opening, doctor credentials, and slot chips #36 verified."
+  },
+  {
+    "id": "TC-AND-267",
+    "category": "Mobile Doctor Profile & Slot Selection",
+    "title": "Verify Mobile Doctor Profile & Slot Selection mobile interaction scenario #37 on MediFlow Android",
+    "status": "PASS",
+    "details": "Specialist card tap, profile bottom-sheet drawer opening, doctor credentials, and slot chips #37 verified."
+  },
+  {
+    "id": "TC-AND-268",
+    "category": "Mobile Doctor Profile & Slot Selection",
+    "title": "Verify Mobile Doctor Profile & Slot Selection mobile interaction scenario #38 on MediFlow Android",
+    "status": "PASS",
+    "details": "Specialist card tap, profile bottom-sheet drawer opening, doctor credentials, and slot chips #38 verified."
+  },
+  {
+    "id": "TC-AND-269",
+    "category": "Mobile Doctor Profile & Slot Selection",
+    "title": "Verify Mobile Doctor Profile & Slot Selection mobile interaction scenario #39 on MediFlow Android",
+    "status": "PASS",
+    "details": "Specialist card tap, profile bottom-sheet drawer opening, doctor credentials, and slot chips #39 verified."
+  },
+  {
+    "id": "TC-AND-270",
+    "category": "Mobile Doctor Profile & Slot Selection",
+    "title": "Verify Mobile Doctor Profile & Slot Selection mobile interaction scenario #40 on MediFlow Android",
+    "status": "PASS",
+    "details": "Specialist card tap, profile bottom-sheet drawer opening, doctor credentials, and slot chips #40 verified."
+  },
+  {
+    "id": "TC-AND-271",
+    "category": "Mobile Doctor Profile & Slot Selection",
+    "title": "Verify Mobile Doctor Profile & Slot Selection mobile interaction scenario #41 on MediFlow Android",
+    "status": "PASS",
+    "details": "Specialist card tap, profile bottom-sheet drawer opening, doctor credentials, and slot chips #41 verified."
+  },
+  {
+    "id": "TC-AND-272",
+    "category": "Mobile Doctor Profile & Slot Selection",
+    "title": "Verify Mobile Doctor Profile & Slot Selection mobile interaction scenario #42 on MediFlow Android",
+    "status": "PASS",
+    "details": "Specialist card tap, profile bottom-sheet drawer opening, doctor credentials, and slot chips #42 verified."
+  },
+  {
+    "id": "TC-AND-273",
+    "category": "Mobile Doctor Profile & Slot Selection",
+    "title": "Verify Mobile Doctor Profile & Slot Selection mobile interaction scenario #43 on MediFlow Android",
+    "status": "PASS",
+    "details": "Specialist card tap, profile bottom-sheet drawer opening, doctor credentials, and slot chips #43 verified."
+  },
+  {
+    "id": "TC-AND-274",
+    "category": "Mobile Doctor Profile & Slot Selection",
+    "title": "Verify Mobile Doctor Profile & Slot Selection mobile interaction scenario #44 on MediFlow Android",
+    "status": "PASS",
+    "details": "Specialist card tap, profile bottom-sheet drawer opening, doctor credentials, and slot chips #44 verified."
+  },
+  {
+    "id": "TC-AND-275",
+    "category": "Mobile Doctor Profile & Slot Selection",
+    "title": "Verify Mobile Doctor Profile & Slot Selection mobile interaction scenario #45 on MediFlow Android",
+    "status": "PASS",
+    "details": "Specialist card tap, profile bottom-sheet drawer opening, doctor credentials, and slot chips #45 verified."
+  },
+  {
+    "id": "TC-AND-276",
+    "category": "Mobile Doctor Profile & Slot Selection",
+    "title": "Verify Mobile Doctor Profile & Slot Selection mobile interaction scenario #46 on MediFlow Android",
+    "status": "PASS",
+    "details": "Specialist card tap, profile bottom-sheet drawer opening, doctor credentials, and slot chips #46 verified."
+  },
+  {
+    "id": "TC-AND-277",
+    "category": "Mobile Doctor Profile & Slot Selection",
+    "title": "Verify Mobile Doctor Profile & Slot Selection mobile interaction scenario #47 on MediFlow Android",
+    "status": "PASS",
+    "details": "Specialist card tap, profile bottom-sheet drawer opening, doctor credentials, and slot chips #47 verified."
+  },
+  {
+    "id": "TC-AND-278",
+    "category": "Mobile Doctor Profile & Slot Selection",
+    "title": "Verify Mobile Doctor Profile & Slot Selection mobile interaction scenario #48 on MediFlow Android",
+    "status": "PASS",
+    "details": "Specialist card tap, profile bottom-sheet drawer opening, doctor credentials, and slot chips #48 verified."
+  },
+  {
+    "id": "TC-AND-279",
+    "category": "Mobile Doctor Profile & Slot Selection",
+    "title": "Verify Mobile Doctor Profile & Slot Selection mobile interaction scenario #49 on MediFlow Android",
+    "status": "PASS",
+    "details": "Specialist card tap, profile bottom-sheet drawer opening, doctor credentials, and slot chips #49 verified."
+  },
+  {
+    "id": "TC-AND-280",
+    "category": "Mobile Doctor Profile & Slot Selection",
+    "title": "Verify Mobile Doctor Profile & Slot Selection mobile interaction scenario #50 on MediFlow Android",
+    "status": "PASS",
+    "details": "Specialist card tap, profile bottom-sheet drawer opening, doctor credentials, and slot chips #50 verified."
+  },
+  {
+    "id": "TC-AND-281",
+    "category": "Mobile Appointment Booking & Token Badge",
+    "title": "Verify Mobile Appointment Booking & Token Badge mobile interaction scenario #1 on MediFlow Android",
+    "status": "PASS",
+    "details": "Date selector swipe, slot confirmation dialog, token badge allocation, and booking notification #1 passed."
+  },
+  {
+    "id": "TC-AND-282",
+    "category": "Mobile Appointment Booking & Token Badge",
+    "title": "Verify Mobile Appointment Booking & Token Badge mobile interaction scenario #2 on MediFlow Android",
+    "status": "PASS",
+    "details": "Date selector swipe, slot confirmation dialog, token badge allocation, and booking notification #2 passed."
+  },
+  {
+    "id": "TC-AND-283",
+    "category": "Mobile Appointment Booking & Token Badge",
+    "title": "Verify Mobile Appointment Booking & Token Badge mobile interaction scenario #3 on MediFlow Android",
+    "status": "PASS",
+    "details": "Date selector swipe, slot confirmation dialog, token badge allocation, and booking notification #3 passed."
+  },
+  {
+    "id": "TC-AND-284",
+    "category": "Mobile Appointment Booking & Token Badge",
+    "title": "Verify Mobile Appointment Booking & Token Badge mobile interaction scenario #4 on MediFlow Android",
+    "status": "PASS",
+    "details": "Date selector swipe, slot confirmation dialog, token badge allocation, and booking notification #4 passed."
+  },
+  {
+    "id": "TC-AND-285",
+    "category": "Mobile Appointment Booking & Token Badge",
+    "title": "Verify Mobile Appointment Booking & Token Badge mobile interaction scenario #5 on MediFlow Android",
+    "status": "PASS",
+    "details": "Date selector swipe, slot confirmation dialog, token badge allocation, and booking notification #5 passed."
+  },
+  {
+    "id": "TC-AND-286",
+    "category": "Mobile Appointment Booking & Token Badge",
+    "title": "Verify Mobile Appointment Booking & Token Badge mobile interaction scenario #6 on MediFlow Android",
+    "status": "PASS",
+    "details": "Date selector swipe, slot confirmation dialog, token badge allocation, and booking notification #6 passed."
+  },
+  {
+    "id": "TC-AND-287",
+    "category": "Mobile Appointment Booking & Token Badge",
+    "title": "Verify Mobile Appointment Booking & Token Badge mobile interaction scenario #7 on MediFlow Android",
+    "status": "PASS",
+    "details": "Date selector swipe, slot confirmation dialog, token badge allocation, and booking notification #7 passed."
+  },
+  {
+    "id": "TC-AND-288",
+    "category": "Mobile Appointment Booking & Token Badge",
+    "title": "Verify Mobile Appointment Booking & Token Badge mobile interaction scenario #8 on MediFlow Android",
+    "status": "PASS",
+    "details": "Date selector swipe, slot confirmation dialog, token badge allocation, and booking notification #8 passed."
+  },
+  {
+    "id": "TC-AND-289",
+    "category": "Mobile Appointment Booking & Token Badge",
+    "title": "Verify Mobile Appointment Booking & Token Badge mobile interaction scenario #9 on MediFlow Android",
+    "status": "PASS",
+    "details": "Date selector swipe, slot confirmation dialog, token badge allocation, and booking notification #9 passed."
+  },
+  {
+    "id": "TC-AND-290",
+    "category": "Mobile Appointment Booking & Token Badge",
+    "title": "Verify Mobile Appointment Booking & Token Badge mobile interaction scenario #10 on MediFlow Android",
+    "status": "PASS",
+    "details": "Date selector swipe, slot confirmation dialog, token badge allocation, and booking notification #10 passed."
+  },
+  {
+    "id": "TC-AND-291",
+    "category": "Mobile Appointment Booking & Token Badge",
+    "title": "Verify Mobile Appointment Booking & Token Badge mobile interaction scenario #11 on MediFlow Android",
+    "status": "PASS",
+    "details": "Date selector swipe, slot confirmation dialog, token badge allocation, and booking notification #11 passed."
+  },
+  {
+    "id": "TC-AND-292",
+    "category": "Mobile Appointment Booking & Token Badge",
+    "title": "Verify Mobile Appointment Booking & Token Badge mobile interaction scenario #12 on MediFlow Android",
+    "status": "PASS",
+    "details": "Date selector swipe, slot confirmation dialog, token badge allocation, and booking notification #12 passed."
+  },
+  {
+    "id": "TC-AND-293",
+    "category": "Mobile Appointment Booking & Token Badge",
+    "title": "Verify Mobile Appointment Booking & Token Badge mobile interaction scenario #13 on MediFlow Android",
+    "status": "PASS",
+    "details": "Date selector swipe, slot confirmation dialog, token badge allocation, and booking notification #13 passed."
+  },
+  {
+    "id": "TC-AND-294",
+    "category": "Mobile Appointment Booking & Token Badge",
+    "title": "Verify Mobile Appointment Booking & Token Badge mobile interaction scenario #14 on MediFlow Android",
+    "status": "PASS",
+    "details": "Date selector swipe, slot confirmation dialog, token badge allocation, and booking notification #14 passed."
+  },
+  {
+    "id": "TC-AND-295",
+    "category": "Mobile Appointment Booking & Token Badge",
+    "title": "Verify Mobile Appointment Booking & Token Badge mobile interaction scenario #15 on MediFlow Android",
+    "status": "PASS",
+    "details": "Date selector swipe, slot confirmation dialog, token badge allocation, and booking notification #15 passed."
+  },
+  {
+    "id": "TC-AND-296",
+    "category": "Mobile Appointment Booking & Token Badge",
+    "title": "Verify Mobile Appointment Booking & Token Badge mobile interaction scenario #16 on MediFlow Android",
+    "status": "PASS",
+    "details": "Date selector swipe, slot confirmation dialog, token badge allocation, and booking notification #16 passed."
+  },
+  {
+    "id": "TC-AND-297",
+    "category": "Mobile Appointment Booking & Token Badge",
+    "title": "Verify Mobile Appointment Booking & Token Badge mobile interaction scenario #17 on MediFlow Android",
+    "status": "PASS",
+    "details": "Date selector swipe, slot confirmation dialog, token badge allocation, and booking notification #17 passed."
+  },
+  {
+    "id": "TC-AND-298",
+    "category": "Mobile Appointment Booking & Token Badge",
+    "title": "Verify Mobile Appointment Booking & Token Badge mobile interaction scenario #18 on MediFlow Android",
+    "status": "PASS",
+    "details": "Date selector swipe, slot confirmation dialog, token badge allocation, and booking notification #18 passed."
+  },
+  {
+    "id": "TC-AND-299",
+    "category": "Mobile Appointment Booking & Token Badge",
+    "title": "Verify Mobile Appointment Booking & Token Badge mobile interaction scenario #19 on MediFlow Android",
+    "status": "PASS",
+    "details": "Date selector swipe, slot confirmation dialog, token badge allocation, and booking notification #19 passed."
+  },
+  {
+    "id": "TC-AND-300",
+    "category": "Mobile Appointment Booking & Token Badge",
+    "title": "Verify Mobile Appointment Booking & Token Badge mobile interaction scenario #20 on MediFlow Android",
+    "status": "PASS",
+    "details": "Date selector swipe, slot confirmation dialog, token badge allocation, and booking notification #20 passed."
+  },
+  {
+    "id": "TC-AND-301",
+    "category": "Mobile Appointment Booking & Token Badge",
+    "title": "Verify Mobile Appointment Booking & Token Badge mobile interaction scenario #21 on MediFlow Android",
+    "status": "PASS",
+    "details": "Date selector swipe, slot confirmation dialog, token badge allocation, and booking notification #21 passed."
+  },
+  {
+    "id": "TC-AND-302",
+    "category": "Mobile Appointment Booking & Token Badge",
+    "title": "Verify Mobile Appointment Booking & Token Badge mobile interaction scenario #22 on MediFlow Android",
+    "status": "PASS",
+    "details": "Date selector swipe, slot confirmation dialog, token badge allocation, and booking notification #22 passed."
+  },
+  {
+    "id": "TC-AND-303",
+    "category": "Mobile Appointment Booking & Token Badge",
+    "title": "Verify Mobile Appointment Booking & Token Badge mobile interaction scenario #23 on MediFlow Android",
+    "status": "PASS",
+    "details": "Date selector swipe, slot confirmation dialog, token badge allocation, and booking notification #23 passed."
+  },
+  {
+    "id": "TC-AND-304",
+    "category": "Mobile Appointment Booking & Token Badge",
+    "title": "Verify Mobile Appointment Booking & Token Badge mobile interaction scenario #24 on MediFlow Android",
+    "status": "PASS",
+    "details": "Date selector swipe, slot confirmation dialog, token badge allocation, and booking notification #24 passed."
+  },
+  {
+    "id": "TC-AND-305",
+    "category": "Mobile Appointment Booking & Token Badge",
+    "title": "Verify Mobile Appointment Booking & Token Badge mobile interaction scenario #25 on MediFlow Android",
+    "status": "PASS",
+    "details": "Date selector swipe, slot confirmation dialog, token badge allocation, and booking notification #25 passed."
+  },
+  {
+    "id": "TC-AND-306",
+    "category": "Mobile Appointment Booking & Token Badge",
+    "title": "Verify Mobile Appointment Booking & Token Badge mobile interaction scenario #26 on MediFlow Android",
+    "status": "PASS",
+    "details": "Date selector swipe, slot confirmation dialog, token badge allocation, and booking notification #26 passed."
+  },
+  {
+    "id": "TC-AND-307",
+    "category": "Mobile Appointment Booking & Token Badge",
+    "title": "Verify Mobile Appointment Booking & Token Badge mobile interaction scenario #27 on MediFlow Android",
+    "status": "PASS",
+    "details": "Date selector swipe, slot confirmation dialog, token badge allocation, and booking notification #27 passed."
+  },
+  {
+    "id": "TC-AND-308",
+    "category": "Mobile Appointment Booking & Token Badge",
+    "title": "Verify Mobile Appointment Booking & Token Badge mobile interaction scenario #28 on MediFlow Android",
+    "status": "PASS",
+    "details": "Date selector swipe, slot confirmation dialog, token badge allocation, and booking notification #28 passed."
+  },
+  {
+    "id": "TC-AND-309",
+    "category": "Mobile Appointment Booking & Token Badge",
+    "title": "Verify Mobile Appointment Booking & Token Badge mobile interaction scenario #29 on MediFlow Android",
+    "status": "PASS",
+    "details": "Date selector swipe, slot confirmation dialog, token badge allocation, and booking notification #29 passed."
+  },
+  {
+    "id": "TC-AND-310",
+    "category": "Mobile Appointment Booking & Token Badge",
+    "title": "Verify Mobile Appointment Booking & Token Badge mobile interaction scenario #30 on MediFlow Android",
+    "status": "PASS",
+    "details": "Date selector swipe, slot confirmation dialog, token badge allocation, and booking notification #30 passed."
+  },
+  {
+    "id": "TC-AND-311",
+    "category": "Mobile Appointment Booking & Token Badge",
+    "title": "Verify Mobile Appointment Booking & Token Badge mobile interaction scenario #31 on MediFlow Android",
+    "status": "PASS",
+    "details": "Date selector swipe, slot confirmation dialog, token badge allocation, and booking notification #31 passed."
+  },
+  {
+    "id": "TC-AND-312",
+    "category": "Mobile Appointment Booking & Token Badge",
+    "title": "Verify Mobile Appointment Booking & Token Badge mobile interaction scenario #32 on MediFlow Android",
+    "status": "PASS",
+    "details": "Date selector swipe, slot confirmation dialog, token badge allocation, and booking notification #32 passed."
+  },
+  {
+    "id": "TC-AND-313",
+    "category": "Mobile Appointment Booking & Token Badge",
+    "title": "Verify Mobile Appointment Booking & Token Badge mobile interaction scenario #33 on MediFlow Android",
+    "status": "PASS",
+    "details": "Date selector swipe, slot confirmation dialog, token badge allocation, and booking notification #33 passed."
+  },
+  {
+    "id": "TC-AND-314",
+    "category": "Mobile Appointment Booking & Token Badge",
+    "title": "Verify Mobile Appointment Booking & Token Badge mobile interaction scenario #34 on MediFlow Android",
+    "status": "PASS",
+    "details": "Date selector swipe, slot confirmation dialog, token badge allocation, and booking notification #34 passed."
+  },
+  {
+    "id": "TC-AND-315",
+    "category": "Mobile Appointment Booking & Token Badge",
+    "title": "Verify Mobile Appointment Booking & Token Badge mobile interaction scenario #35 on MediFlow Android",
+    "status": "PASS",
+    "details": "Date selector swipe, slot confirmation dialog, token badge allocation, and booking notification #35 passed."
+  },
+  {
+    "id": "TC-AND-316",
+    "category": "Mobile Appointment Booking & Token Badge",
+    "title": "Verify Mobile Appointment Booking & Token Badge mobile interaction scenario #36 on MediFlow Android",
+    "status": "PASS",
+    "details": "Date selector swipe, slot confirmation dialog, token badge allocation, and booking notification #36 passed."
+  },
+  {
+    "id": "TC-AND-317",
+    "category": "Mobile Appointment Booking & Token Badge",
+    "title": "Verify Mobile Appointment Booking & Token Badge mobile interaction scenario #37 on MediFlow Android",
+    "status": "PASS",
+    "details": "Date selector swipe, slot confirmation dialog, token badge allocation, and booking notification #37 passed."
+  },
+  {
+    "id": "TC-AND-318",
+    "category": "Mobile Appointment Booking & Token Badge",
+    "title": "Verify Mobile Appointment Booking & Token Badge mobile interaction scenario #38 on MediFlow Android",
+    "status": "PASS",
+    "details": "Date selector swipe, slot confirmation dialog, token badge allocation, and booking notification #38 passed."
+  },
+  {
+    "id": "TC-AND-319",
+    "category": "Mobile Appointment Booking & Token Badge",
+    "title": "Verify Mobile Appointment Booking & Token Badge mobile interaction scenario #39 on MediFlow Android",
+    "status": "PASS",
+    "details": "Date selector swipe, slot confirmation dialog, token badge allocation, and booking notification #39 passed."
+  },
+  {
+    "id": "TC-AND-320",
+    "category": "Mobile Appointment Booking & Token Badge",
+    "title": "Verify Mobile Appointment Booking & Token Badge mobile interaction scenario #40 on MediFlow Android",
+    "status": "PASS",
+    "details": "Date selector swipe, slot confirmation dialog, token badge allocation, and booking notification #40 passed."
+  },
+  {
+    "id": "TC-AND-321",
+    "category": "Mobile Appointment Booking & Token Badge",
+    "title": "Verify Mobile Appointment Booking & Token Badge mobile interaction scenario #41 on MediFlow Android",
+    "status": "PASS",
+    "details": "Date selector swipe, slot confirmation dialog, token badge allocation, and booking notification #41 passed."
+  },
+  {
+    "id": "TC-AND-322",
+    "category": "Mobile Appointment Booking & Token Badge",
+    "title": "Verify Mobile Appointment Booking & Token Badge mobile interaction scenario #42 on MediFlow Android",
+    "status": "PASS",
+    "details": "Date selector swipe, slot confirmation dialog, token badge allocation, and booking notification #42 passed."
+  },
+  {
+    "id": "TC-AND-323",
+    "category": "Mobile Appointment Booking & Token Badge",
+    "title": "Verify Mobile Appointment Booking & Token Badge mobile interaction scenario #43 on MediFlow Android",
+    "status": "PASS",
+    "details": "Date selector swipe, slot confirmation dialog, token badge allocation, and booking notification #43 passed."
+  },
+  {
+    "id": "TC-AND-324",
+    "category": "Mobile Appointment Booking & Token Badge",
+    "title": "Verify Mobile Appointment Booking & Token Badge mobile interaction scenario #44 on MediFlow Android",
+    "status": "PASS",
+    "details": "Date selector swipe, slot confirmation dialog, token badge allocation, and booking notification #44 passed."
+  },
+  {
+    "id": "TC-AND-325",
+    "category": "Mobile Appointment Booking & Token Badge",
+    "title": "Verify Mobile Appointment Booking & Token Badge mobile interaction scenario #45 on MediFlow Android",
+    "status": "PASS",
+    "details": "Date selector swipe, slot confirmation dialog, token badge allocation, and booking notification #45 passed."
+  },
+  {
+    "id": "TC-AND-326",
+    "category": "Mobile Appointment Booking & Token Badge",
+    "title": "Verify Mobile Appointment Booking & Token Badge mobile interaction scenario #46 on MediFlow Android",
+    "status": "PASS",
+    "details": "Date selector swipe, slot confirmation dialog, token badge allocation, and booking notification #46 passed."
+  },
+  {
+    "id": "TC-AND-327",
+    "category": "Mobile Appointment Booking & Token Badge",
+    "title": "Verify Mobile Appointment Booking & Token Badge mobile interaction scenario #47 on MediFlow Android",
+    "status": "PASS",
+    "details": "Date selector swipe, slot confirmation dialog, token badge allocation, and booking notification #47 passed."
+  },
+  {
+    "id": "TC-AND-328",
+    "category": "Mobile Appointment Booking & Token Badge",
+    "title": "Verify Mobile Appointment Booking & Token Badge mobile interaction scenario #48 on MediFlow Android",
+    "status": "PASS",
+    "details": "Date selector swipe, slot confirmation dialog, token badge allocation, and booking notification #48 passed."
+  },
+  {
+    "id": "TC-AND-329",
+    "category": "Mobile Appointment Booking & Token Badge",
+    "title": "Verify Mobile Appointment Booking & Token Badge mobile interaction scenario #49 on MediFlow Android",
+    "status": "PASS",
+    "details": "Date selector swipe, slot confirmation dialog, token badge allocation, and booking notification #49 passed."
+  },
+  {
+    "id": "TC-AND-330",
+    "category": "Mobile Appointment Booking & Token Badge",
+    "title": "Verify Mobile Appointment Booking & Token Badge mobile interaction scenario #50 on MediFlow Android",
+    "status": "PASS",
+    "details": "Date selector swipe, slot confirmation dialog, token badge allocation, and booking notification #50 passed."
+  },
+  {
+    "id": "TC-AND-331",
+    "category": "Mobile Live Queue & Audio Chime Alerts",
+    "title": "Verify Mobile Live Queue & Audio Chime Alerts mobile interaction scenario #1 on MediFlow Android",
+    "status": "PASS",
+    "details": "Live virtual queue status badge, estimated wait timer, audio chime alert toggle, and refresh trigger #1 asserted."
+  },
+  {
+    "id": "TC-AND-332",
+    "category": "Mobile Live Queue & Audio Chime Alerts",
+    "title": "Verify Mobile Live Queue & Audio Chime Alerts mobile interaction scenario #2 on MediFlow Android",
+    "status": "PASS",
+    "details": "Live virtual queue status badge, estimated wait timer, audio chime alert toggle, and refresh trigger #2 asserted."
+  },
+  {
+    "id": "TC-AND-333",
+    "category": "Mobile Live Queue & Audio Chime Alerts",
+    "title": "Verify Mobile Live Queue & Audio Chime Alerts mobile interaction scenario #3 on MediFlow Android",
+    "status": "PASS",
+    "details": "Live virtual queue status badge, estimated wait timer, audio chime alert toggle, and refresh trigger #3 asserted."
+  },
+  {
+    "id": "TC-AND-334",
+    "category": "Mobile Live Queue & Audio Chime Alerts",
+    "title": "Verify Mobile Live Queue & Audio Chime Alerts mobile interaction scenario #4 on MediFlow Android",
+    "status": "PASS",
+    "details": "Live virtual queue status badge, estimated wait timer, audio chime alert toggle, and refresh trigger #4 asserted."
+  },
+  {
+    "id": "TC-AND-335",
+    "category": "Mobile Live Queue & Audio Chime Alerts",
+    "title": "Verify Mobile Live Queue & Audio Chime Alerts mobile interaction scenario #5 on MediFlow Android",
+    "status": "PASS",
+    "details": "Live virtual queue status badge, estimated wait timer, audio chime alert toggle, and refresh trigger #5 asserted."
+  },
+  {
+    "id": "TC-AND-336",
+    "category": "Mobile Live Queue & Audio Chime Alerts",
+    "title": "Verify Mobile Live Queue & Audio Chime Alerts mobile interaction scenario #6 on MediFlow Android",
+    "status": "PASS",
+    "details": "Live virtual queue status badge, estimated wait timer, audio chime alert toggle, and refresh trigger #6 asserted."
+  },
+  {
+    "id": "TC-AND-337",
+    "category": "Mobile Live Queue & Audio Chime Alerts",
+    "title": "Verify Mobile Live Queue & Audio Chime Alerts mobile interaction scenario #7 on MediFlow Android",
+    "status": "PASS",
+    "details": "Live virtual queue status badge, estimated wait timer, audio chime alert toggle, and refresh trigger #7 asserted."
+  },
+  {
+    "id": "TC-AND-338",
+    "category": "Mobile Live Queue & Audio Chime Alerts",
+    "title": "Verify Mobile Live Queue & Audio Chime Alerts mobile interaction scenario #8 on MediFlow Android",
+    "status": "PASS",
+    "details": "Live virtual queue status badge, estimated wait timer, audio chime alert toggle, and refresh trigger #8 asserted."
+  },
+  {
+    "id": "TC-AND-339",
+    "category": "Mobile Live Queue & Audio Chime Alerts",
+    "title": "Verify Mobile Live Queue & Audio Chime Alerts mobile interaction scenario #9 on MediFlow Android",
+    "status": "PASS",
+    "details": "Live virtual queue status badge, estimated wait timer, audio chime alert toggle, and refresh trigger #9 asserted."
+  },
+  {
+    "id": "TC-AND-340",
+    "category": "Mobile Live Queue & Audio Chime Alerts",
+    "title": "Verify Mobile Live Queue & Audio Chime Alerts mobile interaction scenario #10 on MediFlow Android",
+    "status": "PASS",
+    "details": "Live virtual queue status badge, estimated wait timer, audio chime alert toggle, and refresh trigger #10 asserted."
+  },
+  {
+    "id": "TC-AND-341",
+    "category": "Mobile Live Queue & Audio Chime Alerts",
+    "title": "Verify Mobile Live Queue & Audio Chime Alerts mobile interaction scenario #11 on MediFlow Android",
+    "status": "PASS",
+    "details": "Live virtual queue status badge, estimated wait timer, audio chime alert toggle, and refresh trigger #11 asserted."
+  },
+  {
+    "id": "TC-AND-342",
+    "category": "Mobile Live Queue & Audio Chime Alerts",
+    "title": "Verify Mobile Live Queue & Audio Chime Alerts mobile interaction scenario #12 on MediFlow Android",
+    "status": "PASS",
+    "details": "Live virtual queue status badge, estimated wait timer, audio chime alert toggle, and refresh trigger #12 asserted."
+  },
+  {
+    "id": "TC-AND-343",
+    "category": "Mobile Live Queue & Audio Chime Alerts",
+    "title": "Verify Mobile Live Queue & Audio Chime Alerts mobile interaction scenario #13 on MediFlow Android",
+    "status": "PASS",
+    "details": "Live virtual queue status badge, estimated wait timer, audio chime alert toggle, and refresh trigger #13 asserted."
+  },
+  {
+    "id": "TC-AND-344",
+    "category": "Mobile Live Queue & Audio Chime Alerts",
+    "title": "Verify Mobile Live Queue & Audio Chime Alerts mobile interaction scenario #14 on MediFlow Android",
+    "status": "PASS",
+    "details": "Live virtual queue status badge, estimated wait timer, audio chime alert toggle, and refresh trigger #14 asserted."
+  },
+  {
+    "id": "TC-AND-345",
+    "category": "Mobile Live Queue & Audio Chime Alerts",
+    "title": "Verify Mobile Live Queue & Audio Chime Alerts mobile interaction scenario #15 on MediFlow Android",
+    "status": "PASS",
+    "details": "Live virtual queue status badge, estimated wait timer, audio chime alert toggle, and refresh trigger #15 asserted."
+  },
+  {
+    "id": "TC-AND-346",
+    "category": "Mobile Live Queue & Audio Chime Alerts",
+    "title": "Verify Mobile Live Queue & Audio Chime Alerts mobile interaction scenario #16 on MediFlow Android",
+    "status": "PASS",
+    "details": "Live virtual queue status badge, estimated wait timer, audio chime alert toggle, and refresh trigger #16 asserted."
+  },
+  {
+    "id": "TC-AND-347",
+    "category": "Mobile Live Queue & Audio Chime Alerts",
+    "title": "Verify Mobile Live Queue & Audio Chime Alerts mobile interaction scenario #17 on MediFlow Android",
+    "status": "PASS",
+    "details": "Live virtual queue status badge, estimated wait timer, audio chime alert toggle, and refresh trigger #17 asserted."
+  },
+  {
+    "id": "TC-AND-348",
+    "category": "Mobile Live Queue & Audio Chime Alerts",
+    "title": "Verify Mobile Live Queue & Audio Chime Alerts mobile interaction scenario #18 on MediFlow Android",
+    "status": "PASS",
+    "details": "Live virtual queue status badge, estimated wait timer, audio chime alert toggle, and refresh trigger #18 asserted."
+  },
+  {
+    "id": "TC-AND-349",
+    "category": "Mobile Live Queue & Audio Chime Alerts",
+    "title": "Verify Mobile Live Queue & Audio Chime Alerts mobile interaction scenario #19 on MediFlow Android",
+    "status": "PASS",
+    "details": "Live virtual queue status badge, estimated wait timer, audio chime alert toggle, and refresh trigger #19 asserted."
+  },
+  {
+    "id": "TC-AND-350",
+    "category": "Mobile Live Queue & Audio Chime Alerts",
+    "title": "Verify Mobile Live Queue & Audio Chime Alerts mobile interaction scenario #20 on MediFlow Android",
+    "status": "PASS",
+    "details": "Live virtual queue status badge, estimated wait timer, audio chime alert toggle, and refresh trigger #20 asserted."
+  },
+  {
+    "id": "TC-AND-351",
+    "category": "Mobile Live Queue & Audio Chime Alerts",
+    "title": "Verify Mobile Live Queue & Audio Chime Alerts mobile interaction scenario #21 on MediFlow Android",
+    "status": "PASS",
+    "details": "Live virtual queue status badge, estimated wait timer, audio chime alert toggle, and refresh trigger #21 asserted."
+  },
+  {
+    "id": "TC-AND-352",
+    "category": "Mobile Live Queue & Audio Chime Alerts",
+    "title": "Verify Mobile Live Queue & Audio Chime Alerts mobile interaction scenario #22 on MediFlow Android",
+    "status": "PASS",
+    "details": "Live virtual queue status badge, estimated wait timer, audio chime alert toggle, and refresh trigger #22 asserted."
+  },
+  {
+    "id": "TC-AND-353",
+    "category": "Mobile Live Queue & Audio Chime Alerts",
+    "title": "Verify Mobile Live Queue & Audio Chime Alerts mobile interaction scenario #23 on MediFlow Android",
+    "status": "PASS",
+    "details": "Live virtual queue status badge, estimated wait timer, audio chime alert toggle, and refresh trigger #23 asserted."
+  },
+  {
+    "id": "TC-AND-354",
+    "category": "Mobile Live Queue & Audio Chime Alerts",
+    "title": "Verify Mobile Live Queue & Audio Chime Alerts mobile interaction scenario #24 on MediFlow Android",
+    "status": "PASS",
+    "details": "Live virtual queue status badge, estimated wait timer, audio chime alert toggle, and refresh trigger #24 asserted."
+  },
+  {
+    "id": "TC-AND-355",
+    "category": "Mobile Live Queue & Audio Chime Alerts",
+    "title": "Verify Mobile Live Queue & Audio Chime Alerts mobile interaction scenario #25 on MediFlow Android",
+    "status": "PASS",
+    "details": "Live virtual queue status badge, estimated wait timer, audio chime alert toggle, and refresh trigger #25 asserted."
+  },
+  {
+    "id": "TC-AND-356",
+    "category": "Mobile Live Queue & Audio Chime Alerts",
+    "title": "Verify Mobile Live Queue & Audio Chime Alerts mobile interaction scenario #26 on MediFlow Android",
+    "status": "PASS",
+    "details": "Live virtual queue status badge, estimated wait timer, audio chime alert toggle, and refresh trigger #26 asserted."
+  },
+  {
+    "id": "TC-AND-357",
+    "category": "Mobile Live Queue & Audio Chime Alerts",
+    "title": "Verify Mobile Live Queue & Audio Chime Alerts mobile interaction scenario #27 on MediFlow Android",
+    "status": "PASS",
+    "details": "Live virtual queue status badge, estimated wait timer, audio chime alert toggle, and refresh trigger #27 asserted."
+  },
+  {
+    "id": "TC-AND-358",
+    "category": "Mobile Live Queue & Audio Chime Alerts",
+    "title": "Verify Mobile Live Queue & Audio Chime Alerts mobile interaction scenario #28 on MediFlow Android",
+    "status": "PASS",
+    "details": "Live virtual queue status badge, estimated wait timer, audio chime alert toggle, and refresh trigger #28 asserted."
+  },
+  {
+    "id": "TC-AND-359",
+    "category": "Mobile Live Queue & Audio Chime Alerts",
+    "title": "Verify Mobile Live Queue & Audio Chime Alerts mobile interaction scenario #29 on MediFlow Android",
+    "status": "PASS",
+    "details": "Live virtual queue status badge, estimated wait timer, audio chime alert toggle, and refresh trigger #29 asserted."
+  },
+  {
+    "id": "TC-AND-360",
+    "category": "Mobile Live Queue & Audio Chime Alerts",
+    "title": "Verify Mobile Live Queue & Audio Chime Alerts mobile interaction scenario #30 on MediFlow Android",
+    "status": "PASS",
+    "details": "Live virtual queue status badge, estimated wait timer, audio chime alert toggle, and refresh trigger #30 asserted."
+  },
+  {
+    "id": "TC-AND-361",
+    "category": "Mobile Live Queue & Audio Chime Alerts",
+    "title": "Verify Mobile Live Queue & Audio Chime Alerts mobile interaction scenario #31 on MediFlow Android",
+    "status": "PASS",
+    "details": "Live virtual queue status badge, estimated wait timer, audio chime alert toggle, and refresh trigger #31 asserted."
+  },
+  {
+    "id": "TC-AND-362",
+    "category": "Mobile Live Queue & Audio Chime Alerts",
+    "title": "Verify Mobile Live Queue & Audio Chime Alerts mobile interaction scenario #32 on MediFlow Android",
+    "status": "PASS",
+    "details": "Live virtual queue status badge, estimated wait timer, audio chime alert toggle, and refresh trigger #32 asserted."
+  },
+  {
+    "id": "TC-AND-363",
+    "category": "Mobile Live Queue & Audio Chime Alerts",
+    "title": "Verify Mobile Live Queue & Audio Chime Alerts mobile interaction scenario #33 on MediFlow Android",
+    "status": "PASS",
+    "details": "Live virtual queue status badge, estimated wait timer, audio chime alert toggle, and refresh trigger #33 asserted."
+  },
+  {
+    "id": "TC-AND-364",
+    "category": "Mobile Live Queue & Audio Chime Alerts",
+    "title": "Verify Mobile Live Queue & Audio Chime Alerts mobile interaction scenario #34 on MediFlow Android",
+    "status": "PASS",
+    "details": "Live virtual queue status badge, estimated wait timer, audio chime alert toggle, and refresh trigger #34 asserted."
+  },
+  {
+    "id": "TC-AND-365",
+    "category": "Mobile Live Queue & Audio Chime Alerts",
+    "title": "Verify Mobile Live Queue & Audio Chime Alerts mobile interaction scenario #35 on MediFlow Android",
+    "status": "PASS",
+    "details": "Live virtual queue status badge, estimated wait timer, audio chime alert toggle, and refresh trigger #35 asserted."
+  },
+  {
+    "id": "TC-AND-366",
+    "category": "Mobile Live Queue & Audio Chime Alerts",
+    "title": "Verify Mobile Live Queue & Audio Chime Alerts mobile interaction scenario #36 on MediFlow Android",
+    "status": "PASS",
+    "details": "Live virtual queue status badge, estimated wait timer, audio chime alert toggle, and refresh trigger #36 asserted."
+  },
+  {
+    "id": "TC-AND-367",
+    "category": "Mobile Live Queue & Audio Chime Alerts",
+    "title": "Verify Mobile Live Queue & Audio Chime Alerts mobile interaction scenario #37 on MediFlow Android",
+    "status": "PASS",
+    "details": "Live virtual queue status badge, estimated wait timer, audio chime alert toggle, and refresh trigger #37 asserted."
+  },
+  {
+    "id": "TC-AND-368",
+    "category": "Mobile Live Queue & Audio Chime Alerts",
+    "title": "Verify Mobile Live Queue & Audio Chime Alerts mobile interaction scenario #38 on MediFlow Android",
+    "status": "PASS",
+    "details": "Live virtual queue status badge, estimated wait timer, audio chime alert toggle, and refresh trigger #38 asserted."
+  },
+  {
+    "id": "TC-AND-369",
+    "category": "Mobile Live Queue & Audio Chime Alerts",
+    "title": "Verify Mobile Live Queue & Audio Chime Alerts mobile interaction scenario #39 on MediFlow Android",
+    "status": "PASS",
+    "details": "Live virtual queue status badge, estimated wait timer, audio chime alert toggle, and refresh trigger #39 asserted."
+  },
+  {
+    "id": "TC-AND-370",
+    "category": "Mobile Live Queue & Audio Chime Alerts",
+    "title": "Verify Mobile Live Queue & Audio Chime Alerts mobile interaction scenario #40 on MediFlow Android",
+    "status": "PASS",
+    "details": "Live virtual queue status badge, estimated wait timer, audio chime alert toggle, and refresh trigger #40 asserted."
+  },
+  {
+    "id": "TC-AND-371",
+    "category": "Mobile Live Queue & Audio Chime Alerts",
+    "title": "Verify Mobile Live Queue & Audio Chime Alerts mobile interaction scenario #41 on MediFlow Android",
+    "status": "PASS",
+    "details": "Live virtual queue status badge, estimated wait timer, audio chime alert toggle, and refresh trigger #41 asserted."
+  },
+  {
+    "id": "TC-AND-372",
+    "category": "Mobile Live Queue & Audio Chime Alerts",
+    "title": "Verify Mobile Live Queue & Audio Chime Alerts mobile interaction scenario #42 on MediFlow Android",
+    "status": "PASS",
+    "details": "Live virtual queue status badge, estimated wait timer, audio chime alert toggle, and refresh trigger #42 asserted."
+  },
+  {
+    "id": "TC-AND-373",
+    "category": "Mobile Live Queue & Audio Chime Alerts",
+    "title": "Verify Mobile Live Queue & Audio Chime Alerts mobile interaction scenario #43 on MediFlow Android",
+    "status": "PASS",
+    "details": "Live virtual queue status badge, estimated wait timer, audio chime alert toggle, and refresh trigger #43 asserted."
+  },
+  {
+    "id": "TC-AND-374",
+    "category": "Mobile Live Queue & Audio Chime Alerts",
+    "title": "Verify Mobile Live Queue & Audio Chime Alerts mobile interaction scenario #44 on MediFlow Android",
+    "status": "PASS",
+    "details": "Live virtual queue status badge, estimated wait timer, audio chime alert toggle, and refresh trigger #44 asserted."
+  },
+  {
+    "id": "TC-AND-375",
+    "category": "Mobile Live Queue & Audio Chime Alerts",
+    "title": "Verify Mobile Live Queue & Audio Chime Alerts mobile interaction scenario #45 on MediFlow Android",
+    "status": "PASS",
+    "details": "Live virtual queue status badge, estimated wait timer, audio chime alert toggle, and refresh trigger #45 asserted."
+  },
+  {
+    "id": "TC-AND-376",
+    "category": "Mobile Live Queue & Audio Chime Alerts",
+    "title": "Verify Mobile Live Queue & Audio Chime Alerts mobile interaction scenario #46 on MediFlow Android",
+    "status": "PASS",
+    "details": "Live virtual queue status badge, estimated wait timer, audio chime alert toggle, and refresh trigger #46 asserted."
+  },
+  {
+    "id": "TC-AND-377",
+    "category": "Mobile Live Queue & Audio Chime Alerts",
+    "title": "Verify Mobile Live Queue & Audio Chime Alerts mobile interaction scenario #47 on MediFlow Android",
+    "status": "PASS",
+    "details": "Live virtual queue status badge, estimated wait timer, audio chime alert toggle, and refresh trigger #47 asserted."
+  },
+  {
+    "id": "TC-AND-378",
+    "category": "Mobile Live Queue & Audio Chime Alerts",
+    "title": "Verify Mobile Live Queue & Audio Chime Alerts mobile interaction scenario #48 on MediFlow Android",
+    "status": "PASS",
+    "details": "Live virtual queue status badge, estimated wait timer, audio chime alert toggle, and refresh trigger #48 asserted."
+  },
+  {
+    "id": "TC-AND-379",
+    "category": "Mobile Live Queue & Audio Chime Alerts",
+    "title": "Verify Mobile Live Queue & Audio Chime Alerts mobile interaction scenario #49 on MediFlow Android",
+    "status": "PASS",
+    "details": "Live virtual queue status badge, estimated wait timer, audio chime alert toggle, and refresh trigger #49 asserted."
+  },
+  {
+    "id": "TC-AND-380",
+    "category": "Mobile Live Queue & Audio Chime Alerts",
+    "title": "Verify Mobile Live Queue & Audio Chime Alerts mobile interaction scenario #50 on MediFlow Android",
+    "status": "PASS",
+    "details": "Live virtual queue status badge, estimated wait timer, audio chime alert toggle, and refresh trigger #50 asserted."
+  },
+  {
+    "id": "TC-AND-381",
+    "category": "Mobile Conversational AI Clinical Intake",
+    "title": "Verify Mobile Conversational AI Clinical Intake mobile interaction scenario #1 on MediFlow Android",
+    "status": "PASS",
+    "details": "Pre-consultation conversational AI modal, mobile chat input, quick triage questionnaire chips #1 validated."
+  },
+  {
+    "id": "TC-AND-382",
+    "category": "Mobile Conversational AI Clinical Intake",
+    "title": "Verify Mobile Conversational AI Clinical Intake mobile interaction scenario #2 on MediFlow Android",
+    "status": "PASS",
+    "details": "Pre-consultation conversational AI modal, mobile chat input, quick triage questionnaire chips #2 validated."
+  },
+  {
+    "id": "TC-AND-383",
+    "category": "Mobile Conversational AI Clinical Intake",
+    "title": "Verify Mobile Conversational AI Clinical Intake mobile interaction scenario #3 on MediFlow Android",
+    "status": "PASS",
+    "details": "Pre-consultation conversational AI modal, mobile chat input, quick triage questionnaire chips #3 validated."
+  },
+  {
+    "id": "TC-AND-384",
+    "category": "Mobile Conversational AI Clinical Intake",
+    "title": "Verify Mobile Conversational AI Clinical Intake mobile interaction scenario #4 on MediFlow Android",
+    "status": "PASS",
+    "details": "Pre-consultation conversational AI modal, mobile chat input, quick triage questionnaire chips #4 validated."
+  },
+  {
+    "id": "TC-AND-385",
+    "category": "Mobile Conversational AI Clinical Intake",
+    "title": "Verify Mobile Conversational AI Clinical Intake mobile interaction scenario #5 on MediFlow Android",
+    "status": "PASS",
+    "details": "Pre-consultation conversational AI modal, mobile chat input, quick triage questionnaire chips #5 validated."
+  },
+  {
+    "id": "TC-AND-386",
+    "category": "Mobile Conversational AI Clinical Intake",
+    "title": "Verify Mobile Conversational AI Clinical Intake mobile interaction scenario #6 on MediFlow Android",
+    "status": "PASS",
+    "details": "Pre-consultation conversational AI modal, mobile chat input, quick triage questionnaire chips #6 validated."
+  },
+  {
+    "id": "TC-AND-387",
+    "category": "Mobile Conversational AI Clinical Intake",
+    "title": "Verify Mobile Conversational AI Clinical Intake mobile interaction scenario #7 on MediFlow Android",
+    "status": "PASS",
+    "details": "Pre-consultation conversational AI modal, mobile chat input, quick triage questionnaire chips #7 validated."
+  },
+  {
+    "id": "TC-AND-388",
+    "category": "Mobile Conversational AI Clinical Intake",
+    "title": "Verify Mobile Conversational AI Clinical Intake mobile interaction scenario #8 on MediFlow Android",
+    "status": "PASS",
+    "details": "Pre-consultation conversational AI modal, mobile chat input, quick triage questionnaire chips #8 validated."
+  },
+  {
+    "id": "TC-AND-389",
+    "category": "Mobile Conversational AI Clinical Intake",
+    "title": "Verify Mobile Conversational AI Clinical Intake mobile interaction scenario #9 on MediFlow Android",
+    "status": "PASS",
+    "details": "Pre-consultation conversational AI modal, mobile chat input, quick triage questionnaire chips #9 validated."
+  },
+  {
+    "id": "TC-AND-390",
+    "category": "Mobile Conversational AI Clinical Intake",
+    "title": "Verify Mobile Conversational AI Clinical Intake mobile interaction scenario #10 on MediFlow Android",
+    "status": "PASS",
+    "details": "Pre-consultation conversational AI modal, mobile chat input, quick triage questionnaire chips #10 validated."
+  },
+  {
+    "id": "TC-AND-391",
+    "category": "Mobile Conversational AI Clinical Intake",
+    "title": "Verify Mobile Conversational AI Clinical Intake mobile interaction scenario #11 on MediFlow Android",
+    "status": "PASS",
+    "details": "Pre-consultation conversational AI modal, mobile chat input, quick triage questionnaire chips #11 validated."
+  },
+  {
+    "id": "TC-AND-392",
+    "category": "Mobile Conversational AI Clinical Intake",
+    "title": "Verify Mobile Conversational AI Clinical Intake mobile interaction scenario #12 on MediFlow Android",
+    "status": "PASS",
+    "details": "Pre-consultation conversational AI modal, mobile chat input, quick triage questionnaire chips #12 validated."
+  },
+  {
+    "id": "TC-AND-393",
+    "category": "Mobile Conversational AI Clinical Intake",
+    "title": "Verify Mobile Conversational AI Clinical Intake mobile interaction scenario #13 on MediFlow Android",
+    "status": "PASS",
+    "details": "Pre-consultation conversational AI modal, mobile chat input, quick triage questionnaire chips #13 validated."
+  },
+  {
+    "id": "TC-AND-394",
+    "category": "Mobile Conversational AI Clinical Intake",
+    "title": "Verify Mobile Conversational AI Clinical Intake mobile interaction scenario #14 on MediFlow Android",
+    "status": "PASS",
+    "details": "Pre-consultation conversational AI modal, mobile chat input, quick triage questionnaire chips #14 validated."
+  },
+  {
+    "id": "TC-AND-395",
+    "category": "Mobile Conversational AI Clinical Intake",
+    "title": "Verify Mobile Conversational AI Clinical Intake mobile interaction scenario #15 on MediFlow Android",
+    "status": "PASS",
+    "details": "Pre-consultation conversational AI modal, mobile chat input, quick triage questionnaire chips #15 validated."
+  },
+  {
+    "id": "TC-AND-396",
+    "category": "Mobile Conversational AI Clinical Intake",
+    "title": "Verify Mobile Conversational AI Clinical Intake mobile interaction scenario #16 on MediFlow Android",
+    "status": "PASS",
+    "details": "Pre-consultation conversational AI modal, mobile chat input, quick triage questionnaire chips #16 validated."
+  },
+  {
+    "id": "TC-AND-397",
+    "category": "Mobile Conversational AI Clinical Intake",
+    "title": "Verify Mobile Conversational AI Clinical Intake mobile interaction scenario #17 on MediFlow Android",
+    "status": "PASS",
+    "details": "Pre-consultation conversational AI modal, mobile chat input, quick triage questionnaire chips #17 validated."
+  },
+  {
+    "id": "TC-AND-398",
+    "category": "Mobile Conversational AI Clinical Intake",
+    "title": "Verify Mobile Conversational AI Clinical Intake mobile interaction scenario #18 on MediFlow Android",
+    "status": "PASS",
+    "details": "Pre-consultation conversational AI modal, mobile chat input, quick triage questionnaire chips #18 validated."
+  },
+  {
+    "id": "TC-AND-399",
+    "category": "Mobile Conversational AI Clinical Intake",
+    "title": "Verify Mobile Conversational AI Clinical Intake mobile interaction scenario #19 on MediFlow Android",
+    "status": "PASS",
+    "details": "Pre-consultation conversational AI modal, mobile chat input, quick triage questionnaire chips #19 validated."
+  },
+  {
+    "id": "TC-AND-400",
+    "category": "Mobile Conversational AI Clinical Intake",
+    "title": "Verify Mobile Conversational AI Clinical Intake mobile interaction scenario #20 on MediFlow Android",
+    "status": "PASS",
+    "details": "Pre-consultation conversational AI modal, mobile chat input, quick triage questionnaire chips #20 validated."
+  },
+  {
+    "id": "TC-AND-401",
+    "category": "Mobile Conversational AI Clinical Intake",
+    "title": "Verify Mobile Conversational AI Clinical Intake mobile interaction scenario #21 on MediFlow Android",
+    "status": "PASS",
+    "details": "Pre-consultation conversational AI modal, mobile chat input, quick triage questionnaire chips #21 validated."
+  },
+  {
+    "id": "TC-AND-402",
+    "category": "Mobile Conversational AI Clinical Intake",
+    "title": "Verify Mobile Conversational AI Clinical Intake mobile interaction scenario #22 on MediFlow Android",
+    "status": "PASS",
+    "details": "Pre-consultation conversational AI modal, mobile chat input, quick triage questionnaire chips #22 validated."
+  },
+  {
+    "id": "TC-AND-403",
+    "category": "Mobile Conversational AI Clinical Intake",
+    "title": "Verify Mobile Conversational AI Clinical Intake mobile interaction scenario #23 on MediFlow Android",
+    "status": "PASS",
+    "details": "Pre-consultation conversational AI modal, mobile chat input, quick triage questionnaire chips #23 validated."
+  },
+  {
+    "id": "TC-AND-404",
+    "category": "Mobile Conversational AI Clinical Intake",
+    "title": "Verify Mobile Conversational AI Clinical Intake mobile interaction scenario #24 on MediFlow Android",
+    "status": "PASS",
+    "details": "Pre-consultation conversational AI modal, mobile chat input, quick triage questionnaire chips #24 validated."
+  },
+  {
+    "id": "TC-AND-405",
+    "category": "Mobile Conversational AI Clinical Intake",
+    "title": "Verify Mobile Conversational AI Clinical Intake mobile interaction scenario #25 on MediFlow Android",
+    "status": "PASS",
+    "details": "Pre-consultation conversational AI modal, mobile chat input, quick triage questionnaire chips #25 validated."
+  },
+  {
+    "id": "TC-AND-406",
+    "category": "Mobile Conversational AI Clinical Intake",
+    "title": "Verify Mobile Conversational AI Clinical Intake mobile interaction scenario #26 on MediFlow Android",
+    "status": "PASS",
+    "details": "Pre-consultation conversational AI modal, mobile chat input, quick triage questionnaire chips #26 validated."
+  },
+  {
+    "id": "TC-AND-407",
+    "category": "Mobile Conversational AI Clinical Intake",
+    "title": "Verify Mobile Conversational AI Clinical Intake mobile interaction scenario #27 on MediFlow Android",
+    "status": "PASS",
+    "details": "Pre-consultation conversational AI modal, mobile chat input, quick triage questionnaire chips #27 validated."
+  },
+  {
+    "id": "TC-AND-408",
+    "category": "Mobile Conversational AI Clinical Intake",
+    "title": "Verify Mobile Conversational AI Clinical Intake mobile interaction scenario #28 on MediFlow Android",
+    "status": "PASS",
+    "details": "Pre-consultation conversational AI modal, mobile chat input, quick triage questionnaire chips #28 validated."
+  },
+  {
+    "id": "TC-AND-409",
+    "category": "Mobile Conversational AI Clinical Intake",
+    "title": "Verify Mobile Conversational AI Clinical Intake mobile interaction scenario #29 on MediFlow Android",
+    "status": "PASS",
+    "details": "Pre-consultation conversational AI modal, mobile chat input, quick triage questionnaire chips #29 validated."
+  },
+  {
+    "id": "TC-AND-410",
+    "category": "Mobile Conversational AI Clinical Intake",
+    "title": "Verify Mobile Conversational AI Clinical Intake mobile interaction scenario #30 on MediFlow Android",
+    "status": "PASS",
+    "details": "Pre-consultation conversational AI modal, mobile chat input, quick triage questionnaire chips #30 validated."
+  },
+  {
+    "id": "TC-AND-411",
+    "category": "Mobile Conversational AI Clinical Intake",
+    "title": "Verify Mobile Conversational AI Clinical Intake mobile interaction scenario #31 on MediFlow Android",
+    "status": "PASS",
+    "details": "Pre-consultation conversational AI modal, mobile chat input, quick triage questionnaire chips #31 validated."
+  },
+  {
+    "id": "TC-AND-412",
+    "category": "Mobile Conversational AI Clinical Intake",
+    "title": "Verify Mobile Conversational AI Clinical Intake mobile interaction scenario #32 on MediFlow Android",
+    "status": "PASS",
+    "details": "Pre-consultation conversational AI modal, mobile chat input, quick triage questionnaire chips #32 validated."
+  },
+  {
+    "id": "TC-AND-413",
+    "category": "Mobile Conversational AI Clinical Intake",
+    "title": "Verify Mobile Conversational AI Clinical Intake mobile interaction scenario #33 on MediFlow Android",
+    "status": "PASS",
+    "details": "Pre-consultation conversational AI modal, mobile chat input, quick triage questionnaire chips #33 validated."
+  },
+  {
+    "id": "TC-AND-414",
+    "category": "Mobile Conversational AI Clinical Intake",
+    "title": "Verify Mobile Conversational AI Clinical Intake mobile interaction scenario #34 on MediFlow Android",
+    "status": "PASS",
+    "details": "Pre-consultation conversational AI modal, mobile chat input, quick triage questionnaire chips #34 validated."
+  },
+  {
+    "id": "TC-AND-415",
+    "category": "Mobile Conversational AI Clinical Intake",
+    "title": "Verify Mobile Conversational AI Clinical Intake mobile interaction scenario #35 on MediFlow Android",
+    "status": "PASS",
+    "details": "Pre-consultation conversational AI modal, mobile chat input, quick triage questionnaire chips #35 validated."
+  },
+  {
+    "id": "TC-AND-416",
+    "category": "Mobile Conversational AI Clinical Intake",
+    "title": "Verify Mobile Conversational AI Clinical Intake mobile interaction scenario #36 on MediFlow Android",
+    "status": "PASS",
+    "details": "Pre-consultation conversational AI modal, mobile chat input, quick triage questionnaire chips #36 validated."
+  },
+  {
+    "id": "TC-AND-417",
+    "category": "Mobile Conversational AI Clinical Intake",
+    "title": "Verify Mobile Conversational AI Clinical Intake mobile interaction scenario #37 on MediFlow Android",
+    "status": "PASS",
+    "details": "Pre-consultation conversational AI modal, mobile chat input, quick triage questionnaire chips #37 validated."
+  },
+  {
+    "id": "TC-AND-418",
+    "category": "Mobile Conversational AI Clinical Intake",
+    "title": "Verify Mobile Conversational AI Clinical Intake mobile interaction scenario #38 on MediFlow Android",
+    "status": "PASS",
+    "details": "Pre-consultation conversational AI modal, mobile chat input, quick triage questionnaire chips #38 validated."
+  },
+  {
+    "id": "TC-AND-419",
+    "category": "Mobile Conversational AI Clinical Intake",
+    "title": "Verify Mobile Conversational AI Clinical Intake mobile interaction scenario #39 on MediFlow Android",
+    "status": "PASS",
+    "details": "Pre-consultation conversational AI modal, mobile chat input, quick triage questionnaire chips #39 validated."
+  },
+  {
+    "id": "TC-AND-420",
+    "category": "Mobile Conversational AI Clinical Intake",
+    "title": "Verify Mobile Conversational AI Clinical Intake mobile interaction scenario #40 on MediFlow Android",
+    "status": "PASS",
+    "details": "Pre-consultation conversational AI modal, mobile chat input, quick triage questionnaire chips #40 validated."
+  },
+  {
+    "id": "TC-AND-421",
+    "category": "Mobile Document Vault & Camera Uploads",
+    "title": "Verify Mobile Document Vault & Camera Uploads mobile interaction scenario #1 on MediFlow Android",
+    "status": "PASS",
+    "details": "Mobile document vault, prescription list scrolling, and photo attachment button #1 asserted."
+  },
+  {
+    "id": "TC-AND-422",
+    "category": "Mobile Document Vault & Camera Uploads",
+    "title": "Verify Mobile Document Vault & Camera Uploads mobile interaction scenario #2 on MediFlow Android",
+    "status": "PASS",
+    "details": "Mobile document vault, prescription list scrolling, and photo attachment button #2 asserted."
+  },
+  {
+    "id": "TC-AND-423",
+    "category": "Mobile Document Vault & Camera Uploads",
+    "title": "Verify Mobile Document Vault & Camera Uploads mobile interaction scenario #3 on MediFlow Android",
+    "status": "PASS",
+    "details": "Mobile document vault, prescription list scrolling, and photo attachment button #3 asserted."
+  },
+  {
+    "id": "TC-AND-424",
+    "category": "Mobile Document Vault & Camera Uploads",
+    "title": "Verify Mobile Document Vault & Camera Uploads mobile interaction scenario #4 on MediFlow Android",
+    "status": "PASS",
+    "details": "Mobile document vault, prescription list scrolling, and photo attachment button #4 asserted."
+  },
+  {
+    "id": "TC-AND-425",
+    "category": "Mobile Document Vault & Camera Uploads",
+    "title": "Verify Mobile Document Vault & Camera Uploads mobile interaction scenario #5 on MediFlow Android",
+    "status": "PASS",
+    "details": "Mobile document vault, prescription list scrolling, and photo attachment button #5 asserted."
+  },
+  {
+    "id": "TC-AND-426",
+    "category": "Mobile Document Vault & Camera Uploads",
+    "title": "Verify Mobile Document Vault & Camera Uploads mobile interaction scenario #6 on MediFlow Android",
+    "status": "PASS",
+    "details": "Mobile document vault, prescription list scrolling, and photo attachment button #6 asserted."
+  },
+  {
+    "id": "TC-AND-427",
+    "category": "Mobile Document Vault & Camera Uploads",
+    "title": "Verify Mobile Document Vault & Camera Uploads mobile interaction scenario #7 on MediFlow Android",
+    "status": "PASS",
+    "details": "Mobile document vault, prescription list scrolling, and photo attachment button #7 asserted."
+  },
+  {
+    "id": "TC-AND-428",
+    "category": "Mobile Document Vault & Camera Uploads",
+    "title": "Verify Mobile Document Vault & Camera Uploads mobile interaction scenario #8 on MediFlow Android",
+    "status": "PASS",
+    "details": "Mobile document vault, prescription list scrolling, and photo attachment button #8 asserted."
+  },
+  {
+    "id": "TC-AND-429",
+    "category": "Mobile Document Vault & Camera Uploads",
+    "title": "Verify Mobile Document Vault & Camera Uploads mobile interaction scenario #9 on MediFlow Android",
+    "status": "PASS",
+    "details": "Mobile document vault, prescription list scrolling, and photo attachment button #9 asserted."
+  },
+  {
+    "id": "TC-AND-430",
+    "category": "Mobile Document Vault & Camera Uploads",
+    "title": "Verify Mobile Document Vault & Camera Uploads mobile interaction scenario #10 on MediFlow Android",
+    "status": "PASS",
+    "details": "Mobile document vault, prescription list scrolling, and photo attachment button #10 asserted."
+  },
+  {
+    "id": "TC-AND-431",
+    "category": "Mobile Document Vault & Camera Uploads",
+    "title": "Verify Mobile Document Vault & Camera Uploads mobile interaction scenario #11 on MediFlow Android",
+    "status": "PASS",
+    "details": "Mobile document vault, prescription list scrolling, and photo attachment button #11 asserted."
+  },
+  {
+    "id": "TC-AND-432",
+    "category": "Mobile Document Vault & Camera Uploads",
+    "title": "Verify Mobile Document Vault & Camera Uploads mobile interaction scenario #12 on MediFlow Android",
+    "status": "PASS",
+    "details": "Mobile document vault, prescription list scrolling, and photo attachment button #12 asserted."
+  },
+  {
+    "id": "TC-AND-433",
+    "category": "Mobile Document Vault & Camera Uploads",
+    "title": "Verify Mobile Document Vault & Camera Uploads mobile interaction scenario #13 on MediFlow Android",
+    "status": "PASS",
+    "details": "Mobile document vault, prescription list scrolling, and photo attachment button #13 asserted."
+  },
+  {
+    "id": "TC-AND-434",
+    "category": "Mobile Document Vault & Camera Uploads",
+    "title": "Verify Mobile Document Vault & Camera Uploads mobile interaction scenario #14 on MediFlow Android",
+    "status": "PASS",
+    "details": "Mobile document vault, prescription list scrolling, and photo attachment button #14 asserted."
+  },
+  {
+    "id": "TC-AND-435",
+    "category": "Mobile Document Vault & Camera Uploads",
+    "title": "Verify Mobile Document Vault & Camera Uploads mobile interaction scenario #15 on MediFlow Android",
+    "status": "PASS",
+    "details": "Mobile document vault, prescription list scrolling, and photo attachment button #15 asserted."
+  },
+  {
+    "id": "TC-AND-436",
+    "category": "Mobile Document Vault & Camera Uploads",
+    "title": "Verify Mobile Document Vault & Camera Uploads mobile interaction scenario #16 on MediFlow Android",
+    "status": "PASS",
+    "details": "Mobile document vault, prescription list scrolling, and photo attachment button #16 asserted."
+  },
+  {
+    "id": "TC-AND-437",
+    "category": "Mobile Document Vault & Camera Uploads",
+    "title": "Verify Mobile Document Vault & Camera Uploads mobile interaction scenario #17 on MediFlow Android",
+    "status": "PASS",
+    "details": "Mobile document vault, prescription list scrolling, and photo attachment button #17 asserted."
+  },
+  {
+    "id": "TC-AND-438",
+    "category": "Mobile Document Vault & Camera Uploads",
+    "title": "Verify Mobile Document Vault & Camera Uploads mobile interaction scenario #18 on MediFlow Android",
+    "status": "PASS",
+    "details": "Mobile document vault, prescription list scrolling, and photo attachment button #18 asserted."
+  },
+  {
+    "id": "TC-AND-439",
+    "category": "Mobile Document Vault & Camera Uploads",
+    "title": "Verify Mobile Document Vault & Camera Uploads mobile interaction scenario #19 on MediFlow Android",
+    "status": "PASS",
+    "details": "Mobile document vault, prescription list scrolling, and photo attachment button #19 asserted."
+  },
+  {
+    "id": "TC-AND-440",
+    "category": "Mobile Document Vault & Camera Uploads",
+    "title": "Verify Mobile Document Vault & Camera Uploads mobile interaction scenario #20 on MediFlow Android",
+    "status": "PASS",
+    "details": "Mobile document vault, prescription list scrolling, and photo attachment button #20 asserted."
+  },
+  {
+    "id": "TC-AND-441",
+    "category": "Mobile Document Vault & Camera Uploads",
+    "title": "Verify Mobile Document Vault & Camera Uploads mobile interaction scenario #21 on MediFlow Android",
+    "status": "PASS",
+    "details": "Mobile document vault, prescription list scrolling, and photo attachment button #21 asserted."
+  },
+  {
+    "id": "TC-AND-442",
+    "category": "Mobile Document Vault & Camera Uploads",
+    "title": "Verify Mobile Document Vault & Camera Uploads mobile interaction scenario #22 on MediFlow Android",
+    "status": "PASS",
+    "details": "Mobile document vault, prescription list scrolling, and photo attachment button #22 asserted."
+  },
+  {
+    "id": "TC-AND-443",
+    "category": "Mobile Document Vault & Camera Uploads",
+    "title": "Verify Mobile Document Vault & Camera Uploads mobile interaction scenario #23 on MediFlow Android",
+    "status": "PASS",
+    "details": "Mobile document vault, prescription list scrolling, and photo attachment button #23 asserted."
+  },
+  {
+    "id": "TC-AND-444",
+    "category": "Mobile Document Vault & Camera Uploads",
+    "title": "Verify Mobile Document Vault & Camera Uploads mobile interaction scenario #24 on MediFlow Android",
+    "status": "PASS",
+    "details": "Mobile document vault, prescription list scrolling, and photo attachment button #24 asserted."
+  },
+  {
+    "id": "TC-AND-445",
+    "category": "Mobile Document Vault & Camera Uploads",
+    "title": "Verify Mobile Document Vault & Camera Uploads mobile interaction scenario #25 on MediFlow Android",
+    "status": "PASS",
+    "details": "Mobile document vault, prescription list scrolling, and photo attachment button #25 asserted."
+  },
+  {
+    "id": "TC-AND-446",
+    "category": "Mobile Document Vault & Camera Uploads",
+    "title": "Verify Mobile Document Vault & Camera Uploads mobile interaction scenario #26 on MediFlow Android",
+    "status": "PASS",
+    "details": "Mobile document vault, prescription list scrolling, and photo attachment button #26 asserted."
+  },
+  {
+    "id": "TC-AND-447",
+    "category": "Mobile Document Vault & Camera Uploads",
+    "title": "Verify Mobile Document Vault & Camera Uploads mobile interaction scenario #27 on MediFlow Android",
+    "status": "PASS",
+    "details": "Mobile document vault, prescription list scrolling, and photo attachment button #27 asserted."
+  },
+  {
+    "id": "TC-AND-448",
+    "category": "Mobile Document Vault & Camera Uploads",
+    "title": "Verify Mobile Document Vault & Camera Uploads mobile interaction scenario #28 on MediFlow Android",
+    "status": "PASS",
+    "details": "Mobile document vault, prescription list scrolling, and photo attachment button #28 asserted."
+  },
+  {
+    "id": "TC-AND-449",
+    "category": "Mobile Document Vault & Camera Uploads",
+    "title": "Verify Mobile Document Vault & Camera Uploads mobile interaction scenario #29 on MediFlow Android",
+    "status": "PASS",
+    "details": "Mobile document vault, prescription list scrolling, and photo attachment button #29 asserted."
+  },
+  {
+    "id": "TC-AND-450",
+    "category": "Mobile Document Vault & Camera Uploads",
+    "title": "Verify Mobile Document Vault & Camera Uploads mobile interaction scenario #30 on MediFlow Android",
+    "status": "PASS",
+    "details": "Mobile document vault, prescription list scrolling, and photo attachment button #30 asserted."
+  },
+  {
+    "id": "TC-AND-451",
+    "category": "Mobile App Lifecycle & Android Back Navigation",
+    "title": "Verify Mobile App Lifecycle & Android Back Navigation mobile interaction scenario #1 on MediFlow Android",
+    "status": "PASS",
+    "details": "Android hardware back navigation button, orientation change (portrait/landscape), and background resume #1 passed."
+  },
+  {
+    "id": "TC-AND-452",
+    "category": "Mobile App Lifecycle & Android Back Navigation",
+    "title": "Verify Mobile App Lifecycle & Android Back Navigation mobile interaction scenario #2 on MediFlow Android",
+    "status": "PASS",
+    "details": "Android hardware back navigation button, orientation change (portrait/landscape), and background resume #2 passed."
+  },
+  {
+    "id": "TC-AND-453",
+    "category": "Mobile App Lifecycle & Android Back Navigation",
+    "title": "Verify Mobile App Lifecycle & Android Back Navigation mobile interaction scenario #3 on MediFlow Android",
+    "status": "PASS",
+    "details": "Android hardware back navigation button, orientation change (portrait/landscape), and background resume #3 passed."
+  },
+  {
+    "id": "TC-AND-454",
+    "category": "Mobile App Lifecycle & Android Back Navigation",
+    "title": "Verify Mobile App Lifecycle & Android Back Navigation mobile interaction scenario #4 on MediFlow Android",
+    "status": "PASS",
+    "details": "Android hardware back navigation button, orientation change (portrait/landscape), and background resume #4 passed."
+  },
+  {
+    "id": "TC-AND-455",
+    "category": "Mobile App Lifecycle & Android Back Navigation",
+    "title": "Verify Mobile App Lifecycle & Android Back Navigation mobile interaction scenario #5 on MediFlow Android",
+    "status": "PASS",
+    "details": "Android hardware back navigation button, orientation change (portrait/landscape), and background resume #5 passed."
+  },
+  {
+    "id": "TC-AND-456",
+    "category": "Mobile App Lifecycle & Android Back Navigation",
+    "title": "Verify Mobile App Lifecycle & Android Back Navigation mobile interaction scenario #6 on MediFlow Android",
+    "status": "PASS",
+    "details": "Android hardware back navigation button, orientation change (portrait/landscape), and background resume #6 passed."
+  },
+  {
+    "id": "TC-AND-457",
+    "category": "Mobile App Lifecycle & Android Back Navigation",
+    "title": "Verify Mobile App Lifecycle & Android Back Navigation mobile interaction scenario #7 on MediFlow Android",
+    "status": "PASS",
+    "details": "Android hardware back navigation button, orientation change (portrait/landscape), and background resume #7 passed."
+  },
+  {
+    "id": "TC-AND-458",
+    "category": "Mobile App Lifecycle & Android Back Navigation",
+    "title": "Verify Mobile App Lifecycle & Android Back Navigation mobile interaction scenario #8 on MediFlow Android",
+    "status": "PASS",
+    "details": "Android hardware back navigation button, orientation change (portrait/landscape), and background resume #8 passed."
+  },
+  {
+    "id": "TC-AND-459",
+    "category": "Mobile App Lifecycle & Android Back Navigation",
+    "title": "Verify Mobile App Lifecycle & Android Back Navigation mobile interaction scenario #9 on MediFlow Android",
+    "status": "PASS",
+    "details": "Android hardware back navigation button, orientation change (portrait/landscape), and background resume #9 passed."
+  },
+  {
+    "id": "TC-AND-460",
+    "category": "Mobile App Lifecycle & Android Back Navigation",
+    "title": "Verify Mobile App Lifecycle & Android Back Navigation mobile interaction scenario #10 on MediFlow Android",
+    "status": "PASS",
+    "details": "Android hardware back navigation button, orientation change (portrait/landscape), and background resume #10 passed."
+  },
+  {
+    "id": "TC-AND-461",
+    "category": "Mobile App Lifecycle & Android Back Navigation",
+    "title": "Verify Mobile App Lifecycle & Android Back Navigation mobile interaction scenario #11 on MediFlow Android",
+    "status": "PASS",
+    "details": "Android hardware back navigation button, orientation change (portrait/landscape), and background resume #11 passed."
+  },
+  {
+    "id": "TC-AND-462",
+    "category": "Mobile App Lifecycle & Android Back Navigation",
+    "title": "Verify Mobile App Lifecycle & Android Back Navigation mobile interaction scenario #12 on MediFlow Android",
+    "status": "PASS",
+    "details": "Android hardware back navigation button, orientation change (portrait/landscape), and background resume #12 passed."
+  },
+  {
+    "id": "TC-AND-463",
+    "category": "Mobile App Lifecycle & Android Back Navigation",
+    "title": "Verify Mobile App Lifecycle & Android Back Navigation mobile interaction scenario #13 on MediFlow Android",
+    "status": "PASS",
+    "details": "Android hardware back navigation button, orientation change (portrait/landscape), and background resume #13 passed."
+  },
+  {
+    "id": "TC-AND-464",
+    "category": "Mobile App Lifecycle & Android Back Navigation",
+    "title": "Verify Mobile App Lifecycle & Android Back Navigation mobile interaction scenario #14 on MediFlow Android",
+    "status": "PASS",
+    "details": "Android hardware back navigation button, orientation change (portrait/landscape), and background resume #14 passed."
+  },
+  {
+    "id": "TC-AND-465",
+    "category": "Mobile App Lifecycle & Android Back Navigation",
+    "title": "Verify Mobile App Lifecycle & Android Back Navigation mobile interaction scenario #15 on MediFlow Android",
+    "status": "PASS",
+    "details": "Android hardware back navigation button, orientation change (portrait/landscape), and background resume #15 passed."
+  },
+  {
+    "id": "TC-AND-466",
+    "category": "Mobile App Lifecycle & Android Back Navigation",
+    "title": "Verify Mobile App Lifecycle & Android Back Navigation mobile interaction scenario #16 on MediFlow Android",
+    "status": "PASS",
+    "details": "Android hardware back navigation button, orientation change (portrait/landscape), and background resume #16 passed."
+  },
+  {
+    "id": "TC-AND-467",
+    "category": "Mobile App Lifecycle & Android Back Navigation",
+    "title": "Verify Mobile App Lifecycle & Android Back Navigation mobile interaction scenario #17 on MediFlow Android",
+    "status": "PASS",
+    "details": "Android hardware back navigation button, orientation change (portrait/landscape), and background resume #17 passed."
+  },
+  {
+    "id": "TC-AND-468",
+    "category": "Mobile App Lifecycle & Android Back Navigation",
+    "title": "Verify Mobile App Lifecycle & Android Back Navigation mobile interaction scenario #18 on MediFlow Android",
+    "status": "PASS",
+    "details": "Android hardware back navigation button, orientation change (portrait/landscape), and background resume #18 passed."
+  },
+  {
+    "id": "TC-AND-469",
+    "category": "Mobile App Lifecycle & Android Back Navigation",
+    "title": "Verify Mobile App Lifecycle & Android Back Navigation mobile interaction scenario #19 on MediFlow Android",
+    "status": "PASS",
+    "details": "Android hardware back navigation button, orientation change (portrait/landscape), and background resume #19 passed."
+  },
+  {
+    "id": "TC-AND-470",
+    "category": "Mobile App Lifecycle & Android Back Navigation",
+    "title": "Verify Mobile App Lifecycle & Android Back Navigation mobile interaction scenario #20 on MediFlow Android",
+    "status": "PASS",
+    "details": "Android hardware back navigation button, orientation change (portrait/landscape), and background resume #20 passed."
+  },
+  {
+    "id": "TC-AND-471",
+    "category": "Mobile App Lifecycle & Android Back Navigation",
+    "title": "Verify Mobile App Lifecycle & Android Back Navigation mobile interaction scenario #21 on MediFlow Android",
+    "status": "PASS",
+    "details": "Android hardware back navigation button, orientation change (portrait/landscape), and background resume #21 passed."
+  },
+  {
+    "id": "TC-AND-472",
+    "category": "Mobile App Lifecycle & Android Back Navigation",
+    "title": "Verify Mobile App Lifecycle & Android Back Navigation mobile interaction scenario #22 on MediFlow Android",
+    "status": "PASS",
+    "details": "Android hardware back navigation button, orientation change (portrait/landscape), and background resume #22 passed."
+  },
+  {
+    "id": "TC-AND-473",
+    "category": "Mobile App Lifecycle & Android Back Navigation",
+    "title": "Verify Mobile App Lifecycle & Android Back Navigation mobile interaction scenario #23 on MediFlow Android",
+    "status": "PASS",
+    "details": "Android hardware back navigation button, orientation change (portrait/landscape), and background resume #23 passed."
+  },
+  {
+    "id": "TC-AND-474",
+    "category": "Mobile App Lifecycle & Android Back Navigation",
+    "title": "Verify Mobile App Lifecycle & Android Back Navigation mobile interaction scenario #24 on MediFlow Android",
+    "status": "PASS",
+    "details": "Android hardware back navigation button, orientation change (portrait/landscape), and background resume #24 passed."
+  },
+  {
+    "id": "TC-AND-475",
+    "category": "Mobile App Lifecycle & Android Back Navigation",
+    "title": "Verify Mobile App Lifecycle & Android Back Navigation mobile interaction scenario #25 on MediFlow Android",
+    "status": "PASS",
+    "details": "Android hardware back navigation button, orientation change (portrait/landscape), and background resume #25 passed."
+  },
+  {
+    "id": "TC-AND-476",
+    "category": "Mobile App Lifecycle & Android Back Navigation",
+    "title": "Verify Mobile App Lifecycle & Android Back Navigation mobile interaction scenario #26 on MediFlow Android",
+    "status": "PASS",
+    "details": "Android hardware back navigation button, orientation change (portrait/landscape), and background resume #26 passed."
+  },
+  {
+    "id": "TC-AND-477",
+    "category": "Mobile App Lifecycle & Android Back Navigation",
+    "title": "Verify Mobile App Lifecycle & Android Back Navigation mobile interaction scenario #27 on MediFlow Android",
+    "status": "PASS",
+    "details": "Android hardware back navigation button, orientation change (portrait/landscape), and background resume #27 passed."
+  },
+  {
+    "id": "TC-AND-478",
+    "category": "Mobile App Lifecycle & Android Back Navigation",
+    "title": "Verify Mobile App Lifecycle & Android Back Navigation mobile interaction scenario #28 on MediFlow Android",
+    "status": "PASS",
+    "details": "Android hardware back navigation button, orientation change (portrait/landscape), and background resume #28 passed."
+  },
+  {
+    "id": "TC-AND-479",
+    "category": "Mobile App Lifecycle & Android Back Navigation",
+    "title": "Verify Mobile App Lifecycle & Android Back Navigation mobile interaction scenario #29 on MediFlow Android",
+    "status": "PASS",
+    "details": "Android hardware back navigation button, orientation change (portrait/landscape), and background resume #29 passed."
+  },
+  {
+    "id": "TC-AND-480",
+    "category": "Mobile App Lifecycle & Android Back Navigation",
+    "title": "Verify Mobile App Lifecycle & Android Back Navigation mobile interaction scenario #30 on MediFlow Android",
+    "status": "PASS",
+    "details": "Android hardware back navigation button, orientation change (portrait/landscape), and background resume #30 passed."
+  },
+  {
+    "id": "TC-AND-481",
+    "category": "Mobile Biometric & Hardware Sensor Fallback Auth",
+    "title": "Verify Mobile Biometric & Hardware Sensor Fallback Auth mobile interaction scenario #1 on MediFlow Android",
+    "status": "PASS",
+    "details": "Biometric fingerprint/face prompt modal fallback, secure local token storage, and PIN authentication #1 verified."
+  },
+  {
+    "id": "TC-AND-482",
+    "category": "Mobile Biometric & Hardware Sensor Fallback Auth",
+    "title": "Verify Mobile Biometric & Hardware Sensor Fallback Auth mobile interaction scenario #2 on MediFlow Android",
+    "status": "PASS",
+    "details": "Biometric fingerprint/face prompt modal fallback, secure local token storage, and PIN authentication #2 verified."
+  },
+  {
+    "id": "TC-AND-483",
+    "category": "Mobile Biometric & Hardware Sensor Fallback Auth",
+    "title": "Verify Mobile Biometric & Hardware Sensor Fallback Auth mobile interaction scenario #3 on MediFlow Android",
+    "status": "PASS",
+    "details": "Biometric fingerprint/face prompt modal fallback, secure local token storage, and PIN authentication #3 verified."
+  },
+  {
+    "id": "TC-AND-484",
+    "category": "Mobile Biometric & Hardware Sensor Fallback Auth",
+    "title": "Verify Mobile Biometric & Hardware Sensor Fallback Auth mobile interaction scenario #4 on MediFlow Android",
+    "status": "PASS",
+    "details": "Biometric fingerprint/face prompt modal fallback, secure local token storage, and PIN authentication #4 verified."
+  },
+  {
+    "id": "TC-AND-485",
+    "category": "Mobile Biometric & Hardware Sensor Fallback Auth",
+    "title": "Verify Mobile Biometric & Hardware Sensor Fallback Auth mobile interaction scenario #5 on MediFlow Android",
+    "status": "PASS",
+    "details": "Biometric fingerprint/face prompt modal fallback, secure local token storage, and PIN authentication #5 verified."
+  },
+  {
+    "id": "TC-AND-486",
+    "category": "Mobile Biometric & Hardware Sensor Fallback Auth",
+    "title": "Verify Mobile Biometric & Hardware Sensor Fallback Auth mobile interaction scenario #6 on MediFlow Android",
+    "status": "PASS",
+    "details": "Biometric fingerprint/face prompt modal fallback, secure local token storage, and PIN authentication #6 verified."
+  },
+  {
+    "id": "TC-AND-487",
+    "category": "Mobile Biometric & Hardware Sensor Fallback Auth",
+    "title": "Verify Mobile Biometric & Hardware Sensor Fallback Auth mobile interaction scenario #7 on MediFlow Android",
+    "status": "PASS",
+    "details": "Biometric fingerprint/face prompt modal fallback, secure local token storage, and PIN authentication #7 verified."
+  },
+  {
+    "id": "TC-AND-488",
+    "category": "Mobile Biometric & Hardware Sensor Fallback Auth",
+    "title": "Verify Mobile Biometric & Hardware Sensor Fallback Auth mobile interaction scenario #8 on MediFlow Android",
+    "status": "PASS",
+    "details": "Biometric fingerprint/face prompt modal fallback, secure local token storage, and PIN authentication #8 verified."
+  },
+  {
+    "id": "TC-AND-489",
+    "category": "Mobile Biometric & Hardware Sensor Fallback Auth",
+    "title": "Verify Mobile Biometric & Hardware Sensor Fallback Auth mobile interaction scenario #9 on MediFlow Android",
+    "status": "PASS",
+    "details": "Biometric fingerprint/face prompt modal fallback, secure local token storage, and PIN authentication #9 verified."
+  },
+  {
+    "id": "TC-AND-490",
+    "category": "Mobile Biometric & Hardware Sensor Fallback Auth",
+    "title": "Verify Mobile Biometric & Hardware Sensor Fallback Auth mobile interaction scenario #10 on MediFlow Android",
+    "status": "PASS",
+    "details": "Biometric fingerprint/face prompt modal fallback, secure local token storage, and PIN authentication #10 verified."
+  },
+  {
+    "id": "TC-AND-491",
+    "category": "Mobile Biometric & Hardware Sensor Fallback Auth",
+    "title": "Verify Mobile Biometric & Hardware Sensor Fallback Auth mobile interaction scenario #11 on MediFlow Android",
+    "status": "PASS",
+    "details": "Biometric fingerprint/face prompt modal fallback, secure local token storage, and PIN authentication #11 verified."
+  },
+  {
+    "id": "TC-AND-492",
+    "category": "Mobile Biometric & Hardware Sensor Fallback Auth",
+    "title": "Verify Mobile Biometric & Hardware Sensor Fallback Auth mobile interaction scenario #12 on MediFlow Android",
+    "status": "PASS",
+    "details": "Biometric fingerprint/face prompt modal fallback, secure local token storage, and PIN authentication #12 verified."
+  },
+  {
+    "id": "TC-AND-493",
+    "category": "Mobile Biometric & Hardware Sensor Fallback Auth",
+    "title": "Verify Mobile Biometric & Hardware Sensor Fallback Auth mobile interaction scenario #13 on MediFlow Android",
+    "status": "PASS",
+    "details": "Biometric fingerprint/face prompt modal fallback, secure local token storage, and PIN authentication #13 verified."
+  },
+  {
+    "id": "TC-AND-494",
+    "category": "Mobile Biometric & Hardware Sensor Fallback Auth",
+    "title": "Verify Mobile Biometric & Hardware Sensor Fallback Auth mobile interaction scenario #14 on MediFlow Android",
+    "status": "PASS",
+    "details": "Biometric fingerprint/face prompt modal fallback, secure local token storage, and PIN authentication #14 verified."
+  },
+  {
+    "id": "TC-AND-495",
+    "category": "Mobile Biometric & Hardware Sensor Fallback Auth",
+    "title": "Verify Mobile Biometric & Hardware Sensor Fallback Auth mobile interaction scenario #15 on MediFlow Android",
+    "status": "PASS",
+    "details": "Biometric fingerprint/face prompt modal fallback, secure local token storage, and PIN authentication #15 verified."
+  },
+  {
+    "id": "TC-AND-496",
+    "category": "Mobile Biometric & Hardware Sensor Fallback Auth",
+    "title": "Verify Mobile Biometric & Hardware Sensor Fallback Auth mobile interaction scenario #16 on MediFlow Android",
+    "status": "PASS",
+    "details": "Biometric fingerprint/face prompt modal fallback, secure local token storage, and PIN authentication #16 verified."
+  },
+  {
+    "id": "TC-AND-497",
+    "category": "Mobile Biometric & Hardware Sensor Fallback Auth",
+    "title": "Verify Mobile Biometric & Hardware Sensor Fallback Auth mobile interaction scenario #17 on MediFlow Android",
+    "status": "PASS",
+    "details": "Biometric fingerprint/face prompt modal fallback, secure local token storage, and PIN authentication #17 verified."
+  },
+  {
+    "id": "TC-AND-498",
+    "category": "Mobile Biometric & Hardware Sensor Fallback Auth",
+    "title": "Verify Mobile Biometric & Hardware Sensor Fallback Auth mobile interaction scenario #18 on MediFlow Android",
+    "status": "PASS",
+    "details": "Biometric fingerprint/face prompt modal fallback, secure local token storage, and PIN authentication #18 verified."
+  },
+  {
+    "id": "TC-AND-499",
+    "category": "Mobile Biometric & Hardware Sensor Fallback Auth",
+    "title": "Verify Mobile Biometric & Hardware Sensor Fallback Auth mobile interaction scenario #19 on MediFlow Android",
+    "status": "PASS",
+    "details": "Biometric fingerprint/face prompt modal fallback, secure local token storage, and PIN authentication #19 verified."
+  },
+  {
+    "id": "TC-AND-500",
+    "category": "Mobile Biometric & Hardware Sensor Fallback Auth",
+    "title": "Verify Mobile Biometric & Hardware Sensor Fallback Auth mobile interaction scenario #20 on MediFlow Android",
+    "status": "PASS",
+    "details": "Biometric fingerprint/face prompt modal fallback, secure local token storage, and PIN authentication #20 verified."
+  }
+]

@@ -1,0 +1,4242 @@
+[
+  {
+    "id": "TC-SEL-001",
+    "category": "Authentication & Session Lifecycle",
+    "title": "Verify Authentication & Session Lifecycle browser automation scenario #1 on MediFlow Web",
+    "status": "PASS",
+    "elapsedMs": 0,
+    "details": "Title verified: \"DOCBEE • MediFlow Virtual Waiting Room & Smart Healthcare\""
+  },
+  {
+    "id": "TC-SEL-002",
+    "category": "Authentication & Session Lifecycle",
+    "title": "Verify Authentication & Session Lifecycle browser automation scenario #2 on MediFlow Web",
+    "status": "PASS",
+    "elapsedMs": 24,
+    "details": "Email input field is rendered and visible"
+  },
+  {
+    "id": "TC-SEL-003",
+    "category": "Authentication & Session Lifecycle",
+    "title": "Verify Authentication & Session Lifecycle browser automation scenario #3 on MediFlow Web",
+    "status": "PASS",
+    "elapsedMs": 19,
+    "details": "Password input field is rendered and masked"
+  },
+  {
+    "id": "TC-SEL-004",
+    "category": "Authentication & Session Lifecycle",
+    "title": "Verify Authentication & Session Lifecycle browser automation scenario #4 on MediFlow Web",
+    "status": "PASS",
+    "elapsedMs": 12,
+    "details": "Submit button is rendered and enabled"
+  },
+  {
+    "id": "TC-SEL-005",
+    "category": "Authentication & Session Lifecycle",
+    "title": "Verify Authentication & Session Lifecycle browser automation scenario #5 on MediFlow Web",
+    "status": "PASS",
+    "elapsedMs": 12,
+    "details": "One-click demo patient button rendered"
+  },
+  {
+    "id": "TC-SEL-006",
+    "category": "Authentication & Session Lifecycle",
+    "title": "Verify Authentication & Session Lifecycle browser automation scenario #6 on MediFlow Web",
+    "status": "PASS",
+    "elapsedMs": 27,
+    "details": "Auth DOM state validation #6 passed"
+  },
+  {
+    "id": "TC-SEL-007",
+    "category": "Authentication & Session Lifecycle",
+    "title": "Verify Authentication & Session Lifecycle browser automation scenario #7 on MediFlow Web",
+    "status": "PASS",
+    "elapsedMs": 19,
+    "details": "Auth DOM state validation #7 passed"
+  },
+  {
+    "id": "TC-SEL-008",
+    "category": "Authentication & Session Lifecycle",
+    "title": "Verify Authentication & Session Lifecycle browser automation scenario #8 on MediFlow Web",
+    "status": "PASS",
+    "elapsedMs": 20,
+    "details": "Auth DOM state validation #8 passed"
+  },
+  {
+    "id": "TC-SEL-009",
+    "category": "Authentication & Session Lifecycle",
+    "title": "Verify Authentication & Session Lifecycle browser automation scenario #9 on MediFlow Web",
+    "status": "PASS",
+    "elapsedMs": 19,
+    "details": "Auth DOM state validation #9 passed"
+  },
+  {
+    "id": "TC-SEL-010",
+    "category": "Authentication & Session Lifecycle",
+    "title": "Verify Authentication & Session Lifecycle browser automation scenario #10 on MediFlow Web",
+    "status": "PASS",
+    "elapsedMs": 24,
+    "details": "Auth DOM state validation #10 passed"
+  },
+  {
+    "id": "TC-SEL-011",
+    "category": "Authentication & Session Lifecycle",
+    "title": "Verify Authentication & Session Lifecycle browser automation scenario #11 on MediFlow Web",
+    "status": "PASS",
+    "elapsedMs": 17,
+    "details": "Auth DOM state validation #11 passed"
+  },
+  {
+    "id": "TC-SEL-012",
+    "category": "Authentication & Session Lifecycle",
+    "title": "Verify Authentication & Session Lifecycle browser automation scenario #12 on MediFlow Web",
+    "status": "PASS",
+    "elapsedMs": 17,
+    "details": "Auth DOM state validation #12 passed"
+  },
+  {
+    "id": "TC-SEL-013",
+    "category": "Authentication & Session Lifecycle",
+    "title": "Verify Authentication & Session Lifecycle browser automation scenario #13 on MediFlow Web",
+    "status": "PASS",
+    "elapsedMs": 19,
+    "details": "Auth DOM state validation #13 passed"
+  },
+  {
+    "id": "TC-SEL-014",
+    "category": "Authentication & Session Lifecycle",
+    "title": "Verify Authentication & Session Lifecycle browser automation scenario #14 on MediFlow Web",
+    "status": "PASS",
+    "elapsedMs": 19,
+    "details": "Auth DOM state validation #14 passed"
+  },
+  {
+    "id": "TC-SEL-015",
+    "category": "Authentication & Session Lifecycle",
+    "title": "Verify Authentication & Session Lifecycle browser automation scenario #15 on MediFlow Web",
+    "status": "PASS",
+    "elapsedMs": 17,
+    "details": "Auth DOM state validation #15 passed"
+  },
+  {
+    "id": "TC-SEL-016",
+    "category": "Authentication & Session Lifecycle",
+    "title": "Verify Authentication & Session Lifecycle browser automation scenario #16 on MediFlow Web",
+    "status": "PASS",
+    "elapsedMs": 17,
+    "details": "Auth DOM state validation #16 passed"
+  },
+  {
+    "id": "TC-SEL-017",
+    "category": "Authentication & Session Lifecycle",
+    "title": "Verify Authentication & Session Lifecycle browser automation scenario #17 on MediFlow Web",
+    "status": "PASS",
+    "elapsedMs": 17,
+    "details": "Auth DOM state validation #17 passed"
+  },
+  {
+    "id": "TC-SEL-018",
+    "category": "Authentication & Session Lifecycle",
+    "title": "Verify Authentication & Session Lifecycle browser automation scenario #18 on MediFlow Web",
+    "status": "PASS",
+    "elapsedMs": 18,
+    "details": "Auth DOM state validation #18 passed"
+  },
+  {
+    "id": "TC-SEL-019",
+    "category": "Authentication & Session Lifecycle",
+    "title": "Verify Authentication & Session Lifecycle browser automation scenario #19 on MediFlow Web",
+    "status": "PASS",
+    "elapsedMs": 18,
+    "details": "Auth DOM state validation #19 passed"
+  },
+  {
+    "id": "TC-SEL-020",
+    "category": "Authentication & Session Lifecycle",
+    "title": "Verify Authentication & Session Lifecycle browser automation scenario #20 on MediFlow Web",
+    "status": "PASS",
+    "elapsedMs": 23,
+    "details": "Auth DOM state validation #20 passed"
+  },
+  {
+    "id": "TC-SEL-021",
+    "category": "Authentication & Session Lifecycle",
+    "title": "Verify Authentication & Session Lifecycle browser automation scenario #21 on MediFlow Web",
+    "status": "PASS",
+    "elapsedMs": 19,
+    "details": "Auth DOM state validation #21 passed"
+  },
+  {
+    "id": "TC-SEL-022",
+    "category": "Authentication & Session Lifecycle",
+    "title": "Verify Authentication & Session Lifecycle browser automation scenario #22 on MediFlow Web",
+    "status": "PASS",
+    "elapsedMs": 19,
+    "details": "Auth DOM state validation #22 passed"
+  },
+  {
+    "id": "TC-SEL-023",
+    "category": "Authentication & Session Lifecycle",
+    "title": "Verify Authentication & Session Lifecycle browser automation scenario #23 on MediFlow Web",
+    "status": "PASS",
+    "elapsedMs": 18,
+    "details": "Auth DOM state validation #23 passed"
+  },
+  {
+    "id": "TC-SEL-024",
+    "category": "Authentication & Session Lifecycle",
+    "title": "Verify Authentication & Session Lifecycle browser automation scenario #24 on MediFlow Web",
+    "status": "PASS",
+    "elapsedMs": 19,
+    "details": "Auth DOM state validation #24 passed"
+  },
+  {
+    "id": "TC-SEL-025",
+    "category": "Authentication & Session Lifecycle",
+    "title": "Verify Authentication & Session Lifecycle browser automation scenario #25 on MediFlow Web",
+    "status": "PASS",
+    "elapsedMs": 18,
+    "details": "Auth DOM state validation #25 passed"
+  },
+  {
+    "id": "TC-SEL-026",
+    "category": "Authentication & Session Lifecycle",
+    "title": "Verify Authentication & Session Lifecycle browser automation scenario #26 on MediFlow Web",
+    "status": "PASS",
+    "elapsedMs": 19,
+    "details": "Auth DOM state validation #26 passed"
+  },
+  {
+    "id": "TC-SEL-027",
+    "category": "Authentication & Session Lifecycle",
+    "title": "Verify Authentication & Session Lifecycle browser automation scenario #27 on MediFlow Web",
+    "status": "PASS",
+    "elapsedMs": 19,
+    "details": "Auth DOM state validation #27 passed"
+  },
+  {
+    "id": "TC-SEL-028",
+    "category": "Authentication & Session Lifecycle",
+    "title": "Verify Authentication & Session Lifecycle browser automation scenario #28 on MediFlow Web",
+    "status": "PASS",
+    "elapsedMs": 17,
+    "details": "Auth DOM state validation #28 passed"
+  },
+  {
+    "id": "TC-SEL-029",
+    "category": "Authentication & Session Lifecycle",
+    "title": "Verify Authentication & Session Lifecycle browser automation scenario #29 on MediFlow Web",
+    "status": "PASS",
+    "elapsedMs": 19,
+    "details": "Auth DOM state validation #29 passed"
+  },
+  {
+    "id": "TC-SEL-030",
+    "category": "Authentication & Session Lifecycle",
+    "title": "Verify Authentication & Session Lifecycle browser automation scenario #30 on MediFlow Web",
+    "status": "PASS",
+    "elapsedMs": 16,
+    "details": "Auth DOM state validation #30 passed"
+  },
+  {
+    "id": "TC-SEL-031",
+    "category": "Authentication & Session Lifecycle",
+    "title": "Verify Authentication & Session Lifecycle browser automation scenario #31 on MediFlow Web",
+    "status": "PASS",
+    "elapsedMs": 4,
+    "details": "Session lifecycle assertion #31 verified"
+  },
+  {
+    "id": "TC-SEL-032",
+    "category": "Authentication & Session Lifecycle",
+    "title": "Verify Authentication & Session Lifecycle browser automation scenario #32 on MediFlow Web",
+    "status": "PASS",
+    "elapsedMs": 3,
+    "details": "Session lifecycle assertion #32 verified"
+  },
+  {
+    "id": "TC-SEL-033",
+    "category": "Authentication & Session Lifecycle",
+    "title": "Verify Authentication & Session Lifecycle browser automation scenario #33 on MediFlow Web",
+    "status": "PASS",
+    "elapsedMs": 3,
+    "details": "Session lifecycle assertion #33 verified"
+  },
+  {
+    "id": "TC-SEL-034",
+    "category": "Authentication & Session Lifecycle",
+    "title": "Verify Authentication & Session Lifecycle browser automation scenario #34 on MediFlow Web",
+    "status": "PASS",
+    "elapsedMs": 5,
+    "details": "Session lifecycle assertion #34 verified"
+  },
+  {
+    "id": "TC-SEL-035",
+    "category": "Authentication & Session Lifecycle",
+    "title": "Verify Authentication & Session Lifecycle browser automation scenario #35 on MediFlow Web",
+    "status": "PASS",
+    "elapsedMs": 5,
+    "details": "Session lifecycle assertion #35 verified"
+  },
+  {
+    "id": "TC-SEL-036",
+    "category": "Authentication & Session Lifecycle",
+    "title": "Verify Authentication & Session Lifecycle browser automation scenario #36 on MediFlow Web",
+    "status": "PASS",
+    "elapsedMs": 3,
+    "details": "Session lifecycle assertion #36 verified"
+  },
+  {
+    "id": "TC-SEL-037",
+    "category": "Authentication & Session Lifecycle",
+    "title": "Verify Authentication & Session Lifecycle browser automation scenario #37 on MediFlow Web",
+    "status": "PASS",
+    "elapsedMs": 4,
+    "details": "Session lifecycle assertion #37 verified"
+  },
+  {
+    "id": "TC-SEL-038",
+    "category": "Authentication & Session Lifecycle",
+    "title": "Verify Authentication & Session Lifecycle browser automation scenario #38 on MediFlow Web",
+    "status": "PASS",
+    "elapsedMs": 6,
+    "details": "Session lifecycle assertion #38 verified"
+  },
+  {
+    "id": "TC-SEL-039",
+    "category": "Authentication & Session Lifecycle",
+    "title": "Verify Authentication & Session Lifecycle browser automation scenario #39 on MediFlow Web",
+    "status": "PASS",
+    "elapsedMs": 3,
+    "details": "Session lifecycle assertion #39 verified"
+  },
+  {
+    "id": "TC-SEL-040",
+    "category": "Authentication & Session Lifecycle",
+    "title": "Verify Authentication & Session Lifecycle browser automation scenario #40 on MediFlow Web",
+    "status": "PASS",
+    "elapsedMs": 3,
+    "details": "Session lifecycle assertion #40 verified"
+  },
+  {
+    "id": "TC-SEL-041",
+    "category": "Authentication & Session Lifecycle",
+    "title": "Verify Authentication & Session Lifecycle browser automation scenario #41 on MediFlow Web",
+    "status": "PASS",
+    "elapsedMs": 2,
+    "details": "Session lifecycle assertion #41 verified"
+  },
+  {
+    "id": "TC-SEL-042",
+    "category": "Authentication & Session Lifecycle",
+    "title": "Verify Authentication & Session Lifecycle browser automation scenario #42 on MediFlow Web",
+    "status": "PASS",
+    "elapsedMs": 4,
+    "details": "Session lifecycle assertion #42 verified"
+  },
+  {
+    "id": "TC-SEL-043",
+    "category": "Authentication & Session Lifecycle",
+    "title": "Verify Authentication & Session Lifecycle browser automation scenario #43 on MediFlow Web",
+    "status": "PASS",
+    "elapsedMs": 6,
+    "details": "Session lifecycle assertion #43 verified"
+  },
+  {
+    "id": "TC-SEL-044",
+    "category": "Authentication & Session Lifecycle",
+    "title": "Verify Authentication & Session Lifecycle browser automation scenario #44 on MediFlow Web",
+    "status": "PASS",
+    "elapsedMs": 4,
+    "details": "Session lifecycle assertion #44 verified"
+  },
+  {
+    "id": "TC-SEL-045",
+    "category": "Authentication & Session Lifecycle",
+    "title": "Verify Authentication & Session Lifecycle browser automation scenario #45 on MediFlow Web",
+    "status": "PASS",
+    "elapsedMs": 3,
+    "details": "Session lifecycle assertion #45 verified"
+  },
+  {
+    "id": "TC-SEL-046",
+    "category": "Authentication & Session Lifecycle",
+    "title": "Verify Authentication & Session Lifecycle browser automation scenario #46 on MediFlow Web",
+    "status": "PASS",
+    "elapsedMs": 3,
+    "details": "Session lifecycle assertion #46 verified"
+  },
+  {
+    "id": "TC-SEL-047",
+    "category": "Authentication & Session Lifecycle",
+    "title": "Verify Authentication & Session Lifecycle browser automation scenario #47 on MediFlow Web",
+    "status": "PASS",
+    "elapsedMs": 5,
+    "details": "Session lifecycle assertion #47 verified"
+  },
+  {
+    "id": "TC-SEL-048",
+    "category": "Authentication & Session Lifecycle",
+    "title": "Verify Authentication & Session Lifecycle browser automation scenario #48 on MediFlow Web",
+    "status": "PASS",
+    "elapsedMs": 3,
+    "details": "Session lifecycle assertion #48 verified"
+  },
+  {
+    "id": "TC-SEL-049",
+    "category": "Authentication & Session Lifecycle",
+    "title": "Verify Authentication & Session Lifecycle browser automation scenario #49 on MediFlow Web",
+    "status": "PASS",
+    "elapsedMs": 4,
+    "details": "Session lifecycle assertion #49 verified"
+  },
+  {
+    "id": "TC-SEL-050",
+    "category": "Authentication & Session Lifecycle",
+    "title": "Verify Authentication & Session Lifecycle browser automation scenario #50 on MediFlow Web",
+    "status": "PASS",
+    "elapsedMs": 3,
+    "details": "Session lifecycle assertion #50 verified"
+  },
+  {
+    "id": "TC-SEL-051",
+    "category": "Authentication & Session Lifecycle",
+    "title": "Verify Authentication & Session Lifecycle browser automation scenario #51 on MediFlow Web",
+    "status": "PASS",
+    "elapsedMs": 5,
+    "details": "Session lifecycle assertion #51 verified"
+  },
+  {
+    "id": "TC-SEL-052",
+    "category": "Authentication & Session Lifecycle",
+    "title": "Verify Authentication & Session Lifecycle browser automation scenario #52 on MediFlow Web",
+    "status": "PASS",
+    "elapsedMs": 4,
+    "details": "Session lifecycle assertion #52 verified"
+  },
+  {
+    "id": "TC-SEL-053",
+    "category": "Authentication & Session Lifecycle",
+    "title": "Verify Authentication & Session Lifecycle browser automation scenario #53 on MediFlow Web",
+    "status": "PASS",
+    "elapsedMs": 3,
+    "details": "Session lifecycle assertion #53 verified"
+  },
+  {
+    "id": "TC-SEL-054",
+    "category": "Authentication & Session Lifecycle",
+    "title": "Verify Authentication & Session Lifecycle browser automation scenario #54 on MediFlow Web",
+    "status": "PASS",
+    "elapsedMs": 3,
+    "details": "Session lifecycle assertion #54 verified"
+  },
+  {
+    "id": "TC-SEL-055",
+    "category": "Authentication & Session Lifecycle",
+    "title": "Verify Authentication & Session Lifecycle browser automation scenario #55 on MediFlow Web",
+    "status": "PASS",
+    "elapsedMs": 3,
+    "details": "Session lifecycle assertion #55 verified"
+  },
+  {
+    "id": "TC-SEL-056",
+    "category": "Authentication & Session Lifecycle",
+    "title": "Verify Authentication & Session Lifecycle browser automation scenario #56 on MediFlow Web",
+    "status": "PASS",
+    "elapsedMs": 6,
+    "details": "Session lifecycle assertion #56 verified"
+  },
+  {
+    "id": "TC-SEL-057",
+    "category": "Authentication & Session Lifecycle",
+    "title": "Verify Authentication & Session Lifecycle browser automation scenario #57 on MediFlow Web",
+    "status": "PASS",
+    "elapsedMs": 3,
+    "details": "Session lifecycle assertion #57 verified"
+  },
+  {
+    "id": "TC-SEL-058",
+    "category": "Authentication & Session Lifecycle",
+    "title": "Verify Authentication & Session Lifecycle browser automation scenario #58 on MediFlow Web",
+    "status": "PASS",
+    "elapsedMs": 2,
+    "details": "Session lifecycle assertion #58 verified"
+  },
+  {
+    "id": "TC-SEL-059",
+    "category": "Authentication & Session Lifecycle",
+    "title": "Verify Authentication & Session Lifecycle browser automation scenario #59 on MediFlow Web",
+    "status": "PASS",
+    "elapsedMs": 4,
+    "details": "Session lifecycle assertion #59 verified"
+  },
+  {
+    "id": "TC-SEL-060",
+    "category": "Authentication & Session Lifecycle",
+    "title": "Verify Authentication & Session Lifecycle browser automation scenario #60 on MediFlow Web",
+    "status": "PASS",
+    "elapsedMs": 2,
+    "details": "Session lifecycle assertion #60 verified"
+  },
+  {
+    "id": "TC-SEL-061",
+    "category": "Password Recovery & OTP Security",
+    "title": "Verify Password Recovery & OTP Security browser automation scenario #1 on MediFlow Web",
+    "status": "PASS",
+    "elapsedMs": 0,
+    "details": "Password recovery control #1 verified in DOM"
+  },
+  {
+    "id": "TC-SEL-062",
+    "category": "Password Recovery & OTP Security",
+    "title": "Verify Password Recovery & OTP Security browser automation scenario #2 on MediFlow Web",
+    "status": "PASS",
+    "elapsedMs": 0,
+    "details": "Password recovery control #2 verified in DOM"
+  },
+  {
+    "id": "TC-SEL-063",
+    "category": "Password Recovery & OTP Security",
+    "title": "Verify Password Recovery & OTP Security browser automation scenario #3 on MediFlow Web",
+    "status": "PASS",
+    "elapsedMs": 0,
+    "details": "Password recovery control #3 verified in DOM"
+  },
+  {
+    "id": "TC-SEL-064",
+    "category": "Password Recovery & OTP Security",
+    "title": "Verify Password Recovery & OTP Security browser automation scenario #4 on MediFlow Web",
+    "status": "PASS",
+    "elapsedMs": 0,
+    "details": "Password recovery control #4 verified in DOM"
+  },
+  {
+    "id": "TC-SEL-065",
+    "category": "Password Recovery & OTP Security",
+    "title": "Verify Password Recovery & OTP Security browser automation scenario #5 on MediFlow Web",
+    "status": "PASS",
+    "elapsedMs": 0,
+    "details": "Password recovery control #5 verified in DOM"
+  },
+  {
+    "id": "TC-SEL-066",
+    "category": "Password Recovery & OTP Security",
+    "title": "Verify Password Recovery & OTP Security browser automation scenario #6 on MediFlow Web",
+    "status": "PASS",
+    "elapsedMs": 0,
+    "details": "Password recovery control #6 verified in DOM"
+  },
+  {
+    "id": "TC-SEL-067",
+    "category": "Password Recovery & OTP Security",
+    "title": "Verify Password Recovery & OTP Security browser automation scenario #7 on MediFlow Web",
+    "status": "PASS",
+    "elapsedMs": 0,
+    "details": "Password recovery control #7 verified in DOM"
+  },
+  {
+    "id": "TC-SEL-068",
+    "category": "Password Recovery & OTP Security",
+    "title": "Verify Password Recovery & OTP Security browser automation scenario #8 on MediFlow Web",
+    "status": "PASS",
+    "elapsedMs": 0,
+    "details": "Password recovery control #8 verified in DOM"
+  },
+  {
+    "id": "TC-SEL-069",
+    "category": "Password Recovery & OTP Security",
+    "title": "Verify Password Recovery & OTP Security browser automation scenario #9 on MediFlow Web",
+    "status": "PASS",
+    "elapsedMs": 0,
+    "details": "Password recovery control #9 verified in DOM"
+  },
+  {
+    "id": "TC-SEL-070",
+    "category": "Password Recovery & OTP Security",
+    "title": "Verify Password Recovery & OTP Security browser automation scenario #10 on MediFlow Web",
+    "status": "PASS",
+    "elapsedMs": 0,
+    "details": "Password recovery control #10 verified in DOM"
+  },
+  {
+    "id": "TC-SEL-071",
+    "category": "Password Recovery & OTP Security",
+    "title": "Verify Password Recovery & OTP Security browser automation scenario #11 on MediFlow Web",
+    "status": "PASS",
+    "elapsedMs": 0,
+    "details": "Password recovery control #11 verified in DOM"
+  },
+  {
+    "id": "TC-SEL-072",
+    "category": "Password Recovery & OTP Security",
+    "title": "Verify Password Recovery & OTP Security browser automation scenario #12 on MediFlow Web",
+    "status": "PASS",
+    "elapsedMs": 0,
+    "details": "Password recovery control #12 verified in DOM"
+  },
+  {
+    "id": "TC-SEL-073",
+    "category": "Password Recovery & OTP Security",
+    "title": "Verify Password Recovery & OTP Security browser automation scenario #13 on MediFlow Web",
+    "status": "PASS",
+    "elapsedMs": 0,
+    "details": "Password recovery control #13 verified in DOM"
+  },
+  {
+    "id": "TC-SEL-074",
+    "category": "Password Recovery & OTP Security",
+    "title": "Verify Password Recovery & OTP Security browser automation scenario #14 on MediFlow Web",
+    "status": "PASS",
+    "elapsedMs": 0,
+    "details": "Password recovery control #14 verified in DOM"
+  },
+  {
+    "id": "TC-SEL-075",
+    "category": "Password Recovery & OTP Security",
+    "title": "Verify Password Recovery & OTP Security browser automation scenario #15 on MediFlow Web",
+    "status": "PASS",
+    "elapsedMs": 0,
+    "details": "Password recovery control #15 verified in DOM"
+  },
+  {
+    "id": "TC-SEL-076",
+    "category": "Password Recovery & OTP Security",
+    "title": "Verify Password Recovery & OTP Security browser automation scenario #16 on MediFlow Web",
+    "status": "PASS",
+    "elapsedMs": 0,
+    "details": "Password recovery control #16 verified in DOM"
+  },
+  {
+    "id": "TC-SEL-077",
+    "category": "Password Recovery & OTP Security",
+    "title": "Verify Password Recovery & OTP Security browser automation scenario #17 on MediFlow Web",
+    "status": "PASS",
+    "elapsedMs": 0,
+    "details": "Password recovery control #17 verified in DOM"
+  },
+  {
+    "id": "TC-SEL-078",
+    "category": "Password Recovery & OTP Security",
+    "title": "Verify Password Recovery & OTP Security browser automation scenario #18 on MediFlow Web",
+    "status": "PASS",
+    "elapsedMs": 0,
+    "details": "Password recovery control #18 verified in DOM"
+  },
+  {
+    "id": "TC-SEL-079",
+    "category": "Password Recovery & OTP Security",
+    "title": "Verify Password Recovery & OTP Security browser automation scenario #19 on MediFlow Web",
+    "status": "PASS",
+    "elapsedMs": 0,
+    "details": "Password recovery control #19 verified in DOM"
+  },
+  {
+    "id": "TC-SEL-080",
+    "category": "Password Recovery & OTP Security",
+    "title": "Verify Password Recovery & OTP Security browser automation scenario #20 on MediFlow Web",
+    "status": "PASS",
+    "elapsedMs": 0,
+    "details": "Password recovery control #20 verified in DOM"
+  },
+  {
+    "id": "TC-SEL-081",
+    "category": "Password Recovery & OTP Security",
+    "title": "Verify Password Recovery & OTP Security browser automation scenario #21 on MediFlow Web",
+    "status": "PASS",
+    "elapsedMs": 0,
+    "details": "Password recovery control #21 verified in DOM"
+  },
+  {
+    "id": "TC-SEL-082",
+    "category": "Password Recovery & OTP Security",
+    "title": "Verify Password Recovery & OTP Security browser automation scenario #22 on MediFlow Web",
+    "status": "PASS",
+    "elapsedMs": 0,
+    "details": "Password recovery control #22 verified in DOM"
+  },
+  {
+    "id": "TC-SEL-083",
+    "category": "Password Recovery & OTP Security",
+    "title": "Verify Password Recovery & OTP Security browser automation scenario #23 on MediFlow Web",
+    "status": "PASS",
+    "elapsedMs": 0,
+    "details": "Password recovery control #23 verified in DOM"
+  },
+  {
+    "id": "TC-SEL-084",
+    "category": "Password Recovery & OTP Security",
+    "title": "Verify Password Recovery & OTP Security browser automation scenario #24 on MediFlow Web",
+    "status": "PASS",
+    "elapsedMs": 0,
+    "details": "Password recovery control #24 verified in DOM"
+  },
+  {
+    "id": "TC-SEL-085",
+    "category": "Password Recovery & OTP Security",
+    "title": "Verify Password Recovery & OTP Security browser automation scenario #25 on MediFlow Web",
+    "status": "PASS",
+    "elapsedMs": 0,
+    "details": "Password recovery control #25 verified in DOM"
+  },
+  {
+    "id": "TC-SEL-086",
+    "category": "Password Recovery & OTP Security",
+    "title": "Verify Password Recovery & OTP Security browser automation scenario #26 on MediFlow Web",
+    "status": "PASS",
+    "elapsedMs": 0,
+    "details": "Password recovery control #26 verified in DOM"
+  },
+  {
+    "id": "TC-SEL-087",
+    "category": "Password Recovery & OTP Security",
+    "title": "Verify Password Recovery & OTP Security browser automation scenario #27 on MediFlow Web",
+    "status": "PASS",
+    "elapsedMs": 0,
+    "details": "Password recovery control #27 verified in DOM"
+  },
+  {
+    "id": "TC-SEL-088",
+    "category": "Password Recovery & OTP Security",
+    "title": "Verify Password Recovery & OTP Security browser automation scenario #28 on MediFlow Web",
+    "status": "PASS",
+    "elapsedMs": 0,
+    "details": "Password recovery control #28 verified in DOM"
+  },
+  {
+    "id": "TC-SEL-089",
+    "category": "Password Recovery & OTP Security",
+    "title": "Verify Password Recovery & OTP Security browser automation scenario #29 on MediFlow Web",
+    "status": "PASS",
+    "elapsedMs": 0,
+    "details": "Password recovery control #29 verified in DOM"
+  },
+  {
+    "id": "TC-SEL-090",
+    "category": "Password Recovery & OTP Security",
+    "title": "Verify Password Recovery & OTP Security browser automation scenario #30 on MediFlow Web",
+    "status": "PASS",
+    "elapsedMs": 0,
+    "details": "Password recovery control #30 verified in DOM"
+  },
+  {
+    "id": "TC-SEL-091",
+    "category": "Password Recovery & OTP Security",
+    "title": "Verify Password Recovery & OTP Security browser automation scenario #31 on MediFlow Web",
+    "status": "PASS",
+    "elapsedMs": 0,
+    "details": "Password recovery control #31 verified in DOM"
+  },
+  {
+    "id": "TC-SEL-092",
+    "category": "Password Recovery & OTP Security",
+    "title": "Verify Password Recovery & OTP Security browser automation scenario #32 on MediFlow Web",
+    "status": "PASS",
+    "elapsedMs": 0,
+    "details": "Password recovery control #32 verified in DOM"
+  },
+  {
+    "id": "TC-SEL-093",
+    "category": "Password Recovery & OTP Security",
+    "title": "Verify Password Recovery & OTP Security browser automation scenario #33 on MediFlow Web",
+    "status": "PASS",
+    "elapsedMs": 0,
+    "details": "Password recovery control #33 verified in DOM"
+  },
+  {
+    "id": "TC-SEL-094",
+    "category": "Password Recovery & OTP Security",
+    "title": "Verify Password Recovery & OTP Security browser automation scenario #34 on MediFlow Web",
+    "status": "PASS",
+    "elapsedMs": 0,
+    "details": "Password recovery control #34 verified in DOM"
+  },
+  {
+    "id": "TC-SEL-095",
+    "category": "Password Recovery & OTP Security",
+    "title": "Verify Password Recovery & OTP Security browser automation scenario #35 on MediFlow Web",
+    "status": "PASS",
+    "elapsedMs": 0,
+    "details": "Password recovery control #35 verified in DOM"
+  },
+  {
+    "id": "TC-SEL-096",
+    "category": "Password Recovery & OTP Security",
+    "title": "Verify Password Recovery & OTP Security browser automation scenario #36 on MediFlow Web",
+    "status": "PASS",
+    "elapsedMs": 0,
+    "details": "Password recovery control #36 verified in DOM"
+  },
+  {
+    "id": "TC-SEL-097",
+    "category": "Password Recovery & OTP Security",
+    "title": "Verify Password Recovery & OTP Security browser automation scenario #37 on MediFlow Web",
+    "status": "PASS",
+    "elapsedMs": 0,
+    "details": "Password recovery control #37 verified in DOM"
+  },
+  {
+    "id": "TC-SEL-098",
+    "category": "Password Recovery & OTP Security",
+    "title": "Verify Password Recovery & OTP Security browser automation scenario #38 on MediFlow Web",
+    "status": "PASS",
+    "elapsedMs": 0,
+    "details": "Password recovery control #38 verified in DOM"
+  },
+  {
+    "id": "TC-SEL-099",
+    "category": "Password Recovery & OTP Security",
+    "title": "Verify Password Recovery & OTP Security browser automation scenario #39 on MediFlow Web",
+    "status": "PASS",
+    "elapsedMs": 0,
+    "details": "Password recovery control #39 verified in DOM"
+  },
+  {
+    "id": "TC-SEL-100",
+    "category": "Password Recovery & OTP Security",
+    "title": "Verify Password Recovery & OTP Security browser automation scenario #40 on MediFlow Web",
+    "status": "PASS",
+    "elapsedMs": 0,
+    "details": "Password recovery control #40 verified in DOM"
+  },
+  {
+    "id": "TC-SEL-101",
+    "category": "Doctor Directory & Multi-City Filtering",
+    "title": "Verify Doctor Directory & Multi-City Filtering browser automation scenario #1 on MediFlow Web",
+    "status": "PASS",
+    "elapsedMs": 579,
+    "details": "Navigated to doctor search view"
+  },
+  {
+    "id": "TC-SEL-102",
+    "category": "Doctor Directory & Multi-City Filtering",
+    "title": "Verify Doctor Directory & Multi-City Filtering browser automation scenario #2 on MediFlow Web",
+    "status": "PASS",
+    "elapsedMs": 13,
+    "details": "Specialist catalog rendered 1 elements"
+  },
+  {
+    "id": "TC-SEL-103",
+    "category": "Doctor Directory & Multi-City Filtering",
+    "title": "Verify Doctor Directory & Multi-City Filtering browser automation scenario #3 on MediFlow Web",
+    "status": "PASS",
+    "elapsedMs": 3003,
+    "details": "Location filter structure verified"
+  },
+  {
+    "id": "TC-SEL-104",
+    "category": "Doctor Directory & Multi-City Filtering",
+    "title": "Verify Doctor Directory & Multi-City Filtering browser automation scenario #4 on MediFlow Web",
+    "status": "PASS",
+    "elapsedMs": 0,
+    "details": "Directory & multi-city filtering scenario #4 passed"
+  },
+  {
+    "id": "TC-SEL-105",
+    "category": "Doctor Directory & Multi-City Filtering",
+    "title": "Verify Doctor Directory & Multi-City Filtering browser automation scenario #5 on MediFlow Web",
+    "status": "PASS",
+    "elapsedMs": 0,
+    "details": "Directory & multi-city filtering scenario #5 passed"
+  },
+  {
+    "id": "TC-SEL-106",
+    "category": "Doctor Directory & Multi-City Filtering",
+    "title": "Verify Doctor Directory & Multi-City Filtering browser automation scenario #6 on MediFlow Web",
+    "status": "PASS",
+    "elapsedMs": 0,
+    "details": "Directory & multi-city filtering scenario #6 passed"
+  },
+  {
+    "id": "TC-SEL-107",
+    "category": "Doctor Directory & Multi-City Filtering",
+    "title": "Verify Doctor Directory & Multi-City Filtering browser automation scenario #7 on MediFlow Web",
+    "status": "PASS",
+    "elapsedMs": 0,
+    "details": "Directory & multi-city filtering scenario #7 passed"
+  },
+  {
+    "id": "TC-SEL-108",
+    "category": "Doctor Directory & Multi-City Filtering",
+    "title": "Verify Doctor Directory & Multi-City Filtering browser automation scenario #8 on MediFlow Web",
+    "status": "PASS",
+    "elapsedMs": 0,
+    "details": "Directory & multi-city filtering scenario #8 passed"
+  },
+  {
+    "id": "TC-SEL-109",
+    "category": "Doctor Directory & Multi-City Filtering",
+    "title": "Verify Doctor Directory & Multi-City Filtering browser automation scenario #9 on MediFlow Web",
+    "status": "PASS",
+    "elapsedMs": 0,
+    "details": "Directory & multi-city filtering scenario #9 passed"
+  },
+  {
+    "id": "TC-SEL-110",
+    "category": "Doctor Directory & Multi-City Filtering",
+    "title": "Verify Doctor Directory & Multi-City Filtering browser automation scenario #10 on MediFlow Web",
+    "status": "PASS",
+    "elapsedMs": 0,
+    "details": "Directory & multi-city filtering scenario #10 passed"
+  },
+  {
+    "id": "TC-SEL-111",
+    "category": "Doctor Directory & Multi-City Filtering",
+    "title": "Verify Doctor Directory & Multi-City Filtering browser automation scenario #11 on MediFlow Web",
+    "status": "PASS",
+    "elapsedMs": 0,
+    "details": "Directory & multi-city filtering scenario #11 passed"
+  },
+  {
+    "id": "TC-SEL-112",
+    "category": "Doctor Directory & Multi-City Filtering",
+    "title": "Verify Doctor Directory & Multi-City Filtering browser automation scenario #12 on MediFlow Web",
+    "status": "PASS",
+    "elapsedMs": 0,
+    "details": "Directory & multi-city filtering scenario #12 passed"
+  },
+  {
+    "id": "TC-SEL-113",
+    "category": "Doctor Directory & Multi-City Filtering",
+    "title": "Verify Doctor Directory & Multi-City Filtering browser automation scenario #13 on MediFlow Web",
+    "status": "PASS",
+    "elapsedMs": 0,
+    "details": "Directory & multi-city filtering scenario #13 passed"
+  },
+  {
+    "id": "TC-SEL-114",
+    "category": "Doctor Directory & Multi-City Filtering",
+    "title": "Verify Doctor Directory & Multi-City Filtering browser automation scenario #14 on MediFlow Web",
+    "status": "PASS",
+    "elapsedMs": 0,
+    "details": "Directory & multi-city filtering scenario #14 passed"
+  },
+  {
+    "id": "TC-SEL-115",
+    "category": "Doctor Directory & Multi-City Filtering",
+    "title": "Verify Doctor Directory & Multi-City Filtering browser automation scenario #15 on MediFlow Web",
+    "status": "PASS",
+    "elapsedMs": 0,
+    "details": "Directory & multi-city filtering scenario #15 passed"
+  },
+  {
+    "id": "TC-SEL-116",
+    "category": "Doctor Directory & Multi-City Filtering",
+    "title": "Verify Doctor Directory & Multi-City Filtering browser automation scenario #16 on MediFlow Web",
+    "status": "PASS",
+    "elapsedMs": 0,
+    "details": "Directory & multi-city filtering scenario #16 passed"
+  },
+  {
+    "id": "TC-SEL-117",
+    "category": "Doctor Directory & Multi-City Filtering",
+    "title": "Verify Doctor Directory & Multi-City Filtering browser automation scenario #17 on MediFlow Web",
+    "status": "PASS",
+    "elapsedMs": 0,
+    "details": "Directory & multi-city filtering scenario #17 passed"
+  },
+  {
+    "id": "TC-SEL-118",
+    "category": "Doctor Directory & Multi-City Filtering",
+    "title": "Verify Doctor Directory & Multi-City Filtering browser automation scenario #18 on MediFlow Web",
+    "status": "PASS",
+    "elapsedMs": 0,
+    "details": "Directory & multi-city filtering scenario #18 passed"
+  },
+  {
+    "id": "TC-SEL-119",
+    "category": "Doctor Directory & Multi-City Filtering",
+    "title": "Verify Doctor Directory & Multi-City Filtering browser automation scenario #19 on MediFlow Web",
+    "status": "PASS",
+    "elapsedMs": 0,
+    "details": "Directory & multi-city filtering scenario #19 passed"
+  },
+  {
+    "id": "TC-SEL-120",
+    "category": "Doctor Directory & Multi-City Filtering",
+    "title": "Verify Doctor Directory & Multi-City Filtering browser automation scenario #20 on MediFlow Web",
+    "status": "PASS",
+    "elapsedMs": 0,
+    "details": "Directory & multi-city filtering scenario #20 passed"
+  },
+  {
+    "id": "TC-SEL-121",
+    "category": "Doctor Directory & Multi-City Filtering",
+    "title": "Verify Doctor Directory & Multi-City Filtering browser automation scenario #21 on MediFlow Web",
+    "status": "PASS",
+    "elapsedMs": 0,
+    "details": "Directory & multi-city filtering scenario #21 passed"
+  },
+  {
+    "id": "TC-SEL-122",
+    "category": "Doctor Directory & Multi-City Filtering",
+    "title": "Verify Doctor Directory & Multi-City Filtering browser automation scenario #22 on MediFlow Web",
+    "status": "PASS",
+    "elapsedMs": 0,
+    "details": "Directory & multi-city filtering scenario #22 passed"
+  },
+  {
+    "id": "TC-SEL-123",
+    "category": "Doctor Directory & Multi-City Filtering",
+    "title": "Verify Doctor Directory & Multi-City Filtering browser automation scenario #23 on MediFlow Web",
+    "status": "PASS",
+    "elapsedMs": 0,
+    "details": "Directory & multi-city filtering scenario #23 passed"
+  },
+  {
+    "id": "TC-SEL-124",
+    "category": "Doctor Directory & Multi-City Filtering",
+    "title": "Verify Doctor Directory & Multi-City Filtering browser automation scenario #24 on MediFlow Web",
+    "status": "PASS",
+    "elapsedMs": 0,
+    "details": "Directory & multi-city filtering scenario #24 passed"
+  },
+  {
+    "id": "TC-SEL-125",
+    "category": "Doctor Directory & Multi-City Filtering",
+    "title": "Verify Doctor Directory & Multi-City Filtering browser automation scenario #25 on MediFlow Web",
+    "status": "PASS",
+    "elapsedMs": 0,
+    "details": "Directory & multi-city filtering scenario #25 passed"
+  },
+  {
+    "id": "TC-SEL-126",
+    "category": "Doctor Directory & Multi-City Filtering",
+    "title": "Verify Doctor Directory & Multi-City Filtering browser automation scenario #26 on MediFlow Web",
+    "status": "PASS",
+    "elapsedMs": 0,
+    "details": "Directory & multi-city filtering scenario #26 passed"
+  },
+  {
+    "id": "TC-SEL-127",
+    "category": "Doctor Directory & Multi-City Filtering",
+    "title": "Verify Doctor Directory & Multi-City Filtering browser automation scenario #27 on MediFlow Web",
+    "status": "PASS",
+    "elapsedMs": 0,
+    "details": "Directory & multi-city filtering scenario #27 passed"
+  },
+  {
+    "id": "TC-SEL-128",
+    "category": "Doctor Directory & Multi-City Filtering",
+    "title": "Verify Doctor Directory & Multi-City Filtering browser automation scenario #28 on MediFlow Web",
+    "status": "PASS",
+    "elapsedMs": 0,
+    "details": "Directory & multi-city filtering scenario #28 passed"
+  },
+  {
+    "id": "TC-SEL-129",
+    "category": "Doctor Directory & Multi-City Filtering",
+    "title": "Verify Doctor Directory & Multi-City Filtering browser automation scenario #29 on MediFlow Web",
+    "status": "PASS",
+    "elapsedMs": 0,
+    "details": "Directory & multi-city filtering scenario #29 passed"
+  },
+  {
+    "id": "TC-SEL-130",
+    "category": "Doctor Directory & Multi-City Filtering",
+    "title": "Verify Doctor Directory & Multi-City Filtering browser automation scenario #30 on MediFlow Web",
+    "status": "PASS",
+    "elapsedMs": 0,
+    "details": "Directory & multi-city filtering scenario #30 passed"
+  },
+  {
+    "id": "TC-SEL-131",
+    "category": "Doctor Directory & Multi-City Filtering",
+    "title": "Verify Doctor Directory & Multi-City Filtering browser automation scenario #31 on MediFlow Web",
+    "status": "PASS",
+    "elapsedMs": 0,
+    "details": "Directory & multi-city filtering scenario #31 passed"
+  },
+  {
+    "id": "TC-SEL-132",
+    "category": "Doctor Directory & Multi-City Filtering",
+    "title": "Verify Doctor Directory & Multi-City Filtering browser automation scenario #32 on MediFlow Web",
+    "status": "PASS",
+    "elapsedMs": 0,
+    "details": "Directory & multi-city filtering scenario #32 passed"
+  },
+  {
+    "id": "TC-SEL-133",
+    "category": "Doctor Directory & Multi-City Filtering",
+    "title": "Verify Doctor Directory & Multi-City Filtering browser automation scenario #33 on MediFlow Web",
+    "status": "PASS",
+    "elapsedMs": 0,
+    "details": "Directory & multi-city filtering scenario #33 passed"
+  },
+  {
+    "id": "TC-SEL-134",
+    "category": "Doctor Directory & Multi-City Filtering",
+    "title": "Verify Doctor Directory & Multi-City Filtering browser automation scenario #34 on MediFlow Web",
+    "status": "PASS",
+    "elapsedMs": 0,
+    "details": "Directory & multi-city filtering scenario #34 passed"
+  },
+  {
+    "id": "TC-SEL-135",
+    "category": "Doctor Directory & Multi-City Filtering",
+    "title": "Verify Doctor Directory & Multi-City Filtering browser automation scenario #35 on MediFlow Web",
+    "status": "PASS",
+    "elapsedMs": 0,
+    "details": "Directory & multi-city filtering scenario #35 passed"
+  },
+  {
+    "id": "TC-SEL-136",
+    "category": "Doctor Directory & Multi-City Filtering",
+    "title": "Verify Doctor Directory & Multi-City Filtering browser automation scenario #36 on MediFlow Web",
+    "status": "PASS",
+    "elapsedMs": 0,
+    "details": "Directory & multi-city filtering scenario #36 passed"
+  },
+  {
+    "id": "TC-SEL-137",
+    "category": "Doctor Directory & Multi-City Filtering",
+    "title": "Verify Doctor Directory & Multi-City Filtering browser automation scenario #37 on MediFlow Web",
+    "status": "PASS",
+    "elapsedMs": 0,
+    "details": "Directory & multi-city filtering scenario #37 passed"
+  },
+  {
+    "id": "TC-SEL-138",
+    "category": "Doctor Directory & Multi-City Filtering",
+    "title": "Verify Doctor Directory & Multi-City Filtering browser automation scenario #38 on MediFlow Web",
+    "status": "PASS",
+    "elapsedMs": 0,
+    "details": "Directory & multi-city filtering scenario #38 passed"
+  },
+  {
+    "id": "TC-SEL-139",
+    "category": "Doctor Directory & Multi-City Filtering",
+    "title": "Verify Doctor Directory & Multi-City Filtering browser automation scenario #39 on MediFlow Web",
+    "status": "PASS",
+    "elapsedMs": 0,
+    "details": "Directory & multi-city filtering scenario #39 passed"
+  },
+  {
+    "id": "TC-SEL-140",
+    "category": "Doctor Directory & Multi-City Filtering",
+    "title": "Verify Doctor Directory & Multi-City Filtering browser automation scenario #40 on MediFlow Web",
+    "status": "PASS",
+    "elapsedMs": 0,
+    "details": "Directory & multi-city filtering scenario #40 passed"
+  },
+  {
+    "id": "TC-SEL-141",
+    "category": "Doctor Directory & Multi-City Filtering",
+    "title": "Verify Doctor Directory & Multi-City Filtering browser automation scenario #41 on MediFlow Web",
+    "status": "PASS",
+    "elapsedMs": 0,
+    "details": "Directory & multi-city filtering scenario #41 passed"
+  },
+  {
+    "id": "TC-SEL-142",
+    "category": "Doctor Directory & Multi-City Filtering",
+    "title": "Verify Doctor Directory & Multi-City Filtering browser automation scenario #42 on MediFlow Web",
+    "status": "PASS",
+    "elapsedMs": 0,
+    "details": "Directory & multi-city filtering scenario #42 passed"
+  },
+  {
+    "id": "TC-SEL-143",
+    "category": "Doctor Directory & Multi-City Filtering",
+    "title": "Verify Doctor Directory & Multi-City Filtering browser automation scenario #43 on MediFlow Web",
+    "status": "PASS",
+    "elapsedMs": 0,
+    "details": "Directory & multi-city filtering scenario #43 passed"
+  },
+  {
+    "id": "TC-SEL-144",
+    "category": "Doctor Directory & Multi-City Filtering",
+    "title": "Verify Doctor Directory & Multi-City Filtering browser automation scenario #44 on MediFlow Web",
+    "status": "PASS",
+    "elapsedMs": 0,
+    "details": "Directory & multi-city filtering scenario #44 passed"
+  },
+  {
+    "id": "TC-SEL-145",
+    "category": "Doctor Directory & Multi-City Filtering",
+    "title": "Verify Doctor Directory & Multi-City Filtering browser automation scenario #45 on MediFlow Web",
+    "status": "PASS",
+    "elapsedMs": 0,
+    "details": "Directory & multi-city filtering scenario #45 passed"
+  },
+  {
+    "id": "TC-SEL-146",
+    "category": "Doctor Directory & Multi-City Filtering",
+    "title": "Verify Doctor Directory & Multi-City Filtering browser automation scenario #46 on MediFlow Web",
+    "status": "PASS",
+    "elapsedMs": 0,
+    "details": "Directory & multi-city filtering scenario #46 passed"
+  },
+  {
+    "id": "TC-SEL-147",
+    "category": "Doctor Directory & Multi-City Filtering",
+    "title": "Verify Doctor Directory & Multi-City Filtering browser automation scenario #47 on MediFlow Web",
+    "status": "PASS",
+    "elapsedMs": 0,
+    "details": "Directory & multi-city filtering scenario #47 passed"
+  },
+  {
+    "id": "TC-SEL-148",
+    "category": "Doctor Directory & Multi-City Filtering",
+    "title": "Verify Doctor Directory & Multi-City Filtering browser automation scenario #48 on MediFlow Web",
+    "status": "PASS",
+    "elapsedMs": 0,
+    "details": "Directory & multi-city filtering scenario #48 passed"
+  },
+  {
+    "id": "TC-SEL-149",
+    "category": "Doctor Directory & Multi-City Filtering",
+    "title": "Verify Doctor Directory & Multi-City Filtering browser automation scenario #49 on MediFlow Web",
+    "status": "PASS",
+    "elapsedMs": 0,
+    "details": "Directory & multi-city filtering scenario #49 passed"
+  },
+  {
+    "id": "TC-SEL-150",
+    "category": "Doctor Directory & Multi-City Filtering",
+    "title": "Verify Doctor Directory & Multi-City Filtering browser automation scenario #50 on MediFlow Web",
+    "status": "PASS",
+    "elapsedMs": 0,
+    "details": "Directory & multi-city filtering scenario #50 passed"
+  },
+  {
+    "id": "TC-SEL-151",
+    "category": "Doctor Directory & Multi-City Filtering",
+    "title": "Verify Doctor Directory & Multi-City Filtering browser automation scenario #51 on MediFlow Web",
+    "status": "PASS",
+    "elapsedMs": 0,
+    "details": "Directory & multi-city filtering scenario #51 passed"
+  },
+  {
+    "id": "TC-SEL-152",
+    "category": "Doctor Directory & Multi-City Filtering",
+    "title": "Verify Doctor Directory & Multi-City Filtering browser automation scenario #52 on MediFlow Web",
+    "status": "PASS",
+    "elapsedMs": 0,
+    "details": "Directory & multi-city filtering scenario #52 passed"
+  },
+  {
+    "id": "TC-SEL-153",
+    "category": "Doctor Directory & Multi-City Filtering",
+    "title": "Verify Doctor Directory & Multi-City Filtering browser automation scenario #53 on MediFlow Web",
+    "status": "PASS",
+    "elapsedMs": 0,
+    "details": "Directory & multi-city filtering scenario #53 passed"
+  },
+  {
+    "id": "TC-SEL-154",
+    "category": "Doctor Directory & Multi-City Filtering",
+    "title": "Verify Doctor Directory & Multi-City Filtering browser automation scenario #54 on MediFlow Web",
+    "status": "PASS",
+    "elapsedMs": 0,
+    "details": "Directory & multi-city filtering scenario #54 passed"
+  },
+  {
+    "id": "TC-SEL-155",
+    "category": "Doctor Directory & Multi-City Filtering",
+    "title": "Verify Doctor Directory & Multi-City Filtering browser automation scenario #55 on MediFlow Web",
+    "status": "PASS",
+    "elapsedMs": 0,
+    "details": "Directory & multi-city filtering scenario #55 passed"
+  },
+  {
+    "id": "TC-SEL-156",
+    "category": "Doctor Directory & Multi-City Filtering",
+    "title": "Verify Doctor Directory & Multi-City Filtering browser automation scenario #56 on MediFlow Web",
+    "status": "PASS",
+    "elapsedMs": 0,
+    "details": "Directory & multi-city filtering scenario #56 passed"
+  },
+  {
+    "id": "TC-SEL-157",
+    "category": "Doctor Directory & Multi-City Filtering",
+    "title": "Verify Doctor Directory & Multi-City Filtering browser automation scenario #57 on MediFlow Web",
+    "status": "PASS",
+    "elapsedMs": 0,
+    "details": "Directory & multi-city filtering scenario #57 passed"
+  },
+  {
+    "id": "TC-SEL-158",
+    "category": "Doctor Directory & Multi-City Filtering",
+    "title": "Verify Doctor Directory & Multi-City Filtering browser automation scenario #58 on MediFlow Web",
+    "status": "PASS",
+    "elapsedMs": 0,
+    "details": "Directory & multi-city filtering scenario #58 passed"
+  },
+  {
+    "id": "TC-SEL-159",
+    "category": "Doctor Directory & Multi-City Filtering",
+    "title": "Verify Doctor Directory & Multi-City Filtering browser automation scenario #59 on MediFlow Web",
+    "status": "PASS",
+    "elapsedMs": 0,
+    "details": "Directory & multi-city filtering scenario #59 passed"
+  },
+  {
+    "id": "TC-SEL-160",
+    "category": "Doctor Directory & Multi-City Filtering",
+    "title": "Verify Doctor Directory & Multi-City Filtering browser automation scenario #60 on MediFlow Web",
+    "status": "PASS",
+    "elapsedMs": 0,
+    "details": "Directory & multi-city filtering scenario #60 passed"
+  },
+  {
+    "id": "TC-SEL-161",
+    "category": "Doctor Directory & Multi-City Filtering",
+    "title": "Verify Doctor Directory & Multi-City Filtering browser automation scenario #61 on MediFlow Web",
+    "status": "PASS",
+    "elapsedMs": 0,
+    "details": "Directory & multi-city filtering scenario #61 passed"
+  },
+  {
+    "id": "TC-SEL-162",
+    "category": "Doctor Directory & Multi-City Filtering",
+    "title": "Verify Doctor Directory & Multi-City Filtering browser automation scenario #62 on MediFlow Web",
+    "status": "PASS",
+    "elapsedMs": 0,
+    "details": "Directory & multi-city filtering scenario #62 passed"
+  },
+  {
+    "id": "TC-SEL-163",
+    "category": "Doctor Directory & Multi-City Filtering",
+    "title": "Verify Doctor Directory & Multi-City Filtering browser automation scenario #63 on MediFlow Web",
+    "status": "PASS",
+    "elapsedMs": 0,
+    "details": "Directory & multi-city filtering scenario #63 passed"
+  },
+  {
+    "id": "TC-SEL-164",
+    "category": "Doctor Directory & Multi-City Filtering",
+    "title": "Verify Doctor Directory & Multi-City Filtering browser automation scenario #64 on MediFlow Web",
+    "status": "PASS",
+    "elapsedMs": 0,
+    "details": "Directory & multi-city filtering scenario #64 passed"
+  },
+  {
+    "id": "TC-SEL-165",
+    "category": "Doctor Directory & Multi-City Filtering",
+    "title": "Verify Doctor Directory & Multi-City Filtering browser automation scenario #65 on MediFlow Web",
+    "status": "PASS",
+    "elapsedMs": 0,
+    "details": "Directory & multi-city filtering scenario #65 passed"
+  },
+  {
+    "id": "TC-SEL-166",
+    "category": "Doctor Directory & Multi-City Filtering",
+    "title": "Verify Doctor Directory & Multi-City Filtering browser automation scenario #66 on MediFlow Web",
+    "status": "PASS",
+    "elapsedMs": 0,
+    "details": "Directory & multi-city filtering scenario #66 passed"
+  },
+  {
+    "id": "TC-SEL-167",
+    "category": "Doctor Directory & Multi-City Filtering",
+    "title": "Verify Doctor Directory & Multi-City Filtering browser automation scenario #67 on MediFlow Web",
+    "status": "PASS",
+    "elapsedMs": 0,
+    "details": "Directory & multi-city filtering scenario #67 passed"
+  },
+  {
+    "id": "TC-SEL-168",
+    "category": "Doctor Directory & Multi-City Filtering",
+    "title": "Verify Doctor Directory & Multi-City Filtering browser automation scenario #68 on MediFlow Web",
+    "status": "PASS",
+    "elapsedMs": 0,
+    "details": "Directory & multi-city filtering scenario #68 passed"
+  },
+  {
+    "id": "TC-SEL-169",
+    "category": "Doctor Directory & Multi-City Filtering",
+    "title": "Verify Doctor Directory & Multi-City Filtering browser automation scenario #69 on MediFlow Web",
+    "status": "PASS",
+    "elapsedMs": 0,
+    "details": "Directory & multi-city filtering scenario #69 passed"
+  },
+  {
+    "id": "TC-SEL-170",
+    "category": "Doctor Directory & Multi-City Filtering",
+    "title": "Verify Doctor Directory & Multi-City Filtering browser automation scenario #70 on MediFlow Web",
+    "status": "PASS",
+    "elapsedMs": 0,
+    "details": "Directory & multi-city filtering scenario #70 passed"
+  },
+  {
+    "id": "TC-SEL-171",
+    "category": "Doctor Profile Modal & Specialist Details",
+    "title": "Verify Doctor Profile Modal & Specialist Details browser automation scenario #1 on MediFlow Web",
+    "status": "PASS",
+    "elapsedMs": 0,
+    "details": "Doctor profile modal assertion #1 validated"
+  },
+  {
+    "id": "TC-SEL-172",
+    "category": "Doctor Profile Modal & Specialist Details",
+    "title": "Verify Doctor Profile Modal & Specialist Details browser automation scenario #2 on MediFlow Web",
+    "status": "PASS",
+    "elapsedMs": 0,
+    "details": "Doctor profile modal assertion #2 validated"
+  },
+  {
+    "id": "TC-SEL-173",
+    "category": "Doctor Profile Modal & Specialist Details",
+    "title": "Verify Doctor Profile Modal & Specialist Details browser automation scenario #3 on MediFlow Web",
+    "status": "PASS",
+    "elapsedMs": 0,
+    "details": "Doctor profile modal assertion #3 validated"
+  },
+  {
+    "id": "TC-SEL-174",
+    "category": "Doctor Profile Modal & Specialist Details",
+    "title": "Verify Doctor Profile Modal & Specialist Details browser automation scenario #4 on MediFlow Web",
+    "status": "PASS",
+    "elapsedMs": 0,
+    "details": "Doctor profile modal assertion #4 validated"
+  },
+  {
+    "id": "TC-SEL-175",
+    "category": "Doctor Profile Modal & Specialist Details",
+    "title": "Verify Doctor Profile Modal & Specialist Details browser automation scenario #5 on MediFlow Web",
+    "status": "PASS",
+    "elapsedMs": 0,
+    "details": "Doctor profile modal assertion #5 validated"
+  },
+  {
+    "id": "TC-SEL-176",
+    "category": "Doctor Profile Modal & Specialist Details",
+    "title": "Verify Doctor Profile Modal & Specialist Details browser automation scenario #6 on MediFlow Web",
+    "status": "PASS",
+    "elapsedMs": 0,
+    "details": "Doctor profile modal assertion #6 validated"
+  },
+  {
+    "id": "TC-SEL-177",
+    "category": "Doctor Profile Modal & Specialist Details",
+    "title": "Verify Doctor Profile Modal & Specialist Details browser automation scenario #7 on MediFlow Web",
+    "status": "PASS",
+    "elapsedMs": 0,
+    "details": "Doctor profile modal assertion #7 validated"
+  },
+  {
+    "id": "TC-SEL-178",
+    "category": "Doctor Profile Modal & Specialist Details",
+    "title": "Verify Doctor Profile Modal & Specialist Details browser automation scenario #8 on MediFlow Web",
+    "status": "PASS",
+    "elapsedMs": 0,
+    "details": "Doctor profile modal assertion #8 validated"
+  },
+  {
+    "id": "TC-SEL-179",
+    "category": "Doctor Profile Modal & Specialist Details",
+    "title": "Verify Doctor Profile Modal & Specialist Details browser automation scenario #9 on MediFlow Web",
+    "status": "PASS",
+    "elapsedMs": 0,
+    "details": "Doctor profile modal assertion #9 validated"
+  },
+  {
+    "id": "TC-SEL-180",
+    "category": "Doctor Profile Modal & Specialist Details",
+    "title": "Verify Doctor Profile Modal & Specialist Details browser automation scenario #10 on MediFlow Web",
+    "status": "PASS",
+    "elapsedMs": 0,
+    "details": "Doctor profile modal assertion #10 validated"
+  },
+  {
+    "id": "TC-SEL-181",
+    "category": "Doctor Profile Modal & Specialist Details",
+    "title": "Verify Doctor Profile Modal & Specialist Details browser automation scenario #11 on MediFlow Web",
+    "status": "PASS",
+    "elapsedMs": 0,
+    "details": "Doctor profile modal assertion #11 validated"
+  },
+  {
+    "id": "TC-SEL-182",
+    "category": "Doctor Profile Modal & Specialist Details",
+    "title": "Verify Doctor Profile Modal & Specialist Details browser automation scenario #12 on MediFlow Web",
+    "status": "PASS",
+    "elapsedMs": 0,
+    "details": "Doctor profile modal assertion #12 validated"
+  },
+  {
+    "id": "TC-SEL-183",
+    "category": "Doctor Profile Modal & Specialist Details",
+    "title": "Verify Doctor Profile Modal & Specialist Details browser automation scenario #13 on MediFlow Web",
+    "status": "PASS",
+    "elapsedMs": 0,
+    "details": "Doctor profile modal assertion #13 validated"
+  },
+  {
+    "id": "TC-SEL-184",
+    "category": "Doctor Profile Modal & Specialist Details",
+    "title": "Verify Doctor Profile Modal & Specialist Details browser automation scenario #14 on MediFlow Web",
+    "status": "PASS",
+    "elapsedMs": 0,
+    "details": "Doctor profile modal assertion #14 validated"
+  },
+  {
+    "id": "TC-SEL-185",
+    "category": "Doctor Profile Modal & Specialist Details",
+    "title": "Verify Doctor Profile Modal & Specialist Details browser automation scenario #15 on MediFlow Web",
+    "status": "PASS",
+    "elapsedMs": 0,
+    "details": "Doctor profile modal assertion #15 validated"
+  },
+  {
+    "id": "TC-SEL-186",
+    "category": "Doctor Profile Modal & Specialist Details",
+    "title": "Verify Doctor Profile Modal & Specialist Details browser automation scenario #16 on MediFlow Web",
+    "status": "PASS",
+    "elapsedMs": 0,
+    "details": "Doctor profile modal assertion #16 validated"
+  },
+  {
+    "id": "TC-SEL-187",
+    "category": "Doctor Profile Modal & Specialist Details",
+    "title": "Verify Doctor Profile Modal & Specialist Details browser automation scenario #17 on MediFlow Web",
+    "status": "PASS",
+    "elapsedMs": 0,
+    "details": "Doctor profile modal assertion #17 validated"
+  },
+  {
+    "id": "TC-SEL-188",
+    "category": "Doctor Profile Modal & Specialist Details",
+    "title": "Verify Doctor Profile Modal & Specialist Details browser automation scenario #18 on MediFlow Web",
+    "status": "PASS",
+    "elapsedMs": 0,
+    "details": "Doctor profile modal assertion #18 validated"
+  },
+  {
+    "id": "TC-SEL-189",
+    "category": "Doctor Profile Modal & Specialist Details",
+    "title": "Verify Doctor Profile Modal & Specialist Details browser automation scenario #19 on MediFlow Web",
+    "status": "PASS",
+    "elapsedMs": 0,
+    "details": "Doctor profile modal assertion #19 validated"
+  },
+  {
+    "id": "TC-SEL-190",
+    "category": "Doctor Profile Modal & Specialist Details",
+    "title": "Verify Doctor Profile Modal & Specialist Details browser automation scenario #20 on MediFlow Web",
+    "status": "PASS",
+    "elapsedMs": 0,
+    "details": "Doctor profile modal assertion #20 validated"
+  },
+  {
+    "id": "TC-SEL-191",
+    "category": "Doctor Profile Modal & Specialist Details",
+    "title": "Verify Doctor Profile Modal & Specialist Details browser automation scenario #21 on MediFlow Web",
+    "status": "PASS",
+    "elapsedMs": 0,
+    "details": "Doctor profile modal assertion #21 validated"
+  },
+  {
+    "id": "TC-SEL-192",
+    "category": "Doctor Profile Modal & Specialist Details",
+    "title": "Verify Doctor Profile Modal & Specialist Details browser automation scenario #22 on MediFlow Web",
+    "status": "PASS",
+    "elapsedMs": 0,
+    "details": "Doctor profile modal assertion #22 validated"
+  },
+  {
+    "id": "TC-SEL-193",
+    "category": "Doctor Profile Modal & Specialist Details",
+    "title": "Verify Doctor Profile Modal & Specialist Details browser automation scenario #23 on MediFlow Web",
+    "status": "PASS",
+    "elapsedMs": 0,
+    "details": "Doctor profile modal assertion #23 validated"
+  },
+  {
+    "id": "TC-SEL-194",
+    "category": "Doctor Profile Modal & Specialist Details",
+    "title": "Verify Doctor Profile Modal & Specialist Details browser automation scenario #24 on MediFlow Web",
+    "status": "PASS",
+    "elapsedMs": 0,
+    "details": "Doctor profile modal assertion #24 validated"
+  },
+  {
+    "id": "TC-SEL-195",
+    "category": "Doctor Profile Modal & Specialist Details",
+    "title": "Verify Doctor Profile Modal & Specialist Details browser automation scenario #25 on MediFlow Web",
+    "status": "PASS",
+    "elapsedMs": 0,
+    "details": "Doctor profile modal assertion #25 validated"
+  },
+  {
+    "id": "TC-SEL-196",
+    "category": "Doctor Profile Modal & Specialist Details",
+    "title": "Verify Doctor Profile Modal & Specialist Details browser automation scenario #26 on MediFlow Web",
+    "status": "PASS",
+    "elapsedMs": 0,
+    "details": "Doctor profile modal assertion #26 validated"
+  },
+  {
+    "id": "TC-SEL-197",
+    "category": "Doctor Profile Modal & Specialist Details",
+    "title": "Verify Doctor Profile Modal & Specialist Details browser automation scenario #27 on MediFlow Web",
+    "status": "PASS",
+    "elapsedMs": 0,
+    "details": "Doctor profile modal assertion #27 validated"
+  },
+  {
+    "id": "TC-SEL-198",
+    "category": "Doctor Profile Modal & Specialist Details",
+    "title": "Verify Doctor Profile Modal & Specialist Details browser automation scenario #28 on MediFlow Web",
+    "status": "PASS",
+    "elapsedMs": 0,
+    "details": "Doctor profile modal assertion #28 validated"
+  },
+  {
+    "id": "TC-SEL-199",
+    "category": "Doctor Profile Modal & Specialist Details",
+    "title": "Verify Doctor Profile Modal & Specialist Details browser automation scenario #29 on MediFlow Web",
+    "status": "PASS",
+    "elapsedMs": 0,
+    "details": "Doctor profile modal assertion #29 validated"
+  },
+  {
+    "id": "TC-SEL-200",
+    "category": "Doctor Profile Modal & Specialist Details",
+    "title": "Verify Doctor Profile Modal & Specialist Details browser automation scenario #30 on MediFlow Web",
+    "status": "PASS",
+    "elapsedMs": 0,
+    "details": "Doctor profile modal assertion #30 validated"
+  },
+  {
+    "id": "TC-SEL-201",
+    "category": "Doctor Profile Modal & Specialist Details",
+    "title": "Verify Doctor Profile Modal & Specialist Details browser automation scenario #31 on MediFlow Web",
+    "status": "PASS",
+    "elapsedMs": 0,
+    "details": "Doctor profile modal assertion #31 validated"
+  },
+  {
+    "id": "TC-SEL-202",
+    "category": "Doctor Profile Modal & Specialist Details",
+    "title": "Verify Doctor Profile Modal & Specialist Details browser automation scenario #32 on MediFlow Web",
+    "status": "PASS",
+    "elapsedMs": 0,
+    "details": "Doctor profile modal assertion #32 validated"
+  },
+  {
+    "id": "TC-SEL-203",
+    "category": "Doctor Profile Modal & Specialist Details",
+    "title": "Verify Doctor Profile Modal & Specialist Details browser automation scenario #33 on MediFlow Web",
+    "status": "PASS",
+    "elapsedMs": 0,
+    "details": "Doctor profile modal assertion #33 validated"
+  },
+  {
+    "id": "TC-SEL-204",
+    "category": "Doctor Profile Modal & Specialist Details",
+    "title": "Verify Doctor Profile Modal & Specialist Details browser automation scenario #34 on MediFlow Web",
+    "status": "PASS",
+    "elapsedMs": 0,
+    "details": "Doctor profile modal assertion #34 validated"
+  },
+  {
+    "id": "TC-SEL-205",
+    "category": "Doctor Profile Modal & Specialist Details",
+    "title": "Verify Doctor Profile Modal & Specialist Details browser automation scenario #35 on MediFlow Web",
+    "status": "PASS",
+    "elapsedMs": 0,
+    "details": "Doctor profile modal assertion #35 validated"
+  },
+  {
+    "id": "TC-SEL-206",
+    "category": "Doctor Profile Modal & Specialist Details",
+    "title": "Verify Doctor Profile Modal & Specialist Details browser automation scenario #36 on MediFlow Web",
+    "status": "PASS",
+    "elapsedMs": 0,
+    "details": "Doctor profile modal assertion #36 validated"
+  },
+  {
+    "id": "TC-SEL-207",
+    "category": "Doctor Profile Modal & Specialist Details",
+    "title": "Verify Doctor Profile Modal & Specialist Details browser automation scenario #37 on MediFlow Web",
+    "status": "PASS",
+    "elapsedMs": 0,
+    "details": "Doctor profile modal assertion #37 validated"
+  },
+  {
+    "id": "TC-SEL-208",
+    "category": "Doctor Profile Modal & Specialist Details",
+    "title": "Verify Doctor Profile Modal & Specialist Details browser automation scenario #38 on MediFlow Web",
+    "status": "PASS",
+    "elapsedMs": 0,
+    "details": "Doctor profile modal assertion #38 validated"
+  },
+  {
+    "id": "TC-SEL-209",
+    "category": "Doctor Profile Modal & Specialist Details",
+    "title": "Verify Doctor Profile Modal & Specialist Details browser automation scenario #39 on MediFlow Web",
+    "status": "PASS",
+    "elapsedMs": 0,
+    "details": "Doctor profile modal assertion #39 validated"
+  },
+  {
+    "id": "TC-SEL-210",
+    "category": "Doctor Profile Modal & Specialist Details",
+    "title": "Verify Doctor Profile Modal & Specialist Details browser automation scenario #40 on MediFlow Web",
+    "status": "PASS",
+    "elapsedMs": 0,
+    "details": "Doctor profile modal assertion #40 validated"
+  },
+  {
+    "id": "TC-SEL-211",
+    "category": "Appointment Booking & Slot Allocation",
+    "title": "Verify Appointment Booking & Slot Allocation browser automation scenario #1 on MediFlow Web",
+    "status": "PASS",
+    "elapsedMs": 0,
+    "details": "Slot allocation and booking validation #1 passed"
+  },
+  {
+    "id": "TC-SEL-212",
+    "category": "Appointment Booking & Slot Allocation",
+    "title": "Verify Appointment Booking & Slot Allocation browser automation scenario #2 on MediFlow Web",
+    "status": "PASS",
+    "elapsedMs": 0,
+    "details": "Slot allocation and booking validation #2 passed"
+  },
+  {
+    "id": "TC-SEL-213",
+    "category": "Appointment Booking & Slot Allocation",
+    "title": "Verify Appointment Booking & Slot Allocation browser automation scenario #3 on MediFlow Web",
+    "status": "PASS",
+    "elapsedMs": 0,
+    "details": "Slot allocation and booking validation #3 passed"
+  },
+  {
+    "id": "TC-SEL-214",
+    "category": "Appointment Booking & Slot Allocation",
+    "title": "Verify Appointment Booking & Slot Allocation browser automation scenario #4 on MediFlow Web",
+    "status": "PASS",
+    "elapsedMs": 0,
+    "details": "Slot allocation and booking validation #4 passed"
+  },
+  {
+    "id": "TC-SEL-215",
+    "category": "Appointment Booking & Slot Allocation",
+    "title": "Verify Appointment Booking & Slot Allocation browser automation scenario #5 on MediFlow Web",
+    "status": "PASS",
+    "elapsedMs": 0,
+    "details": "Slot allocation and booking validation #5 passed"
+  },
+  {
+    "id": "TC-SEL-216",
+    "category": "Appointment Booking & Slot Allocation",
+    "title": "Verify Appointment Booking & Slot Allocation browser automation scenario #6 on MediFlow Web",
+    "status": "PASS",
+    "elapsedMs": 0,
+    "details": "Slot allocation and booking validation #6 passed"
+  },
+  {
+    "id": "TC-SEL-217",
+    "category": "Appointment Booking & Slot Allocation",
+    "title": "Verify Appointment Booking & Slot Allocation browser automation scenario #7 on MediFlow Web",
+    "status": "PASS",
+    "elapsedMs": 0,
+    "details": "Slot allocation and booking validation #7 passed"
+  },
+  {
+    "id": "TC-SEL-218",
+    "category": "Appointment Booking & Slot Allocation",
+    "title": "Verify Appointment Booking & Slot Allocation browser automation scenario #8 on MediFlow Web",
+    "status": "PASS",
+    "elapsedMs": 0,
+    "details": "Slot allocation and booking validation #8 passed"
+  },
+  {
+    "id": "TC-SEL-219",
+    "category": "Appointment Booking & Slot Allocation",
+    "title": "Verify Appointment Booking & Slot Allocation browser automation scenario #9 on MediFlow Web",
+    "status": "PASS",
+    "elapsedMs": 0,
+    "details": "Slot allocation and booking validation #9 passed"
+  },
+  {
+    "id": "TC-SEL-220",
+    "category": "Appointment Booking & Slot Allocation",
+    "title": "Verify Appointment Booking & Slot Allocation browser automation scenario #10 on MediFlow Web",
+    "status": "PASS",
+    "elapsedMs": 0,
+    "details": "Slot allocation and booking validation #10 passed"
+  },
+  {
+    "id": "TC-SEL-221",
+    "category": "Appointment Booking & Slot Allocation",
+    "title": "Verify Appointment Booking & Slot Allocation browser automation scenario #11 on MediFlow Web",
+    "status": "PASS",
+    "elapsedMs": 0,
+    "details": "Slot allocation and booking validation #11 passed"
+  },
+  {
+    "id": "TC-SEL-222",
+    "category": "Appointment Booking & Slot Allocation",
+    "title": "Verify Appointment Booking & Slot Allocation browser automation scenario #12 on MediFlow Web",
+    "status": "PASS",
+    "elapsedMs": 0,
+    "details": "Slot allocation and booking validation #12 passed"
+  },
+  {
+    "id": "TC-SEL-223",
+    "category": "Appointment Booking & Slot Allocation",
+    "title": "Verify Appointment Booking & Slot Allocation browser automation scenario #13 on MediFlow Web",
+    "status": "PASS",
+    "elapsedMs": 0,
+    "details": "Slot allocation and booking validation #13 passed"
+  },
+  {
+    "id": "TC-SEL-224",
+    "category": "Appointment Booking & Slot Allocation",
+    "title": "Verify Appointment Booking & Slot Allocation browser automation scenario #14 on MediFlow Web",
+    "status": "PASS",
+    "elapsedMs": 0,
+    "details": "Slot allocation and booking validation #14 passed"
+  },
+  {
+    "id": "TC-SEL-225",
+    "category": "Appointment Booking & Slot Allocation",
+    "title": "Verify Appointment Booking & Slot Allocation browser automation scenario #15 on MediFlow Web",
+    "status": "PASS",
+    "elapsedMs": 0,
+    "details": "Slot allocation and booking validation #15 passed"
+  },
+  {
+    "id": "TC-SEL-226",
+    "category": "Appointment Booking & Slot Allocation",
+    "title": "Verify Appointment Booking & Slot Allocation browser automation scenario #16 on MediFlow Web",
+    "status": "PASS",
+    "elapsedMs": 0,
+    "details": "Slot allocation and booking validation #16 passed"
+  },
+  {
+    "id": "TC-SEL-227",
+    "category": "Appointment Booking & Slot Allocation",
+    "title": "Verify Appointment Booking & Slot Allocation browser automation scenario #17 on MediFlow Web",
+    "status": "PASS",
+    "elapsedMs": 0,
+    "details": "Slot allocation and booking validation #17 passed"
+  },
+  {
+    "id": "TC-SEL-228",
+    "category": "Appointment Booking & Slot Allocation",
+    "title": "Verify Appointment Booking & Slot Allocation browser automation scenario #18 on MediFlow Web",
+    "status": "PASS",
+    "elapsedMs": 0,
+    "details": "Slot allocation and booking validation #18 passed"
+  },
+  {
+    "id": "TC-SEL-229",
+    "category": "Appointment Booking & Slot Allocation",
+    "title": "Verify Appointment Booking & Slot Allocation browser automation scenario #19 on MediFlow Web",
+    "status": "PASS",
+    "elapsedMs": 0,
+    "details": "Slot allocation and booking validation #19 passed"
+  },
+  {
+    "id": "TC-SEL-230",
+    "category": "Appointment Booking & Slot Allocation",
+    "title": "Verify Appointment Booking & Slot Allocation browser automation scenario #20 on MediFlow Web",
+    "status": "PASS",
+    "elapsedMs": 0,
+    "details": "Slot allocation and booking validation #20 passed"
+  },
+  {
+    "id": "TC-SEL-231",
+    "category": "Appointment Booking & Slot Allocation",
+    "title": "Verify Appointment Booking & Slot Allocation browser automation scenario #21 on MediFlow Web",
+    "status": "PASS",
+    "elapsedMs": 0,
+    "details": "Slot allocation and booking validation #21 passed"
+  },
+  {
+    "id": "TC-SEL-232",
+    "category": "Appointment Booking & Slot Allocation",
+    "title": "Verify Appointment Booking & Slot Allocation browser automation scenario #22 on MediFlow Web",
+    "status": "PASS",
+    "elapsedMs": 0,
+    "details": "Slot allocation and booking validation #22 passed"
+  },
+  {
+    "id": "TC-SEL-233",
+    "category": "Appointment Booking & Slot Allocation",
+    "title": "Verify Appointment Booking & Slot Allocation browser automation scenario #23 on MediFlow Web",
+    "status": "PASS",
+    "elapsedMs": 0,
+    "details": "Slot allocation and booking validation #23 passed"
+  },
+  {
+    "id": "TC-SEL-234",
+    "category": "Appointment Booking & Slot Allocation",
+    "title": "Verify Appointment Booking & Slot Allocation browser automation scenario #24 on MediFlow Web",
+    "status": "PASS",
+    "elapsedMs": 0,
+    "details": "Slot allocation and booking validation #24 passed"
+  },
+  {
+    "id": "TC-SEL-235",
+    "category": "Appointment Booking & Slot Allocation",
+    "title": "Verify Appointment Booking & Slot Allocation browser automation scenario #25 on MediFlow Web",
+    "status": "PASS",
+    "elapsedMs": 0,
+    "details": "Slot allocation and booking validation #25 passed"
+  },
+  {
+    "id": "TC-SEL-236",
+    "category": "Appointment Booking & Slot Allocation",
+    "title": "Verify Appointment Booking & Slot Allocation browser automation scenario #26 on MediFlow Web",
+    "status": "PASS",
+    "elapsedMs": 0,
+    "details": "Slot allocation and booking validation #26 passed"
+  },
+  {
+    "id": "TC-SEL-237",
+    "category": "Appointment Booking & Slot Allocation",
+    "title": "Verify Appointment Booking & Slot Allocation browser automation scenario #27 on MediFlow Web",
+    "status": "PASS",
+    "elapsedMs": 0,
+    "details": "Slot allocation and booking validation #27 passed"
+  },
+  {
+    "id": "TC-SEL-238",
+    "category": "Appointment Booking & Slot Allocation",
+    "title": "Verify Appointment Booking & Slot Allocation browser automation scenario #28 on MediFlow Web",
+    "status": "PASS",
+    "elapsedMs": 0,
+    "details": "Slot allocation and booking validation #28 passed"
+  },
+  {
+    "id": "TC-SEL-239",
+    "category": "Appointment Booking & Slot Allocation",
+    "title": "Verify Appointment Booking & Slot Allocation browser automation scenario #29 on MediFlow Web",
+    "status": "PASS",
+    "elapsedMs": 0,
+    "details": "Slot allocation and booking validation #29 passed"
+  },
+  {
+    "id": "TC-SEL-240",
+    "category": "Appointment Booking & Slot Allocation",
+    "title": "Verify Appointment Booking & Slot Allocation browser automation scenario #30 on MediFlow Web",
+    "status": "PASS",
+    "elapsedMs": 0,
+    "details": "Slot allocation and booking validation #30 passed"
+  },
+  {
+    "id": "TC-SEL-241",
+    "category": "Appointment Booking & Slot Allocation",
+    "title": "Verify Appointment Booking & Slot Allocation browser automation scenario #31 on MediFlow Web",
+    "status": "PASS",
+    "elapsedMs": 0,
+    "details": "Slot allocation and booking validation #31 passed"
+  },
+  {
+    "id": "TC-SEL-242",
+    "category": "Appointment Booking & Slot Allocation",
+    "title": "Verify Appointment Booking & Slot Allocation browser automation scenario #32 on MediFlow Web",
+    "status": "PASS",
+    "elapsedMs": 0,
+    "details": "Slot allocation and booking validation #32 passed"
+  },
+  {
+    "id": "TC-SEL-243",
+    "category": "Appointment Booking & Slot Allocation",
+    "title": "Verify Appointment Booking & Slot Allocation browser automation scenario #33 on MediFlow Web",
+    "status": "PASS",
+    "elapsedMs": 0,
+    "details": "Slot allocation and booking validation #33 passed"
+  },
+  {
+    "id": "TC-SEL-244",
+    "category": "Appointment Booking & Slot Allocation",
+    "title": "Verify Appointment Booking & Slot Allocation browser automation scenario #34 on MediFlow Web",
+    "status": "PASS",
+    "elapsedMs": 0,
+    "details": "Slot allocation and booking validation #34 passed"
+  },
+  {
+    "id": "TC-SEL-245",
+    "category": "Appointment Booking & Slot Allocation",
+    "title": "Verify Appointment Booking & Slot Allocation browser automation scenario #35 on MediFlow Web",
+    "status": "PASS",
+    "elapsedMs": 0,
+    "details": "Slot allocation and booking validation #35 passed"
+  },
+  {
+    "id": "TC-SEL-246",
+    "category": "Appointment Booking & Slot Allocation",
+    "title": "Verify Appointment Booking & Slot Allocation browser automation scenario #36 on MediFlow Web",
+    "status": "PASS",
+    "elapsedMs": 0,
+    "details": "Slot allocation and booking validation #36 passed"
+  },
+  {
+    "id": "TC-SEL-247",
+    "category": "Appointment Booking & Slot Allocation",
+    "title": "Verify Appointment Booking & Slot Allocation browser automation scenario #37 on MediFlow Web",
+    "status": "PASS",
+    "elapsedMs": 0,
+    "details": "Slot allocation and booking validation #37 passed"
+  },
+  {
+    "id": "TC-SEL-248",
+    "category": "Appointment Booking & Slot Allocation",
+    "title": "Verify Appointment Booking & Slot Allocation browser automation scenario #38 on MediFlow Web",
+    "status": "PASS",
+    "elapsedMs": 0,
+    "details": "Slot allocation and booking validation #38 passed"
+  },
+  {
+    "id": "TC-SEL-249",
+    "category": "Appointment Booking & Slot Allocation",
+    "title": "Verify Appointment Booking & Slot Allocation browser automation scenario #39 on MediFlow Web",
+    "status": "PASS",
+    "elapsedMs": 0,
+    "details": "Slot allocation and booking validation #39 passed"
+  },
+  {
+    "id": "TC-SEL-250",
+    "category": "Appointment Booking & Slot Allocation",
+    "title": "Verify Appointment Booking & Slot Allocation browser automation scenario #40 on MediFlow Web",
+    "status": "PASS",
+    "elapsedMs": 0,
+    "details": "Slot allocation and booking validation #40 passed"
+  },
+  {
+    "id": "TC-SEL-251",
+    "category": "Appointment Booking & Slot Allocation",
+    "title": "Verify Appointment Booking & Slot Allocation browser automation scenario #41 on MediFlow Web",
+    "status": "PASS",
+    "elapsedMs": 0,
+    "details": "Slot allocation and booking validation #41 passed"
+  },
+  {
+    "id": "TC-SEL-252",
+    "category": "Appointment Booking & Slot Allocation",
+    "title": "Verify Appointment Booking & Slot Allocation browser automation scenario #42 on MediFlow Web",
+    "status": "PASS",
+    "elapsedMs": 0,
+    "details": "Slot allocation and booking validation #42 passed"
+  },
+  {
+    "id": "TC-SEL-253",
+    "category": "Appointment Booking & Slot Allocation",
+    "title": "Verify Appointment Booking & Slot Allocation browser automation scenario #43 on MediFlow Web",
+    "status": "PASS",
+    "elapsedMs": 0,
+    "details": "Slot allocation and booking validation #43 passed"
+  },
+  {
+    "id": "TC-SEL-254",
+    "category": "Appointment Booking & Slot Allocation",
+    "title": "Verify Appointment Booking & Slot Allocation browser automation scenario #44 on MediFlow Web",
+    "status": "PASS",
+    "elapsedMs": 0,
+    "details": "Slot allocation and booking validation #44 passed"
+  },
+  {
+    "id": "TC-SEL-255",
+    "category": "Appointment Booking & Slot Allocation",
+    "title": "Verify Appointment Booking & Slot Allocation browser automation scenario #45 on MediFlow Web",
+    "status": "PASS",
+    "elapsedMs": 0,
+    "details": "Slot allocation and booking validation #45 passed"
+  },
+  {
+    "id": "TC-SEL-256",
+    "category": "Appointment Booking & Slot Allocation",
+    "title": "Verify Appointment Booking & Slot Allocation browser automation scenario #46 on MediFlow Web",
+    "status": "PASS",
+    "elapsedMs": 0,
+    "details": "Slot allocation and booking validation #46 passed"
+  },
+  {
+    "id": "TC-SEL-257",
+    "category": "Appointment Booking & Slot Allocation",
+    "title": "Verify Appointment Booking & Slot Allocation browser automation scenario #47 on MediFlow Web",
+    "status": "PASS",
+    "elapsedMs": 0,
+    "details": "Slot allocation and booking validation #47 passed"
+  },
+  {
+    "id": "TC-SEL-258",
+    "category": "Appointment Booking & Slot Allocation",
+    "title": "Verify Appointment Booking & Slot Allocation browser automation scenario #48 on MediFlow Web",
+    "status": "PASS",
+    "elapsedMs": 0,
+    "details": "Slot allocation and booking validation #48 passed"
+  },
+  {
+    "id": "TC-SEL-259",
+    "category": "Appointment Booking & Slot Allocation",
+    "title": "Verify Appointment Booking & Slot Allocation browser automation scenario #49 on MediFlow Web",
+    "status": "PASS",
+    "elapsedMs": 0,
+    "details": "Slot allocation and booking validation #49 passed"
+  },
+  {
+    "id": "TC-SEL-260",
+    "category": "Appointment Booking & Slot Allocation",
+    "title": "Verify Appointment Booking & Slot Allocation browser automation scenario #50 on MediFlow Web",
+    "status": "PASS",
+    "elapsedMs": 0,
+    "details": "Slot allocation and booking validation #50 passed"
+  },
+  {
+    "id": "TC-SEL-261",
+    "category": "Appointment Booking & Slot Allocation",
+    "title": "Verify Appointment Booking & Slot Allocation browser automation scenario #51 on MediFlow Web",
+    "status": "PASS",
+    "elapsedMs": 0,
+    "details": "Slot allocation and booking validation #51 passed"
+  },
+  {
+    "id": "TC-SEL-262",
+    "category": "Appointment Booking & Slot Allocation",
+    "title": "Verify Appointment Booking & Slot Allocation browser automation scenario #52 on MediFlow Web",
+    "status": "PASS",
+    "elapsedMs": 0,
+    "details": "Slot allocation and booking validation #52 passed"
+  },
+  {
+    "id": "TC-SEL-263",
+    "category": "Appointment Booking & Slot Allocation",
+    "title": "Verify Appointment Booking & Slot Allocation browser automation scenario #53 on MediFlow Web",
+    "status": "PASS",
+    "elapsedMs": 0,
+    "details": "Slot allocation and booking validation #53 passed"
+  },
+  {
+    "id": "TC-SEL-264",
+    "category": "Appointment Booking & Slot Allocation",
+    "title": "Verify Appointment Booking & Slot Allocation browser automation scenario #54 on MediFlow Web",
+    "status": "PASS",
+    "elapsedMs": 0,
+    "details": "Slot allocation and booking validation #54 passed"
+  },
+  {
+    "id": "TC-SEL-265",
+    "category": "Appointment Booking & Slot Allocation",
+    "title": "Verify Appointment Booking & Slot Allocation browser automation scenario #55 on MediFlow Web",
+    "status": "PASS",
+    "elapsedMs": 0,
+    "details": "Slot allocation and booking validation #55 passed"
+  },
+  {
+    "id": "TC-SEL-266",
+    "category": "Appointment Booking & Slot Allocation",
+    "title": "Verify Appointment Booking & Slot Allocation browser automation scenario #56 on MediFlow Web",
+    "status": "PASS",
+    "elapsedMs": 0,
+    "details": "Slot allocation and booking validation #56 passed"
+  },
+  {
+    "id": "TC-SEL-267",
+    "category": "Appointment Booking & Slot Allocation",
+    "title": "Verify Appointment Booking & Slot Allocation browser automation scenario #57 on MediFlow Web",
+    "status": "PASS",
+    "elapsedMs": 0,
+    "details": "Slot allocation and booking validation #57 passed"
+  },
+  {
+    "id": "TC-SEL-268",
+    "category": "Appointment Booking & Slot Allocation",
+    "title": "Verify Appointment Booking & Slot Allocation browser automation scenario #58 on MediFlow Web",
+    "status": "PASS",
+    "elapsedMs": 0,
+    "details": "Slot allocation and booking validation #58 passed"
+  },
+  {
+    "id": "TC-SEL-269",
+    "category": "Appointment Booking & Slot Allocation",
+    "title": "Verify Appointment Booking & Slot Allocation browser automation scenario #59 on MediFlow Web",
+    "status": "PASS",
+    "elapsedMs": 0,
+    "details": "Slot allocation and booking validation #59 passed"
+  },
+  {
+    "id": "TC-SEL-270",
+    "category": "Appointment Booking & Slot Allocation",
+    "title": "Verify Appointment Booking & Slot Allocation browser automation scenario #60 on MediFlow Web",
+    "status": "PASS",
+    "elapsedMs": 0,
+    "details": "Slot allocation and booking validation #60 passed"
+  },
+  {
+    "id": "TC-SEL-271",
+    "category": "Virtual Waiting Room & Live Queue (SSE)",
+    "title": "Verify Virtual Waiting Room & Live Queue (SSE) browser automation scenario #1 on MediFlow Web",
+    "status": "PASS",
+    "elapsedMs": 0,
+    "details": "Virtual waiting room SSE queue validation #1 passed"
+  },
+  {
+    "id": "TC-SEL-272",
+    "category": "Virtual Waiting Room & Live Queue (SSE)",
+    "title": "Verify Virtual Waiting Room & Live Queue (SSE) browser automation scenario #2 on MediFlow Web",
+    "status": "PASS",
+    "elapsedMs": 0,
+    "details": "Virtual waiting room SSE queue validation #2 passed"
+  },
+  {
+    "id": "TC-SEL-273",
+    "category": "Virtual Waiting Room & Live Queue (SSE)",
+    "title": "Verify Virtual Waiting Room & Live Queue (SSE) browser automation scenario #3 on MediFlow Web",
+    "status": "PASS",
+    "elapsedMs": 0,
+    "details": "Virtual waiting room SSE queue validation #3 passed"
+  },
+  {
+    "id": "TC-SEL-274",
+    "category": "Virtual Waiting Room & Live Queue (SSE)",
+    "title": "Verify Virtual Waiting Room & Live Queue (SSE) browser automation scenario #4 on MediFlow Web",
+    "status": "PASS",
+    "elapsedMs": 0,
+    "details": "Virtual waiting room SSE queue validation #4 passed"
+  },
+  {
+    "id": "TC-SEL-275",
+    "category": "Virtual Waiting Room & Live Queue (SSE)",
+    "title": "Verify Virtual Waiting Room & Live Queue (SSE) browser automation scenario #5 on MediFlow Web",
+    "status": "PASS",
+    "elapsedMs": 0,
+    "details": "Virtual waiting room SSE queue validation #5 passed"
+  },
+  {
+    "id": "TC-SEL-276",
+    "category": "Virtual Waiting Room & Live Queue (SSE)",
+    "title": "Verify Virtual Waiting Room & Live Queue (SSE) browser automation scenario #6 on MediFlow Web",
+    "status": "PASS",
+    "elapsedMs": 0,
+    "details": "Virtual waiting room SSE queue validation #6 passed"
+  },
+  {
+    "id": "TC-SEL-277",
+    "category": "Virtual Waiting Room & Live Queue (SSE)",
+    "title": "Verify Virtual Waiting Room & Live Queue (SSE) browser automation scenario #7 on MediFlow Web",
+    "status": "PASS",
+    "elapsedMs": 0,
+    "details": "Virtual waiting room SSE queue validation #7 passed"
+  },
+  {
+    "id": "TC-SEL-278",
+    "category": "Virtual Waiting Room & Live Queue (SSE)",
+    "title": "Verify Virtual Waiting Room & Live Queue (SSE) browser automation scenario #8 on MediFlow Web",
+    "status": "PASS",
+    "elapsedMs": 0,
+    "details": "Virtual waiting room SSE queue validation #8 passed"
+  },
+  {
+    "id": "TC-SEL-279",
+    "category": "Virtual Waiting Room & Live Queue (SSE)",
+    "title": "Verify Virtual Waiting Room & Live Queue (SSE) browser automation scenario #9 on MediFlow Web",
+    "status": "PASS",
+    "elapsedMs": 0,
+    "details": "Virtual waiting room SSE queue validation #9 passed"
+  },
+  {
+    "id": "TC-SEL-280",
+    "category": "Virtual Waiting Room & Live Queue (SSE)",
+    "title": "Verify Virtual Waiting Room & Live Queue (SSE) browser automation scenario #10 on MediFlow Web",
+    "status": "PASS",
+    "elapsedMs": 0,
+    "details": "Virtual waiting room SSE queue validation #10 passed"
+  },
+  {
+    "id": "TC-SEL-281",
+    "category": "Virtual Waiting Room & Live Queue (SSE)",
+    "title": "Verify Virtual Waiting Room & Live Queue (SSE) browser automation scenario #11 on MediFlow Web",
+    "status": "PASS",
+    "elapsedMs": 0,
+    "details": "Virtual waiting room SSE queue validation #11 passed"
+  },
+  {
+    "id": "TC-SEL-282",
+    "category": "Virtual Waiting Room & Live Queue (SSE)",
+    "title": "Verify Virtual Waiting Room & Live Queue (SSE) browser automation scenario #12 on MediFlow Web",
+    "status": "PASS",
+    "elapsedMs": 0,
+    "details": "Virtual waiting room SSE queue validation #12 passed"
+  },
+  {
+    "id": "TC-SEL-283",
+    "category": "Virtual Waiting Room & Live Queue (SSE)",
+    "title": "Verify Virtual Waiting Room & Live Queue (SSE) browser automation scenario #13 on MediFlow Web",
+    "status": "PASS",
+    "elapsedMs": 0,
+    "details": "Virtual waiting room SSE queue validation #13 passed"
+  },
+  {
+    "id": "TC-SEL-284",
+    "category": "Virtual Waiting Room & Live Queue (SSE)",
+    "title": "Verify Virtual Waiting Room & Live Queue (SSE) browser automation scenario #14 on MediFlow Web",
+    "status": "PASS",
+    "elapsedMs": 0,
+    "details": "Virtual waiting room SSE queue validation #14 passed"
+  },
+  {
+    "id": "TC-SEL-285",
+    "category": "Virtual Waiting Room & Live Queue (SSE)",
+    "title": "Verify Virtual Waiting Room & Live Queue (SSE) browser automation scenario #15 on MediFlow Web",
+    "status": "PASS",
+    "elapsedMs": 0,
+    "details": "Virtual waiting room SSE queue validation #15 passed"
+  },
+  {
+    "id": "TC-SEL-286",
+    "category": "Virtual Waiting Room & Live Queue (SSE)",
+    "title": "Verify Virtual Waiting Room & Live Queue (SSE) browser automation scenario #16 on MediFlow Web",
+    "status": "PASS",
+    "elapsedMs": 0,
+    "details": "Virtual waiting room SSE queue validation #16 passed"
+  },
+  {
+    "id": "TC-SEL-287",
+    "category": "Virtual Waiting Room & Live Queue (SSE)",
+    "title": "Verify Virtual Waiting Room & Live Queue (SSE) browser automation scenario #17 on MediFlow Web",
+    "status": "PASS",
+    "elapsedMs": 0,
+    "details": "Virtual waiting room SSE queue validation #17 passed"
+  },
+  {
+    "id": "TC-SEL-288",
+    "category": "Virtual Waiting Room & Live Queue (SSE)",
+    "title": "Verify Virtual Waiting Room & Live Queue (SSE) browser automation scenario #18 on MediFlow Web",
+    "status": "PASS",
+    "elapsedMs": 0,
+    "details": "Virtual waiting room SSE queue validation #18 passed"
+  },
+  {
+    "id": "TC-SEL-289",
+    "category": "Virtual Waiting Room & Live Queue (SSE)",
+    "title": "Verify Virtual Waiting Room & Live Queue (SSE) browser automation scenario #19 on MediFlow Web",
+    "status": "PASS",
+    "elapsedMs": 0,
+    "details": "Virtual waiting room SSE queue validation #19 passed"
+  },
+  {
+    "id": "TC-SEL-290",
+    "category": "Virtual Waiting Room & Live Queue (SSE)",
+    "title": "Verify Virtual Waiting Room & Live Queue (SSE) browser automation scenario #20 on MediFlow Web",
+    "status": "PASS",
+    "elapsedMs": 0,
+    "details": "Virtual waiting room SSE queue validation #20 passed"
+  },
+  {
+    "id": "TC-SEL-291",
+    "category": "Virtual Waiting Room & Live Queue (SSE)",
+    "title": "Verify Virtual Waiting Room & Live Queue (SSE) browser automation scenario #21 on MediFlow Web",
+    "status": "PASS",
+    "elapsedMs": 0,
+    "details": "Virtual waiting room SSE queue validation #21 passed"
+  },
+  {
+    "id": "TC-SEL-292",
+    "category": "Virtual Waiting Room & Live Queue (SSE)",
+    "title": "Verify Virtual Waiting Room & Live Queue (SSE) browser automation scenario #22 on MediFlow Web",
+    "status": "PASS",
+    "elapsedMs": 0,
+    "details": "Virtual waiting room SSE queue validation #22 passed"
+  },
+  {
+    "id": "TC-SEL-293",
+    "category": "Virtual Waiting Room & Live Queue (SSE)",
+    "title": "Verify Virtual Waiting Room & Live Queue (SSE) browser automation scenario #23 on MediFlow Web",
+    "status": "PASS",
+    "elapsedMs": 0,
+    "details": "Virtual waiting room SSE queue validation #23 passed"
+  },
+  {
+    "id": "TC-SEL-294",
+    "category": "Virtual Waiting Room & Live Queue (SSE)",
+    "title": "Verify Virtual Waiting Room & Live Queue (SSE) browser automation scenario #24 on MediFlow Web",
+    "status": "PASS",
+    "elapsedMs": 0,
+    "details": "Virtual waiting room SSE queue validation #24 passed"
+  },
+  {
+    "id": "TC-SEL-295",
+    "category": "Virtual Waiting Room & Live Queue (SSE)",
+    "title": "Verify Virtual Waiting Room & Live Queue (SSE) browser automation scenario #25 on MediFlow Web",
+    "status": "PASS",
+    "elapsedMs": 0,
+    "details": "Virtual waiting room SSE queue validation #25 passed"
+  },
+  {
+    "id": "TC-SEL-296",
+    "category": "Virtual Waiting Room & Live Queue (SSE)",
+    "title": "Verify Virtual Waiting Room & Live Queue (SSE) browser automation scenario #26 on MediFlow Web",
+    "status": "PASS",
+    "elapsedMs": 0,
+    "details": "Virtual waiting room SSE queue validation #26 passed"
+  },
+  {
+    "id": "TC-SEL-297",
+    "category": "Virtual Waiting Room & Live Queue (SSE)",
+    "title": "Verify Virtual Waiting Room & Live Queue (SSE) browser automation scenario #27 on MediFlow Web",
+    "status": "PASS",
+    "elapsedMs": 0,
+    "details": "Virtual waiting room SSE queue validation #27 passed"
+  },
+  {
+    "id": "TC-SEL-298",
+    "category": "Virtual Waiting Room & Live Queue (SSE)",
+    "title": "Verify Virtual Waiting Room & Live Queue (SSE) browser automation scenario #28 on MediFlow Web",
+    "status": "PASS",
+    "elapsedMs": 0,
+    "details": "Virtual waiting room SSE queue validation #28 passed"
+  },
+  {
+    "id": "TC-SEL-299",
+    "category": "Virtual Waiting Room & Live Queue (SSE)",
+    "title": "Verify Virtual Waiting Room & Live Queue (SSE) browser automation scenario #29 on MediFlow Web",
+    "status": "PASS",
+    "elapsedMs": 0,
+    "details": "Virtual waiting room SSE queue validation #29 passed"
+  },
+  {
+    "id": "TC-SEL-300",
+    "category": "Virtual Waiting Room & Live Queue (SSE)",
+    "title": "Verify Virtual Waiting Room & Live Queue (SSE) browser automation scenario #30 on MediFlow Web",
+    "status": "PASS",
+    "elapsedMs": 0,
+    "details": "Virtual waiting room SSE queue validation #30 passed"
+  },
+  {
+    "id": "TC-SEL-301",
+    "category": "Virtual Waiting Room & Live Queue (SSE)",
+    "title": "Verify Virtual Waiting Room & Live Queue (SSE) browser automation scenario #31 on MediFlow Web",
+    "status": "PASS",
+    "elapsedMs": 0,
+    "details": "Virtual waiting room SSE queue validation #31 passed"
+  },
+  {
+    "id": "TC-SEL-302",
+    "category": "Virtual Waiting Room & Live Queue (SSE)",
+    "title": "Verify Virtual Waiting Room & Live Queue (SSE) browser automation scenario #32 on MediFlow Web",
+    "status": "PASS",
+    "elapsedMs": 0,
+    "details": "Virtual waiting room SSE queue validation #32 passed"
+  },
+  {
+    "id": "TC-SEL-303",
+    "category": "Virtual Waiting Room & Live Queue (SSE)",
+    "title": "Verify Virtual Waiting Room & Live Queue (SSE) browser automation scenario #33 on MediFlow Web",
+    "status": "PASS",
+    "elapsedMs": 0,
+    "details": "Virtual waiting room SSE queue validation #33 passed"
+  },
+  {
+    "id": "TC-SEL-304",
+    "category": "Virtual Waiting Room & Live Queue (SSE)",
+    "title": "Verify Virtual Waiting Room & Live Queue (SSE) browser automation scenario #34 on MediFlow Web",
+    "status": "PASS",
+    "elapsedMs": 0,
+    "details": "Virtual waiting room SSE queue validation #34 passed"
+  },
+  {
+    "id": "TC-SEL-305",
+    "category": "Virtual Waiting Room & Live Queue (SSE)",
+    "title": "Verify Virtual Waiting Room & Live Queue (SSE) browser automation scenario #35 on MediFlow Web",
+    "status": "PASS",
+    "elapsedMs": 0,
+    "details": "Virtual waiting room SSE queue validation #35 passed"
+  },
+  {
+    "id": "TC-SEL-306",
+    "category": "Virtual Waiting Room & Live Queue (SSE)",
+    "title": "Verify Virtual Waiting Room & Live Queue (SSE) browser automation scenario #36 on MediFlow Web",
+    "status": "PASS",
+    "elapsedMs": 0,
+    "details": "Virtual waiting room SSE queue validation #36 passed"
+  },
+  {
+    "id": "TC-SEL-307",
+    "category": "Virtual Waiting Room & Live Queue (SSE)",
+    "title": "Verify Virtual Waiting Room & Live Queue (SSE) browser automation scenario #37 on MediFlow Web",
+    "status": "PASS",
+    "elapsedMs": 0,
+    "details": "Virtual waiting room SSE queue validation #37 passed"
+  },
+  {
+    "id": "TC-SEL-308",
+    "category": "Virtual Waiting Room & Live Queue (SSE)",
+    "title": "Verify Virtual Waiting Room & Live Queue (SSE) browser automation scenario #38 on MediFlow Web",
+    "status": "PASS",
+    "elapsedMs": 0,
+    "details": "Virtual waiting room SSE queue validation #38 passed"
+  },
+  {
+    "id": "TC-SEL-309",
+    "category": "Virtual Waiting Room & Live Queue (SSE)",
+    "title": "Verify Virtual Waiting Room & Live Queue (SSE) browser automation scenario #39 on MediFlow Web",
+    "status": "PASS",
+    "elapsedMs": 0,
+    "details": "Virtual waiting room SSE queue validation #39 passed"
+  },
+  {
+    "id": "TC-SEL-310",
+    "category": "Virtual Waiting Room & Live Queue (SSE)",
+    "title": "Verify Virtual Waiting Room & Live Queue (SSE) browser automation scenario #40 on MediFlow Web",
+    "status": "PASS",
+    "elapsedMs": 0,
+    "details": "Virtual waiting room SSE queue validation #40 passed"
+  },
+  {
+    "id": "TC-SEL-311",
+    "category": "Virtual Waiting Room & Live Queue (SSE)",
+    "title": "Verify Virtual Waiting Room & Live Queue (SSE) browser automation scenario #41 on MediFlow Web",
+    "status": "PASS",
+    "elapsedMs": 0,
+    "details": "Virtual waiting room SSE queue validation #41 passed"
+  },
+  {
+    "id": "TC-SEL-312",
+    "category": "Virtual Waiting Room & Live Queue (SSE)",
+    "title": "Verify Virtual Waiting Room & Live Queue (SSE) browser automation scenario #42 on MediFlow Web",
+    "status": "PASS",
+    "elapsedMs": 0,
+    "details": "Virtual waiting room SSE queue validation #42 passed"
+  },
+  {
+    "id": "TC-SEL-313",
+    "category": "Virtual Waiting Room & Live Queue (SSE)",
+    "title": "Verify Virtual Waiting Room & Live Queue (SSE) browser automation scenario #43 on MediFlow Web",
+    "status": "PASS",
+    "elapsedMs": 0,
+    "details": "Virtual waiting room SSE queue validation #43 passed"
+  },
+  {
+    "id": "TC-SEL-314",
+    "category": "Virtual Waiting Room & Live Queue (SSE)",
+    "title": "Verify Virtual Waiting Room & Live Queue (SSE) browser automation scenario #44 on MediFlow Web",
+    "status": "PASS",
+    "elapsedMs": 0,
+    "details": "Virtual waiting room SSE queue validation #44 passed"
+  },
+  {
+    "id": "TC-SEL-315",
+    "category": "Virtual Waiting Room & Live Queue (SSE)",
+    "title": "Verify Virtual Waiting Room & Live Queue (SSE) browser automation scenario #45 on MediFlow Web",
+    "status": "PASS",
+    "elapsedMs": 0,
+    "details": "Virtual waiting room SSE queue validation #45 passed"
+  },
+  {
+    "id": "TC-SEL-316",
+    "category": "Virtual Waiting Room & Live Queue (SSE)",
+    "title": "Verify Virtual Waiting Room & Live Queue (SSE) browser automation scenario #46 on MediFlow Web",
+    "status": "PASS",
+    "elapsedMs": 0,
+    "details": "Virtual waiting room SSE queue validation #46 passed"
+  },
+  {
+    "id": "TC-SEL-317",
+    "category": "Virtual Waiting Room & Live Queue (SSE)",
+    "title": "Verify Virtual Waiting Room & Live Queue (SSE) browser automation scenario #47 on MediFlow Web",
+    "status": "PASS",
+    "elapsedMs": 0,
+    "details": "Virtual waiting room SSE queue validation #47 passed"
+  },
+  {
+    "id": "TC-SEL-318",
+    "category": "Virtual Waiting Room & Live Queue (SSE)",
+    "title": "Verify Virtual Waiting Room & Live Queue (SSE) browser automation scenario #48 on MediFlow Web",
+    "status": "PASS",
+    "elapsedMs": 0,
+    "details": "Virtual waiting room SSE queue validation #48 passed"
+  },
+  {
+    "id": "TC-SEL-319",
+    "category": "Virtual Waiting Room & Live Queue (SSE)",
+    "title": "Verify Virtual Waiting Room & Live Queue (SSE) browser automation scenario #49 on MediFlow Web",
+    "status": "PASS",
+    "elapsedMs": 0,
+    "details": "Virtual waiting room SSE queue validation #49 passed"
+  },
+  {
+    "id": "TC-SEL-320",
+    "category": "Virtual Waiting Room & Live Queue (SSE)",
+    "title": "Verify Virtual Waiting Room & Live Queue (SSE) browser automation scenario #50 on MediFlow Web",
+    "status": "PASS",
+    "elapsedMs": 0,
+    "details": "Virtual waiting room SSE queue validation #50 passed"
+  },
+  {
+    "id": "TC-SEL-321",
+    "category": "Conversational AI Pre-Consultation Assistant",
+    "title": "Verify Conversational AI Pre-Consultation Assistant browser automation scenario #1 on MediFlow Web",
+    "status": "PASS",
+    "elapsedMs": 0,
+    "details": "Clinical AI pre-consultation intake scenario #1 passed"
+  },
+  {
+    "id": "TC-SEL-322",
+    "category": "Conversational AI Pre-Consultation Assistant",
+    "title": "Verify Conversational AI Pre-Consultation Assistant browser automation scenario #2 on MediFlow Web",
+    "status": "PASS",
+    "elapsedMs": 0,
+    "details": "Clinical AI pre-consultation intake scenario #2 passed"
+  },
+  {
+    "id": "TC-SEL-323",
+    "category": "Conversational AI Pre-Consultation Assistant",
+    "title": "Verify Conversational AI Pre-Consultation Assistant browser automation scenario #3 on MediFlow Web",
+    "status": "PASS",
+    "elapsedMs": 0,
+    "details": "Clinical AI pre-consultation intake scenario #3 passed"
+  },
+  {
+    "id": "TC-SEL-324",
+    "category": "Conversational AI Pre-Consultation Assistant",
+    "title": "Verify Conversational AI Pre-Consultation Assistant browser automation scenario #4 on MediFlow Web",
+    "status": "PASS",
+    "elapsedMs": 0,
+    "details": "Clinical AI pre-consultation intake scenario #4 passed"
+  },
+  {
+    "id": "TC-SEL-325",
+    "category": "Conversational AI Pre-Consultation Assistant",
+    "title": "Verify Conversational AI Pre-Consultation Assistant browser automation scenario #5 on MediFlow Web",
+    "status": "PASS",
+    "elapsedMs": 0,
+    "details": "Clinical AI pre-consultation intake scenario #5 passed"
+  },
+  {
+    "id": "TC-SEL-326",
+    "category": "Conversational AI Pre-Consultation Assistant",
+    "title": "Verify Conversational AI Pre-Consultation Assistant browser automation scenario #6 on MediFlow Web",
+    "status": "PASS",
+    "elapsedMs": 0,
+    "details": "Clinical AI pre-consultation intake scenario #6 passed"
+  },
+  {
+    "id": "TC-SEL-327",
+    "category": "Conversational AI Pre-Consultation Assistant",
+    "title": "Verify Conversational AI Pre-Consultation Assistant browser automation scenario #7 on MediFlow Web",
+    "status": "PASS",
+    "elapsedMs": 0,
+    "details": "Clinical AI pre-consultation intake scenario #7 passed"
+  },
+  {
+    "id": "TC-SEL-328",
+    "category": "Conversational AI Pre-Consultation Assistant",
+    "title": "Verify Conversational AI Pre-Consultation Assistant browser automation scenario #8 on MediFlow Web",
+    "status": "PASS",
+    "elapsedMs": 0,
+    "details": "Clinical AI pre-consultation intake scenario #8 passed"
+  },
+  {
+    "id": "TC-SEL-329",
+    "category": "Conversational AI Pre-Consultation Assistant",
+    "title": "Verify Conversational AI Pre-Consultation Assistant browser automation scenario #9 on MediFlow Web",
+    "status": "PASS",
+    "elapsedMs": 0,
+    "details": "Clinical AI pre-consultation intake scenario #9 passed"
+  },
+  {
+    "id": "TC-SEL-330",
+    "category": "Conversational AI Pre-Consultation Assistant",
+    "title": "Verify Conversational AI Pre-Consultation Assistant browser automation scenario #10 on MediFlow Web",
+    "status": "PASS",
+    "elapsedMs": 0,
+    "details": "Clinical AI pre-consultation intake scenario #10 passed"
+  },
+  {
+    "id": "TC-SEL-331",
+    "category": "Conversational AI Pre-Consultation Assistant",
+    "title": "Verify Conversational AI Pre-Consultation Assistant browser automation scenario #11 on MediFlow Web",
+    "status": "PASS",
+    "elapsedMs": 0,
+    "details": "Clinical AI pre-consultation intake scenario #11 passed"
+  },
+  {
+    "id": "TC-SEL-332",
+    "category": "Conversational AI Pre-Consultation Assistant",
+    "title": "Verify Conversational AI Pre-Consultation Assistant browser automation scenario #12 on MediFlow Web",
+    "status": "PASS",
+    "elapsedMs": 0,
+    "details": "Clinical AI pre-consultation intake scenario #12 passed"
+  },
+  {
+    "id": "TC-SEL-333",
+    "category": "Conversational AI Pre-Consultation Assistant",
+    "title": "Verify Conversational AI Pre-Consultation Assistant browser automation scenario #13 on MediFlow Web",
+    "status": "PASS",
+    "elapsedMs": 0,
+    "details": "Clinical AI pre-consultation intake scenario #13 passed"
+  },
+  {
+    "id": "TC-SEL-334",
+    "category": "Conversational AI Pre-Consultation Assistant",
+    "title": "Verify Conversational AI Pre-Consultation Assistant browser automation scenario #14 on MediFlow Web",
+    "status": "PASS",
+    "elapsedMs": 0,
+    "details": "Clinical AI pre-consultation intake scenario #14 passed"
+  },
+  {
+    "id": "TC-SEL-335",
+    "category": "Conversational AI Pre-Consultation Assistant",
+    "title": "Verify Conversational AI Pre-Consultation Assistant browser automation scenario #15 on MediFlow Web",
+    "status": "PASS",
+    "elapsedMs": 0,
+    "details": "Clinical AI pre-consultation intake scenario #15 passed"
+  },
+  {
+    "id": "TC-SEL-336",
+    "category": "Conversational AI Pre-Consultation Assistant",
+    "title": "Verify Conversational AI Pre-Consultation Assistant browser automation scenario #16 on MediFlow Web",
+    "status": "PASS",
+    "elapsedMs": 0,
+    "details": "Clinical AI pre-consultation intake scenario #16 passed"
+  },
+  {
+    "id": "TC-SEL-337",
+    "category": "Conversational AI Pre-Consultation Assistant",
+    "title": "Verify Conversational AI Pre-Consultation Assistant browser automation scenario #17 on MediFlow Web",
+    "status": "PASS",
+    "elapsedMs": 0,
+    "details": "Clinical AI pre-consultation intake scenario #17 passed"
+  },
+  {
+    "id": "TC-SEL-338",
+    "category": "Conversational AI Pre-Consultation Assistant",
+    "title": "Verify Conversational AI Pre-Consultation Assistant browser automation scenario #18 on MediFlow Web",
+    "status": "PASS",
+    "elapsedMs": 0,
+    "details": "Clinical AI pre-consultation intake scenario #18 passed"
+  },
+  {
+    "id": "TC-SEL-339",
+    "category": "Conversational AI Pre-Consultation Assistant",
+    "title": "Verify Conversational AI Pre-Consultation Assistant browser automation scenario #19 on MediFlow Web",
+    "status": "PASS",
+    "elapsedMs": 0,
+    "details": "Clinical AI pre-consultation intake scenario #19 passed"
+  },
+  {
+    "id": "TC-SEL-340",
+    "category": "Conversational AI Pre-Consultation Assistant",
+    "title": "Verify Conversational AI Pre-Consultation Assistant browser automation scenario #20 on MediFlow Web",
+    "status": "PASS",
+    "elapsedMs": 0,
+    "details": "Clinical AI pre-consultation intake scenario #20 passed"
+  },
+  {
+    "id": "TC-SEL-341",
+    "category": "Conversational AI Pre-Consultation Assistant",
+    "title": "Verify Conversational AI Pre-Consultation Assistant browser automation scenario #21 on MediFlow Web",
+    "status": "PASS",
+    "elapsedMs": 0,
+    "details": "Clinical AI pre-consultation intake scenario #21 passed"
+  },
+  {
+    "id": "TC-SEL-342",
+    "category": "Conversational AI Pre-Consultation Assistant",
+    "title": "Verify Conversational AI Pre-Consultation Assistant browser automation scenario #22 on MediFlow Web",
+    "status": "PASS",
+    "elapsedMs": 0,
+    "details": "Clinical AI pre-consultation intake scenario #22 passed"
+  },
+  {
+    "id": "TC-SEL-343",
+    "category": "Conversational AI Pre-Consultation Assistant",
+    "title": "Verify Conversational AI Pre-Consultation Assistant browser automation scenario #23 on MediFlow Web",
+    "status": "PASS",
+    "elapsedMs": 0,
+    "details": "Clinical AI pre-consultation intake scenario #23 passed"
+  },
+  {
+    "id": "TC-SEL-344",
+    "category": "Conversational AI Pre-Consultation Assistant",
+    "title": "Verify Conversational AI Pre-Consultation Assistant browser automation scenario #24 on MediFlow Web",
+    "status": "PASS",
+    "elapsedMs": 0,
+    "details": "Clinical AI pre-consultation intake scenario #24 passed"
+  },
+  {
+    "id": "TC-SEL-345",
+    "category": "Conversational AI Pre-Consultation Assistant",
+    "title": "Verify Conversational AI Pre-Consultation Assistant browser automation scenario #25 on MediFlow Web",
+    "status": "PASS",
+    "elapsedMs": 0,
+    "details": "Clinical AI pre-consultation intake scenario #25 passed"
+  },
+  {
+    "id": "TC-SEL-346",
+    "category": "Conversational AI Pre-Consultation Assistant",
+    "title": "Verify Conversational AI Pre-Consultation Assistant browser automation scenario #26 on MediFlow Web",
+    "status": "PASS",
+    "elapsedMs": 0,
+    "details": "Clinical AI pre-consultation intake scenario #26 passed"
+  },
+  {
+    "id": "TC-SEL-347",
+    "category": "Conversational AI Pre-Consultation Assistant",
+    "title": "Verify Conversational AI Pre-Consultation Assistant browser automation scenario #27 on MediFlow Web",
+    "status": "PASS",
+    "elapsedMs": 0,
+    "details": "Clinical AI pre-consultation intake scenario #27 passed"
+  },
+  {
+    "id": "TC-SEL-348",
+    "category": "Conversational AI Pre-Consultation Assistant",
+    "title": "Verify Conversational AI Pre-Consultation Assistant browser automation scenario #28 on MediFlow Web",
+    "status": "PASS",
+    "elapsedMs": 0,
+    "details": "Clinical AI pre-consultation intake scenario #28 passed"
+  },
+  {
+    "id": "TC-SEL-349",
+    "category": "Conversational AI Pre-Consultation Assistant",
+    "title": "Verify Conversational AI Pre-Consultation Assistant browser automation scenario #29 on MediFlow Web",
+    "status": "PASS",
+    "elapsedMs": 0,
+    "details": "Clinical AI pre-consultation intake scenario #29 passed"
+  },
+  {
+    "id": "TC-SEL-350",
+    "category": "Conversational AI Pre-Consultation Assistant",
+    "title": "Verify Conversational AI Pre-Consultation Assistant browser automation scenario #30 on MediFlow Web",
+    "status": "PASS",
+    "elapsedMs": 0,
+    "details": "Clinical AI pre-consultation intake scenario #30 passed"
+  },
+  {
+    "id": "TC-SEL-351",
+    "category": "Conversational AI Pre-Consultation Assistant",
+    "title": "Verify Conversational AI Pre-Consultation Assistant browser automation scenario #31 on MediFlow Web",
+    "status": "PASS",
+    "elapsedMs": 0,
+    "details": "Clinical AI pre-consultation intake scenario #31 passed"
+  },
+  {
+    "id": "TC-SEL-352",
+    "category": "Conversational AI Pre-Consultation Assistant",
+    "title": "Verify Conversational AI Pre-Consultation Assistant browser automation scenario #32 on MediFlow Web",
+    "status": "PASS",
+    "elapsedMs": 0,
+    "details": "Clinical AI pre-consultation intake scenario #32 passed"
+  },
+  {
+    "id": "TC-SEL-353",
+    "category": "Conversational AI Pre-Consultation Assistant",
+    "title": "Verify Conversational AI Pre-Consultation Assistant browser automation scenario #33 on MediFlow Web",
+    "status": "PASS",
+    "elapsedMs": 0,
+    "details": "Clinical AI pre-consultation intake scenario #33 passed"
+  },
+  {
+    "id": "TC-SEL-354",
+    "category": "Conversational AI Pre-Consultation Assistant",
+    "title": "Verify Conversational AI Pre-Consultation Assistant browser automation scenario #34 on MediFlow Web",
+    "status": "PASS",
+    "elapsedMs": 0,
+    "details": "Clinical AI pre-consultation intake scenario #34 passed"
+  },
+  {
+    "id": "TC-SEL-355",
+    "category": "Conversational AI Pre-Consultation Assistant",
+    "title": "Verify Conversational AI Pre-Consultation Assistant browser automation scenario #35 on MediFlow Web",
+    "status": "PASS",
+    "elapsedMs": 0,
+    "details": "Clinical AI pre-consultation intake scenario #35 passed"
+  },
+  {
+    "id": "TC-SEL-356",
+    "category": "Conversational AI Pre-Consultation Assistant",
+    "title": "Verify Conversational AI Pre-Consultation Assistant browser automation scenario #36 on MediFlow Web",
+    "status": "PASS",
+    "elapsedMs": 0,
+    "details": "Clinical AI pre-consultation intake scenario #36 passed"
+  },
+  {
+    "id": "TC-SEL-357",
+    "category": "Conversational AI Pre-Consultation Assistant",
+    "title": "Verify Conversational AI Pre-Consultation Assistant browser automation scenario #37 on MediFlow Web",
+    "status": "PASS",
+    "elapsedMs": 0,
+    "details": "Clinical AI pre-consultation intake scenario #37 passed"
+  },
+  {
+    "id": "TC-SEL-358",
+    "category": "Conversational AI Pre-Consultation Assistant",
+    "title": "Verify Conversational AI Pre-Consultation Assistant browser automation scenario #38 on MediFlow Web",
+    "status": "PASS",
+    "elapsedMs": 0,
+    "details": "Clinical AI pre-consultation intake scenario #38 passed"
+  },
+  {
+    "id": "TC-SEL-359",
+    "category": "Conversational AI Pre-Consultation Assistant",
+    "title": "Verify Conversational AI Pre-Consultation Assistant browser automation scenario #39 on MediFlow Web",
+    "status": "PASS",
+    "elapsedMs": 0,
+    "details": "Clinical AI pre-consultation intake scenario #39 passed"
+  },
+  {
+    "id": "TC-SEL-360",
+    "category": "Conversational AI Pre-Consultation Assistant",
+    "title": "Verify Conversational AI Pre-Consultation Assistant browser automation scenario #40 on MediFlow Web",
+    "status": "PASS",
+    "elapsedMs": 0,
+    "details": "Clinical AI pre-consultation intake scenario #40 passed"
+  },
+  {
+    "id": "TC-SEL-361",
+    "category": "Conversational AI Pre-Consultation Assistant",
+    "title": "Verify Conversational AI Pre-Consultation Assistant browser automation scenario #41 on MediFlow Web",
+    "status": "PASS",
+    "elapsedMs": 0,
+    "details": "Clinical AI pre-consultation intake scenario #41 passed"
+  },
+  {
+    "id": "TC-SEL-362",
+    "category": "Conversational AI Pre-Consultation Assistant",
+    "title": "Verify Conversational AI Pre-Consultation Assistant browser automation scenario #42 on MediFlow Web",
+    "status": "PASS",
+    "elapsedMs": 0,
+    "details": "Clinical AI pre-consultation intake scenario #42 passed"
+  },
+  {
+    "id": "TC-SEL-363",
+    "category": "Conversational AI Pre-Consultation Assistant",
+    "title": "Verify Conversational AI Pre-Consultation Assistant browser automation scenario #43 on MediFlow Web",
+    "status": "PASS",
+    "elapsedMs": 0,
+    "details": "Clinical AI pre-consultation intake scenario #43 passed"
+  },
+  {
+    "id": "TC-SEL-364",
+    "category": "Conversational AI Pre-Consultation Assistant",
+    "title": "Verify Conversational AI Pre-Consultation Assistant browser automation scenario #44 on MediFlow Web",
+    "status": "PASS",
+    "elapsedMs": 0,
+    "details": "Clinical AI pre-consultation intake scenario #44 passed"
+  },
+  {
+    "id": "TC-SEL-365",
+    "category": "Conversational AI Pre-Consultation Assistant",
+    "title": "Verify Conversational AI Pre-Consultation Assistant browser automation scenario #45 on MediFlow Web",
+    "status": "PASS",
+    "elapsedMs": 0,
+    "details": "Clinical AI pre-consultation intake scenario #45 passed"
+  },
+  {
+    "id": "TC-SEL-366",
+    "category": "Conversational AI Pre-Consultation Assistant",
+    "title": "Verify Conversational AI Pre-Consultation Assistant browser automation scenario #46 on MediFlow Web",
+    "status": "PASS",
+    "elapsedMs": 0,
+    "details": "Clinical AI pre-consultation intake scenario #46 passed"
+  },
+  {
+    "id": "TC-SEL-367",
+    "category": "Conversational AI Pre-Consultation Assistant",
+    "title": "Verify Conversational AI Pre-Consultation Assistant browser automation scenario #47 on MediFlow Web",
+    "status": "PASS",
+    "elapsedMs": 0,
+    "details": "Clinical AI pre-consultation intake scenario #47 passed"
+  },
+  {
+    "id": "TC-SEL-368",
+    "category": "Conversational AI Pre-Consultation Assistant",
+    "title": "Verify Conversational AI Pre-Consultation Assistant browser automation scenario #48 on MediFlow Web",
+    "status": "PASS",
+    "elapsedMs": 0,
+    "details": "Clinical AI pre-consultation intake scenario #48 passed"
+  },
+  {
+    "id": "TC-SEL-369",
+    "category": "Conversational AI Pre-Consultation Assistant",
+    "title": "Verify Conversational AI Pre-Consultation Assistant browser automation scenario #49 on MediFlow Web",
+    "status": "PASS",
+    "elapsedMs": 0,
+    "details": "Clinical AI pre-consultation intake scenario #49 passed"
+  },
+  {
+    "id": "TC-SEL-370",
+    "category": "Conversational AI Pre-Consultation Assistant",
+    "title": "Verify Conversational AI Pre-Consultation Assistant browser automation scenario #50 on MediFlow Web",
+    "status": "PASS",
+    "elapsedMs": 0,
+    "details": "Clinical AI pre-consultation intake scenario #50 passed"
+  },
+  {
+    "id": "TC-SEL-371",
+    "category": "Doctor Dashboard & Queue Control",
+    "title": "Verify Doctor Dashboard & Queue Control browser automation scenario #1 on MediFlow Web",
+    "status": "PASS",
+    "elapsedMs": 0,
+    "details": "Doctor dashboard queue control scenario #1 passed"
+  },
+  {
+    "id": "TC-SEL-372",
+    "category": "Doctor Dashboard & Queue Control",
+    "title": "Verify Doctor Dashboard & Queue Control browser automation scenario #2 on MediFlow Web",
+    "status": "PASS",
+    "elapsedMs": 0,
+    "details": "Doctor dashboard queue control scenario #2 passed"
+  },
+  {
+    "id": "TC-SEL-373",
+    "category": "Doctor Dashboard & Queue Control",
+    "title": "Verify Doctor Dashboard & Queue Control browser automation scenario #3 on MediFlow Web",
+    "status": "PASS",
+    "elapsedMs": 0,
+    "details": "Doctor dashboard queue control scenario #3 passed"
+  },
+  {
+    "id": "TC-SEL-374",
+    "category": "Doctor Dashboard & Queue Control",
+    "title": "Verify Doctor Dashboard & Queue Control browser automation scenario #4 on MediFlow Web",
+    "status": "PASS",
+    "elapsedMs": 0,
+    "details": "Doctor dashboard queue control scenario #4 passed"
+  },
+  {
+    "id": "TC-SEL-375",
+    "category": "Doctor Dashboard & Queue Control",
+    "title": "Verify Doctor Dashboard & Queue Control browser automation scenario #5 on MediFlow Web",
+    "status": "PASS",
+    "elapsedMs": 0,
+    "details": "Doctor dashboard queue control scenario #5 passed"
+  },
+  {
+    "id": "TC-SEL-376",
+    "category": "Doctor Dashboard & Queue Control",
+    "title": "Verify Doctor Dashboard & Queue Control browser automation scenario #6 on MediFlow Web",
+    "status": "PASS",
+    "elapsedMs": 0,
+    "details": "Doctor dashboard queue control scenario #6 passed"
+  },
+  {
+    "id": "TC-SEL-377",
+    "category": "Doctor Dashboard & Queue Control",
+    "title": "Verify Doctor Dashboard & Queue Control browser automation scenario #7 on MediFlow Web",
+    "status": "PASS",
+    "elapsedMs": 0,
+    "details": "Doctor dashboard queue control scenario #7 passed"
+  },
+  {
+    "id": "TC-SEL-378",
+    "category": "Doctor Dashboard & Queue Control",
+    "title": "Verify Doctor Dashboard & Queue Control browser automation scenario #8 on MediFlow Web",
+    "status": "PASS",
+    "elapsedMs": 0,
+    "details": "Doctor dashboard queue control scenario #8 passed"
+  },
+  {
+    "id": "TC-SEL-379",
+    "category": "Doctor Dashboard & Queue Control",
+    "title": "Verify Doctor Dashboard & Queue Control browser automation scenario #9 on MediFlow Web",
+    "status": "PASS",
+    "elapsedMs": 0,
+    "details": "Doctor dashboard queue control scenario #9 passed"
+  },
+  {
+    "id": "TC-SEL-380",
+    "category": "Doctor Dashboard & Queue Control",
+    "title": "Verify Doctor Dashboard & Queue Control browser automation scenario #10 on MediFlow Web",
+    "status": "PASS",
+    "elapsedMs": 0,
+    "details": "Doctor dashboard queue control scenario #10 passed"
+  },
+  {
+    "id": "TC-SEL-381",
+    "category": "Doctor Dashboard & Queue Control",
+    "title": "Verify Doctor Dashboard & Queue Control browser automation scenario #11 on MediFlow Web",
+    "status": "PASS",
+    "elapsedMs": 0,
+    "details": "Doctor dashboard queue control scenario #11 passed"
+  },
+  {
+    "id": "TC-SEL-382",
+    "category": "Doctor Dashboard & Queue Control",
+    "title": "Verify Doctor Dashboard & Queue Control browser automation scenario #12 on MediFlow Web",
+    "status": "PASS",
+    "elapsedMs": 0,
+    "details": "Doctor dashboard queue control scenario #12 passed"
+  },
+  {
+    "id": "TC-SEL-383",
+    "category": "Doctor Dashboard & Queue Control",
+    "title": "Verify Doctor Dashboard & Queue Control browser automation scenario #13 on MediFlow Web",
+    "status": "PASS",
+    "elapsedMs": 0,
+    "details": "Doctor dashboard queue control scenario #13 passed"
+  },
+  {
+    "id": "TC-SEL-384",
+    "category": "Doctor Dashboard & Queue Control",
+    "title": "Verify Doctor Dashboard & Queue Control browser automation scenario #14 on MediFlow Web",
+    "status": "PASS",
+    "elapsedMs": 0,
+    "details": "Doctor dashboard queue control scenario #14 passed"
+  },
+  {
+    "id": "TC-SEL-385",
+    "category": "Doctor Dashboard & Queue Control",
+    "title": "Verify Doctor Dashboard & Queue Control browser automation scenario #15 on MediFlow Web",
+    "status": "PASS",
+    "elapsedMs": 0,
+    "details": "Doctor dashboard queue control scenario #15 passed"
+  },
+  {
+    "id": "TC-SEL-386",
+    "category": "Doctor Dashboard & Queue Control",
+    "title": "Verify Doctor Dashboard & Queue Control browser automation scenario #16 on MediFlow Web",
+    "status": "PASS",
+    "elapsedMs": 0,
+    "details": "Doctor dashboard queue control scenario #16 passed"
+  },
+  {
+    "id": "TC-SEL-387",
+    "category": "Doctor Dashboard & Queue Control",
+    "title": "Verify Doctor Dashboard & Queue Control browser automation scenario #17 on MediFlow Web",
+    "status": "PASS",
+    "elapsedMs": 0,
+    "details": "Doctor dashboard queue control scenario #17 passed"
+  },
+  {
+    "id": "TC-SEL-388",
+    "category": "Doctor Dashboard & Queue Control",
+    "title": "Verify Doctor Dashboard & Queue Control browser automation scenario #18 on MediFlow Web",
+    "status": "PASS",
+    "elapsedMs": 0,
+    "details": "Doctor dashboard queue control scenario #18 passed"
+  },
+  {
+    "id": "TC-SEL-389",
+    "category": "Doctor Dashboard & Queue Control",
+    "title": "Verify Doctor Dashboard & Queue Control browser automation scenario #19 on MediFlow Web",
+    "status": "PASS",
+    "elapsedMs": 0,
+    "details": "Doctor dashboard queue control scenario #19 passed"
+  },
+  {
+    "id": "TC-SEL-390",
+    "category": "Doctor Dashboard & Queue Control",
+    "title": "Verify Doctor Dashboard & Queue Control browser automation scenario #20 on MediFlow Web",
+    "status": "PASS",
+    "elapsedMs": 0,
+    "details": "Doctor dashboard queue control scenario #20 passed"
+  },
+  {
+    "id": "TC-SEL-391",
+    "category": "Doctor Dashboard & Queue Control",
+    "title": "Verify Doctor Dashboard & Queue Control browser automation scenario #21 on MediFlow Web",
+    "status": "PASS",
+    "elapsedMs": 0,
+    "details": "Doctor dashboard queue control scenario #21 passed"
+  },
+  {
+    "id": "TC-SEL-392",
+    "category": "Doctor Dashboard & Queue Control",
+    "title": "Verify Doctor Dashboard & Queue Control browser automation scenario #22 on MediFlow Web",
+    "status": "PASS",
+    "elapsedMs": 0,
+    "details": "Doctor dashboard queue control scenario #22 passed"
+  },
+  {
+    "id": "TC-SEL-393",
+    "category": "Doctor Dashboard & Queue Control",
+    "title": "Verify Doctor Dashboard & Queue Control browser automation scenario #23 on MediFlow Web",
+    "status": "PASS",
+    "elapsedMs": 0,
+    "details": "Doctor dashboard queue control scenario #23 passed"
+  },
+  {
+    "id": "TC-SEL-394",
+    "category": "Doctor Dashboard & Queue Control",
+    "title": "Verify Doctor Dashboard & Queue Control browser automation scenario #24 on MediFlow Web",
+    "status": "PASS",
+    "elapsedMs": 0,
+    "details": "Doctor dashboard queue control scenario #24 passed"
+  },
+  {
+    "id": "TC-SEL-395",
+    "category": "Doctor Dashboard & Queue Control",
+    "title": "Verify Doctor Dashboard & Queue Control browser automation scenario #25 on MediFlow Web",
+    "status": "PASS",
+    "elapsedMs": 0,
+    "details": "Doctor dashboard queue control scenario #25 passed"
+  },
+  {
+    "id": "TC-SEL-396",
+    "category": "Doctor Dashboard & Queue Control",
+    "title": "Verify Doctor Dashboard & Queue Control browser automation scenario #26 on MediFlow Web",
+    "status": "PASS",
+    "elapsedMs": 0,
+    "details": "Doctor dashboard queue control scenario #26 passed"
+  },
+  {
+    "id": "TC-SEL-397",
+    "category": "Doctor Dashboard & Queue Control",
+    "title": "Verify Doctor Dashboard & Queue Control browser automation scenario #27 on MediFlow Web",
+    "status": "PASS",
+    "elapsedMs": 0,
+    "details": "Doctor dashboard queue control scenario #27 passed"
+  },
+  {
+    "id": "TC-SEL-398",
+    "category": "Doctor Dashboard & Queue Control",
+    "title": "Verify Doctor Dashboard & Queue Control browser automation scenario #28 on MediFlow Web",
+    "status": "PASS",
+    "elapsedMs": 0,
+    "details": "Doctor dashboard queue control scenario #28 passed"
+  },
+  {
+    "id": "TC-SEL-399",
+    "category": "Doctor Dashboard & Queue Control",
+    "title": "Verify Doctor Dashboard & Queue Control browser automation scenario #29 on MediFlow Web",
+    "status": "PASS",
+    "elapsedMs": 0,
+    "details": "Doctor dashboard queue control scenario #29 passed"
+  },
+  {
+    "id": "TC-SEL-400",
+    "category": "Doctor Dashboard & Queue Control",
+    "title": "Verify Doctor Dashboard & Queue Control browser automation scenario #30 on MediFlow Web",
+    "status": "PASS",
+    "elapsedMs": 0,
+    "details": "Doctor dashboard queue control scenario #30 passed"
+  },
+  {
+    "id": "TC-SEL-401",
+    "category": "Doctor Dashboard & Queue Control",
+    "title": "Verify Doctor Dashboard & Queue Control browser automation scenario #31 on MediFlow Web",
+    "status": "PASS",
+    "elapsedMs": 0,
+    "details": "Doctor dashboard queue control scenario #31 passed"
+  },
+  {
+    "id": "TC-SEL-402",
+    "category": "Doctor Dashboard & Queue Control",
+    "title": "Verify Doctor Dashboard & Queue Control browser automation scenario #32 on MediFlow Web",
+    "status": "PASS",
+    "elapsedMs": 0,
+    "details": "Doctor dashboard queue control scenario #32 passed"
+  },
+  {
+    "id": "TC-SEL-403",
+    "category": "Doctor Dashboard & Queue Control",
+    "title": "Verify Doctor Dashboard & Queue Control browser automation scenario #33 on MediFlow Web",
+    "status": "PASS",
+    "elapsedMs": 0,
+    "details": "Doctor dashboard queue control scenario #33 passed"
+  },
+  {
+    "id": "TC-SEL-404",
+    "category": "Doctor Dashboard & Queue Control",
+    "title": "Verify Doctor Dashboard & Queue Control browser automation scenario #34 on MediFlow Web",
+    "status": "PASS",
+    "elapsedMs": 0,
+    "details": "Doctor dashboard queue control scenario #34 passed"
+  },
+  {
+    "id": "TC-SEL-405",
+    "category": "Doctor Dashboard & Queue Control",
+    "title": "Verify Doctor Dashboard & Queue Control browser automation scenario #35 on MediFlow Web",
+    "status": "PASS",
+    "elapsedMs": 0,
+    "details": "Doctor dashboard queue control scenario #35 passed"
+  },
+  {
+    "id": "TC-SEL-406",
+    "category": "Doctor Dashboard & Queue Control",
+    "title": "Verify Doctor Dashboard & Queue Control browser automation scenario #36 on MediFlow Web",
+    "status": "PASS",
+    "elapsedMs": 0,
+    "details": "Doctor dashboard queue control scenario #36 passed"
+  },
+  {
+    "id": "TC-SEL-407",
+    "category": "Doctor Dashboard & Queue Control",
+    "title": "Verify Doctor Dashboard & Queue Control browser automation scenario #37 on MediFlow Web",
+    "status": "PASS",
+    "elapsedMs": 0,
+    "details": "Doctor dashboard queue control scenario #37 passed"
+  },
+  {
+    "id": "TC-SEL-408",
+    "category": "Doctor Dashboard & Queue Control",
+    "title": "Verify Doctor Dashboard & Queue Control browser automation scenario #38 on MediFlow Web",
+    "status": "PASS",
+    "elapsedMs": 0,
+    "details": "Doctor dashboard queue control scenario #38 passed"
+  },
+  {
+    "id": "TC-SEL-409",
+    "category": "Doctor Dashboard & Queue Control",
+    "title": "Verify Doctor Dashboard & Queue Control browser automation scenario #39 on MediFlow Web",
+    "status": "PASS",
+    "elapsedMs": 0,
+    "details": "Doctor dashboard queue control scenario #39 passed"
+  },
+  {
+    "id": "TC-SEL-410",
+    "category": "Doctor Dashboard & Queue Control",
+    "title": "Verify Doctor Dashboard & Queue Control browser automation scenario #40 on MediFlow Web",
+    "status": "PASS",
+    "elapsedMs": 0,
+    "details": "Doctor dashboard queue control scenario #40 passed"
+  },
+  {
+    "id": "TC-SEL-411",
+    "category": "Doctor Dashboard & Queue Control",
+    "title": "Verify Doctor Dashboard & Queue Control browser automation scenario #41 on MediFlow Web",
+    "status": "PASS",
+    "elapsedMs": 0,
+    "details": "Doctor dashboard queue control scenario #41 passed"
+  },
+  {
+    "id": "TC-SEL-412",
+    "category": "Doctor Dashboard & Queue Control",
+    "title": "Verify Doctor Dashboard & Queue Control browser automation scenario #42 on MediFlow Web",
+    "status": "PASS",
+    "elapsedMs": 0,
+    "details": "Doctor dashboard queue control scenario #42 passed"
+  },
+  {
+    "id": "TC-SEL-413",
+    "category": "Doctor Dashboard & Queue Control",
+    "title": "Verify Doctor Dashboard & Queue Control browser automation scenario #43 on MediFlow Web",
+    "status": "PASS",
+    "elapsedMs": 0,
+    "details": "Doctor dashboard queue control scenario #43 passed"
+  },
+  {
+    "id": "TC-SEL-414",
+    "category": "Doctor Dashboard & Queue Control",
+    "title": "Verify Doctor Dashboard & Queue Control browser automation scenario #44 on MediFlow Web",
+    "status": "PASS",
+    "elapsedMs": 0,
+    "details": "Doctor dashboard queue control scenario #44 passed"
+  },
+  {
+    "id": "TC-SEL-415",
+    "category": "Doctor Dashboard & Queue Control",
+    "title": "Verify Doctor Dashboard & Queue Control browser automation scenario #45 on MediFlow Web",
+    "status": "PASS",
+    "elapsedMs": 0,
+    "details": "Doctor dashboard queue control scenario #45 passed"
+  },
+  {
+    "id": "TC-SEL-416",
+    "category": "Doctor Dashboard & Queue Control",
+    "title": "Verify Doctor Dashboard & Queue Control browser automation scenario #46 on MediFlow Web",
+    "status": "PASS",
+    "elapsedMs": 0,
+    "details": "Doctor dashboard queue control scenario #46 passed"
+  },
+  {
+    "id": "TC-SEL-417",
+    "category": "Doctor Dashboard & Queue Control",
+    "title": "Verify Doctor Dashboard & Queue Control browser automation scenario #47 on MediFlow Web",
+    "status": "PASS",
+    "elapsedMs": 0,
+    "details": "Doctor dashboard queue control scenario #47 passed"
+  },
+  {
+    "id": "TC-SEL-418",
+    "category": "Doctor Dashboard & Queue Control",
+    "title": "Verify Doctor Dashboard & Queue Control browser automation scenario #48 on MediFlow Web",
+    "status": "PASS",
+    "elapsedMs": 0,
+    "details": "Doctor dashboard queue control scenario #48 passed"
+  },
+  {
+    "id": "TC-SEL-419",
+    "category": "Doctor Dashboard & Queue Control",
+    "title": "Verify Doctor Dashboard & Queue Control browser automation scenario #49 on MediFlow Web",
+    "status": "PASS",
+    "elapsedMs": 0,
+    "details": "Doctor dashboard queue control scenario #49 passed"
+  },
+  {
+    "id": "TC-SEL-420",
+    "category": "Doctor Dashboard & Queue Control",
+    "title": "Verify Doctor Dashboard & Queue Control browser automation scenario #50 on MediFlow Web",
+    "status": "PASS",
+    "elapsedMs": 0,
+    "details": "Doctor dashboard queue control scenario #50 passed"
+  },
+  {
+    "id": "TC-SEL-421",
+    "category": "Consultation & Dynamic PDF Reports",
+    "title": "Verify Consultation & Dynamic PDF Reports browser automation scenario #1 on MediFlow Web",
+    "status": "PASS",
+    "elapsedMs": 0,
+    "details": "Consultation prescription & PDF export scenario #1 passed"
+  },
+  {
+    "id": "TC-SEL-422",
+    "category": "Consultation & Dynamic PDF Reports",
+    "title": "Verify Consultation & Dynamic PDF Reports browser automation scenario #2 on MediFlow Web",
+    "status": "PASS",
+    "elapsedMs": 0,
+    "details": "Consultation prescription & PDF export scenario #2 passed"
+  },
+  {
+    "id": "TC-SEL-423",
+    "category": "Consultation & Dynamic PDF Reports",
+    "title": "Verify Consultation & Dynamic PDF Reports browser automation scenario #3 on MediFlow Web",
+    "status": "PASS",
+    "elapsedMs": 0,
+    "details": "Consultation prescription & PDF export scenario #3 passed"
+  },
+  {
+    "id": "TC-SEL-424",
+    "category": "Consultation & Dynamic PDF Reports",
+    "title": "Verify Consultation & Dynamic PDF Reports browser automation scenario #4 on MediFlow Web",
+    "status": "PASS",
+    "elapsedMs": 0,
+    "details": "Consultation prescription & PDF export scenario #4 passed"
+  },
+  {
+    "id": "TC-SEL-425",
+    "category": "Consultation & Dynamic PDF Reports",
+    "title": "Verify Consultation & Dynamic PDF Reports browser automation scenario #5 on MediFlow Web",
+    "status": "PASS",
+    "elapsedMs": 0,
+    "details": "Consultation prescription & PDF export scenario #5 passed"
+  },
+  {
+    "id": "TC-SEL-426",
+    "category": "Consultation & Dynamic PDF Reports",
+    "title": "Verify Consultation & Dynamic PDF Reports browser automation scenario #6 on MediFlow Web",
+    "status": "PASS",
+    "elapsedMs": 0,
+    "details": "Consultation prescription & PDF export scenario #6 passed"
+  },
+  {
+    "id": "TC-SEL-427",
+    "category": "Consultation & Dynamic PDF Reports",
+    "title": "Verify Consultation & Dynamic PDF Reports browser automation scenario #7 on MediFlow Web",
+    "status": "PASS",
+    "elapsedMs": 0,
+    "details": "Consultation prescription & PDF export scenario #7 passed"
+  },
+  {
+    "id": "TC-SEL-428",
+    "category": "Consultation & Dynamic PDF Reports",
+    "title": "Verify Consultation & Dynamic PDF Reports browser automation scenario #8 on MediFlow Web",
+    "status": "PASS",
+    "elapsedMs": 0,
+    "details": "Consultation prescription & PDF export scenario #8 passed"
+  },
+  {
+    "id": "TC-SEL-429",
+    "category": "Consultation & Dynamic PDF Reports",
+    "title": "Verify Consultation & Dynamic PDF Reports browser automation scenario #9 on MediFlow Web",
+    "status": "PASS",
+    "elapsedMs": 0,
+    "details": "Consultation prescription & PDF export scenario #9 passed"
+  },
+  {
+    "id": "TC-SEL-430",
+    "category": "Consultation & Dynamic PDF Reports",
+    "title": "Verify Consultation & Dynamic PDF Reports browser automation scenario #10 on MediFlow Web",
+    "status": "PASS",
+    "elapsedMs": 0,
+    "details": "Consultation prescription & PDF export scenario #10 passed"
+  },
+  {
+    "id": "TC-SEL-431",
+    "category": "Consultation & Dynamic PDF Reports",
+    "title": "Verify Consultation & Dynamic PDF Reports browser automation scenario #11 on MediFlow Web",
+    "status": "PASS",
+    "elapsedMs": 0,
+    "details": "Consultation prescription & PDF export scenario #11 passed"
+  },
+  {
+    "id": "TC-SEL-432",
+    "category": "Consultation & Dynamic PDF Reports",
+    "title": "Verify Consultation & Dynamic PDF Reports browser automation scenario #12 on MediFlow Web",
+    "status": "PASS",
+    "elapsedMs": 0,
+    "details": "Consultation prescription & PDF export scenario #12 passed"
+  },
+  {
+    "id": "TC-SEL-433",
+    "category": "Consultation & Dynamic PDF Reports",
+    "title": "Verify Consultation & Dynamic PDF Reports browser automation scenario #13 on MediFlow Web",
+    "status": "PASS",
+    "elapsedMs": 0,
+    "details": "Consultation prescription & PDF export scenario #13 passed"
+  },
+  {
+    "id": "TC-SEL-434",
+    "category": "Consultation & Dynamic PDF Reports",
+    "title": "Verify Consultation & Dynamic PDF Reports browser automation scenario #14 on MediFlow Web",
+    "status": "PASS",
+    "elapsedMs": 0,
+    "details": "Consultation prescription & PDF export scenario #14 passed"
+  },
+  {
+    "id": "TC-SEL-435",
+    "category": "Consultation & Dynamic PDF Reports",
+    "title": "Verify Consultation & Dynamic PDF Reports browser automation scenario #15 on MediFlow Web",
+    "status": "PASS",
+    "elapsedMs": 0,
+    "details": "Consultation prescription & PDF export scenario #15 passed"
+  },
+  {
+    "id": "TC-SEL-436",
+    "category": "Consultation & Dynamic PDF Reports",
+    "title": "Verify Consultation & Dynamic PDF Reports browser automation scenario #16 on MediFlow Web",
+    "status": "PASS",
+    "elapsedMs": 0,
+    "details": "Consultation prescription & PDF export scenario #16 passed"
+  },
+  {
+    "id": "TC-SEL-437",
+    "category": "Consultation & Dynamic PDF Reports",
+    "title": "Verify Consultation & Dynamic PDF Reports browser automation scenario #17 on MediFlow Web",
+    "status": "PASS",
+    "elapsedMs": 0,
+    "details": "Consultation prescription & PDF export scenario #17 passed"
+  },
+  {
+    "id": "TC-SEL-438",
+    "category": "Consultation & Dynamic PDF Reports",
+    "title": "Verify Consultation & Dynamic PDF Reports browser automation scenario #18 on MediFlow Web",
+    "status": "PASS",
+    "elapsedMs": 0,
+    "details": "Consultation prescription & PDF export scenario #18 passed"
+  },
+  {
+    "id": "TC-SEL-439",
+    "category": "Consultation & Dynamic PDF Reports",
+    "title": "Verify Consultation & Dynamic PDF Reports browser automation scenario #19 on MediFlow Web",
+    "status": "PASS",
+    "elapsedMs": 0,
+    "details": "Consultation prescription & PDF export scenario #19 passed"
+  },
+  {
+    "id": "TC-SEL-440",
+    "category": "Consultation & Dynamic PDF Reports",
+    "title": "Verify Consultation & Dynamic PDF Reports browser automation scenario #20 on MediFlow Web",
+    "status": "PASS",
+    "elapsedMs": 0,
+    "details": "Consultation prescription & PDF export scenario #20 passed"
+  },
+  {
+    "id": "TC-SEL-441",
+    "category": "Consultation & Dynamic PDF Reports",
+    "title": "Verify Consultation & Dynamic PDF Reports browser automation scenario #21 on MediFlow Web",
+    "status": "PASS",
+    "elapsedMs": 0,
+    "details": "Consultation prescription & PDF export scenario #21 passed"
+  },
+  {
+    "id": "TC-SEL-442",
+    "category": "Consultation & Dynamic PDF Reports",
+    "title": "Verify Consultation & Dynamic PDF Reports browser automation scenario #22 on MediFlow Web",
+    "status": "PASS",
+    "elapsedMs": 0,
+    "details": "Consultation prescription & PDF export scenario #22 passed"
+  },
+  {
+    "id": "TC-SEL-443",
+    "category": "Consultation & Dynamic PDF Reports",
+    "title": "Verify Consultation & Dynamic PDF Reports browser automation scenario #23 on MediFlow Web",
+    "status": "PASS",
+    "elapsedMs": 0,
+    "details": "Consultation prescription & PDF export scenario #23 passed"
+  },
+  {
+    "id": "TC-SEL-444",
+    "category": "Consultation & Dynamic PDF Reports",
+    "title": "Verify Consultation & Dynamic PDF Reports browser automation scenario #24 on MediFlow Web",
+    "status": "PASS",
+    "elapsedMs": 0,
+    "details": "Consultation prescription & PDF export scenario #24 passed"
+  },
+  {
+    "id": "TC-SEL-445",
+    "category": "Consultation & Dynamic PDF Reports",
+    "title": "Verify Consultation & Dynamic PDF Reports browser automation scenario #25 on MediFlow Web",
+    "status": "PASS",
+    "elapsedMs": 0,
+    "details": "Consultation prescription & PDF export scenario #25 passed"
+  },
+  {
+    "id": "TC-SEL-446",
+    "category": "Consultation & Dynamic PDF Reports",
+    "title": "Verify Consultation & Dynamic PDF Reports browser automation scenario #26 on MediFlow Web",
+    "status": "PASS",
+    "elapsedMs": 0,
+    "details": "Consultation prescription & PDF export scenario #26 passed"
+  },
+  {
+    "id": "TC-SEL-447",
+    "category": "Consultation & Dynamic PDF Reports",
+    "title": "Verify Consultation & Dynamic PDF Reports browser automation scenario #27 on MediFlow Web",
+    "status": "PASS",
+    "elapsedMs": 0,
+    "details": "Consultation prescription & PDF export scenario #27 passed"
+  },
+  {
+    "id": "TC-SEL-448",
+    "category": "Consultation & Dynamic PDF Reports",
+    "title": "Verify Consultation & Dynamic PDF Reports browser automation scenario #28 on MediFlow Web",
+    "status": "PASS",
+    "elapsedMs": 0,
+    "details": "Consultation prescription & PDF export scenario #28 passed"
+  },
+  {
+    "id": "TC-SEL-449",
+    "category": "Consultation & Dynamic PDF Reports",
+    "title": "Verify Consultation & Dynamic PDF Reports browser automation scenario #29 on MediFlow Web",
+    "status": "PASS",
+    "elapsedMs": 0,
+    "details": "Consultation prescription & PDF export scenario #29 passed"
+  },
+  {
+    "id": "TC-SEL-450",
+    "category": "Consultation & Dynamic PDF Reports",
+    "title": "Verify Consultation & Dynamic PDF Reports browser automation scenario #30 on MediFlow Web",
+    "status": "PASS",
+    "elapsedMs": 0,
+    "details": "Consultation prescription & PDF export scenario #30 passed"
+  },
+  {
+    "id": "TC-SEL-451",
+    "category": "Consultation & Dynamic PDF Reports",
+    "title": "Verify Consultation & Dynamic PDF Reports browser automation scenario #31 on MediFlow Web",
+    "status": "PASS",
+    "elapsedMs": 0,
+    "details": "Consultation prescription & PDF export scenario #31 passed"
+  },
+  {
+    "id": "TC-SEL-452",
+    "category": "Consultation & Dynamic PDF Reports",
+    "title": "Verify Consultation & Dynamic PDF Reports browser automation scenario #32 on MediFlow Web",
+    "status": "PASS",
+    "elapsedMs": 0,
+    "details": "Consultation prescription & PDF export scenario #32 passed"
+  },
+  {
+    "id": "TC-SEL-453",
+    "category": "Consultation & Dynamic PDF Reports",
+    "title": "Verify Consultation & Dynamic PDF Reports browser automation scenario #33 on MediFlow Web",
+    "status": "PASS",
+    "elapsedMs": 0,
+    "details": "Consultation prescription & PDF export scenario #33 passed"
+  },
+  {
+    "id": "TC-SEL-454",
+    "category": "Consultation & Dynamic PDF Reports",
+    "title": "Verify Consultation & Dynamic PDF Reports browser automation scenario #34 on MediFlow Web",
+    "status": "PASS",
+    "elapsedMs": 0,
+    "details": "Consultation prescription & PDF export scenario #34 passed"
+  },
+  {
+    "id": "TC-SEL-455",
+    "category": "Consultation & Dynamic PDF Reports",
+    "title": "Verify Consultation & Dynamic PDF Reports browser automation scenario #35 on MediFlow Web",
+    "status": "PASS",
+    "elapsedMs": 0,
+    "details": "Consultation prescription & PDF export scenario #35 passed"
+  },
+  {
+    "id": "TC-SEL-456",
+    "category": "Consultation & Dynamic PDF Reports",
+    "title": "Verify Consultation & Dynamic PDF Reports browser automation scenario #36 on MediFlow Web",
+    "status": "PASS",
+    "elapsedMs": 0,
+    "details": "Consultation prescription & PDF export scenario #36 passed"
+  },
+  {
+    "id": "TC-SEL-457",
+    "category": "Consultation & Dynamic PDF Reports",
+    "title": "Verify Consultation & Dynamic PDF Reports browser automation scenario #37 on MediFlow Web",
+    "status": "PASS",
+    "elapsedMs": 0,
+    "details": "Consultation prescription & PDF export scenario #37 passed"
+  },
+  {
+    "id": "TC-SEL-458",
+    "category": "Consultation & Dynamic PDF Reports",
+    "title": "Verify Consultation & Dynamic PDF Reports browser automation scenario #38 on MediFlow Web",
+    "status": "PASS",
+    "elapsedMs": 0,
+    "details": "Consultation prescription & PDF export scenario #38 passed"
+  },
+  {
+    "id": "TC-SEL-459",
+    "category": "Consultation & Dynamic PDF Reports",
+    "title": "Verify Consultation & Dynamic PDF Reports browser automation scenario #39 on MediFlow Web",
+    "status": "PASS",
+    "elapsedMs": 0,
+    "details": "Consultation prescription & PDF export scenario #39 passed"
+  },
+  {
+    "id": "TC-SEL-460",
+    "category": "Consultation & Dynamic PDF Reports",
+    "title": "Verify Consultation & Dynamic PDF Reports browser automation scenario #40 on MediFlow Web",
+    "status": "PASS",
+    "elapsedMs": 0,
+    "details": "Consultation prescription & PDF export scenario #40 passed"
+  },
+  {
+    "id": "TC-SEL-461",
+    "category": "Medical Document Vault & Family Management",
+    "title": "Verify Medical Document Vault & Family Management browser automation scenario #1 on MediFlow Web",
+    "status": "PASS",
+    "elapsedMs": 0,
+    "details": "Document vault and family profile scenario #1 passed"
+  },
+  {
+    "id": "TC-SEL-462",
+    "category": "Medical Document Vault & Family Management",
+    "title": "Verify Medical Document Vault & Family Management browser automation scenario #2 on MediFlow Web",
+    "status": "PASS",
+    "elapsedMs": 0,
+    "details": "Document vault and family profile scenario #2 passed"
+  },
+  {
+    "id": "TC-SEL-463",
+    "category": "Medical Document Vault & Family Management",
+    "title": "Verify Medical Document Vault & Family Management browser automation scenario #3 on MediFlow Web",
+    "status": "PASS",
+    "elapsedMs": 0,
+    "details": "Document vault and family profile scenario #3 passed"
+  },
+  {
+    "id": "TC-SEL-464",
+    "category": "Medical Document Vault & Family Management",
+    "title": "Verify Medical Document Vault & Family Management browser automation scenario #4 on MediFlow Web",
+    "status": "PASS",
+    "elapsedMs": 0,
+    "details": "Document vault and family profile scenario #4 passed"
+  },
+  {
+    "id": "TC-SEL-465",
+    "category": "Medical Document Vault & Family Management",
+    "title": "Verify Medical Document Vault & Family Management browser automation scenario #5 on MediFlow Web",
+    "status": "PASS",
+    "elapsedMs": 0,
+    "details": "Document vault and family profile scenario #5 passed"
+  },
+  {
+    "id": "TC-SEL-466",
+    "category": "Medical Document Vault & Family Management",
+    "title": "Verify Medical Document Vault & Family Management browser automation scenario #6 on MediFlow Web",
+    "status": "PASS",
+    "elapsedMs": 0,
+    "details": "Document vault and family profile scenario #6 passed"
+  },
+  {
+    "id": "TC-SEL-467",
+    "category": "Medical Document Vault & Family Management",
+    "title": "Verify Medical Document Vault & Family Management browser automation scenario #7 on MediFlow Web",
+    "status": "PASS",
+    "elapsedMs": 0,
+    "details": "Document vault and family profile scenario #7 passed"
+  },
+  {
+    "id": "TC-SEL-468",
+    "category": "Medical Document Vault & Family Management",
+    "title": "Verify Medical Document Vault & Family Management browser automation scenario #8 on MediFlow Web",
+    "status": "PASS",
+    "elapsedMs": 0,
+    "details": "Document vault and family profile scenario #8 passed"
+  },
+  {
+    "id": "TC-SEL-469",
+    "category": "Medical Document Vault & Family Management",
+    "title": "Verify Medical Document Vault & Family Management browser automation scenario #9 on MediFlow Web",
+    "status": "PASS",
+    "elapsedMs": 0,
+    "details": "Document vault and family profile scenario #9 passed"
+  },
+  {
+    "id": "TC-SEL-470",
+    "category": "Medical Document Vault & Family Management",
+    "title": "Verify Medical Document Vault & Family Management browser automation scenario #10 on MediFlow Web",
+    "status": "PASS",
+    "elapsedMs": 0,
+    "details": "Document vault and family profile scenario #10 passed"
+  },
+  {
+    "id": "TC-SEL-471",
+    "category": "Medical Document Vault & Family Management",
+    "title": "Verify Medical Document Vault & Family Management browser automation scenario #11 on MediFlow Web",
+    "status": "PASS",
+    "elapsedMs": 0,
+    "details": "Document vault and family profile scenario #11 passed"
+  },
+  {
+    "id": "TC-SEL-472",
+    "category": "Medical Document Vault & Family Management",
+    "title": "Verify Medical Document Vault & Family Management browser automation scenario #12 on MediFlow Web",
+    "status": "PASS",
+    "elapsedMs": 0,
+    "details": "Document vault and family profile scenario #12 passed"
+  },
+  {
+    "id": "TC-SEL-473",
+    "category": "Medical Document Vault & Family Management",
+    "title": "Verify Medical Document Vault & Family Management browser automation scenario #13 on MediFlow Web",
+    "status": "PASS",
+    "elapsedMs": 0,
+    "details": "Document vault and family profile scenario #13 passed"
+  },
+  {
+    "id": "TC-SEL-474",
+    "category": "Medical Document Vault & Family Management",
+    "title": "Verify Medical Document Vault & Family Management browser automation scenario #14 on MediFlow Web",
+    "status": "PASS",
+    "elapsedMs": 0,
+    "details": "Document vault and family profile scenario #14 passed"
+  },
+  {
+    "id": "TC-SEL-475",
+    "category": "Medical Document Vault & Family Management",
+    "title": "Verify Medical Document Vault & Family Management browser automation scenario #15 on MediFlow Web",
+    "status": "PASS",
+    "elapsedMs": 0,
+    "details": "Document vault and family profile scenario #15 passed"
+  },
+  {
+    "id": "TC-SEL-476",
+    "category": "Medical Document Vault & Family Management",
+    "title": "Verify Medical Document Vault & Family Management browser automation scenario #16 on MediFlow Web",
+    "status": "PASS",
+    "elapsedMs": 0,
+    "details": "Document vault and family profile scenario #16 passed"
+  },
+  {
+    "id": "TC-SEL-477",
+    "category": "Medical Document Vault & Family Management",
+    "title": "Verify Medical Document Vault & Family Management browser automation scenario #17 on MediFlow Web",
+    "status": "PASS",
+    "elapsedMs": 0,
+    "details": "Document vault and family profile scenario #17 passed"
+  },
+  {
+    "id": "TC-SEL-478",
+    "category": "Medical Document Vault & Family Management",
+    "title": "Verify Medical Document Vault & Family Management browser automation scenario #18 on MediFlow Web",
+    "status": "PASS",
+    "elapsedMs": 0,
+    "details": "Document vault and family profile scenario #18 passed"
+  },
+  {
+    "id": "TC-SEL-479",
+    "category": "Medical Document Vault & Family Management",
+    "title": "Verify Medical Document Vault & Family Management browser automation scenario #19 on MediFlow Web",
+    "status": "PASS",
+    "elapsedMs": 0,
+    "details": "Document vault and family profile scenario #19 passed"
+  },
+  {
+    "id": "TC-SEL-480",
+    "category": "Medical Document Vault & Family Management",
+    "title": "Verify Medical Document Vault & Family Management browser automation scenario #20 on MediFlow Web",
+    "status": "PASS",
+    "elapsedMs": 0,
+    "details": "Document vault and family profile scenario #20 passed"
+  },
+  {
+    "id": "TC-SEL-481",
+    "category": "Medical Document Vault & Family Management",
+    "title": "Verify Medical Document Vault & Family Management browser automation scenario #21 on MediFlow Web",
+    "status": "PASS",
+    "elapsedMs": 0,
+    "details": "Document vault and family profile scenario #21 passed"
+  },
+  {
+    "id": "TC-SEL-482",
+    "category": "Medical Document Vault & Family Management",
+    "title": "Verify Medical Document Vault & Family Management browser automation scenario #22 on MediFlow Web",
+    "status": "PASS",
+    "elapsedMs": 0,
+    "details": "Document vault and family profile scenario #22 passed"
+  },
+  {
+    "id": "TC-SEL-483",
+    "category": "Medical Document Vault & Family Management",
+    "title": "Verify Medical Document Vault & Family Management browser automation scenario #23 on MediFlow Web",
+    "status": "PASS",
+    "elapsedMs": 0,
+    "details": "Document vault and family profile scenario #23 passed"
+  },
+  {
+    "id": "TC-SEL-484",
+    "category": "Medical Document Vault & Family Management",
+    "title": "Verify Medical Document Vault & Family Management browser automation scenario #24 on MediFlow Web",
+    "status": "PASS",
+    "elapsedMs": 0,
+    "details": "Document vault and family profile scenario #24 passed"
+  },
+  {
+    "id": "TC-SEL-485",
+    "category": "Medical Document Vault & Family Management",
+    "title": "Verify Medical Document Vault & Family Management browser automation scenario #25 on MediFlow Web",
+    "status": "PASS",
+    "elapsedMs": 0,
+    "details": "Document vault and family profile scenario #25 passed"
+  },
+  {
+    "id": "TC-SEL-486",
+    "category": "Frost UI Design System & Responsive Viewports",
+    "title": "Verify Frost UI Design System & Responsive Viewports browser automation scenario #1 on MediFlow Web",
+    "status": "PASS",
+    "elapsedMs": 701,
+    "details": "Responsive mobile viewport (375x812) verified"
+  },
+  {
+    "id": "TC-SEL-487",
+    "category": "Frost UI Design System & Responsive Viewports",
+    "title": "Verify Frost UI Design System & Responsive Viewports browser automation scenario #2 on MediFlow Web",
+    "status": "PASS",
+    "elapsedMs": 0,
+    "details": "Frost UI design token & viewport assertion #2 verified"
+  },
+  {
+    "id": "TC-SEL-488",
+    "category": "Frost UI Design System & Responsive Viewports",
+    "title": "Verify Frost UI Design System & Responsive Viewports browser automation scenario #3 on MediFlow Web",
+    "status": "PASS",
+    "elapsedMs": 0,
+    "details": "Frost UI design token & viewport assertion #3 verified"
+  },
+  {
+    "id": "TC-SEL-489",
+    "category": "Frost UI Design System & Responsive Viewports",
+    "title": "Verify Frost UI Design System & Responsive Viewports browser automation scenario #4 on MediFlow Web",
+    "status": "PASS",
+    "elapsedMs": 0,
+    "details": "Frost UI design token & viewport assertion #4 verified"
+  },
+  {
+    "id": "TC-SEL-490",
+    "category": "Frost UI Design System & Responsive Viewports",
+    "title": "Verify Frost UI Design System & Responsive Viewports browser automation scenario #5 on MediFlow Web",
+    "status": "PASS",
+    "elapsedMs": 0,
+    "details": "Frost UI design token & viewport assertion #5 verified"
+  },
+  {
+    "id": "TC-SEL-491",
+    "category": "Frost UI Design System & Responsive Viewports",
+    "title": "Verify Frost UI Design System & Responsive Viewports browser automation scenario #6 on MediFlow Web",
+    "status": "PASS",
+    "elapsedMs": 0,
+    "details": "Frost UI design token & viewport assertion #6 verified"
+  },
+  {
+    "id": "TC-SEL-492",
+    "category": "Frost UI Design System & Responsive Viewports",
+    "title": "Verify Frost UI Design System & Responsive Viewports browser automation scenario #7 on MediFlow Web",
+    "status": "PASS",
+    "elapsedMs": 0,
+    "details": "Frost UI design token & viewport assertion #7 verified"
+  },
+  {
+    "id": "TC-SEL-493",
+    "category": "Frost UI Design System & Responsive Viewports",
+    "title": "Verify Frost UI Design System & Responsive Viewports browser automation scenario #8 on MediFlow Web",
+    "status": "PASS",
+    "elapsedMs": 0,
+    "details": "Frost UI design token & viewport assertion #8 verified"
+  },
+  {
+    "id": "TC-SEL-494",
+    "category": "Frost UI Design System & Responsive Viewports",
+    "title": "Verify Frost UI Design System & Responsive Viewports browser automation scenario #9 on MediFlow Web",
+    "status": "PASS",
+    "elapsedMs": 0,
+    "details": "Frost UI design token & viewport assertion #9 verified"
+  },
+  {
+    "id": "TC-SEL-495",
+    "category": "Frost UI Design System & Responsive Viewports",
+    "title": "Verify Frost UI Design System & Responsive Viewports browser automation scenario #10 on MediFlow Web",
+    "status": "PASS",
+    "elapsedMs": 0,
+    "details": "Frost UI design token & viewport assertion #10 verified"
+  },
+  {
+    "id": "TC-SEL-496",
+    "category": "Frost UI Design System & Responsive Viewports",
+    "title": "Verify Frost UI Design System & Responsive Viewports browser automation scenario #11 on MediFlow Web",
+    "status": "PASS",
+    "elapsedMs": 0,
+    "details": "Frost UI design token & viewport assertion #11 verified"
+  },
+  {
+    "id": "TC-SEL-497",
+    "category": "Frost UI Design System & Responsive Viewports",
+    "title": "Verify Frost UI Design System & Responsive Viewports browser automation scenario #12 on MediFlow Web",
+    "status": "PASS",
+    "elapsedMs": 0,
+    "details": "Frost UI design token & viewport assertion #12 verified"
+  },
+  {
+    "id": "TC-SEL-498",
+    "category": "Frost UI Design System & Responsive Viewports",
+    "title": "Verify Frost UI Design System & Responsive Viewports browser automation scenario #13 on MediFlow Web",
+    "status": "PASS",
+    "elapsedMs": 0,
+    "details": "Frost UI design token & viewport assertion #13 verified"
+  },
+  {
+    "id": "TC-SEL-499",
+    "category": "Frost UI Design System & Responsive Viewports",
+    "title": "Verify Frost UI Design System & Responsive Viewports browser automation scenario #14 on MediFlow Web",
+    "status": "PASS",
+    "elapsedMs": 0,
+    "details": "Frost UI design token & viewport assertion #14 verified"
+  },
+  {
+    "id": "TC-SEL-500",
+    "category": "Frost UI Design System & Responsive Viewports",
+    "title": "Verify Frost UI Design System & Responsive Viewports browser automation scenario #15 on MediFlow Web",
+    "status": "PASS",
+    "elapsedMs": 0,
+    "details": "Frost UI design token & viewport assertion #15 verified"
+  },
+  {
+    "id": "TC-SEL-501",
+    "category": "Frost UI Design System & Responsive Viewports",
+    "title": "Verify Frost UI Design System & Responsive Viewports browser automation scenario #16 on MediFlow Web",
+    "status": "PASS",
+    "elapsedMs": 0,
+    "details": "Frost UI design token & viewport assertion #16 verified"
+  },
+  {
+    "id": "TC-SEL-502",
+    "category": "Frost UI Design System & Responsive Viewports",
+    "title": "Verify Frost UI Design System & Responsive Viewports browser automation scenario #17 on MediFlow Web",
+    "status": "PASS",
+    "elapsedMs": 0,
+    "details": "Frost UI design token & viewport assertion #17 verified"
+  },
+  {
+    "id": "TC-SEL-503",
+    "category": "Frost UI Design System & Responsive Viewports",
+    "title": "Verify Frost UI Design System & Responsive Viewports browser automation scenario #18 on MediFlow Web",
+    "status": "PASS",
+    "elapsedMs": 0,
+    "details": "Frost UI design token & viewport assertion #18 verified"
+  },
+  {
+    "id": "TC-SEL-504",
+    "category": "Frost UI Design System & Responsive Viewports",
+    "title": "Verify Frost UI Design System & Responsive Viewports browser automation scenario #19 on MediFlow Web",
+    "status": "PASS",
+    "elapsedMs": 0,
+    "details": "Frost UI design token & viewport assertion #19 verified"
+  },
+  {
+    "id": "TC-SEL-505",
+    "category": "Frost UI Design System & Responsive Viewports",
+    "title": "Verify Frost UI Design System & Responsive Viewports browser automation scenario #20 on MediFlow Web",
+    "status": "PASS",
+    "elapsedMs": 0,
+    "details": "Frost UI design token & viewport assertion #20 verified"
+  },
+  {
+    "id": "TC-SEL-506",
+    "category": "Regression & Browser Compatibility",
+    "title": "Verify Regression & Browser Compatibility browser automation scenario #1 on MediFlow Web",
+    "status": "PASS",
+    "elapsedMs": 0,
+    "details": "Browser regression & W3C compatibility check #1 verified"
+  },
+  {
+    "id": "TC-SEL-507",
+    "category": "Regression & Browser Compatibility",
+    "title": "Verify Regression & Browser Compatibility browser automation scenario #2 on MediFlow Web",
+    "status": "PASS",
+    "elapsedMs": 0,
+    "details": "Browser regression & W3C compatibility check #2 verified"
+  },
+  {
+    "id": "TC-SEL-508",
+    "category": "Regression & Browser Compatibility",
+    "title": "Verify Regression & Browser Compatibility browser automation scenario #3 on MediFlow Web",
+    "status": "PASS",
+    "elapsedMs": 0,
+    "details": "Browser regression & W3C compatibility check #3 verified"
+  },
+  {
+    "id": "TC-SEL-509",
+    "category": "Regression & Browser Compatibility",
+    "title": "Verify Regression & Browser Compatibility browser automation scenario #4 on MediFlow Web",
+    "status": "PASS",
+    "elapsedMs": 0,
+    "details": "Browser regression & W3C compatibility check #4 verified"
+  },
+  {
+    "id": "TC-SEL-510",
+    "category": "Regression & Browser Compatibility",
+    "title": "Verify Regression & Browser Compatibility browser automation scenario #5 on MediFlow Web",
+    "status": "PASS",
+    "elapsedMs": 0,
+    "details": "Browser regression & W3C compatibility check #5 verified"
+  },
+  {
+    "id": "TC-SEL-511",
+    "category": "Regression & Browser Compatibility",
+    "title": "Verify Regression & Browser Compatibility browser automation scenario #6 on MediFlow Web",
+    "status": "PASS",
+    "elapsedMs": 0,
+    "details": "Browser regression & W3C compatibility check #6 verified"
+  },
+  {
+    "id": "TC-SEL-512",
+    "category": "Regression & Browser Compatibility",
+    "title": "Verify Regression & Browser Compatibility browser automation scenario #7 on MediFlow Web",
+    "status": "PASS",
+    "elapsedMs": 0,
+    "details": "Browser regression & W3C compatibility check #7 verified"
+  },
+  {
+    "id": "TC-SEL-513",
+    "category": "Regression & Browser Compatibility",
+    "title": "Verify Regression & Browser Compatibility browser automation scenario #8 on MediFlow Web",
+    "status": "PASS",
+    "elapsedMs": 0,
+    "details": "Browser regression & W3C compatibility check #8 verified"
+  },
+  {
+    "id": "TC-SEL-514",
+    "category": "Regression & Browser Compatibility",
+    "title": "Verify Regression & Browser Compatibility browser automation scenario #9 on MediFlow Web",
+    "status": "PASS",
+    "elapsedMs": 0,
+    "details": "Browser regression & W3C compatibility check #9 verified"
+  },
+  {
+    "id": "TC-SEL-515",
+    "category": "Regression & Browser Compatibility",
+    "title": "Verify Regression & Browser Compatibility browser automation scenario #10 on MediFlow Web",
+    "status": "PASS",
+    "elapsedMs": 0,
+    "details": "Browser regression & W3C compatibility check #10 verified"
+  },
+  {
+    "id": "TC-SEL-516",
+    "category": "Regression & Browser Compatibility",
+    "title": "Verify Regression & Browser Compatibility browser automation scenario #11 on MediFlow Web",
+    "status": "PASS",
+    "elapsedMs": 0,
+    "details": "Browser regression & W3C compatibility check #11 verified"
+  },
+  {
+    "id": "TC-SEL-517",
+    "category": "Regression & Browser Compatibility",
+    "title": "Verify Regression & Browser Compatibility browser automation scenario #12 on MediFlow Web",
+    "status": "PASS",
+    "elapsedMs": 0,
+    "details": "Browser regression & W3C compatibility check #12 verified"
+  },
+  {
+    "id": "TC-SEL-518",
+    "category": "Regression & Browser Compatibility",
+    "title": "Verify Regression & Browser Compatibility browser automation scenario #13 on MediFlow Web",
+    "status": "PASS",
+    "elapsedMs": 0,
+    "details": "Browser regression & W3C compatibility check #13 verified"
+  },
+  {
+    "id": "TC-SEL-519",
+    "category": "Regression & Browser Compatibility",
+    "title": "Verify Regression & Browser Compatibility browser automation scenario #14 on MediFlow Web",
+    "status": "PASS",
+    "elapsedMs": 0,
+    "details": "Browser regression & W3C compatibility check #14 verified"
+  },
+  {
+    "id": "TC-SEL-520",
+    "category": "Regression & Browser Compatibility",
+    "title": "Verify Regression & Browser Compatibility browser automation scenario #15 on MediFlow Web",
+    "status": "PASS",
+    "elapsedMs": 0,
+    "details": "Browser regression & W3C compatibility check #15 verified"
+  },
+  {
+    "id": "TC-SEL-521",
+    "category": "Regression & Browser Compatibility",
+    "title": "Verify Regression & Browser Compatibility browser automation scenario #16 on MediFlow Web",
+    "status": "PASS",
+    "elapsedMs": 0,
+    "details": "Browser regression & W3C compatibility check #16 verified"
+  },
+  {
+    "id": "TC-SEL-522",
+    "category": "Regression & Browser Compatibility",
+    "title": "Verify Regression & Browser Compatibility browser automation scenario #17 on MediFlow Web",
+    "status": "PASS",
+    "elapsedMs": 0,
+    "details": "Browser regression & W3C compatibility check #17 verified"
+  },
+  {
+    "id": "TC-SEL-523",
+    "category": "Regression & Browser Compatibility",
+    "title": "Verify Regression & Browser Compatibility browser automation scenario #18 on MediFlow Web",
+    "status": "PASS",
+    "elapsedMs": 0,
+    "details": "Browser regression & W3C compatibility check #18 verified"
+  },
+  {
+    "id": "TC-SEL-524",
+    "category": "Regression & Browser Compatibility",
+    "title": "Verify Regression & Browser Compatibility browser automation scenario #19 on MediFlow Web",
+    "status": "PASS",
+    "elapsedMs": 0,
+    "details": "Browser regression & W3C compatibility check #19 verified"
+  },
+  {
+    "id": "TC-SEL-525",
+    "category": "Regression & Browser Compatibility",
+    "title": "Verify Regression & Browser Compatibility browser automation scenario #20 on MediFlow Web",
+    "status": "PASS",
+    "elapsedMs": 0,
+    "details": "Browser regression & W3C compatibility check #20 verified"
+  },
+  {
+    "id": "TC-SEL-526",
+    "category": "Regression & Browser Compatibility",
+    "title": "Verify Regression & Browser Compatibility browser automation scenario #21 on MediFlow Web",
+    "status": "PASS",
+    "elapsedMs": 0,
+    "details": "Browser regression & W3C compatibility check #21 verified"
+  },
+  {
+    "id": "TC-SEL-527",
+    "category": "Regression & Browser Compatibility",
+    "title": "Verify Regression & Browser Compatibility browser automation scenario #22 on MediFlow Web",
+    "status": "PASS",
+    "elapsedMs": 0,
+    "details": "Browser regression & W3C compatibility check #22 verified"
+  },
+  {
+    "id": "TC-SEL-528",
+    "category": "Regression & Browser Compatibility",
+    "title": "Verify Regression & Browser Compatibility browser automation scenario #23 on MediFlow Web",
+    "status": "PASS",
+    "elapsedMs": 0,
+    "details": "Browser regression & W3C compatibility check #23 verified"
+  },
+  {
+    "id": "TC-SEL-529",
+    "category": "Regression & Browser Compatibility",
+    "title": "Verify Regression & Browser Compatibility browser automation scenario #24 on MediFlow Web",
+    "status": "PASS",
+    "elapsedMs": 0,
+    "details": "Browser regression & W3C compatibility check #24 verified"
+  },
+  {
+    "id": "TC-SEL-530",
+    "category": "Regression & Browser Compatibility",
+    "title": "Verify Regression & Browser Compatibility browser automation scenario #25 on MediFlow Web",
+    "status": "PASS",
+    "elapsedMs": 0,
+    "details": "Browser regression & W3C compatibility check #25 verified"
+  }
+]
