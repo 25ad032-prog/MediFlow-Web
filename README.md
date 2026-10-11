@@ -26,10 +26,13 @@ The unified backend acts as the single source of truth for both Web and Mobile c
   - Connection pooling with `pg` (`node-postgres`) and automatic SSL support for cloud deployment (Render, Neon, Supabase, Railway).
   - Idempotent schema migration and auto-seeding of 70 specialists across 5 cities.
   - Transparent in-memory fallback if PostgreSQL is not configured during local testing.
-- **Secure Authentication & RBAC**:
+- **Secure Authentication, RBAC & Password Recovery**:
   - `bcryptjs` password hashing (salt rounds = 10, never plain text).
   - JWT tokens with 7-day expiration and HTTP-only cookie + Bearer token support.
   - Role-based authorization (`patient` and `doctor`) enforced on all protected routes.
+  - **Instagram-Style Forgot Password Flow**: 4-step wizard with 6-digit OTP email delivery, 5-minute countdown, 5-attempt limit, rate limiting, single-use reset tokens, and old session revocation (`token_version`).
+  - **Brevo (Sendinblue) SMTP Integration**: Real outgoing email delivery with styled responsive HTML templates.
+  - **In-App Password Management**: Authenticated Change Password feature in Patient Profile.
 - **Multi-City Doctor Directory**:
   - 70 specialists across **Chennai**, **Bangalore**, **Hyderabad**, **Coimbatore**, and **Madurai**.
   - Multi-specialty coverage (Cardiology, Dermatology, Orthopedics, Pediatrics, Neurology, ENT, General Medicine, Gynecology).
@@ -53,7 +56,7 @@ The unified backend acts as the single source of truth for both Web and Mobile c
 - **Design System**: Frost UI (Glassmorphism with ambient background glows and responsive layout).
 - **Backend API**: Node.js, Express 4, Server-Sent Events (SSE).
 - **Database Layer**: PostgreSQL via `pg` connection pool with relational schema DDL (`server/db/schema.sql`) and unified database service (`server/db/dbService.js`).
-- **Authentication**: `jsonwebtoken`, `bcryptjs`, `cookie-parser`.
+- **Authentication & Email**: `jsonwebtoken`, `bcryptjs`, `cookie-parser`, `nodemailer` (Brevo SMTP).
 - **Interoperability**: HL7 FHIR R4 integration layer (`server/integrations/healthcare/`).
 
 ---
@@ -74,22 +77,22 @@ AUTH_SECRET=your_jwt_secret_key_change_in_production
 SESSION_SECRET=your_session_secret_change_in_production
 
 # PostgreSQL Database (Single Source of Truth)
-# Example for Render / Supabase / Neon:
 DATABASE_URL=postgres://user:password@host:5432/mediflow
 
-# Alternative discrete connection parameters:
-# PGHOST=localhost
-# PGPORT=5432
-# PGUSER=postgres
-# PGPASSWORD=your_postgres_password
-# PGDATABASE=mediflow
-# PGSSL=false
+# Brevo SMTP Configuration (Real OTP Email Delivery)
+SMTP_HOST=smtp-relay.brevo.com
+SMTP_PORT=587
+SMTP_SECURE=false
+SMTP_USER=your_brevo_smtp_login
+SMTP_PASS=your_brevo_smtp_key
+EMAIL_FROM="MediFlow Security <your-verified-brevo-email@domain.com>"
 
 # HL7 FHIR Interoperability (Optional external server)
 FHIR_ENABLED=false
 FHIR_BASE_URL=
 FHIR_API_KEY=
 ```
+
 
 ---
 
@@ -134,16 +137,22 @@ node test_postgres_db_integration.js
 # 2. Authentication & Role Enforcement Suite
 node test_auth_enforcement.js
 
-# 3. Multi-City Doctor Directory & Queue Suite
+# 3. Password Recovery & OTP Security Suite
+node test_password_recovery.js
+
+# 4. Brevo SMTP Connection Verification
+node test_smtp_connection.js
+
+# 5. Multi-City Doctor Directory & Queue Suite
 node test_doctors_multi_location.js
 
-# 4. HL7 FHIR R4 Interoperability Suite
+# 6. HL7 FHIR R4 Interoperability Suite
 node test_healthcare_api_integration.js
 
-# 5. Full Platform Upgrade & PDF Generation Suite
+# 7. Full Platform Upgrade & PDF Generation Suite
 node test_mediflow_upgrade.js
 
-# 6. End-to-End Workflow Verification Suite
+# 8. End-to-End Workflow Verification Suite
 node test_mediflow_web.js
 ```
 
@@ -159,8 +168,15 @@ node test_mediflow_web.js
    - Environment: `Node`.
    - Build Command: `npm run build`
    - Start Command: `npm start`
-3. **Set Environment Variables**:
+3. **Set Environment Variables in Render**:
    - `DATABASE_URL` = `<your-render-postgres-url>`
    - `AUTH_SECRET` = `<random-strong-secret>`
    - `NODE_ENV` = `production`
-4. Deploy! The server will automatically connect to PostgreSQL, run table migrations, and seed data.
+   - `SMTP_HOST` = `smtp-relay.brevo.com`
+   - `SMTP_PORT` = `587`
+   - `SMTP_SECURE` = `false`
+   - `SMTP_USER` = `<your-brevo-smtp-login>`
+   - `SMTP_PASS` = `<your-brevo-smtp-key>`
+   - `EMAIL_FROM` = `MediFlow Security <your-verified-brevo-email>`
+4. Deploy! The server will automatically connect to PostgreSQL, run table migrations, serve the React production bundle, and handle real email delivery.
+
