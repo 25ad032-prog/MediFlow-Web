@@ -84,6 +84,111 @@ export const api = {
     }
   },
 
+  async forgotPassword(email) {
+    try {
+      const res = await fetch(`${API_BASE}/auth/forgot-password`, {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        credentials: 'include',
+        body: JSON.stringify({ email })
+      });
+      const data = await res.json().catch(() => ({}));
+      if (!res.ok) {
+        return {
+          success: false,
+          status: res.status,
+          message: data.message || 'Unable to process recovery request.'
+        };
+      }
+      return { success: true, ...data };
+    } catch (err) {
+      return {
+        success: false,
+        status: 500,
+        message: 'Network error. Please check your connection.'
+      };
+    }
+  },
+
+  async verifyOtp(email, otp) {
+    try {
+      const res = await fetch(`${API_BASE}/auth/verify-otp`, {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        credentials: 'include',
+        body: JSON.stringify({ email, otp })
+      });
+      const data = await res.json().catch(() => ({}));
+      if (!res.ok) {
+        return {
+          success: false,
+          status: res.status,
+          message: data.message || 'Invalid or expired verification code.'
+        };
+      }
+      return { success: true, ...data };
+    } catch (err) {
+      return {
+        success: false,
+        status: 500,
+        message: 'Network error verifying code.'
+      };
+    }
+  },
+
+  async resetPassword(email, resetToken, newPassword) {
+    try {
+      const res = await fetch(`${API_BASE}/auth/reset-password`, {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        credentials: 'include',
+        body: JSON.stringify({ email, resetToken, newPassword })
+      });
+      const data = await res.json().catch(() => ({}));
+      if (!res.ok) {
+        return {
+          success: false,
+          status: res.status,
+          message: data.message || 'Unable to reset password.'
+        };
+      }
+      return { success: true, ...data };
+    } catch (err) {
+      return {
+        success: false,
+        status: 500,
+        message: 'Network error resetting password.'
+      };
+    }
+  },
+
+  async changePassword(currentPassword, newPassword) {
+    try {
+      const res = await fetch(`${API_BASE}/auth/change-password`, {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        credentials: 'include',
+        body: JSON.stringify({ currentPassword, newPassword })
+      });
+      const data = await res.json().catch(() => ({}));
+      if (!res.ok) {
+        return {
+          success: false,
+          status: res.status,
+          message: data.message || 'Failed to update password.'
+        };
+      }
+      return { success: true, ...data };
+    } catch (err) {
+      return {
+        success: false,
+        status: 500,
+        message: 'Network error updating password.'
+      };
+    }
+  },
+
+
   // Locations
   async getLocations() {
     const res = await fetch(`${API_BASE}/locations`, {

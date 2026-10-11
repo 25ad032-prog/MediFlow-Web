@@ -1,12 +1,16 @@
+require('dotenv').config();
 const express = require('express');
 const cors = require('cors');
 const path = require('path');
+
 const cookieParser = require('cookie-parser');
 const jwt = require('jsonwebtoken');
 const bcrypt = require('bcryptjs');
+const crypto = require('crypto');
 const PDFDocument = require('pdfkit');
 const seedData = require('./data/seedData');
 const { initDatabase, dbService, checkConnection, isDbConnected } = require('./db');
+const { isSmtpConfigured, sendPasswordResetOtpEmail } = require('./utils/emailService');
 const healthcareDataProvider = require('./integrations/healthcare/healthcareDataProvider');
 const resourceMapper = require('./integrations/healthcare/resourceMapper');
 
@@ -62,7 +66,10 @@ app.get('/api/events', (req, res) => {
 // ==========================================
 
 function generateToken(payload) {
-  return jwt.sign(payload, AUTH_SECRET, { expiresIn: '7d' });
+  return jwt.sign({
+    ...payload,
+    tokenVersion: payload.tokenVersion || 1
+  }, AUTH_SECRET, { expiresIn: '7d' });
 }
 
 function setAuthCookie(res, token) {
@@ -82,7 +89,7 @@ function clearAuthCookie(res) {
   });
 }
 
-// Authentication Middleware
+// Authentication Middleware with Session Invalidation Check
 function authenticateToken(req, res, next) {
   let token = req.cookies ? req.cookies.token : null;
 
@@ -95,15 +102,29 @@ function authenticateToken(req, res, next) {
     return next();
   }
 
-  jwt.verify(token, AUTH_SECRET, (err, decoded) => {
+  jwt.verify(token, AUTH_SECRET, async (err, decoded) => {
     if (err) {
       req.user = null;
-    } else {
-      req.user = decoded;
+      return next();
     }
+
+    if (decoded && decoded.id && decoded.tokenVersion) {
+      try {
+        const u = await dbService.findUserById(decoded.id);
+        if (u && (u.tokenVersion || 1) !== decoded.tokenVersion) {
+          req.user = null;
+          return next();
+        }
+      } catch (e) {
+        // Fall back gracefully
+      }
+    }
+
+    req.user = decoded;
     next();
   });
 }
+
 
 app.use(authenticateToken);
 
@@ -290,7 +311,8 @@ app.post('/api/auth/register', async (req, res) => {
       role: newUser.role,
       name: newUser.name,
       patientId: newUser.patientId,
-      doctorId: newUser.doctorId
+      doctorId: newUser.doctorId,
+      tokenVersion: newUser.tokenVersion || 1
     });
 
     setAuthCookie(res, token);
@@ -348,10 +370,12 @@ app.post('/api/auth/login', async (req, res) => {
       role: user.role,
       name: user.name,
       patientId: user.patientId,
-      doctorId: user.doctorId
+      doctorId: user.doctorId,
+      tokenVersion: user.tokenVersion || 1
     });
 
     setAuthCookie(res, token);
+
 
     const [patientData, doctorData] = await Promise.all([
       user.role === 'patient' ? dbService.getPatientProfile(user.patientId || user.id) : null,
@@ -418,6 +442,242 @@ app.get('/api/auth/me', async (req, res) => {
     res.status(500).json({ success: false, message: 'Internal server error' });
   }
 });
+
+// ==========================================
+// 1.1 PASSWORD RECOVERY & MANAGEMENT APIS
+// ==========================================
+
+// 1. Request Password Reset (Send 6-digit OTP)
+app.post('/api/auth/forgot-password', async (req, res) => {
+  try {
+    const { email } = req.body;
+    if (!email || typeof email !== 'string') {
+      return res.status(400).json({ success: false, message: 'Please enter a valid email address.' });
+    }
+
+    const cleanEmail = email.trim().toLowerCase();
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    if (!emailRegex.test(cleanEmail)) {
+      return res.status(400).json({ success: false, message: 'Please enter a valid email address format.' });
+    }
+
+    // Rate Limiting: Max 3 requests per 15 minutes per email
+    const allowed = await dbService.checkResetRateLimit(cleanEmail, 3, 15);
+    if (!allowed) {
+      return res.status(429).json({
+        success: false,
+        message: 'Too many recovery attempts. For your security, please wait 15 minutes before requesting another code.'
+      });
+    }
+
+    // Check user existence
+    const user = await dbService.findUserByEmailOrPhone(cleanEmail);
+    if (!user) {
+      // Return generic 200 response to prevent email enumeration
+      return res.status(200).json({
+        success: true,
+        message: 'If an account exists with this email, a 6-digit verification code has been sent.'
+      });
+    }
+
+    // Generate cryptographically secure 6-digit numeric OTP
+    const otp = crypto.randomInt(100000, 1000000).toString();
+    const otpHash = crypto.createHash('sha256').update(otp).digest('hex');
+    const expiresAt = new Date(Date.now() + 5 * 60 * 1000); // 5-minute expiry
+    const resetId = `rst-${Date.now()}-${crypto.randomBytes(4).toString('hex')}`;
+
+    await dbService.createPasswordReset({
+      id: resetId,
+      email: user.email,
+      otpHash,
+      expiresAt
+    });
+
+    // Send email using real SMTP transporter if configured or dev console fallback
+    try {
+      await sendPasswordResetOtpEmail({
+        to: user.email,
+        otp,
+        name: user.name
+      });
+    } catch (mailErr) {
+      console.error('[Auth] Failed to dispatch password reset email:', mailErr.message);
+      if (process.env.NODE_ENV === 'production') {
+        return res.status(500).json({
+          success: false,
+          message: 'Unable to deliver verification email at this moment. Please contact support.'
+        });
+      }
+    }
+
+    res.status(200).json({
+      success: true,
+      message: 'If an account exists with this email, a 6-digit verification code has been sent.',
+      ...(process.env.NODE_ENV !== 'production' ? { devOtp: otp } : {})
+    });
+  } catch (err) {
+    console.error('Forgot-password error:', err);
+    res.status(500).json({ success: false, message: 'Password recovery request failed. Please try again.' });
+  }
+});
+
+// 2. Verify 6-digit OTP & Issue Reset Token
+app.post('/api/auth/verify-otp', async (req, res) => {
+  try {
+    const { email, otp } = req.body;
+    if (!email || !otp) {
+      return res.status(400).json({ success: false, message: 'Email and 6-digit verification code are required.' });
+    }
+
+    const cleanEmail = email.trim().toLowerCase();
+    const cleanOtp = String(otp).trim();
+
+    if (!/^\d{6}$/.test(cleanOtp)) {
+      return res.status(400).json({ success: false, message: 'Verification code must be exactly 6 digits.' });
+    }
+
+    const activeReset = await dbService.getLatestActiveReset(cleanEmail);
+    if (!activeReset) {
+      return res.status(400).json({
+        success: false,
+        message: 'Verification code has expired or is invalid. Please request a new code.'
+      });
+    }
+
+    const maxAttempts = activeReset.max_attempts || 5;
+    if (activeReset.attempts >= maxAttempts) {
+      return res.status(429).json({
+        success: false,
+        message: 'Maximum verification attempts exceeded. Please request a new code.'
+      });
+    }
+
+    const candidateHash = crypto.createHash('sha256').update(cleanOtp).digest('hex');
+    if (candidateHash !== activeReset.otp_hash) {
+      await dbService.incrementResetAttempts(activeReset.id);
+      const remaining = maxAttempts - (activeReset.attempts + 1);
+      return res.status(400).json({
+        success: false,
+        message: remaining > 0
+          ? `Invalid verification code. ${remaining} attempt${remaining === 1 ? '' : 's'} remaining.`
+          : 'Invalid verification code. Maximum attempts exceeded. Please request a new code.'
+      });
+    }
+
+    // OTP Verified: Bind single-use resetToken valid for 10 minutes
+    const resetToken = 'rsttok_' + crypto.randomBytes(32).toString('hex');
+    const tokenExpiresAt = new Date(Date.now() + 10 * 60 * 1000);
+
+    await dbService.bindResetToken(activeReset.id, resetToken, tokenExpiresAt);
+
+    res.status(200).json({
+      success: true,
+      message: 'Code verified successfully.',
+      resetToken
+    });
+  } catch (err) {
+    console.error('Verify-OTP error:', err);
+    res.status(500).json({ success: false, message: 'Verification failed. Please try again.' });
+  }
+});
+
+// 3. Reset Password using bound resetToken
+app.post('/api/auth/reset-password', async (req, res) => {
+  try {
+    const { email, resetToken, newPassword } = req.body;
+    if (!email || !resetToken || !newPassword) {
+      return res.status(400).json({ success: false, message: 'Email, reset token, and new password are required.' });
+    }
+
+    const cleanEmail = email.trim().toLowerCase();
+
+    if (newPassword.length < 6) {
+      return res.status(400).json({ success: false, message: 'Password must be at least 6 characters.' });
+    }
+
+    // Check token and recovery request binding
+    const resetRecord = await dbService.getResetByTokenAndEmail(resetToken, cleanEmail);
+    if (!resetRecord) {
+      return res.status(400).json({
+        success: false,
+        message: 'Reset authorization is invalid or has expired. Please restart the password recovery process.'
+      });
+    }
+
+    // Hash new password using bcrypt
+    const passwordHash = bcrypt.hashSync(newPassword, 10);
+
+    // Update user in database and increment token_version to invalidate prior sessions
+    const updatedUser = await dbService.updateUserPassword(cleanEmail, passwordHash);
+    if (!updatedUser) {
+      return res.status(404).json({ success: false, message: 'User account not found.' });
+    }
+
+    // Mark reset record as used (single-use enforcement)
+    await dbService.markResetUsed(resetRecord.id);
+
+    // Invalidate active session cookie on this client
+    clearAuthCookie(res);
+
+    res.status(200).json({
+      success: true,
+      message: 'Password reset successfully! You can now log in with your new password.'
+    });
+  } catch (err) {
+    console.error('Reset-password error:', err);
+    res.status(500).json({ success: false, message: 'Password reset failed. Please try again.' });
+  }
+});
+
+// 4. Authenticated Change Password (Profile Area)
+app.post('/api/auth/change-password', requireAuth, async (req, res) => {
+  try {
+    const { currentPassword, newPassword } = req.body;
+    if (!currentPassword || !newPassword) {
+      return res.status(400).json({ success: false, message: 'Current password and new password are required.' });
+    }
+
+    if (newPassword.length < 6) {
+      return res.status(400).json({ success: false, message: 'New password must be at least 6 characters.' });
+    }
+
+    const user = await dbService.findUserById(req.user.id);
+    if (!user) {
+      return res.status(404).json({ success: false, message: 'User account not found.' });
+    }
+
+    const isMatch = bcrypt.compareSync(currentPassword, user.passwordHash);
+    if (!isMatch) {
+      return res.status(400).json({ success: false, message: 'Current password does not match.' });
+    }
+
+    const passwordHash = bcrypt.hashSync(newPassword, 10);
+    const updatedUser = await dbService.updateUserPassword(user.email, passwordHash);
+
+    // Issue updated token with incremented tokenVersion
+    const newToken = generateToken({
+      id: updatedUser.id,
+      email: updatedUser.email,
+      role: updatedUser.role,
+      name: updatedUser.name,
+      patientId: updatedUser.patientId,
+      doctorId: updatedUser.doctorId,
+      tokenVersion: updatedUser.tokenVersion
+    });
+
+    setAuthCookie(res, newToken);
+
+    res.status(200).json({
+      success: true,
+      message: 'Password changed successfully.',
+      token: newToken
+    });
+  } catch (err) {
+    console.error('Change-password error:', err);
+    res.status(500).json({ success: false, message: 'Unable to update password. Please try again.' });
+  }
+});
+
 
 // ==========================================
 // 1.5. HEALTHCARE INTEROPERABILITY & FHIR R4 APIS

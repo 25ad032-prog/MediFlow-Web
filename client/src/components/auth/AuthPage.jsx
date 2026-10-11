@@ -18,6 +18,8 @@ import {
   KeyRound,
   Hospital
 } from 'lucide-react';
+import ForgotPasswordWorkflow from './ForgotPasswordWorkflow';
+
 
 export default function AuthPage() {
   const { login, register, quickDemoLogin } = useAuth();
@@ -257,22 +259,17 @@ export default function AuthPage() {
 
             {/* Forgot Password Flow */}
             {showForgotPassword ? (
-              <div className="space-y-4 text-xs">
-                <div className="p-4 rounded-2xl bg-slate-50 border border-slate-200 space-y-2">
-                  <h4 className="font-bold text-slate-900">Demo Password Reminder</h4>
-                  <p className="text-slate-600 leading-relaxed">
-                    Use demo password <strong className="text-teal-700 font-mono">Patient@123</strong> for patient accounts or <strong className="text-sky-700 font-mono">Doctor@123</strong> for doctor accounts.
-                  </p>
-                </div>
-                <button
-                  type="button"
-                  onClick={() => setShowForgotPassword(false)}
-                  className="w-full py-2.5 rounded-xl bg-slate-100 hover:bg-slate-200 text-slate-800 font-bold text-xs transition-colors"
-                >
-                  Back to Sign In
-                </button>
-              </div>
+              <ForgotPasswordWorkflow
+                initialEmail={email}
+                onBackToLogin={() => setShowForgotPassword(false)}
+                onSuccessReset={(recoveredEmail) => {
+                  setShowForgotPassword(false);
+                  if (recoveredEmail) setEmail(recoveredEmail);
+                  setSuccessMessage('Password reset successfully! Please sign in with your new password.');
+                }}
+              />
             ) : (
+
               /* Main Form */
               <form onSubmit={handleSubmit} className="space-y-3.5 text-xs">
                 
@@ -422,70 +419,73 @@ export default function AuthPage() {
             )}
 
             {/* Quick 1-Click Demo Logins */}
-            <div className="pt-4 border-t border-slate-100 space-y-2.5">
-              <div className="flex items-center justify-between">
-                <span className="text-[10px] font-bold text-slate-400 uppercase tracking-wider">
-                  1-Click Instant Demo Login
-                </span>
-                <span className="text-[10px] text-teal-700 font-semibold">Ready to test</span>
-              </div>
+            {!showForgotPassword && (
+              <div className="pt-4 border-t border-slate-100 space-y-2.5">
+                <div className="flex items-center justify-between">
+                  <span className="text-[10px] font-bold text-slate-400 uppercase tracking-wider">
+                    1-Click Instant Demo Login
+                  </span>
+                  <span className="text-[10px] text-teal-700 font-semibold">Ready to test</span>
+                </div>
 
-              <div className="grid grid-cols-2 gap-2">
-                <button
-                  type="button"
-                  disabled={isLoading}
-                  onClick={() => handleQuickLogin('rahul')}
-                  className="p-2.5 rounded-xl bg-teal-50/60 hover:bg-teal-100/70 border border-teal-200/80 text-left transition-all group"
-                >
-                  <div className="flex items-center justify-between">
-                    <span className="font-bold text-slate-900 text-[11px] group-hover:text-teal-900">
-                      👤 Rahul Sharma
-                    </span>
-                    <span className="text-[9px] font-extrabold text-teal-700 bg-teal-100/80 px-1.5 py-0.5 rounded">
-                      Patient
-                    </span>
-                  </div>
-                  <p className="text-[10px] text-slate-500 font-mono mt-0.5">patient@mediflow.demo</p>
-                </button>
+                <div className="grid grid-cols-2 gap-2">
+                  <button
+                    type="button"
+                    disabled={isLoading}
+                    onClick={() => handleQuickLogin('rahul')}
+                    className="p-2.5 rounded-xl bg-teal-50/60 hover:bg-teal-100/70 border border-teal-200/80 text-left transition-all group"
+                  >
+                    <div className="flex items-center justify-between">
+                      <span className="font-bold text-slate-900 text-[11px] group-hover:text-teal-900">
+                        👤 Rahul Sharma
+                      </span>
+                      <span className="text-[9px] font-extrabold text-teal-700 bg-teal-100/80 px-1.5 py-0.5 rounded">
+                        Patient
+                      </span>
+                    </div>
+                    <p className="text-[10px] text-slate-500 font-mono mt-0.5">patient@mediflow.demo</p>
+                  </button>
 
-                <button
-                  type="button"
-                  disabled={isLoading}
-                  onClick={() => handleQuickLogin('priya')}
-                  className="p-2.5 rounded-xl bg-sky-50/60 hover:bg-sky-100/70 border border-sky-200/80 text-left transition-all group"
-                >
-                  <div className="flex items-center justify-between">
-                    <span className="font-bold text-slate-900 text-[11px] group-hover:text-sky-900">
-                      🩺 Dr. Priya Sharma
-                    </span>
-                    <span className="text-[9px] font-extrabold text-sky-700 bg-sky-100/80 px-1.5 py-0.5 rounded">
-                      Doctor
-                    </span>
-                  </div>
-                  <p className="text-[10px] text-slate-500 font-mono mt-0.5">doctor@mediflow.demo</p>
-                </button>
-              </div>
+                  <button
+                    type="button"
+                    disabled={isLoading}
+                    onClick={() => handleQuickLogin('priya')}
+                    className="p-2.5 rounded-xl bg-sky-50/60 hover:bg-sky-100/70 border border-sky-200/80 text-left transition-all group"
+                  >
+                    <div className="flex items-center justify-between">
+                      <span className="font-bold text-slate-900 text-[11px] group-hover:text-sky-900">
+                        🩺 Dr. Priya Sharma
+                      </span>
+                      <span className="text-[9px] font-extrabold text-sky-700 bg-sky-100/80 px-1.5 py-0.5 rounded">
+                        Doctor
+                      </span>
+                    </div>
+                    <p className="text-[10px] text-slate-500 font-mono mt-0.5">doctor@mediflow.demo</p>
+                  </button>
+                </div>
 
-              {/* Autofill Demo Fields Option */}
-              <div className="flex justify-center gap-3 pt-1 text-[11px] text-slate-500">
-                <span>Or autofill form:</span>
-                <button 
-                  type="button"
-                  onClick={() => handleFillDemo('patient')} 
-                  className="text-teal-700 font-bold hover:underline cursor-pointer"
-                >
-                  Patient credentials
-                </button>
-                <span>•</span>
-                <button 
-                  type="button"
-                  onClick={() => handleFillDemo('doctor')} 
-                  className="text-sky-700 font-bold hover:underline cursor-pointer"
-                >
-                  Doctor credentials
-                </button>
+                {/* Autofill Demo Fields Option */}
+                <div className="flex justify-center gap-3 pt-1 text-[11px] text-slate-500">
+                  <span>Or autofill form:</span>
+                  <button 
+                    type="button"
+                    onClick={() => handleFillDemo('patient')} 
+                    className="text-teal-700 font-bold hover:underline cursor-pointer"
+                  >
+                    Patient credentials
+                  </button>
+                  <span>•</span>
+                  <button 
+                    type="button"
+                    onClick={() => handleFillDemo('doctor')} 
+                    className="text-sky-700 font-bold hover:underline cursor-pointer"
+                  >
+                    Doctor credentials
+                  </button>
+                </div>
               </div>
-            </div>
+            )}
+
 
           </div>
 

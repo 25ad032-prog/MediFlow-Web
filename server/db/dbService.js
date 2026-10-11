@@ -11,6 +11,7 @@ let memFamilyMembers = JSON.parse(JSON.stringify(seedData.familyMembers));
 let memConsultationReports = JSON.parse(JSON.stringify(seedData.consultationReports));
 let memMedicalDocuments = JSON.parse(JSON.stringify(seedData.medicalDocuments));
 let memNotifications = JSON.parse(JSON.stringify(seedData.notifications));
+let memPasswordResets = [];
 
 // Helper: Canonical specialty lookup
 function getCanonicalSpecialty(spec) {
@@ -101,9 +102,12 @@ function mapUserRow(row) {
     name: row.name,
     patientId: row.patient_id,
     doctorId: row.doctor_id,
+    tokenVersion: row.token_version || 1,
+    passwordChangedAt: row.password_changed_at || null,
     createdAt: row.created_at
   };
 }
+
 
 // Convert DB row to Report model
 function mapReportRow(row) {
@@ -188,6 +192,198 @@ const dbService = {
     memUsers.push(userData);
     return userData;
   },
+
+  // ==========================================
+  // PASSWORD RECOVERY & AUTH SECURITY
+  // ==========================================
+  async checkResetRateLimit(email, maxRequests = 3, windowMinutes = 15) {
+    const clean = email.toLowerCase().trim();
+    if (isDbConnected()) {
+      const res = await query(
+        `SELECT COUNT(*) as cnt FROM password_resets 
+         WHERE LOWER(email) = $1 AND created_at > (NOW() - INTERVAL '${windowMinutes} minutes');`,
+        [clean]
+      );
+      const count = parseInt(res.rows[0].cnt, 10);
+      return count < maxRequests;
+    }
+
+    // In-memory fallback is disabled in production
+    if (process.env.NODE_ENV === 'production') {
+      throw new Error('Database required for password recovery in production.');
+    }
+    const cutoff = Date.now() - (windowMinutes * 60 * 1000);
+    const count = memPasswordResets.filter(r => 
+      r.email.toLowerCase() === clean && new Date(r.createdAt).getTime() > cutoff
+    ).length;
+    return count < maxRequests;
+  },
+
+  async createPasswordReset({ id, email, otpHash, expiresAt }) {
+    const clean = email.toLowerCase().trim();
+    if (isDbConnected()) {
+      const res = await query(
+        `INSERT INTO password_resets (id, email, otp_hash, expires_at, created_at)
+         VALUES ($1, $2, $3, $4, NOW())
+         RETURNING *;`,
+        [id, clean, otpHash, expiresAt]
+      );
+      return res.rows[0];
+    }
+
+    if (process.env.NODE_ENV === 'production') {
+      throw new Error('Database required for password recovery in production.');
+    }
+
+    const rec = {
+      id,
+      email: clean,
+      otp_hash: otpHash,
+      reset_token: null,
+      expires_at: expiresAt,
+      token_expires_at: null,
+      attempts: 0,
+      max_attempts: 5,
+      used: false,
+      createdAt: new Date().toISOString()
+    };
+    memPasswordResets.push(rec);
+    return rec;
+  },
+
+  async getLatestActiveReset(email) {
+    const clean = email.toLowerCase().trim();
+    if (isDbConnected()) {
+      const res = await query(
+        `SELECT * FROM password_resets 
+         WHERE LOWER(email) = $1 AND used = FALSE AND expires_at > NOW()
+         ORDER BY created_at DESC LIMIT 1;`,
+        [clean]
+      );
+      return res.rows[0] || null;
+    }
+
+    if (process.env.NODE_ENV === 'production') {
+      throw new Error('Database required for password recovery in production.');
+    }
+
+    const now = new Date();
+    return memPasswordResets
+      .filter(r => r.email.toLowerCase() === clean && !r.used && new Date(r.expires_at) > now)
+      .sort((a, b) => new Date(b.createdAt) - new Date(a.createdAt))[0] || null;
+  },
+
+  async incrementResetAttempts(id) {
+    if (isDbConnected()) {
+      const res = await query(
+        `UPDATE password_resets 
+         SET attempts = attempts + 1 
+         WHERE id = $1 
+         RETURNING *;`,
+        [id]
+      );
+      return res.rows[0];
+    }
+
+    if (process.env.NODE_ENV === 'production') {
+      throw new Error('Database required for password recovery in production.');
+    }
+
+    const rec = memPasswordResets.find(r => r.id === id);
+    if (rec) rec.attempts = (rec.attempts || 0) + 1;
+    return rec;
+  },
+
+  async bindResetToken(id, resetToken, tokenExpiresAt) {
+    if (isDbConnected()) {
+      const res = await query(
+        `UPDATE password_resets 
+         SET reset_token = $1, token_expires_at = $2 
+         WHERE id = $3 
+         RETURNING *;`,
+        [resetToken, tokenExpiresAt, id]
+      );
+      return res.rows[0];
+    }
+
+    if (process.env.NODE_ENV === 'production') {
+      throw new Error('Database required for password recovery in production.');
+    }
+
+    const rec = memPasswordResets.find(r => r.id === id);
+    if (rec) {
+      rec.reset_token = resetToken;
+      rec.token_expires_at = tokenExpiresAt;
+    }
+    return rec;
+  },
+
+  async getResetByTokenAndEmail(resetToken, email) {
+    const clean = email.toLowerCase().trim();
+    if (isDbConnected()) {
+      const res = await query(
+        `SELECT * FROM password_resets 
+         WHERE reset_token = $1 AND LOWER(email) = $2 AND used = FALSE AND token_expires_at > NOW()
+         LIMIT 1;`,
+        [resetToken, clean]
+      );
+      return res.rows[0] || null;
+    }
+
+    if (process.env.NODE_ENV === 'production') {
+      throw new Error('Database required for password recovery in production.');
+    }
+
+    const now = new Date();
+    return memPasswordResets.find(r => 
+      r.reset_token === resetToken && 
+      r.email.toLowerCase() === clean && 
+      !r.used && 
+      new Date(r.token_expires_at) > now
+    ) || null;
+  },
+
+  async markResetUsed(id) {
+    if (isDbConnected()) {
+      await query(`UPDATE password_resets SET used = TRUE WHERE id = $1;`, [id]);
+      return true;
+    }
+
+    if (process.env.NODE_ENV === 'production') {
+      throw new Error('Database required for password recovery in production.');
+    }
+
+    const rec = memPasswordResets.find(r => r.id === id);
+    if (rec) rec.used = true;
+    return true;
+  },
+
+  async updateUserPassword(email, newPasswordHash) {
+    const clean = email.toLowerCase().trim();
+    if (isDbConnected()) {
+      const res = await query(
+        `UPDATE users 
+         SET password_hash = $1, 
+             token_version = COALESCE(token_version, 1) + 1, 
+             password_changed_at = NOW(), 
+             updated_at = NOW() 
+         WHERE LOWER(email) = $2 
+         RETURNING *;`,
+        [newPasswordHash, clean]
+      );
+      return mapUserRow(res.rows[0]);
+    }
+
+    const user = memUsers.find(u => u.email.toLowerCase() === clean);
+    if (user) {
+      user.passwordHash = newPasswordHash;
+      user.tokenVersion = (user.tokenVersion || 1) + 1;
+      user.passwordChangedAt = new Date().toISOString();
+      return user;
+    }
+    return null;
+  },
+
 
   // ==========================================
   // PATIENT PROFILES

@@ -16,6 +16,8 @@ import {
   Sparkles,
   LogIn
 } from 'lucide-react';
+import ForgotPasswordWorkflow from './ForgotPasswordWorkflow';
+
 
 export default function AuthModal({ isOpen, onClose }) {
   const { login, register, quickDemoLogin, isAuthenticated, logout, user, patient, role } = useAuth();
@@ -294,22 +296,17 @@ export default function AuthModal({ isOpen, onClose }) {
             )}
 
             {showForgotPassword ? (
-              <div className="space-y-4 text-xs">
-                <div className="p-4 rounded-2xl bg-slate-50 border border-slate-200 space-y-2">
-                  <h4 className="font-bold text-slate-900">Reset Password</h4>
-                  <p className="text-slate-500 leading-relaxed">
-                    For demonstration purposes, you can log in with demo password <strong>Patient@123</strong> or <strong>Doctor@123</strong>.
-                  </p>
-                </div>
-                <button
-                  type="button"
-                  onClick={() => setShowForgotPassword(false)}
-                  className="w-full py-2.5 rounded-xl bg-slate-100 hover:bg-slate-200 text-slate-800 font-bold text-xs transition-colors"
-                >
-                  Back to Sign In
-                </button>
-              </div>
+              <ForgotPasswordWorkflow
+                initialEmail={email}
+                onBackToLogin={() => setShowForgotPassword(false)}
+                onSuccessReset={(recoveredEmail) => {
+                  setShowForgotPassword(false);
+                  if (recoveredEmail) setEmail(recoveredEmail);
+                  setSuccessMessage('Password reset successfully! Please sign in with your new password.');
+                }}
+              />
             ) : (
+
               <form onSubmit={handleSubmit} className="space-y-3.5 text-xs">
                 
                 {authMode === 'register' && activeTab === 'patient' && (
@@ -448,29 +445,32 @@ export default function AuthModal({ isOpen, onClose }) {
             )}
 
             {/* Quick 1-Click Demo Buttons */}
-            <div className="pt-3 border-t border-slate-100 text-center">
-              <span className="text-[10px] text-slate-400 block mb-2 font-semibold">
-                Instant 1-Click Demo Login:
-              </span>
-              <div className="flex gap-2">
-                <button
-                  type="button"
-                  disabled={isLoading}
-                  onClick={() => handleQuickDemo('rahul')}
-                  className="flex-1 py-2 px-2.5 rounded-xl bg-slate-100 hover:bg-slate-200 text-[11px] text-slate-800 font-bold border border-slate-200 transition-all flex items-center justify-center gap-1"
-                >
-                  <span>👤 Patient Demo</span>
-                </button>
-                <button
-                  type="button"
-                  disabled={isLoading}
-                  onClick={() => handleQuickDemo('priya')}
-                  className="flex-1 py-2 px-2.5 rounded-xl bg-slate-100 hover:bg-slate-200 text-[11px] text-sky-800 font-bold border border-slate-200 transition-all flex items-center justify-center gap-1"
-                >
-                  <span>🩺 Doctor Demo</span>
-                </button>
+            {!showForgotPassword && (
+              <div className="pt-3 border-t border-slate-100 text-center">
+                <span className="text-[10px] text-slate-400 block mb-2 font-semibold">
+                  Instant 1-Click Demo Login:
+                </span>
+                <div className="flex gap-2">
+                  <button
+                    type="button"
+                    disabled={isLoading}
+                    onClick={() => handleQuickDemo('rahul')}
+                    className="flex-1 py-2 px-2.5 rounded-xl bg-slate-100 hover:bg-slate-200 text-[11px] text-slate-800 font-bold border border-slate-200 transition-all flex items-center justify-center gap-1 cursor-pointer"
+                  >
+                    <span>👤 Patient Demo</span>
+                  </button>
+                  <button
+                    type="button"
+                    disabled={isLoading}
+                    onClick={() => handleQuickDemo('priya')}
+                    className="flex-1 py-2 px-2.5 rounded-xl bg-slate-100 hover:bg-slate-200 text-[11px] text-sky-800 font-bold border border-slate-200 transition-all flex items-center justify-center gap-1 cursor-pointer"
+                  >
+                    <span>🩺 Doctor Demo</span>
+                  </button>
+                </div>
               </div>
-            </div>
+            )}
+
 
           </div>
         )}

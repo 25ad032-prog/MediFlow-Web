@@ -10,7 +10,13 @@ import {
   ShieldAlert, 
   Edit3, 
   Save, 
-  CheckCircle2
+  CheckCircle2,
+  KeyRound,
+  Lock,
+  Eye,
+  EyeOff,
+  AlertCircle,
+  ShieldCheck
 } from 'lucide-react';
 
 export default function PatientProfile() {
@@ -29,9 +35,22 @@ export default function PatientProfile() {
   const [isEditing, setIsEditing] = useState(false);
   const [savedSuccess, setSavedSuccess] = useState(false);
 
+  // Change Password State
+  const [showPasswordSection, setShowPasswordSection] = useState(false);
+  const [currentPassword, setCurrentPassword] = useState('');
+  const [newPassword, setNewPassword] = useState('');
+  const [confirmPassword, setConfirmPassword] = useState('');
+  const [showCurrentPw, setShowCurrentPw] = useState(false);
+  const [showNewPw, setShowNewPw] = useState(false);
+  const [showConfirmPw, setShowConfirmPw] = useState(false);
+  const [pwError, setPwError] = useState('');
+  const [pwSuccess, setPwSuccess] = useState('');
+  const [isUpdatingPw, setIsUpdatingPw] = useState(false);
+
   useEffect(() => {
     if (patient) setProfileData(patient);
   }, [patient]);
+
 
   const handleSave = async (e) => {
     e.preventDefault();
@@ -47,6 +66,44 @@ export default function PatientProfile() {
       console.error(e);
     }
   };
+
+  const handleChangePassword = async (e) => {
+    e.preventDefault();
+    setPwError('');
+    setPwSuccess('');
+
+    if (newPassword.length < 6) {
+      setPwError('New password must be at least 6 characters.');
+      return;
+    }
+
+    if (newPassword !== confirmPassword) {
+      setPwError('New passwords do not match.');
+      return;
+    }
+
+    setIsUpdatingPw(true);
+    try {
+      const res = await api.changePassword(currentPassword, newPassword);
+      if (res.success) {
+        setPwSuccess('Password changed successfully! Your sessions have been updated.');
+        setCurrentPassword('');
+        setNewPassword('');
+        setConfirmPassword('');
+        setTimeout(() => {
+          setPwSuccess('');
+          setShowPasswordSection(false);
+        }, 3000);
+      } else {
+        setPwError(res.message || 'Failed to update password. Please check your current password.');
+      }
+    } catch (err) {
+      setPwError('Network error updating password.');
+    } finally {
+      setIsUpdatingPw(false);
+    }
+  };
+
 
   return (
     <div className="space-y-6 animate-fade-in max-w-4xl mx-auto pb-12">
@@ -197,6 +254,125 @@ export default function PatientProfile() {
         </form>
       </div>
 
+      {/* Security & Password Card */}
+      <div className="p-6 sm:p-8 rounded-3xl bg-white border border-slate-200 shadow-sm space-y-5">
+        <div className="flex items-center justify-between">
+          <div className="flex items-center gap-3">
+            <div className="w-10 h-10 rounded-xl bg-teal-50 border border-teal-200 text-teal-600 flex items-center justify-center">
+              <KeyRound className="w-5 h-5" />
+            </div>
+            <div>
+              <h3 className="font-bold text-slate-900 text-sm">Account Security & Password</h3>
+              <p className="text-slate-500 text-xs">Update your account login password</p>
+            </div>
+          </div>
+
+          <button
+            type="button"
+            onClick={() => {
+              setShowPasswordSection(!showPasswordSection);
+              setPwError('');
+              setPwSuccess('');
+            }}
+            className="px-3.5 py-1.5 rounded-xl bg-slate-100 hover:bg-slate-200 text-slate-700 text-xs font-bold border border-slate-200 transition-all cursor-pointer"
+          >
+            {showPasswordSection ? 'Cancel' : 'Change Password'}
+          </button>
+        </div>
+
+        {pwSuccess && (
+          <div className="p-3 rounded-2xl bg-teal-50 border border-teal-200 text-teal-800 text-xs flex items-center gap-2 animate-fade-in">
+            <CheckCircle2 className="w-4 h-4 text-teal-600 shrink-0" />
+            <span>{pwSuccess}</span>
+          </div>
+        )}
+
+        {pwError && (
+          <div className="p-3 rounded-2xl bg-rose-50 border border-rose-200 text-rose-700 text-xs flex items-center gap-2 animate-fade-in">
+            <AlertCircle className="w-4 h-4 text-rose-600 shrink-0" />
+            <span>{pwError}</span>
+          </div>
+        )}
+
+        {showPasswordSection && (
+          <form onSubmit={handleChangePassword} className="space-y-4 pt-2 border-t border-slate-100 text-xs">
+            <div>
+              <label className="font-bold text-slate-600 block mb-1">Current Password</label>
+              <div className="relative">
+                <input
+                  type={showCurrentPw ? 'text' : 'password'}
+                  value={currentPassword}
+                  onChange={(e) => setCurrentPassword(e.target.value)}
+                  required
+                  placeholder="Enter your current password"
+                  className="w-full p-3 pr-10 rounded-xl glass-input text-slate-900 text-xs font-mono"
+                />
+                <button
+                  type="button"
+                  onClick={() => setShowCurrentPw(!showCurrentPw)}
+                  className="absolute right-3 top-3 text-slate-400 hover:text-slate-600"
+                >
+                  {showCurrentPw ? <EyeOff className="w-4 h-4" /> : <Eye className="w-4 h-4" />}
+                </button>
+              </div>
+            </div>
+
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+              <div>
+                <label className="font-bold text-slate-600 block mb-1">New Password</label>
+                <div className="relative">
+                  <input
+                    type={showNewPw ? 'text' : 'password'}
+                    value={newPassword}
+                    onChange={(e) => setNewPassword(e.target.value)}
+                    required
+                    placeholder="Min 6 characters"
+                    className="w-full p-3 pr-10 rounded-xl glass-input text-slate-900 text-xs font-mono"
+                  />
+                  <button
+                    type="button"
+                    onClick={() => setShowNewPw(!showNewPw)}
+                    className="absolute right-3 top-3 text-slate-400 hover:text-slate-600"
+                  >
+                    {showNewPw ? <EyeOff className="w-4 h-4" /> : <Eye className="w-4 h-4" />}
+                  </button>
+                </div>
+              </div>
+
+              <div>
+                <label className="font-bold text-slate-600 block mb-1">Confirm New Password</label>
+                <div className="relative">
+                  <input
+                    type={showConfirmPw ? 'text' : 'password'}
+                    value={confirmPassword}
+                    onChange={(e) => setConfirmPassword(e.target.value)}
+                    required
+                    placeholder="Re-type new password"
+                    className="w-full p-3 pr-10 rounded-xl glass-input text-slate-900 text-xs font-mono"
+                  />
+                  <button
+                    type="button"
+                    onClick={() => setShowConfirmPw(!showConfirmPw)}
+                    className="absolute right-3 top-3 text-slate-400 hover:text-slate-600"
+                  >
+                    {showConfirmPw ? <EyeOff className="w-4 h-4" /> : <Eye className="w-4 h-4" />}
+                  </button>
+                </div>
+              </div>
+            </div>
+
+            <button
+              type="submit"
+              disabled={isUpdatingPw || newPassword.length < 6 || newPassword !== confirmPassword}
+              className="w-full py-3 rounded-xl bg-teal-600 hover:bg-teal-700 disabled:opacity-50 text-white font-bold text-xs shadow-sm transition-all cursor-pointer"
+            >
+              {isUpdatingPw ? 'Updating Password...' : 'Save New Password'}
+            </button>
+          </form>
+        )}
+      </div>
+
     </div>
   );
 }
+

@@ -174,6 +174,24 @@ CREATE TABLE IF NOT EXISTS medical_documents (
   created_at TIMESTAMPTZ DEFAULT NOW()
 );
 
+-- 10. PASSWORD RESETS (Secure Recovery with OTP & Reset Tokens)
+CREATE TABLE IF NOT EXISTS password_resets (
+  id VARCHAR(64) PRIMARY KEY,
+  email VARCHAR(255) NOT NULL,
+  otp_hash VARCHAR(255) NOT NULL,
+  reset_token VARCHAR(255),
+  expires_at TIMESTAMPTZ NOT NULL,
+  token_expires_at TIMESTAMPTZ,
+  attempts INT DEFAULT 0,
+  max_attempts INT DEFAULT 5,
+  used BOOLEAN DEFAULT FALSE,
+  created_at TIMESTAMPTZ DEFAULT NOW()
+);
+
+-- Schema migration columns for users session invalidation
+ALTER TABLE users ADD COLUMN IF NOT EXISTS token_version INT DEFAULT 1;
+ALTER TABLE users ADD COLUMN IF NOT EXISTS password_changed_at TIMESTAMPTZ DEFAULT NOW();
+
 -- =========================================================
 -- INDEXES FOR MAXIMUM QUERY PERFORMANCE
 -- =========================================================
@@ -191,3 +209,6 @@ CREATE INDEX IF NOT EXISTS idx_notifications_user ON notifications(user_id);
 CREATE INDEX IF NOT EXISTS idx_notifications_patient ON notifications(patient_id);
 CREATE INDEX IF NOT EXISTS idx_documents_patient ON medical_documents(patient_id);
 CREATE INDEX IF NOT EXISTS idx_family_patient ON family_members(patient_id);
+CREATE INDEX IF NOT EXISTS idx_password_resets_email ON password_resets(LOWER(email));
+CREATE INDEX IF NOT EXISTS idx_password_resets_token ON password_resets(reset_token);
+
